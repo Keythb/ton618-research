@@ -74,7 +74,7 @@ li{margin:.28rem 0;}
 
 <div class="mast">
   <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
-  <span class="meta">Event Probability Note<br>As of 23 June 2026<br>v1.0</span>
+  <span class="meta">Event Probability Note<br>As of 23 June 2026<br>v1.1 · revised same day</span>
 </div>
 
 <div class="kicker">Legislative Catalyst · Digital Assets</div>
@@ -84,10 +84,10 @@ li{margin:.28rem 0;}
 
 <!-- EXECUTIVE SUMMARY -->
 <div class="verdict">
-  <div class="big">~6%<small>Central estimate</small></div>
-  <div class="txt"><b>We estimate a ~6% probability (plausible range 3–14%) that the CLARITY Act is signed into law on or before 31 July 2026.</b> The bill is real, advancing, and has a credible 2026 path — the prediction market prices a <b>42.5%</b> chance it is signed at some point this year — but the <i>before-August</i> window is the binding constraint. Three sequential gates (a 60-vote Senate floor passage, House concurrence in the Senate text, and the signature) must <i>all</i> clear inside roughly 15 Senate session days that are split by the 27 Jun–12 Jul recess, with two substantive disputes still unresolved. The base case is that market-structure law is an H2-2026 story, not a July one.</p></div>
+  <div class="big">~15%<small>Central · range 6–20%</small></div>
+  <div class="txt"><b>We estimate a ~15% probability (range 6–20%) that the CLARITY Act is signed into law on or before 31 July 2026.</b> This is anchored on the most direct evidence available: Kalshi runs a contract on this <i>exact</i> question — "a crypto market structure bill becomes law before Aug 1, 2026" — trading at <b>~17–20%</b>. We discount it modestly for the sequential-execution risk our structural model isolates (that model alone implies ~6%) and for these markets' documented near-term optimism. Both Kalshi (~49%) and Polymarket (~42.5%) price a roughly even-money chance of a signing <i>somewhere</i> in 2026; the before-August cut-off is the binding constraint.</div>
 </div>
-<p class="small">Conclusion first: a sub-August signing is a low-probability near-term catalyst. The larger, better-priced catalyst window opens after Labor Day (Senate returns 14 Sep), ahead of the midterm campaign recess.</p>
+<p class="small">Conclusion first: a sub-August signing is a real but minority outcome. The market treats the pre-recess window as the primary 2026 window — if it slips past the 8 Aug recess, midterm-year compression lowers the odds for the rest of the year.</p>
 
 <!-- MILESTONE LADDER -->
 <h2><span class="n">1</span>The milestone ladder</h2>
@@ -101,8 +101,10 @@ li{margin:.28rem 0;}
     <tr><td>Senate floor passage (≥60 votes) by 31 Jul</td><td class="num">Not scheduled</td><td class="num">~20%</td></tr>
     <tr><td><span class="small">— memo: Senate passage by 7 Aug (pre-recess, press framing)</span></td><td class="num"><span class="small">—</span></td><td class="num"><span class="small">~30–35%</span></td></tr>
     <tr><td>Both chambers clear identical text by 31 Jul</td><td class="num">Pending Senate</td><td class="num">~7%</td></tr>
-    <tr class="total"><td>Signed into law by 31 Jul 2026 <b>(the question)</b></td><td class="num">—</td><td class="num">~6%</td></tr>
-    <tr><td><span class="small">Context: signed into law any time in 2026 (market-implied)</span></td><td class="num"><span class="small">Polymarket</span></td><td class="num"><span class="small">42.5%</span></td></tr>
+    <tr><td><b>Direct market</b> — Kalshi "law before 1 Aug 2026"</td><td class="num">Live, ≈ the question</td><td class="num">~17–20%</td></tr>
+    <tr><td><span class="small">Structural gate model alone (conservative floor)</span></td><td class="num"><span class="small">—</span></td><td class="num"><span class="small">~6%</span></td></tr>
+    <tr class="total"><td>Signed into law by 31 Jul 2026 — reconciled <b>(the question)</b></td><td class="num">—</td><td class="num">~15%</td></tr>
+    <tr><td><span class="small">Context: signed any time in 2026 (Kalshi / Polymarket / Galaxy)</span></td><td class="num"><span class="small">full-year</span></td><td class="num"><span class="small">~49% / 42.5% / ~50%</span></td></tr>
   </tbody>
 </table>
 <p class="small">Note the gap between "before the August recess" (≤ 7 Aug, the deadline the press tracks) and "before August" (≤ 31 Jul, your question). The 3–7 Aug session week is arguably the single most likely passage window — and it falls <i>outside</i> the asked window. This alone meaningfully lowers the estimate versus the headlines.</p>
@@ -131,11 +133,12 @@ li{margin:.28rem 0;}
 
 <!-- METHOD -->
 <h2><span class="n">3</span>Method: a three-source ensemble</h2>
-<p>We triangulate three independent estimators rather than rely on any single one, then gate the result on the legislative calendar.</p>
+<p>We triangulate independent estimators rather than rely on any single one, then gate the result on the legislative calendar. Per our data-integrity standard, the most <i>direct</i> source carries the most weight.</p>
 <ol>
-  <li><b>Structural gate model (primary).</b> Decompose the remaining path into sequential conditional probabilities and multiply. This is auditable and isolates the binding constraint.</li>
-  <li><b>Market-implied anchor (cross-check).</b> Polymarket's "signed in 2026" contract (42.5% Yes, $1.4m volume) is a money-weighted full-year estimate; we convert it to a before-August figure using a timing split.</li>
-  <li><b>Precedent base rate (sanity band).</b> The GENIUS Act is the closest comparable: Senate passage → House concurrence → signature in ~1 month (Senate 68–30 on 17 Jun 2025; signed 18 Jul 2025). But it cleared the Senate <i>comfortably</i> and the House adopted the Senate text wholesale — neither condition is yet met for CLARITY.</li>
+  <li><b>Direct market on the exact question (primary anchor).</b> Kalshi's KXCRYPTOSTRUCTURE series carries a contract — "a crypto market structure bill becomes law before Aug 1, 2026" — that resolves on precisely the event asked. It trades at ~17–20% (~295k contracts of volume, ~100k open interest). This is the single best read available.</li>
+  <li><b>Structural gate model (skeptic's floor).</b> Decompose the remaining path into sequential conditional probabilities and multiply. Auditable, isolates the binding constraint, and implies ~6% — below the market, for reasons reconciled in §4.</li>
+  <li><b>Full-year markets, converted (cross-check).</b> Kalshi (~49%) and Polymarket (42.5%) price a 2026 signing; Galaxy Research separately pegs full-year odds near 50–50. Converting to a before-August basis depends on the timing split (see §4).</li>
+  <li><b>Precedent base rate (sanity band).</b> The GENIUS Act is the closest comparable: Senate passage → House concurrence → signature in ~1 month (Senate 68–30 on 17 Jun 2025; signed 18 Jul 2025) — but it cleared the Senate <i>comfortably</i> and the House adopted the Senate text wholesale, neither yet true for CLARITY.</li>
 </ol>
 
 <!-- GATE MODEL -->
@@ -152,12 +155,34 @@ li{margin:.28rem 0;}
   </tbody>
 </table>
 
-<h3>Market cross-check</h3>
-<p>The full-year market prices 42.5%. For the before-August figure to equal ~6%, roughly 15% of the 2026 success mass must fall in the next five weeks (two of which are recess), with the remainder in the post–Labor Day and lame-duck windows. Given far more session days exist after 14 September, a ~15% near-term share is reasonable — so the market anchor and the structural model <b>converge near 6%</b>, which raises our confidence in the estimate.</p>
+<h3>Reconciling the model with the market</h3>
+<p>The structural model (~6%) and the direct market (~18%) disagree by roughly 3×. The disagreement is almost entirely about the <b>timing split</b> — what share of the full-year probability falls in the pre-August window:</p>
+<table>
+  <caption>Kalshi KXCRYPTOSTRUCTURE term structure (live, 23 Jun 2026) + Polymarket</caption>
+  <thead><tr><th>Contract — "law before…"</th><th class="num">Last</th><th class="num">Bid/Ask</th><th class="num">Implied</th></tr></thead>
+  <tbody>
+    <tr><td>Kalshi — 1 Jul 2026</td><td class="num">0.7¢</td><td class="num">0.4 / 0.7¢</td><td class="num">~1%</td></tr>
+    <tr><td><b>Kalshi — 1 Aug 2026 (≈ the question)</b></td><td class="num">17¢</td><td class="num">18 / 20¢</td><td class="num"><b>~18%</b></td></tr>
+    <tr><td>Kalshi — 1 Jan 2027 (full year)</td><td class="num">49¢</td><td class="num">46 / 49¢</td><td class="num">~49%</td></tr>
+    <tr><td>Polymarket — signed in 2026 (full year)</td><td class="num">—</td><td class="num">—</td><td class="num">42.5%</td></tr>
+  </tbody>
+</table>
+<p>Kalshi's own term structure implies P(before Aug | in 2026) ≈ 18 / 49 ≈ <b>37%</b> — the market believes the pre-recess window carries over a third of the year's probability. Our structural model implicitly assumed ~15%. The market's view is defensible: the August recess is a genuine forcing function, and 2026 midterm-campaign compression (recess 3 Oct–8 Nov) thins the post–Labor-Day calendar, so the late-July sprint really is the primary 2026 window. We therefore <b>weight toward the market</b>, while keeping a discount — these contracts have repeatedly over-priced near-term passage (the full-year line decayed 64→48→42.5 on Polymarket) and the sequential-gate execution risk is real.</p>
+<table>
+  <caption>Reconciled estimate — weighted blend of estimators</caption>
+  <thead><tr><th>Estimator</th><th class="num">Reads</th><th class="num">Weight</th><th class="num">Contribution</th></tr></thead>
+  <tbody>
+    <tr><td>Kalshi direct contract (best source)</td><td class="num">18%</td><td class="num">55%</td><td class="num">9.9%</td></tr>
+    <tr><td>Full-year markets × market timing split</td><td class="num">16%</td><td class="num">20%</td><td class="num">3.2%</td></tr>
+    <tr><td>Structural gate model (floor)</td><td class="num">6%</td><td class="num">25%</td><td class="num">1.5%</td></tr>
+    <tr class="total"><td>Reconciled central estimate</td><td class="num">—</td><td class="num">100%</td><td class="num">~14.6%</td></tr>
+  </tbody>
+</table>
+<p class="small">Rounded headline: <b>~15%, range 6–20%</b> (structural floor to market ask).</p>
 
 <!-- SCENARIOS -->
 <h2><span class="n">5</span>Scenario &amp; sensitivity analysis</h2>
-<p>The estimate is most sensitive to Gate A (does the Senate even vote, and pass, in July) and Gate B (does the House swallow the Senate text immediately). Holding the signature gate near-certain, we bound the outcome:</p>
+<p>The following bounds the <b>structural model</b> (the conservative floor, §3 estimator 2); the reconciled headline in §4 sits above it because it gives primary weight to the direct market. The model is most sensitive to Gate A (does the Senate even vote, and pass, in July) and Gate B (does the House swallow the Senate text immediately). Holding the signature gate near-certain, we bound the outcome:</p>
 <table>
   <caption>Sensitivity of P(signed ≤ 31 Jul) to the two binding gates</caption>
   <thead><tr><th>Scenario</th><th class="num">Gate A</th><th class="num">Gate B</th><th class="num">Gate C</th><th class="num">P(signed ≤ 31 Jul)</th></tr></thead>
@@ -177,7 +202,7 @@ li{margin:.28rem 0;}
     <tr class="total"><td>Expected value</td><td class="num">100%</td><td class="num">—</td><td class="num">~5.8%</td></tr>
   </tbody>
 </table>
-<p class="small">Rounded headline: <b>~6%, range 3–14%.</b> We report a range rather than a false-precision point estimate because the floor schedule is not yet set.</p>
+<p class="small">These bound the <b>structural model</b> at ~3–14% (EV ~6%). The reconciled headline (§4), which gives primary weight to the direct Kalshi market, is <b>~15% (range 6–20%)</b>. We report a range rather than a false-precision point estimate because the floor schedule is not yet set.</p>
 
 <!-- RISKS / WHAT MOVES IT -->
 <h2><span class="n">6</span>What would move the estimate</h2>
@@ -198,9 +223,9 @@ li{margin:.28rem 0;}
 <h2><span class="n">7</span>Investment relevance</h2>
 <p>For a Bitcoin-benchmarked book, CLARITY is a sentiment- and flow-relevant catalyst (regulatory clarity for digital-commodity spot markets under the CFTC), but the <i>timing</i> of the catalyst is what is tradeable here. <b>We believe</b> the practical read is:</p>
 <ul>
-  <li><b>Do not pay up for a pre-August signing.</b> At ~6%, the near-term event is unlikely; structuring exposure around a July signature has poor expected value.</li>
-  <li><b>The real catalyst window is post–Labor Day.</b> The bulk of the market-implied 42.5% sits in the 14 Sep–2 Oct window and the post-election lame duck — both with more session days and, by then, possibly resolved disputes.</li>
-  <li><b>Mind "buy the rumor, sell the news."</b> With the full-year probability already near a coin-flip and partially priced into crypto sentiment, the marginal upside on an actual signing may be muted; the larger asymmetric move could be to the downside on a clear <i>failure</i> signal (e.g., the bill slipping to 2027).</li>
+  <li><b>A pre-August signing is a minority outcome (~15%), not a base case.</b> Sizing a position <i>around</i> a July signature still carries negative expected value, but the event is no longer negligible — the direct market puts it near 1-in-5.</li>
+  <li><b>The August recess is the swing date.</b> Watch for a filed cloture motion or floor date in mid-to-late July; absent that by the 8 Aug recess, midterm-year compression (recess 3 Oct–8 Nov) lowers odds for the rest of 2026.</li>
+  <li><b>Mind "buy the rumor, sell the news."</b> With the full-year probability near a coin-flip and partially priced into crypto sentiment, marginal upside on an actual signing may be muted; the larger asymmetric move could be to the downside on a clear <i>failure</i> signal (the bill slipping to 2027).</li>
 </ul>
 <p class="small">This note expresses no BTC price target. It is a single-event probability assessment intended as one input to catalyst positioning, consistent with the fund's mandate to outperform spot BTC over multi-year horizons.</p>
 
@@ -208,14 +233,16 @@ li{margin:.28rem 0;}
 <div class="disc">
 <h3>Disclosures &amp; CFA-standard notes</h3>
 <p><b>As-of date.</b> All probabilities and statuses are as of 23 June 2026 and will drift as the Senate floor schedule firms up. <b>Question definition.</b> "Passing" is defined, per the client's instruction, as <i>signed into law</i> (enacted), not Senate passage or bicameral passage; "before August" is interpreted as on or before 31 July 2026.</p>
-<p><b>Data sources &amp; vintage.</b> Legislative status and action dates: Congress.gov API, H.R. 3633 (record last updated 11 Jun 2026) — treated as authoritative. Market-implied probability: Polymarket "Clarity Act signed into law in 2026?" via the public Gamma API (live read, 23 Jun 2026; 42.5% Yes, $1.38m cumulative volume, resolves 1 Jan 2027). Calendar: U.S. Senate 2026 tentative legislative schedule (recesses 27 Jun–12 Jul and 8 Aug–13 Sep). Vote counts, committee dynamics, and the stablecoin-yield / ethics disputes: contemporaneous reporting (CNBC, CoinDesk, Fortune, The Defiant, Yahoo Finance, PYMNTS, FinTech Weekly). GENIUS Act precedent: Congress.gov and law-firm summaries.</p>
-<p><b>Method &amp; assumptions.</b> The primary estimate is a structural conditional-gate model (probabilities multiplied across sequential steps); gate inputs are analyst judgments calibrated to the named facts, not market quotes. The market-implied figure is converted to a before-August basis via an assumed timing split (~15% of 2026 success mass in the pre-recess window). Scenario weights (Bear 45% / Base 40% / Bull 15%) are subjective. <b>Separation of fact and opinion:</b> milestone dates and the 42.5% market price are facts; all gate probabilities, weights, and the ~6% conclusion are opinion.</p>
+<p><b>Revision (v1.1, 23 Jun 2026).</b> v1.0 used Polymarket's full-year contract only and reported ~6%. v1.1 adds Kalshi's direct "before 1 Aug 2026" contract (~18%) — a market on the exact question — and revises the central estimate up to ~15% to give that direct source primary weight. The structural model (~6%) is retained as the conservative floor.</p>
+<p><b>Data sources &amp; vintage.</b> Legislative status and action dates: Congress.gov API, H.R. 3633 (record last updated 11 Jun 2026) — treated as authoritative. Market-implied probabilities (live read, 23 Jun 2026): <b>Kalshi</b> KXCRYPTOSTRUCTURE series via the public trade API — "before 1 Aug 2026" last 17¢ / 18–20¢ bid-ask (~295k volume, ~100k OI), "before 1 Jul 2026" ~1%, "before 1 Jan 2027" ~49%; <b>Polymarket</b> "Clarity Act signed into law in 2026?" via the Gamma API (42.5% Yes, $1.38m volume, resolves 1 Jan 2027). Full-year corroboration: Galaxy Research (~50–50). Calendar: U.S. Senate 2026 tentative legislative schedule (recesses 27 Jun–12 Jul and 8 Aug–13 Sep). Vote counts, committee dynamics, and the stablecoin-yield / ethics disputes: contemporaneous reporting (CNBC, CoinDesk, Fortune, The Defiant, Yahoo Finance, PYMNTS, FinTech Weekly). GENIUS Act precedent: Congress.gov and law-firm summaries.</p>
+<p><b>Method &amp; assumptions.</b> The headline ~15% is a weighted blend that gives primary weight (55%) to the direct Kalshi contract on the exact event, with the remainder split between the full-year markets (converted on the market-implied ~37% timing split, 20%) and an auditable structural conditional-gate model (which alone implies ~6%, 25%). Gate inputs, blend weights, and structural scenario weights (Bear 45% / Base 40% / Bull 15%) are analyst judgments. <b>Separation of fact and opinion:</b> milestone dates and the live market prices (Kalshi ~18% before-Aug, ~49% full-year; Polymarket 42.5%) are facts; all gate probabilities, weights, the timing-split interpretation, and the ~15% conclusion are opinion.</p>
 <p><b>Limitations.</b> Legislative forecasting is low-base-rate and regime-sensitive; a single procedural decision by the Majority Leader can move the estimate by more than its stated range. Prediction-market liquidity on niche legislative contracts is thin and the contract resolves on enactment in 2026 (a superset of the asked window), so it is used only as a corroborating anchor. This is a point-in-time read; we recommend refreshing on any change to the Senate floor schedule.</p>
 <p><b>Conflicts.</b> TON618 Capital holds long digital-asset exposure (Bitcoin and Bitcoin-linked instruments) whose sentiment could be affected by the outcome discussed. This note is research for information purposes only — it is not an offer, solicitation, or recommendation to buy or sell any security, fund interest, or digital asset, and it is not investment, legal, or tax advice. It contains forward-looking estimates that may prove wrong. Past performance is not indicative of future results. Digital assets are highly volatile and may result in total loss of capital. Prepared in keeping with CFA Institute Standards of Professional Conduct (diligence, reasonable basis, fair representation, and disclosure of conflicts).</p>
 
 <h3>Sources</h3>
 <ol class="refs">
 <li>Congress.gov — H.R. 3633, Digital Asset Market Clarity Act, bill status &amp; actions: <a href="https://www.congress.gov/bill/119th-congress/house-bill/3633/all-info">congress.gov/bill/119th-congress/house-bill/3633</a></li>
+<li>Kalshi — "Will crypto market structure legislation become law?" (series KXCRYPTOSTRUCTURE, monthly-expiry contracts; "before 1 Aug 2026" the direct anchor): <a href="https://kalshi.com/markets/kxcryptostructure/crypto-market-structure">kalshi.com/markets/kxcryptostructure</a></li>
 <li>Polymarket — "Clarity Act signed into law in 2026?": <a href="https://polymarket.com/event/clarity-act-signed-into-law-in-2026">polymarket.com/event/clarity-act-signed-into-law-in-2026</a></li>
 <li>U.S. Senate — 2026 tentative legislative schedule: <a href="https://www.senate.gov/legislative/2026_schedule.htm">senate.gov/legislative/2026_schedule.htm</a>; Roll Call, "Senate releases its 2026 calendar" (19 Nov 2025).</li>
 <li>CNBC — "Crypto industry scores win as Clarity Act clears Senate hurdle" (14 May 2026).</li>
