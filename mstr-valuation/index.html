@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TON618 Capital — Strategy (MSTR): What Are You Really Buying?</title>
+<meta name="description" content="A CFA-standard valuation of Strategy (MSTR) — a leveraged bitcoin holding company. Sum-of-the-parts fair value, the collapsed NAV premium, the fortress capital structure, the real risks, and an even-handed read of the Ponzi, liquidation, and regulatory questions.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ main{padding:0;max-width:none;} body{font-size:10.4px;line-height:1.5;}
+.verdict .big{font-size:1.9rem;} h1{font-size:1.9rem;} h2{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,.qa,blockquote{page-break-inside:avoid;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Equity Research Note<br>As of 28 June 2026<br>v1.0</span>
+</div>
+
+<div class="kicker">Equity Valuation · Strategy Inc. (NASDAQ: MSTR)</div>
+<h1>Strategy (MSTR): What Are You Really Buying?</h1>
+<p class="dek">A leveraged bitcoin holding company, valued honestly. What the stock is, what it is worth, and a fair hearing of the questions critics and the public keep asking.</p>
+<p class="byline">TON618 Capital Research · Prepared under CFA Institute analytical standards · For information purposes only · <a class="pdf-link" href="TON618_MSTR-Valuation_Research_Note_v1.0.pdf">Download PDF</a></p>
+
+<div class="verdict">
+  <div class="big">~$86<small>Sum-of-the-parts fair value/share at spot BTC · vs $82.31 market</small></div>
+  <div class="txt"><b>At ~$82, MSTR trades at roughly 1.0&times; net asset value — the famous premium is essentially gone.</b> You are no longer paying $2.50 for $1 of bitcoin (the trade Jim Chanos shorted in 2024). After a brutal de-rating, MSTR is now a <b>~1.7&times; levered, convex claim on bitcoin</b>, priced about in line with the bitcoin behind it. Our sum-of-the-parts fair value is <b>~$86/share</b> at spot BTC (software on comps + bitcoin at NAV − $22B of senior claims), so the stock is roughly fairly valued. The bet has changed: it is now <b>BTC direction, geared</b>, minus a permanent <b>~$1.55B/yr preferred coupon</b>, plus refinancing and discount-to-NAV risk. Not a fraud; not about to be liquidated; but no longer the free lunch the premium once made it.</div>
+</div>
+
+<section class="kpis">
+  <div class="fig">~1.0x<span class="label">Multiple-to-NAV today, down from ~2.5&times; in Dec 2024. The MSTR-specific premium has corrected.</span></div>
+  <div class="fig">$50B<span class="label">Bitcoin held (843,738 BTC) — ~95% of asset value. Software is the other ~3%.</span></div>
+  <div class="fig">$1.55B<span class="label">Annual preferred dividends owed in cash, against a bitcoin pile that yields nothing.</span></div>
+  <div class="fig">~$23k<span class="label">BTC price at which common equity is wiped; preferred only impairs below ~$26k.</span></div>
+</section>
+
+<h2>Key questions, answered</h2>
+<p class="small">The questions investors, critics, and the press keep asking — adjudicated as fairly as we can, before the full analysis below.</p>
+<div class="qa">
+
+<h3><span>Q.</span>What does MSTR <em class="t">actually do</em>? Is it even a business?</h3>
+<p>Barely, in the conventional sense. Think of a real business as a <b>factory</b>: it takes inputs and converts them into a product or a stream of cash flow. Bitcoin-the-network is arguably such a business — it &ldquo;sells&rdquo; block space and security for fees. <b>MSTR is not a factory.</b> It is a financing machine bolted to a vault: it converts <em>capital-markets access</em> (equity, convertible debt, preferred) into <em>bitcoin</em>, and then holds it. Its legacy enterprise-analytics software unit (~$450M revenue, declining, ~breakeven) is worth perhaps ~$1.5B — under 5% of enterprise value — and is kept partly as a regulatory fig leaf (see the &lsquo;40 Act question below). So MSTR is best understood as a <b>listed, leveraged bitcoin holding company with a vestigial software arm</b>.</p>
+
+<h3><span>Q.</span>The key claim is that <em class="t">bitcoin-per-share grows</em>. How is that possible without magic?</h3>
+<p>It is real, and it is not magic — it is issuing stock above its own net asset value. <b>The S&amp;P metaphor:</b> imagine a closed-end fund that holds the S&amp;P 500 but, because it is fashionable, trades at <em>twice</em> the value of the index it owns. It issues a new share for $2, buys $2 of index, and — because the new shareholder handed over $2 for a claim on only ~$1 of index — <em>everyone&rsquo;s index-per-share goes up</em>. That is exactly MSTR&rsquo;s &ldquo;BTC Yield.&rdquo; It is the mirror image of a buyback: a company that buys its stock <em>below</em> intrinsic value raises per-share value; MSTR <em>sells</em> stock <em>above</em> NAV to raise BTC-per-share. The catch is fatal to the perpetual-motion story: <b>it only works while the stock trades above NAV.</b> At ~1.0&times; today, the engine is at stall speed; below 1.0&times; it runs in reverse and <em>destroys</em> bitcoin-per-share.</p>
+
+<h3><span>Q.</span>Is it a <em class="t">Ponzi scheme</em>?</h3>
+<p>No — not in any technical or legal sense. A Ponzi pays fake returns to old investors out of new investors&rsquo; money while lying about it. MSTR&rsquo;s assets are real, verifiable on-chain, and fully disclosed; nobody is promised a fixed return; there is no deception. <b>But</b> it shares <em>one</em> structural feature with reflexive schemes, and honest bulls admit it: above-NAV issuance means early holders&rsquo; bitcoin-per-share gains are funded by later investors paying a premium. Bloomberg&rsquo;s Matt Levine calls it a &ldquo;perpetual motion machine&rdquo; — accurate, and pointedly <em>not</em> a fraud allegation. The fairest verdict: <b>not a Ponzi, but a reflexive premium machine whose accretion only works above NAV</b> — and that premium has now largely unwound in plain view.</p>
+
+<h3><span>Q.</span>Will Saylor get <em class="t">liquidated</em>?</h3>
+<p>There is no margin-call &ldquo;liquidation&rdquo; button to press. The debt is <b>unsecured convertibles with 0–2.25% coupons</b> and no bitcoin pledged — a falling BTC price triggers no call. The preferred is <b>perpetual</b>, can be deferred, and never comes due. So a price crash alone cannot force a fire-sale. The real risk is slower and more reflexive: a permanent <b>~$1.5–1.6B/yr preferred dividend</b> that bitcoin cannot fund from income, plus laddered convert maturities (2027 onward) — met by issuing securities or <em>selling bitcoin</em>. Strategy already sold its first 32 BTC in June 2026 to fund a dividend. Solvency cushion is huge: common is only wiped if BTC falls below ~$23k, and the bondholders only below ~$8k. <b>Verdict: not a liquidation risk; a slow funding-drain and discount-to-NAV risk.</b></p>
+
+<h3><span>Q.</span>Is <em class="t">JPMorgan applying pressure</em> to MSTR?</h3>
+<p>Partly real, partly conspiracy. <b>Real:</b> JPMorgan published bearish research (Nov 2025) estimating $2.8–8.8B of forced passive selling if MSTR were dropped from major indices, says it prefers crypto names with real operating businesses, and Jamie Dimon is a long-standing bitcoin skeptic. <b>Speculation:</b> the viral &ldquo;JPMorgan is coordinating a short attack / hiked margin to crush MSTR&rdquo; narrative is sourced only to advocacy blogs and is <b>unverified</b> — we do not present it as fact. And the index threat eased when <b>MSCI declined to exclude</b> bitcoin-treasury companies in January 2026 (deferred, not resolved). Net: genuine analytical bearishness and a live index overhang — no evidence of manipulation.</p>
+
+</div>
+
+<h2><span class="n">1</span>What you are really betting on</h2>
+<p>Start with the asset, because it dictates the valuation method. <strong>Bitcoin is a commodity, and commodities have no intrinsic value</strong> — no coupon, no dividend, no cash flow to discount. A barrel of oil, an ounce of gold, a bitcoin: each is worth what the marginal buyer will pay, set by <em>supply and demand</em>, not by a stream of future cash flows. That is the opposite of an equity, whose intrinsic value <em>is</em> the present value of its cash flows. You cannot run a discounted-cash-flow model on a thing that produces no cash. The honest fair value of a bitcoin is its <strong>market price</strong>; the honest fair value of a pile of bitcoin is its <strong>net asset value (NAV)</strong> — mark-to-market, full stop.</p>
+<p>This is why a conventional &ldquo;stock valuation&rdquo; of MSTR is mostly a category error, and why the bulls and bears so often talk past each other. ~95% of MSTR&rsquo;s asset value is bitcoin, whose fair value is simply NAV. The only part of MSTR that <em>can</em> be valued like a normal equity is the small software business. So the correct framework is <strong>sum-of-the-parts</strong>: value the software on comparable-company multiples, value the bitcoin at NAV, subtract the debt and preferred that sit ahead of common, and you have the fair value of the equity. We do exactly that in &sect;5.</p>
+<p>What remains after that arithmetic is the real question: <strong>what are you actually betting on by owning the stock rather than the coin?</strong> Three things, in order of importance:</p>
+<ul>
+<li><strong>Bitcoin&rsquo;s direction, geared.</strong> With $22B of senior claims sitting beneath $50B of bitcoin, the common equity is a <b>~1.7&times; levered, convex claim on BTC</b> — it outperforms in up-markets and is destroyed faster in down-markets. This is the dominant driver by far.</li>
+<li><strong>The premium (mNAV).</strong> Whether the market pays above or below NAV for that levered exposure. This was the whole game in 2021–24; it is now ~1.0&times; and is the swing factor between &ldquo;fairly valued&rdquo; and &ldquo;value trap.&rdquo;</li>
+<li><strong>The financing carry and idiosyncratic risk.</strong> A permanent ~$1.55B/yr preferred coupon (~5% of NAV/yr), refinancing risk at convert maturities, key-man/governance, custody, and tax.</li>
+</ul>
+<div class="callout"><b>&ldquo;Asset-management clients turned into asymmetric partners.&rdquo;</b> Saylor&rsquo;s framing reclassifies shareholders from <em>fund investors</em> — who would rationally expect to pay ~NAV — into <em>partners</em> in a leveraged accumulation vehicle, who accept asymmetric, levered, junior-to-the-preferred risk in exchange for asymmetric upside. That reframing is precisely what justified the premium. As the premium fades, the &ldquo;partnership&rdquo; narrative is tested against the plain arithmetic of a closed-end fund trading at NAV.</div>
+
+<h2><span class="n">2</span>The premium that was the whole story — and its collapse</h2>
+<p>For four years, the interesting thing about MSTR was never the bitcoin; anyone could buy bitcoin. It was that the market paid a <em>premium</em> to NAV for MSTR&rsquo;s bitcoin — peaking near <strong>2.5&times;</strong> in December 2024. That premium did real work: it made above-NAV equity issuance accretive (the &ldquo;BTC Yield&rdquo; flywheel), and it was the single most contested number in the stock.</p>
+
+<span class="exlabel">Exhibit 1 · The premium has fully compressed to ~NAV</span>
+<p class="exnote">Multiple-to-NAV (enterprise basis) over time. The MSTR-specific overvaluation that defined the stock is essentially gone.</p>
+<div class="chart"><svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><line x1="54" y1="233.7" x2="704" y2="233.7" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="236.7" font-size="9" fill="#5E626B" text-anchor="end">0.5x</text><line x1="54" y1="189.4" x2="704" y2="189.4" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="192.4" font-size="9" fill="#5E626B" text-anchor="end">1.0x</text><line x1="54" y1="145.1" x2="704" y2="145.1" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="148.1" font-size="9" fill="#5E626B" text-anchor="end">1.5x</text><line x1="54" y1="100.9" x2="704" y2="100.9" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="103.9" font-size="9" fill="#5E626B" text-anchor="end">2.0x</text><line x1="54" y1="56.6" x2="704" y2="56.6" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="59.6" font-size="9" fill="#5E626B" text-anchor="end">2.5x</text><line x1="54" y1="189.4" x2="704" y2="189.4" stroke="#B23B3B" stroke-width="1.2" stroke-dasharray="5 4"/><text x="704" y="184.4" font-size="8.5" fill="#B23B3B" text-anchor="end" font-weight="600">1.0x = trades at net asset value</text><path d="M 54.0 136.3 L 108.2 100.9 L 162.3 127.4 L 216.5 109.7 L 270.7 56.6 L 324.8 92.0 L 379.0 109.7 L 433.2 127.4 L 487.3 154.0 L 541.5 176.1 L 595.7 167.3 L 649.8 180.6 L 704.0 192.1" fill="none" stroke="#B8902F" stroke-width="2"/><circle cx="54.0" cy="136.3" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="54.0" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">Jan'24</text><circle cx="108.2" cy="100.9" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><circle cx="162.3" cy="127.4" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="162.3" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">Jun'24</text><circle cx="216.5" cy="109.7" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><circle cx="270.7" cy="56.6" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="270.7" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">Dec'24</text><circle cx="324.8" cy="92.0" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><circle cx="379.0" cy="109.7" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="379.0" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">May'25</text><circle cx="433.2" cy="127.4" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><circle cx="487.3" cy="154.0" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="487.3" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">Sep'25</text><circle cx="541.5" cy="176.1" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><circle cx="595.7" cy="167.3" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="595.7" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">Jan'26</text><circle cx="649.8" cy="180.6" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><circle cx="704.0" cy="192.1" r="3" fill="#B8902F" stroke="#fff" stroke-width="1.2"/><text x="704.0" y="292.0" font-size="8.4" fill="#5E626B" text-anchor="middle">Jun'26</text><text x="270.7" y="47.6" font-size="8.4" fill="#15161A" text-anchor="middle" font-weight="700">~2.5x  Chanos shorts</text><text x="108.2" y="91.9" font-size="8.4" fill="#15161A" text-anchor="middle" font-weight="700">Kerrisdale short</text><text x="541.5" y="194.1" font-size="8.4" fill="#15161A" text-anchor="middle" font-weight="700">~1.15x  Chanos covers</text><text x="704.0" y="183.1" font-size="8.4" fill="#15161A" text-anchor="middle" font-weight="700">~1.0x  today</text><text x="54" y="18" font-size="8.6" fill="#5E626B">Multiple-to-NAV (mNAV), enterprise basis — illustrative from reported figures. The MSTR-specific premium has fully compressed.</text></svg></div>
+
+<p><b>The Louis Vuitton problem.</b> Paying 2.5&times; NAV for MSTR was like paying full retail for a Louis Vuitton bag when you could buy the <em>identical</em> bag direct from the contract manufacturer. The underlying &ldquo;leather&rdquo; — bitcoin — is the same; the markup is brand, access, and convenience (Saylor&rsquo;s conviction, index inclusion, a stock your 401(k) can hold). That markup was defensible when bitcoin was <em>hard to buy</em>. But the spot-bitcoin ETFs (IBIT and peers, ~0.25% fees) opened the factory door: anyone can now buy the bag direct, cheaply. With the premium back to ~1.0&times;, the LV markup has largely evaporated — you are now buying close to &ldquo;at cost,&rdquo; which is the bull&rsquo;s consolation and the bear&rsquo;s vindication at once.</p>
+<p>Jim Chanos built the canonical trade around exactly this: <em>long bitcoin, short MSTR</em>, harvesting the spread as the premium normalized. He entered around 2.5&times; and covered around 1.15&times; in November 2025 — the thesis worked, and he said so. The premium has since drifted to ~1.0&times;. <strong>The relevant point for a buyer today is that this trade is largely done:</strong> the easy premium-compression has happened. What is left is the levered bitcoin exposure and the structural carry — which is a very different proposition from the one the bears were short.</p>
+
+<h2><span class="n">3</span>The fortress: capital structure designed to survive a siege</h2>
+<p>Whatever one thinks of the strategy, the balance sheet is engineered with real skill — a fortress built to hold out as long as possible. The design goal is explicit: <strong>never be a forced seller.</strong> Three features deliver that.</p>
+<ul>
+<li><strong>Cheap, unsecured, long-dated debt.</strong> ~$6.7B of convertible notes at 0–2.25% coupons, no bitcoin pledged as collateral, laddered 2027–2032. No margin, no maintenance test — a falling BTC price triggers nothing.</li>
+<li><strong>Perpetual preferred.</strong> ~$15.5B across five series (STRK 8%, STRF 10%, STRD 10%, STRE 10%, STRC 11.5%) that <em>never mature</em> and whose dividends can be deferred in extremis. Permanent capital that cannot be called.</li>
+<li><strong>An equity ATM</strong> that can issue into strength. Together these mean the company can refinance and wait, rather than liquidate, through a drawdown.</li>
+</ul>
+
+<span class="exlabel">Exhibit 2 · The financing schedule — only the converts are hard cash walls</span>
+<p class="exnote">Convertible maturities by year (teal) vs. the perpetual preferred (gold). Color tells the story: small, laddered debt walls; a large, never-ending dividend obligation.</p>
+<div class="chart"><svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><line x1="54" y1="209.6" x2="704" y2="209.6" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="212.6" font-size="9" fill="#5E626B" text-anchor="end">$1B</text><line x1="54" y1="135.2" x2="704" y2="135.2" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="138.2" font-size="9" fill="#5E626B" text-anchor="end">$2B</text><line x1="54" y1="60.9" x2="704" y2="60.9" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="63.9" font-size="9" fill="#5E626B" text-anchor="end">$3B</text><rect x="81.1" y="205.9" width="54.2" height="78.1" fill="#2C6E6A"/><text x="108.2" y="201.9" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$1.05B</text><text x="108.2" y="299.0" font-size="9" fill="#5E626B" text-anchor="middle">2027</text><rect x="189.4" y="208.9" width="54.2" height="75.1" fill="#2C6E6A"/><text x="216.5" y="204.9" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$1.01B</text><text x="216.5" y="299.0" font-size="9" fill="#5E626B" text-anchor="middle">2028</text><rect x="297.8" y="172.4" width="54.2" height="111.6" fill="#2C6E6A"/><text x="324.8" y="168.4" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$1.50B</text><text x="324.8" y="299.0" font-size="9" fill="#5E626B" text-anchor="middle">2029</text><rect x="406.1" y="75.8" width="54.2" height="208.2" fill="#2C6E6A"/><text x="433.2" y="71.8" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$2.80B</text><text x="433.2" y="299.0" font-size="9" fill="#5E626B" text-anchor="middle">2030</text><rect x="514.4" y="239.4" width="54.2" height="44.6" fill="#2C6E6A"/><text x="541.5" y="235.4" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$0.60B</text><text x="541.5" y="299.0" font-size="9" fill="#5E626B" text-anchor="middle">2031</text><rect x="622.7" y="224.5" width="54.2" height="59.5" fill="#2C6E6A"/><text x="649.8" y="220.5" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$0.80B</text><text x="649.8" y="299.0" font-size="9" fill="#5E626B" text-anchor="middle">2032</text><rect x="54" y="6" width="650" height="20" fill="#B8902F" opacity="0.16"/><rect x="54" y="6" width="650" height="20" fill="none" stroke="#B8902F" stroke-width="1"/><text x="62" y="20" font-size="9.2" fill="#15161A" font-weight="700">Perpetual preferred  $15.5B  —  no maturity, but ~$1.55B/yr cash dividend forever (∞)</text><text x="54" y="316" font-size="8.5" fill="#5E626B">Convertible notes (teal) are the only hard cash walls — laddered, ~$6.7B total, all currently out-of-the-money. The preferred (gold) never matures but its dividend is a permanent cash drain.</text></svg></div>
+
+<p>But a fortress under siege still has a garrison to feed. The preferred&rsquo;s strength — permanence — is also its cost: a <strong>~$1.55B/yr cash dividend, forever</strong>, against an asset that yields nothing. That bill has grown from ~$0.3B/yr in early 2025 toward ~$1.5–1.6B as the preferred stack scaled. It is funded only two ways: <em>issue more securities</em> (which needs market access and, ideally, a premium) or <em>sell bitcoin</em>. In June 2026 the company crossed that Rubicon for the first time, selling 32 BTC to fund a distribution — small and symbolic, but a tell. The fortress is sound; the question is the cost of the siege over time.</p>
+
+<table>
+<caption>Capital structure at a glance (latest disclosures; prices 28 Jun 2026)</caption>
+<thead><tr><th>Layer</th><th class="num">Amount</th><th>Cost</th><th>Key feature</th></tr></thead>
+<tbody>
+<tr><td>Convertible notes (senior)</td><td class="num">~$6.7B</td><td>0–2.25% cash</td><td>Unsecured; laddered 2027–32; all out-of-the-money</td></tr>
+<tr><td>Preferred (STRK/STRF/STRD/STRE/STRC)</td><td class="num">~$15.5B</td><td>8–11.5%</td><td>Perpetual; ~$1.55B/yr cash dividend; deferrable</td></tr>
+<tr><td>Common equity (MSTR)</td><td class="num">~$29B</td><td>—</td><td>Residual ~1.7&times; levered BTC claim; dual-class (Saylor control)</td></tr>
+<tr class="total"><td>Asset side: bitcoin + cash + software</td><td class="num">~$53B</td><td>0% yield</td><td>843,738 BTC at NAV; software ~$1.5B</td></tr>
+</tbody>
+</table>
+
+<h2><span class="n">4</span>The real risk factors</h2>
+<p>Stripping away both the hype and the &ldquo;Ponzi&rdquo; noise, here is what actually threatens permanent capital loss for the common, roughly in order of how live each is.</p>
+<ol>
+<li><strong>Bitcoin drawdown (the master risk).</strong> Everything keys off one variable. At ~1.7&times; leverage, a 50% BTC fall is a far larger fall in MSTR&rsquo;s equity value, and the convexity turns vicious near the breakeven.</li>
+<li><strong>Discount-to-NAV / reflexivity reversal.</strong> Below 1.0&times; mNAV, the accretion machine inverts: issuance <em>shrinks</em> BTC-per-share, which justifies a deeper discount — a slow self-reinforcing spiral that destroys equity value without any default.</li>
+<li><strong>The preferred funding drain.</strong> ~$1.55B/yr of cash dividends with no operating cash flow to pay them. In a prolonged bear with markets shut, this forces dilutive issuance or bitcoin sales — the opposite of the accumulation thesis.</li>
+<li><strong>Refinancing walls.</strong> Convertibles must be repaid in cash at maturity if out-of-the-money (they all are). The walls are laddered and modest (~$2B in 2027–28 vs. $50B of BTC), so manageable unless capital markets are closed at the wrong moment.</li>
+<li><strong>Index exclusion.</strong> A future MSCI/S&amp;P decision to treat bitcoin-treasury companies as ineligible would force billions in passive selling (JPMorgan: $2.8–8.8B). MSCI deferred in Jan 2026 — the risk is postponed, not gone.</li>
+<li><strong>Tax (CAMT).</strong> The Corporate Alternative Minimum Tax can levy cash tax on <em>unrealized</em> bitcoin gains under fair-value accounting — a bizarre risk that could force BTC sales in an up-year. Policy-dependent and bidirectional.</li>
+<li><strong>Governance / key-man.</strong> Dual-class super-voting stock concentrates control in Michael Saylor; the strategy is inseparable from one person&rsquo;s conviction.</li>
+<li><strong>Custody &amp; regulatory.</strong> Single-asset custody risk, and the contingent &mdash; though currently remote &mdash; &lsquo;40 Act reclassification risk (only if bitcoin were deemed a security).</li>
+</ol>
+<div class="callout"><b>On the STRC &ldquo;Sharpe ratio of 3+&rdquo; claim.</b> Strategy has marketed its STRC preferred as having a Sharpe ratio above 3 — better than gold or Nvidia. Treat this with great caution. STRC is under a year old and its Sharpe is computed over a <em>~30-trading-day</em> window in which a deliberate price-anchoring mechanism held it in a $99.3–$100.1 band. A high Sharpe built on artificially low, short-window volatility is a <b>statistical illusion, not cycle-tested risk</b>; the low-vol premise is exactly what would break first if bitcoin&rsquo;s volatility forced dividend resets. Do not extrapolate it.</div>
+
+<h2><span class="n">5</span>Valuation — sum-of-the-parts, then the bet</h2>
+<p>We value MSTR the only way that respects what it is: software on comparable multiples, bitcoin at NAV, less the claims that rank ahead of common.</p>
+
+<span class="exlabel">Exhibit 3 · Sum-of-the-parts bridge to equity value</span>
+<p class="exnote">Bitcoin at mark-to-market NAV; software at comps; less convertible debt and preferred. Equity NAV vs. current market cap.</p>
+<div class="chart"><svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><line x1="54" y1="266.0" x2="704" y2="266.0" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="269.0" font-size="9" fill="#5E626B" text-anchor="end">$0B</text><line x1="54" y1="222.5" x2="704" y2="222.5" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="225.5" font-size="9" fill="#5E626B" text-anchor="end">$10B</text><line x1="54" y1="179.0" x2="704" y2="179.0" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="182.0" font-size="9" fill="#5E626B" text-anchor="end">$20B</text><line x1="54" y1="135.5" x2="704" y2="135.5" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="138.5" font-size="9" fill="#5E626B" text-anchor="end">$30B</text><line x1="54" y1="92.1" x2="704" y2="92.1" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="95.1" font-size="9" fill="#5E626B" text-anchor="end">$40B</text><line x1="54" y1="48.6" x2="704" y2="48.6" stroke="#E2E4E8" stroke-width="1"/><text x="48" y="51.6" font-size="9" fill="#5E626B" text-anchor="end">$50B</text><rect x="69.8" y="47.7" width="61.3" height="218.3" fill="#B8902F"/><text x="100.4" y="43.7" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$50.2B</text><text x="100.4" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Bitcoin</text><text x="100.4" y="290.0" font-size="8.2" fill="#5E626B" text-anchor="middle">(at NAV)</text><rect x="162.6" y="41.2" width="61.3" height="6.5" fill="#C9A24B"/><text x="193.3" y="37.2" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$1.5B</text><text x="193.3" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Software</text><text x="193.3" y="290.0" font-size="8.2" fill="#5E626B" text-anchor="middle">(comps)</text><rect x="255.5" y="35.5" width="61.3" height="5.7" fill="#C9A24B"/><text x="286.1" y="31.5" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$1.3B</text><text x="286.1" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Cash</text><rect x="348.4" y="64.7" width="61.3" height="29.1" fill="#2C6E6A"/><text x="379.0" y="60.7" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$6.7B</text><text x="379.0" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Conv. debt</text><rect x="441.2" y="132.1" width="61.3" height="67.4" fill="#B23B3B"/><text x="471.9" y="128.1" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$15.5B</text><text x="471.9" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Preferred</text><rect x="534.1" y="132.1" width="61.3" height="133.9" fill="#15161A"/><text x="564.7" y="128.1" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$30.8B</text><text x="564.7" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Equity NAV</text><rect x="626.9" y="138.2" width="61.3" height="127.8" fill="#6E7B8A"/><text x="657.6" y="134.2" font-size="9" fill="#15161A" text-anchor="middle" font-weight="700">$29.4B</text><text x="657.6" y="280.0" font-size="8.2" fill="#5E626B" text-anchor="middle">Market cap</text><text x="54" y="16" font-size="8.6" fill="#5E626B">Sum-of-the-parts: software valued on comps, bitcoin at mark-to-market NAV, less senior claims. Equity NAV $31B ($86/sh) vs market cap $29B ($82/sh).</text></svg></div>
+
+<table>
+<caption>Sum-of-the-parts fair value (28 Jun 2026)</caption>
+<thead><tr><th>Component</th><th>Method</th><th class="num">Value</th></tr></thead>
+<tbody>
+<tr><td>Software business</td><td>~$450M revenue &times; ~3&times; EV/sales (low-growth BI comps)</td><td class="num">~$1.5B</td></tr>
+<tr><td>Bitcoin (843,738 BTC)</td><td>NAV (mark-to-market @ $59,500)</td><td class="num">$50.2B</td></tr>
+<tr><td>Cash / USD reserve</td><td>Book</td><td class="num">~$1.3B</td></tr>
+<tr><td>Less: convertible debt</td><td>Principal</td><td class="num">($6.7B)</td></tr>
+<tr><td>Less: preferred</td><td>Liquidation preference</td><td class="num">($15.5B)</td></tr>
+<tr class="total"><td>Equity fair value</td><td>~357M shares</td><td class="num">$31B · ~$86/sh</td></tr>
+</tbody>
+</table>
+<p>At ~$86/share fair value versus ~$82 traded, <strong>MSTR is roughly fairly valued to NAV — arguably marginally cheap.</strong> This is the single most important shift in the story: the large idiosyncratic overvaluation is gone. Note the SOTP confirms the &ldquo;not really a business&rdquo; point — the software contributes ~$1.5B of a ~$53B asset base; this is a bitcoin balance sheet with a software footnote.</p>
+
+<h3>What you actually own: a levered, convex BTC claim</h3>
+<span class="exlabel">Exhibit 4 · MSTR is a geared, convex bet on bitcoin</span>
+<p class="exnote">Fair value per share as bitcoin moves, vs. holding bitcoin directly. Above today, leverage amplifies upside; below, it underperforms and the equity is wiped near $23k.</p>
+<div class="chart"><svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><line x1="58" y1="294.0" x2="704" y2="294.0" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="297.0" font-size="9" fill="#5E626B" text-anchor="end">$0</text><line x1="58" y1="254.6" x2="704" y2="254.6" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="257.6" font-size="9" fill="#5E626B" text-anchor="end">$50</text><line x1="58" y1="215.2" x2="704" y2="215.2" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="218.2" font-size="9" fill="#5E626B" text-anchor="end">$100</text><line x1="58" y1="175.8" x2="704" y2="175.8" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="178.8" font-size="9" fill="#5E626B" text-anchor="end">$150</text><line x1="58" y1="136.4" x2="704" y2="136.4" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="139.4" font-size="9" fill="#5E626B" text-anchor="end">$200</text><line x1="58" y1="96.9" x2="704" y2="96.9" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="99.9" font-size="9" fill="#5E626B" text-anchor="end">$250</text><line x1="58" y1="57.5" x2="704" y2="57.5" stroke="#E2E4E8" stroke-width="1"/><text x="52" y="60.5" font-size="9" fill="#5E626B" text-anchor="end">$300</text><text x="58.0" y="309.0" font-size="8.6" fill="#5E626B" text-anchor="middle">$0k</text><text x="219.5" y="309.0" font-size="8.6" fill="#5E626B" text-anchor="middle">$40k</text><text x="381.0" y="309.0" font-size="8.6" fill="#5E626B" text-anchor="middle">$80k</text><text x="542.5" y="309.0" font-size="8.6" fill="#5E626B" text-anchor="middle">$120k</text><text x="704.0" y="309.0" font-size="8.6" fill="#5E626B" text-anchor="middle">$160k</text><path d="M 58.0 294.0 L 704.0 111.1" fill="none" stroke="#6E7B8A" stroke-width="1.6" stroke-dasharray="5 4"/><path d="M 58.0 294.0 L 74.2 294.0 L 90.3 294.0 L 106.5 294.0 L 122.6 294.0 L 138.8 294.0 L 154.9 292.1 L 171.1 284.7 L 187.2 277.2 L 203.3 269.8 L 219.5 262.3 L 235.7 254.9 L 251.8 247.4 L 267.9 240.0 L 284.1 232.5 L 300.2 225.1 L 316.4 217.6 L 332.6 210.2 L 348.7 202.7 L 364.9 195.3 L 381.0 187.8 L 397.1 180.3 L 413.3 172.9 L 429.4 165.4 L 445.6 158.0 L 461.8 150.5 L 477.9 143.1 L 494.1 135.6 L 510.2 128.2 L 526.4 120.7 L 542.5 113.3 L 558.6 105.8 L 574.8 98.4 L 591.0 90.9 L 607.1 83.5 L 623.2 76.0 L 639.4 68.6 L 655.5 61.1 L 671.7 53.7 L 687.9 46.2 L 704.0 38.8" fill="none" stroke="#B8902F" stroke-width="2.2"/><line x1="298.2" y1="26" x2="298.2" y2="294" stroke="#15161A" stroke-width="1" stroke-dasharray="2 3"/><text x="302.2" y="36.0" font-size="8.4" fill="#15161A" font-weight="700">BTC today $59k</text><circle cx="298.2" cy="226.0" r="3.4" fill="#B8902F" stroke="#fff" stroke-width="1.3"/><circle cx="150.8" cy="294.0" r="3.4" fill="#B23B3B" stroke="#fff" stroke-width="1.3"/><text x="155.8" y="288.0" font-size="8.2" fill="#B23B3B" font-weight="700">equity wiped ~$23k</text><text x="542.5" y="105.3" font-size="8.6" fill="#B8902F" text-anchor="middle" font-weight="700">MSTR (~1.7x levered, convex)</text><text x="663.6" y="136.5" font-size="8.6" fill="#6E7B8A" text-anchor="middle" font-weight="700">direct BTC</text><text x="58" y="16" font-size="8.6" fill="#5E626B">Fair value/share vs BTC price (software+cash+BTC − senior claims). Above today MSTR levers BTC upside; below, it underperforms and is wiped near $23k.</text></svg></div>
+<p>Because $22B of senior claims sit beneath the bitcoin, the common behaves like a <strong>call option on bitcoin struck around $26k</strong>: convex and geared to the upside, with total loss in a deep enough decline. That convexity — not a premium — is now the core of the bull case. It also means any single &ldquo;price target&rdquo; is really a bet on bitcoin; the table below makes the conditionality explicit.</p>
+
+<table>
+<caption>Scenario fair value — conditional on bitcoin and the premium (12–18 month frame)</caption>
+<thead><tr><th>Scenario</th><th class="num">BTC</th><th class="num">BTC value</th><th class="num">Equity NAV</th><th class="num">mNAV</th><th class="num">FV/share</th><th class="num">vs $82</th></tr></thead>
+<tbody>
+<tr><td><b>Bear</b></td><td class="num">$32k</td><td class="num">$27B</td><td class="num">$8B</td><td class="num">0.85x</td><td class="num">$18</td><td class="num con">-78%</td></tr>
+<tr><td><b>Base</b></td><td class="num">$60k</td><td class="num">$50B</td><td class="num">$31B</td><td class="num">1.00x</td><td class="num">$86</td><td class="num pro">+5%</td></tr>
+<tr><td><b>Bull</b></td><td class="num">$120k</td><td class="num">$101B</td><td class="num">$82B</td><td class="num">1.20x</td><td class="num">$275</td><td class="num pro">+234%</td></tr>
+</tbody>
+</table>
+<p class="small">Per-share figures hold share count constant and ignore further accretion/dilution; they are directional, not point forecasts. Probabilities are deliberately omitted because the expected value is almost entirely a function of one&rsquo;s bitcoin view — which is the honest summary of the whole security.</p>
+
+<h3>MSTR vs. a levered bitcoin ETF at the same risk</h3>
+<p>If the goal is geared bitcoin exposure, MSTR is one option among several now. Held at risk parity against, say, a 2&times; bitcoin ETF, the trade-offs are:</p>
+<ul>
+<li><span class="pro">MSTR advantages:</span> <b>term leverage with no margin calls and no daily-reset volatility decay.</b> A 2&times; daily ETF (e.g., MSTU/MSTX-style products) bleeds value in choppy markets through rebalancing; MSTR&rsquo;s leverage is long-dated and refinanced, not rebalanced, so it has no path-decay and cannot be liquidated on a wick.</li>
+<li><span class="con">MSTR disadvantages:</span> a <b>~5%/yr preferred carry</b> ($1.55B on ~$31B NAV), <b>tracking error</b> to bitcoin via a premium/discount that an ETF does not have (MSTR can de-rate to a discount; an ETF tracks NAV by construction), plus idiosyncratic key-man, refinancing, index, and tax risk.</li>
+</ul>
+<p>The clean way to say it: <strong>MSTR is crash-resistant leverage with a carry and a wildcard premium; a levered ETF is clean BTC beta with decay and a margin/borrow cost.</strong> Which is &ldquo;better&rdquo; depends on horizon (MSTR&rsquo;s no-decay edge compounds over long holds) and on your read of the premium (now near 1.0&times;, the historical tailwind/headwind is roughly neutral).</p>
+
+<h2><span class="n">6</span>The polarizing part: vision, ambassadorship, and the critics</h2>
+<p>Few stocks split serious people as cleanly as MSTR, because two true things sit uncomfortably together: the strategy is intellectually coherent <em>and</em> structurally fragile. A fair note gives both sides their best voice.</p>
+
+<h3>The bull case &amp; Saylor as bitcoin&rsquo;s ambassador</h3>
+<p>Michael Saylor is, by common consent on both sides, the most effective corporate evangelist bitcoin has had — free education (Saylor Academy), an open-sourced &ldquo;treasury company&rdquo; playbook now copied worldwide, and a vocabulary that gave holders conviction through 50%+ drawdowns. The underlying thesis is serious: cash is a melting asset, bitcoin is durable &ldquo;digital capital,&rdquo; and intelligent, non-callable leverage lets a public company accumulate it across decades.</p>
+<blockquote>&ldquo;Bitcoin is a swarm of cyber hornets serving the goddess of wisdom, feeding on the fire of truth, exponentially growing ever smarter, faster, and stronger behind a wall of encrypted energy.&rdquo;<cite>Michael Saylor, 2020</cite></blockquote>
+<blockquote>&ldquo;#Bitcoin is the Apex Property of the Human Race.&rdquo; · &ldquo;There is no second best.&rdquo;<cite>Michael Saylor, 2024 (keynote theme)</cite></blockquote>
+<blockquote>&ldquo;I&rsquo;m going to be buying the top forever. Bitcoin is the exit strategy.&rdquo;<cite>Michael Saylor, Bloomberg, Feb 2024</cite></blockquote>
+<blockquote>&ldquo;If you&rsquo;re a short seller and your thesis is the company&rsquo;s got to sell equity in order to fund the dividends, I would like nothing better than to&hellip; rip your wings off.&rdquo;<cite>Michael Saylor, Q1 2026 earnings call</cite></blockquote>
+<p class="small">A fair-disclosure footnote to the bull case: the &ldquo;never sell&rdquo; promise is no longer literally true. After a ~$12.5B Q1 2026 loss, Saylor said Strategy would &ldquo;probably sell some bitcoin&rdquo; to fund dividends and executed a small (32 BTC) sale in June 2026, which he framed as a tactical brushback at short-sellers. The thesis is intact; the absolutism is not.</p>
+<p><b>Tom Lee&rsquo;s Exxon precedent.</b> Fundstrat&rsquo;s Tom Lee argues there is S&amp;P precedent for valuing a company on a commodity it holds — Exxon was a top company for a generation, valued on its oil. Examined, the analogy actually cuts toward NAV, not premium: Exxon is an <em>operating</em> business that finds, extracts, refines, and <em>sells</em> oil — converting a commodity into cash flow. MSTR does none of that; it holds. The honest comparable is a <em>closed-end commodity fund</em>, which trades at NAV (often a discount), not a premium — which is exactly where MSTR has landed.</p>
+<p><b>Wall Street&rsquo;s structured-product validation.</b> Bulls note that Goldman, Morgan Stanley, and JPMorgan now issue bitcoin-linked structured notes, and that MSTR single-stock ETFs (MSTY ~$4B, MSTU ~$1.6B, MSTX ~$1.2B) have multiplied — evidence that institutions are happy to build levered/income products on bitcoin and on MSTR. True, and a real demand signal. The double edge: it also confirms MSTR&rsquo;s &ldquo;unique access&rdquo; moat is gone (you can get geared bitcoin a dozen ways now), and the reflexive ETF flows add volatility.</p>
+
+<h3>The bear case, in the critics&rsquo; own words</h3>
+<blockquote class="q2">&ldquo;We&rsquo;re selling MicroStrategy stock and buying bitcoin&hellip; basically buying something for $1, selling it for $2.50.&rdquo;<cite>Jim Chanos, May 2025 (trade closed ~1.15&times; in Nov 2025)</cite></blockquote>
+<blockquote class="q2">&ldquo;None of the reasons cited for the stock&rsquo;s relative attractiveness justify paying well over double for the same coin.&rdquo;<cite>Kerrisdale Capital short report, 2024</cite></blockquote>
+<blockquote class="q2">&ldquo;If you buy $100 of Bitcoin and put it in a pot, you can slice the pot into shares and sell them for $200&hellip; a perpetual motion machine.&rdquo;<cite>Matt Levine, Bloomberg (mechanism, not fraud)</cite></blockquote>
+<blockquote class="q2">&ldquo;A company that believes it is issuing equity at a premium when it is not can easily end up making value-destructive financing decisions.&rdquo;<cite>NYDIG Research, on the &ldquo;BTC Yield&rdquo; metric, 2025</cite></blockquote>
+<p>The bears&rsquo; strongest point is not &ldquo;fraud&rdquo; — it is that the accretion engine is premium-dependent and reverses below NAV, and that &ldquo;BTC Yield&rdquo; is a self-defined, methodology-sensitive metric that can flatter value-destructive issuance. That critique has largely <em>played out</em> in the de-rating to ~1.0&times;. The sharpest forward-looking worry is the preferred drain meeting a sustained discount — the reflexive reversal — not a sudden liquidation. <span class="small">(Note on attribution: the widely-shared &ldquo;leveraged Ponzi&rdquo; line often pinned to David Gerard was in fact a commenter&rsquo;s; Chanos&rsquo;s own word was &ldquo;gibberish,&rdquo; not &ldquo;Ponzi.&rdquo;)</span></p>
+
+<h2><span class="n">7</span>Conclusion — what we think it is worth, and the open questions</h2>
+<p><strong>Fair value ~$86/share at spot bitcoin, versus ~$82 traded — roughly fairly valued, arguably marginally cheap to NAV.</strong> The MSTR-specific overvaluation that defined the stock for four years has corrected: the premium is back to ~1.0&times;, the trade the bears made is largely complete, and what remains is a clean-ish, ~1.7&times; levered, convex claim on bitcoin carrying a permanent ~$1.55B/yr preferred coupon and refinancing/reflexivity risk.</p>
+<p><strong>What you are really buying:</strong> not &ldquo;bitcoin at a discount&rdquo; and not &ldquo;free alpha,&rdquo; but <em>geared bitcoin without margin-call risk or daily-reset decay</em>, minus a carry, minus the optionality of the premium (now neutral), plus idiosyncratic risk. Over a long horizon and a constructive bitcoin view, the no-liquidation leverage is genuinely valuable and the stock should outperform spot BTC. Over a flat-to-down bitcoin path, the preferred drain and a potential slide to a <em>discount</em> make it a poor substitute for simply holding the coin (or a spot ETF). It is, in the cleanest terms, a <b>leveraged bet on bitcoin&rsquo;s direction with extra ways to be right and extra ways to be wrong.</b></p>
+<p><strong>Is it a fraud, a Ponzi, about to be liquidated?</strong> No, no, and no — on the evidence. It is a real, fully-disclosed, over-collateralized balance sheet with a fortress liability structure. But it is also <em>not</em> a perpetual motion machine, and the parts of the bear case that were structurally true (premium-dependence, the preferred drain, the &ldquo;not really a business&rdquo; point) are real and now visibly in play.</p>
+<h3>Open questions we are still watching</h3>
+<ul>
+<li>Does mNAV stabilize at ~1.0&times;, or break into a <em>persistent discount</em> that inverts the model?</li>
+<li>How is the ~$1.55B/yr preferred coupon funded through a bear — issuance, or accelerating bitcoin sales (the June 2026 sale being the first)?</li>
+<li>The deferred MSCI/S&amp;P index question — exclusion would force passive selling on a vulnerable float.</li>
+<li>CAMT cash-tax treatment of unrealized gains — still policy-dependent.</li>
+<li>Succession/governance: how much of the premium (and the conviction bid) is Saylor-specific?</li>
+</ul>
+
+<div class="disc">
+<h3>Disclosures</h3>
+<p><b>Position.</b> TON618 Capital and its principal are <b>long bitcoin</b>. We hold <b>no position in MSTR common stock, MSTR derivatives, or MSTR&rsquo;s preferred or convertible securities</b>, long or short. This note is independent of any MSTR security position.</p>
+<p><b>Information only.</b> This material is for information purposes only. It is not an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and it is not investment, legal, tax, or accounting advice or a recommendation regarding any instrument.</p>
+<p><b>Not an investment adviser / broker-dealer; publisher&rsquo;s exclusion.</b> TON618 Capital is not registered as an investment adviser or broker-dealer. This research is general, impersonal commentary published under the publisher&rsquo;s exclusion to the definition of &ldquo;investment adviser&rdquo; (Section 202(a)(11)(D) of the Investment Advisers Act of 1940) and does not account for any reader&rsquo;s objectives or circumstances. Readers should consult their own advisers.</p>
+<p><b>AI use.</b> This note was prepared with the assistance of AI research tools. All capital-structure figures were taken from primary SEC filings; quotations were verified against primary or reputable secondary sources, and items that could not be verified were excluded or flagged.</p>
+<p><b>CFA marks.</b> CFA&reg; and Chartered Financial Analyst&reg; are trademarks owned by CFA Institute. References to CFA Institute analytical standards indicate methodology only and do not imply CFA Institute endorsement.</p>
+<p><b>Risk &amp; methodology.</b> Valuation is sum-of-the-parts: software on comparable multiples, bitcoin at mark-to-market NAV, less senior claims at face/liquidation value. Fair-value and scenario figures are estimates with wide uncertainty, dominated by the bitcoin price path; they are not forecasts. Capital structure is as of the Q1 2026 10-Q (period 31 Mar 2026) and the 26 May 2026 8-K; prices are MSTR&rsquo;s 26 Jun 2026 close ($82.31) and bitcoin ~$59,500 (28 Jun 2026). Share count, cash, and preferred notional are approximate and move with ongoing issuance. Digital assets are highly volatile and may result in total loss of capital. Past performance is not indicative of future results. We welcome corrections and feedback.</p>
+<h3>Selected sources</h3>
+<ul class="refs">
+<li>Strategy Inc. Form 10-Q, period 2026-03-31 (CIK 1050446, accession 0001050446-26-000031); Form 10-K, FY2025 (accession 0001050446-26-000020); 8-K, 26 May 2026 — SEC EDGAR.</li>
+<li>VanEck (M. Sigel), &ldquo;Deconstructing Strategy (MSTR): Premium, Leverage, and Capital Structure.&rdquo;</li>
+<li>J. Chanos remarks, Sohn Conference / CNBC (May 2025) via CoinDesk, DL News, Protos; Kerrisdale Capital short report (Mar 2024) via CoinDesk / The Block.</li>
+<li>M. Levine, Bloomberg &ldquo;Money Stuff&rdquo;; NYDIG Research, &ldquo;DAT Financing Decisions Are Being Driven by the Wrong Metric&rdquo; (Dec 2025).</li>
+<li>JPMorgan (N. Panigirtzoglou) index-exclusion estimate (Nov 2025) via The Block / TheStreet; MSCI consultation outcome (Jan 2026) via Yahoo Finance / Bitcoin Magazine.</li>
+<li>T. Lee (Fundstrat) ExxonMobil analogy (Aug 2025); STRC Sharpe-ratio analysis via AInvest / Wall Street Pit; BitMEX Research, &ldquo;Can MSTR get liquidated?&rdquo;</li>
+</ul>
+<p class="small">&copy; 2026 TON618 Capital. Strategy&trade;, MicroStrategy&reg;, and ticker MSTR are marks of Strategy Inc., used for identification only.</p>
+</div>
+</main></body></html>
