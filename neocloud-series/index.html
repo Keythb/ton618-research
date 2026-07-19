@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The AI Buildout, in Four Notes — TON618 Capital</title>
+<meta name="description" content="An equity valuation of Oracle (ORCL). After a 64% fall from its AI-hype peak, Oracle prices its OCI/AI bet at the base case. Sum-of-the-parts fair value approximately 119 dollars vs 124. Roughly fair, risks skewed down.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+code{font-family:var(--sans);font-size:.85em;background:var(--soft);padding:1px 5px;border-radius:3px;}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Series Overview<br>As of July 16, 2026<br>v1.0</span>
+</div>
+
+<div class="kicker">Series Overview · AI Infrastructure</div>
+<h1>The AI Buildout, in Four Notes</h1>
+<p class="dek">A Reader's Guide to the Series: One Question, Two Lenses, Two Tests — and the Two Undisclosed Numbers the Whole Complex Is Priced On</p>
+<p class="byline">TON618 Capital Research · As of July 16, 2026 · <a class="pdf-link" href="TON618_AI-Buildout-Series_Readers_Guide.pdf">Download PDF</a></p>
+<p class="small">A reader's guide, not new research. This short note explains how four TON618 research pieces fit together and what they conclude jointly; every figure below is sourced and hedged in the underlying note it comes from, and the underlying notes — not this summary — are the reference documents. Nothing here is a recommendation regarding any security.</p>
+
+<h2><span class="n">§0</span> One Question, Asked Four Ways</h2>
+<p>The series began with a simple observation: the AI infrastructure buildout is the largest capital deployment in corporate history, and nearly all of it is financed — with debt, with vendor money, and against contracts. That raises one question, and each note in the series asks it through a different instrument:</p>
+<p>&gt; <strong>When an AI buildout is financed like this, what is actually left for the investor — and is anyone pricing the difference between the headline and the reality?</strong></p>
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:var(--sans)">
+<rect x="30" y="20" width="300" height="72" rx="6" fill="#bfa14a" opacity="0.16" stroke="#bfa14a" stroke-width="1"/>
+<text x="180" y="44" text-anchor="middle" fill="#2a2c31" font-size="13" font-weight="bold">1 · The Depreciation Question</text>
+<text x="180" y="62" text-anchor="middle" fill="#55585f" font-size="11.5">the EARNINGS lens</text>
+<text x="180" y="79" text-anchor="middle" fill="#55585f" font-size="11.5">are reported profits real?</text>
+<rect x="370" y="20" width="300" height="72" rx="6" fill="#bfa14a" opacity="0.16" stroke="#bfa14a" stroke-width="1"/>
+<text x="520" y="44" text-anchor="middle" fill="#2a2c31" font-size="13" font-weight="bold">2 · The Neocloud Fuse</text>
+<text x="520" y="62" text-anchor="middle" fill="#55585f" font-size="11.5">the CREDIT lens</text>
+<text x="520" y="79" text-anchor="middle" fill="#55585f" font-size="11.5">what does the debt market already know?</text>
+<line x1="180" y1="92" x2="330" y2="140" stroke="#8a8d95" stroke-width="1.2"/>
+<line x1="520" y1="92" x2="370" y2="140" stroke="#8a8d95" stroke-width="1.2"/>
+<rect x="215" y="140" width="270" height="52" rx="6" fill="#5b7fb0" opacity="0.14" stroke="#5b7fb0" stroke-width="1"/>
+<text x="350" y="162" text-anchor="middle" fill="#2a2c31" font-size="12.5" font-weight="bold">the residual lands on the EQUITY</text>
+<text x="350" y="180" text-anchor="middle" fill="#55585f" font-size="11.5">has the stock market priced it? — two tests</text>
+<line x1="280" y1="192" x2="180" y2="228" stroke="#8a8d95" stroke-width="1.2"/>
+<line x1="420" y1="192" x2="520" y2="228" stroke="#8a8d95" stroke-width="1.2"/>
+<rect x="30" y="228" width="300" height="58" rx="6" fill="#7a7d85" opacity="0.12" stroke="#7a7d85" stroke-width="1"/>
+<text x="180" y="250" text-anchor="middle" fill="#2a2c31" font-size="13" font-weight="bold">3 · Oracle — The Round Trip</text>
+<text x="180" y="268" text-anchor="middle" fill="#55585f" font-size="11.5">the test WITH a floor · FV ≈ $114 vs $124</text>
+<rect x="370" y="228" width="300" height="58" rx="6" fill="#7a7d85" opacity="0.12" stroke="#7a7d85" stroke-width="1"/>
+<text x="520" y="250" text-anchor="middle" fill="#2a2c31" font-size="13" font-weight="bold">4 · CoreWeave — The Thin Floor</text>
+<text x="520" y="268" text-anchor="middle" fill="#55585f" font-size="11.5">the test WITHOUT one · FV ≈ $60 vs $73</text>
+</svg>
+<p>Two notes examine the machinery — one through the accounting, one through the credit markets. Their shared finding is that <strong>the risk in this buildout does not sit where the headlines put it, and it ultimately lands on the shareholder.</strong> The last two notes then test whether the shareholders in the two most exposed public securities have priced that — one company with a real business underneath its bet, and one that <em>is</em> the bet.</p>
+<h2><span class="n">§1</span> The Four Notes, Each in a Paragraph</h2>
+<p>**1 · <em>The Depreciation Question</em> — are the earnings real?<strong> Six large AI-infrastructure builders depreciate their servers and GPUs over roughly six years, while the hardware's economic life — set by Nvidia's roughly annual release cadence — is argued to be closer to three or four. Restating the six companies on a realistic schedule finds on the order of </strong>$221 billion of depreciation that current schedules defer out of 2026–28 earnings<strong>, with reported FY25 profits overstated by roughly </strong>4–17%<strong> depending on the company. The distortion follows a dose-response rule: </strong>the more a company spends on hardware relative to its income, the more its earnings overstate reality.** Oracle sits at the extreme of the profitable names; CoreWeave is the limiting case — charge realistic depreciation and its results flip sign entirely.</p>
+<p>**2 · <em>The Neocloud Fuse</em> — what does the credit market already know?<strong> Reading the SEC filings behind the ~$1.4 trillion of announced AI compute commitments finds that the binding share is a fraction of the headline — letters of intent that never converted, "up to" ceilings, partially-binding gigawatts — while the counterparties behind the largest contracts are funded in a partly circular loop. The credit market has quietly priced this: the same issuer, CoreWeave, borrows </strong>secured and non-recourse at Treasuries +200bp and unsecured at roughly Treasuries +534bp, simultaneously** — a ~334bp wedge that says the market will finance the <em>assets</em> but not the <em>company</em>. The note's conclusion is structural: when lenders protect themselves this way, <strong>the residual risk does not disappear — it moves down the capital structure, to the equity.</strong> Whether the equity market has priced <em>that</em> is the question the note hands to the two valuations.</p>
+<p>**3 · <em>Oracle — The Round Trip</em> — the test with a floor.<strong> Oracle is two companies in one ticker: a mature ~42%-margin software annuity worth about </strong>$72 a share<strong> on its own, plus a debt-funded AI-infrastructure bet whose backlog ($638B) is reportedly half one undisclosed counterparty and whose margins the company will not print (the one leaked figure: ~14% gross). After a </strong>64% fall<strong> from its September 2025 peak, the market now pays ~$52 a share for that bet — almost exactly its base-case value. Three methods triangulate fair value at </strong>≈$114 against $124.21<strong> (−8%): roughly fair, no margin of safety, risks skewed down. Oracle's investor is mostly exposed to </strong>whether the AI revenue is real.**</p>
+<p>**4 · <em>CoreWeave — The Thin Floor</em> — the test without one.** CoreWeave is the pure play: a GPU landlord with no second business, $25B of debt, and revenue that is — unusually — <em>more</em> contracted than its peers' (take-or-pay, prepaid, Microsoft-anchored). But the contracted book, run off and netted against the debt, covers only <strong>~$10 of the $72.91 price — a seventh</strong> — so ~86% of the price is a levered growth option whose value swings on a number nobody will disclose: the economic life of a GPU (six years on CoreWeave's books; three to four by the hardware cadence). Fair value triangulates at <strong>≈$60</strong> (−18%), inside an honest range of <strong>$17 to $114.</strong> CoreWeave's investor is mostly exposed to <strong>whether the AI economics are good.</strong></p>
+<h2><span class="n">§2</span> The Through-Line</h2>
+<p>Read in sequence, the four notes make one argument:</p>
+<ul>
+<li><strong>The earnings are flattered</strong> (Note 1): six-year depreciation schedules on three-to-four-year hardware defer real costs out of today's reported profits — most severely at exactly the companies spending the most.</li>
+<li><strong>The credit market has noticed</strong> (Note 2): lenders finance the hardware and the contracts cheaply while charging the <em>companies</em> deep high-yield spreads. The 334bp wedge is that skepticism, printed in public filings.</li>
+<li><strong>The residual lands on the equity</strong> (Notes 2→3→4): secured lenders take the assets, unsecured lenders take a spread — whatever goes wrong after that belongs to the shareholder.</li>
+<li><strong>And the equity market has now largely priced the base case — but only the base case</strong> (Notes 3 and 4). Oracle at −8% to fair value and CoreWeave at −18% are not bubbles; both corrected hard from their 2025 peaks. But neither price carries a discount for its well-supported bear case, and both bear cases rest on the same two facts nobody outside the companies can verify.</li>
+</ul>
+<p>Which yields the series' single sentence:</p>
+<p>&gt; <strong>The AI buildout's public securities are priced for their base cases, with no margin of safety, on two numbers that remain undisclosed: the solvency of the biggest counterparty, and the true useful life of a GPU.</strong></p>
+<p>Everything in the four notes is an elaboration, a test, or a falsifier of that sentence.</p>
+<h2><span class="n">§3</span> Where the Notes Disagree, and Why That Is the Point</h2>
+<p>The series was built to check itself, and the internal tensions are deliberate:</p>
+<ul>
+<li>**The thematic note's biggest fear is <em>least</em> true at the purest neocloud.** <em>The Neocloud Fuse</em> worried about ceiling-shaped contracts with shaky counterparties; CoreWeave's book is take-or-pay, prepaid, and anchored by Microsoft. The CoreWeave note says so plainly — the demand risk concentrated at Oracle, not at the neocloud. One thesis, tested honestly, came back half-right.</li>
+<li><strong>The two valuations' risks are mirror images.</strong> Oracle has the thick floor and the questionable demand; CoreWeave has the certain demand and the thin floor. An investor in the pair is not diversified — they hold the same bet through two different failure modes.</li>
+<li><strong>The depreciation thesis matters differently at each name.</strong> At Oracle it is an earnings-quality overlay (margins overstated on the way to an already-fair valuation). At CoreWeave it is existential — the difference between a 21% steady-state margin and roughly 1% <em>is</em> the fair-value range.</li>
+</ul>
+<h2><span class="n">§4</span> The Consolidated Dashboard</h2>
+<p>The four notes each carry falsifiers; these are the ones that move the whole series:</p>
+<ul>
+<li><strong>An OCI margin disclosure from Oracle</strong> — above ~20% validates the base cases across the series; low teens confirms the bears.</li>
+<li><strong>CoreWeave's first contract renewals</strong> — renewal at or near original rates would defeat the depreciation-treadmill thesis at its strongest point; steep discounts confirm it.</li>
+<li><strong>OpenAI's S-1 flipping public</strong> (confidentially submitted June 8, 2026) — replaces the counterparty question with audited fact, in either direction. The single most consequential scheduled event for all four notes.</li>
+<li><strong>The wedge at the next unsecured print</strong> (CoreWeave's, or any neocloud's) — narrowing says the market is warming to the operating companies and the series is wrong; widening says the repricing is generalizing.</li>
+<li><strong>Any change to a disclosed server life</strong> — a company shortening its schedule toward four years concedes the depreciation thesis in its own filings.</li>
+</ul>
+<h2><span class="n">§5</span> Reading Order</h2>
+<p>For the full argument, read in publication order: <em><strong>The Depreciation Question</strong></em> (the accounting), <em><strong>The Neocloud Fuse</strong></em> (the credit), then <em><strong>Oracle</strong></em> and <em><strong>CoreWeave</strong></em> (the tests) — each valuation stands alone, and §10 of the CoreWeave note sets the pair side by side. For the fastest useful path: read §1 ("The Story in Plain English") of each valuation note, then <em>The Neocloud Fuse</em> §8 — the wedge — which is the single section the whole series stands on.</p>
+<h2><span class="n">§6</span> Disclosures</h2>
+<p><strong>Information only.</strong> This material is published by TON618 Capital for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (§202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material conflicts are disclosed where they exist. As of the date of this note the Fund holds <strong>no position in Oracle, CoreWeave, or any other single security named herein</strong>; it maintains a strategic Bitcoin allocation. The Fund receives no compensation from any party in connection with this research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. <strong>A material conflict is disclosed here: this series analyzes the financing, contracts, and counterparties of AI laboratories, and the AI tooling used to produce it is made by one of the companies discussed.</strong> All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does not imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is not issued, reviewed, endorsed, certified, or approved by — nor affiliated with — CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Equities and digital assets are volatile and may result in total loss of capital. Fair-value estimates are not price targets and carry wide uncertainty. Corrections and feedback are welcome — please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>.</p>
+<h2>Source &amp; Verification Note</h2>
+<p>This guide introduces and synthesizes four TON618 research notes; it contains no independent research, and every figure above is sourced, hedged, and fact-checked in the underlying note it summarizes. The reference documents are: <em><strong>The Depreciation Question</strong></em> (published July 2026) — the six-company useful-life restatement ($221B deferred depreciation 2026–28E; FY25 earnings overstated ~4–17%; dose-response by capex intensity); <em><strong>The Neocloud Fuse</strong></em> (July 16, 2026) — the credit analysis (the ~334bp secured/unsecured wedge from CoreWeave's Q1-2026 10-Q; the nameplate-versus-binding ledger of OpenAI's compute web; Oracle's $638B RPO and its disclosure gap); <em><strong>Oracle — The Round Trip</strong></em> (July 16, 2026) — fair value ≈$114 vs $124.21 (sum-of-the-parts $119 / DCF $104 / peer P/E $120; legacy floor ~$72); and <em><strong>CoreWeave — The Thin Floor</strong></em> (July 16, 2026) — fair value ≈$60 vs $72.91 (scenario $65 / DCF $54; contracted floor ~$10; range $17–114). Where a figure in those notes is REPORTED rather than DISCLOSED — the ~$300B Oracle–OpenAI contract, the ~14% OCI gross margin, the S&amp;P downgrade details — that labelling carries through to this summary by reference. Fair values quoted here reflect the notes as of this writing; if an underlying note is revised before publication, this guide is updated to match.</p>
+<p class="lede"><em>Version 1.0 · analyst: TON618 Research.</em></p>
+
+</main></body></html>
