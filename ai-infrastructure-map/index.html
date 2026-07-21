@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Power Wall — TON618 Capital</title>
+<meta name="description" content="A reader-first synthesis connecting four TON618 notes on AI infrastructure: one profit migration from hyperscalers to hardware and power, two forces (demand-plateau risk and supply scarcity), and a map placing NVIDIA, GE Vernova, memory, neoclouds and utilities by durability and demand exposure.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+code{font-family:var(--sans);font-size:.85em;background:var(--soft);padding:1px 5px;border-radius:3px;}
+blockquote{font-family:var(--serif);font-size:1.06rem;font-style:italic;color:#2f323a;
+  border-left:3px solid var(--gold);background:var(--soft);margin:1.05rem 0;padding:13px 20px;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.68rem;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:9px;}
+.chart svg{max-width:100%;height:auto;}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Thematic Research Note<br>As of July 19, 2026<br>v1.0</span>
+</div>
+
+<div class="kicker">Thematic Research · AI Infrastructure · Reader's Guide</div>
+<h1>The AI Infrastructure Map</h1>
+<p class="dek">One Profit Migration, Two Forces, Four Notes. Where the AI Premium Is Going, What Could Stop It, and Which Companies Own the Durable Slice — A Reader's Guide to the Series</p>
+<p class="byline">TON618 Capital Research · As of July 19, 2026 · <a class="pdf-link" href="TON618_AI-Infrastructure-Map_Reader-Guide.pdf">Download PDF</a></p>
+<p class="small">Every figure in this guide traces to one of the four notes it connects, each cited inline and linked. This is the READ-FIRST map: it states the single thesis the series is built on, the two forces that drive it, and where each company sits — then points to the note that does the work. Read this first; read the others for the evidence.</p>
+
+<h2><span class="n">§0</span> The Thesis in One Page</h2>
+<div class="verdict"><div class="big">The migration<small>For a decade the tech profit pool sat with the asset-light hyperscalers. The AI wave is handing it down the stack — to the makers of hardware and power. This series maps where it lands, and whether it stays</small></div><div class="txt"><b>One thesis, two forces.</b> The AI buildout is a <b>profit migration</b>. For fifteen years compute was abundant and cheap, so the premium accrued to the software platforms on top of it — the hyperscalers, earning software margins on almost no capital. AI made the <b>physical</b> inputs scarce again — leading-edge silicon, high-bandwidth memory, and above all power — and by the economics of scarcity, the premium migrates to whoever owns the bottleneck. Two forces govern the migration. The <b>demand</b> force is whether the ~$700bn a year of AI capital spending ever earns its cost of capital — the risk is a <b>plateau</b>. The <b>supply</b> force is where, within the hardware layer, the premium is <b>durable</b> versus a fleeting shortage rent — decided by how fast new supply can be built. The demand force is the risk to the whole complex; the supply force decides who keeps the money. This guide is the map; the four notes are the territory.</div></div>
+<p>The evidence that the migration is already underway is in the cash flows: aggregate hyperscaler free cash flow <strong>peaked in 2024 and rolled over in 2025</strong> as capital spending overran even their surging operating cash, while the semiconductor complex's free cash flow compounded. The money is visibly moving from the buyers to the suppliers. The two open questions — does the spending pay back, and which suppliers keep the premium — are what the series answers.</p>
+<div class="kpis">
+<div class="fig">~$137bn<span class="label">The 2026 payback gap — what the year's AI capex must earn on a 3-yr clock, less every dollar of AI profit we can credit ([the Clock](../ai-capex-payback-clock/))</span></div>
+<div class="fig">~2 yrs vs ~5 yrs+<span class="label">Time to add silicon supply vs power supply — the split between a shortage rent and a durable premium ([the Power Wall](../power-wall/))</span></div>
+<div class="fig">FV $163 vs $203<span class="label">NVIDIA — the supplier, priced for the demand not to plateau ([NVDA](../nvda-valuation/))</span></div>
+<div class="fig">FV $655 vs $1,058<span class="label">GE Vernova — the durable-premium winner, priced for the super-cycle to be secular ([GEV](../gev-valuation/))</span></div>
+</div>
+<h2><span class="n">§1</span> The Two Forces</h2>
+<p class="lede"><em>Everything in the series is one of these two questions. Keep them separate and the whole picture resolves.</em></p>
+<p><strong>Force one — demand: does the capex pay back?</strong> The four hyperscalers have guided to roughly <strong>$700bn of capital expenditure in 2026</strong>, up from ~$420bn in 2025. On the three-year clock the silicon actually keeps, that single year's spend must earn on the order of <strong>$221bn of annual operating profit</strong> to clear its cost of capital — and against a generous count of AI profit it falls about <strong>$137bn a year short</strong> (<a href="../ai-capex-payback-clock/">the Clock</a>). The gap closes only in one family of futures: capex growth <em>stops</em> while AI revenue keeps compounding — a contradiction, because the spending is guided <em>up</em>. The demand force is the risk to <em>everyone</em> in the stack: if the buildout plateaus, every supplier's revenue plateaus with it. <em>Example:</em> NVIDIA's revenue is, by identity, other companies' capex — so a demand plateau is the dominant risk in its valuation, which is why it trades at a discount to a disciplined fair value despite being the best business in the complex.</p>
+<p><strong>Force two — supply: where does the premium stay?</strong> A shortage rent lasts exactly as long as the bottleneck can't be supplied. Sort the hardware layer by time-to-add-supply and it splits cleanly (<a href="../power-wall/">the Power Wall</a>):</p>
+<ul>
+<li><strong>Silicon is a rent.</strong> Advanced-packaging capacity is doubling annually; H100 rental rates have already fallen <strong>64–75%</strong> from peak. The premium is real but self-liquidating on a ~2-year clock. <em>Example:</em> memory is the extreme case — Micron, a "winner," had <em>negative</em> free cash flow in 2023; the shortage round-trips to glut.</li>
+<li><strong>Power is durable.</strong> You cannot add a gigawatt on a two-year clock. Gas turbines are sold out through 2030 across all three makers; the grid-interconnection wait has stretched to <strong>five years and lengthening</strong>. This premium persists across the whole investment horizon. <em>Example:</em> GE Vernova's backlog is booked toward 2030 — visibility no silicon name can match.</li>
+</ul>
+<h2><span class="n">§2</span> The Map</h2>
+<p class="lede"><em>Two axes — how fast supply can be added, and how exposed you are to a demand plateau — place every player. The migration runs from the top-left to the bottom-right.</em></p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 553.413125 425.529688" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-21T00:47:37.785194</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 425.529688 
+L 553.413125 425.529688 
+L 553.413125 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 64.893125 381.09475 
+L 544.773125 381.09475 
+L 544.773125 26.27875 
+L 64.893125 26.27875 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 64.893125 203.68675 
+L 304.833125 203.68675 
+L 304.833125 26.27875 
+L 64.893125 26.27875 
+z
+" clip-path="url(#p407e16afa5)" style="fill: #b23b3b; opacity: 0.06; stroke: #b23b3b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 304.833125 381.09475 
+L 544.773125 381.09475 
+L 544.773125 203.68675 
+L 304.833125 203.68675 
+z
+" clip-path="url(#p407e16afa5)" style="fill: #1f7a4d; opacity: 0.07; stroke: #1f7a4d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 193.694364 96.630594 
+Q 321.630141 187.720896 447.744389 277.514268 
+" style="fill: none; opacity: 0.4; stroke: #15161a; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 445.85579 273.959948 
+L 447.744389 277.514268 
+L 443.767773 276.892555 
+z
+" style="fill: #15161a; opacity: 0.4; stroke: #15161a; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m9ee9613b05" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m9ee9613b05" x="136.875125" y="381.09475" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font: 8px 'Helvetica'" transform="translate(117.755125 393.91475)">fast supply</text>
+      <text style="font: 8px 'Helvetica'" transform="translate(110.64325 402.62875)">(shortage rent)</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m9ee9613b05" x="472.791125" y="381.09475" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font: 8px 'Helvetica'" transform="translate(452.116125 393.8335)">slow supply</text>
+      <text style="font: 8px 'Helvetica'" transform="translate(440.116125 402.5475)">(durable premium)</text>
+     </g>
+    </g>
+    <g id="text_3">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="304.833125" y="414.960313" transform="rotate(-0 304.833125 414.960313)">Durability  (time to add new supply)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <defs>
+       <path id="mad111c90e7" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mad111c90e7" x="64.893125" y="327.87235" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font: 8px 'Helvetica'" transform="translate(41.444375 327.029225)">low /</text>
+      <text style="font: 8px 'Helvetica'" transform="translate(33.871875 335.605725)">lagged</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mad111c90e7" x="64.893125" y="79.50115" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font: 8px 'Helvetica'" transform="translate(38.324375 78.625525)">high /</text>
+      <text style="font: 8px 'Helvetica'" transform="translate(20.993125 87.282025)">immediate</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.117188" y="203.68675" transform="rotate(-90 15.117188 203.68675)">Exposure to a demand plateau</text>
+    </g>
+   </g>
+   <g id="line2d_5">
+    <path d="M 304.833125 381.09475 
+L 304.833125 26.27875 
+" clip-path="url(#p407e16afa5)" style="fill: none; stroke: #e2e4e8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 64.893125 203.68675 
+L 544.773125 203.68675 
+" clip-path="url(#p407e16afa5)" style="fill: none; stroke: #e2e4e8; stroke-linecap: square"/>
+   </g>
+   <g id="text_7">
+    <text style="fill: #15161a; opacity: 0.75; font: italic 9.5px 'Helvetica'" transform="translate(251.953935 140.62185) rotate(-326)">the migration</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 64.893125 381.09475 
+L 64.893125 26.27875 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 544.773125 381.09475 
+L 544.773125 26.27875 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 64.893125 381.09475 
+L 544.773125 381.09475 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 64.893125 26.27875 
+L 544.773125 26.27875 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_8">
+    <text style="fill: #b23b3b; font: 700 8.5px 'Helvetica'; text-anchor: start" x="76.890125" y="37.312002" transform="rotate(-0 76.890125 37.312002)">THE TRADE</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #b23b3b; font: italic 7.4px 'Helvetica'; text-anchor: start" x="76.890125" y="49.466273" transform="rotate(-0 76.890125 49.466273)">rented premium, fully exposed</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #1f7a4d; font: 700 8.5px 'Helvetica'; text-anchor: end" x="532.776125" y="353.098242" transform="rotate(-0 532.776125 353.098242)">THE INVESTMENT</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #1f7a4d; font: italic 7.4px 'Helvetica'; text-anchor: end" x="532.776125" y="367.048561" transform="rotate(-0 532.776125 367.048561)">durable premium, defensive</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="64.893125" y="16.27875" transform="rotate(-0 64.893125 16.27875)">The AI infrastructure map: where the premium lands, and who is exposed</text>
+   </g>
+   <g id="line2d_7">
+    <defs>
+     <path id="mf60b5de7a1" d="M 0 5.5 
+C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
+C 4.920485 2.857689 5.5 1.458617 5.5 0 
+C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
+C 2.857689 -4.920485 1.458617 -5.5 0 -5.5 
+C -1.458617 -5.5 -2.857689 -4.920485 -3.889087 -3.889087 
+C -4.920485 -2.857689 -5.5 -1.458617 -5.5 0 
+C -5.5 1.458617 -4.920485 2.857689 -3.889087 3.889087 
+C -2.857689 4.920485 -1.458617 5.5 0 5.5 
+z
+" style="stroke: #ffffff; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#mf60b5de7a1" x="151.271525" y="65.30851" style="fill: #b23b3b; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#mf60b5de7a1" x="194.460725" y="100.79011" style="fill: #b23b3b; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_9">
+    <defs>
+     <path id="m0a79271bbe" d="M 0 5.5 
+C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
+C 4.920485 2.857689 5.5 1.458617 5.5 0 
+C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
+C 2.857689 -4.920485 1.458617 -5.5 0 -5.5 
+C -1.458617 -5.5 -2.857689 -4.920485 -3.889087 -3.889087 
+C -4.920485 -2.857689 -5.5 -1.458617 -5.5 0 
+C -5.5 1.458617 -4.920485 2.857689 -3.889087 3.889087 
+C -2.857689 4.920485 -1.458617 5.5 0 5.5 
+z
+" style="stroke: #ffffff; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#m0a79271bbe" x="242.448725" y="132.72355" style="fill: #b8902f; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_10">
+    <defs>
+     <path id="m77f44c7c03" d="M 0 5.5 
+C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
+C 4.920485 2.857689 5.5 1.458617 5.5 0 
+C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
+C 2.857689 -4.920485 1.458617 -5.5 0 -5.5 
+C -1.458617 -5.5 -2.857689 -4.920485 -3.889087 -3.889087 
+C -4.920485 -2.857689 -5.5 -1.458617 -5.5 0 
+C -5.5 1.458617 -4.920485 2.857689 -3.889087 3.889087 
+C -2.857689 4.920485 -1.458617 5.5 0 5.5 
+z
+" style="stroke: #ffffff; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#m77f44c7c03" x="304.833125" y="182.39779" style="fill: #5e626b; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_11">
+    <defs>
+     <path id="m464af41947" d="M 0 5.5 
+C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
+C 4.920485 2.857689 5.5 1.458617 5.5 0 
+C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
+C 2.857689 -4.920485 1.458617 -5.5 0 -5.5 
+C -1.458617 -5.5 -2.857689 -4.920485 -3.889087 -3.889087 
+C -4.920485 -2.857689 -5.5 -1.458617 -5.5 0 
+C -5.5 1.458617 -4.920485 2.857689 -3.889087 3.889087 
+C -2.857689 4.920485 -1.458617 5.5 0 5.5 
+z
+" style="stroke: #ffffff; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#m464af41947" x="376.815125" y="235.62019" style="fill: #2c6e6a; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <defs>
+     <path id="m884817b9b2" d="M 0 5.5 
+C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
+C 4.920485 2.857689 5.5 1.458617 5.5 0 
+C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
+C 2.857689 -4.920485 1.458617 -5.5 0 -5.5 
+C -1.458617 -5.5 -2.857689 -4.920485 -3.889087 -3.889087 
+C -4.920485 -2.857689 -5.5 -1.458617 -5.5 0 
+C -5.5 1.458617 -4.920485 2.857689 -3.889087 3.889087 
+C -2.857689 4.920485 -1.458617 5.5 0 5.5 
+z
+" style="stroke: #ffffff; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#m884817b9b2" x="429.601925" y="267.55363" style="fill: #7b3fb5; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <g clip-path="url(#p407e16afa5)">
+     <use xlink:href="#m884817b9b2" x="482.388725" y="303.03523" style="fill: #7b3fb5; stroke: #ffffff; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: start" x="163.268525" y="67.471362" transform="rotate(-0 163.268525 67.471362)">Neoclouds</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: end" x="183.903365" y="102.977532" transform="rotate(-0 183.903365 102.977532)">Memory (Micron)</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: end" x="231.891365" y="134.886402" transform="rotate(-0 231.891365 134.886402)">Merchant GPUs / NVIDIA</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: start" x="318.269765" y="184.585212" transform="rotate(-0 318.269765 184.585212)">Hyperscalers (the payers)</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: start" x="390.251765" y="237.866049" transform="rotate(-0 390.251765 237.866049)">Grid equipment</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: start" x="441.598925" y="269.716482" transform="rotate(-0 441.598925 269.716482)">Turbines / GE Vernova</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: end" x="470.391725" y="305.198082" transform="rotate(-0 470.391725 305.198082)">Utilities / IPPs</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p407e16afa5">
+   <rect x="64.893125" y="26.27875" width="479.88" height="354.816"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p>The map is the synthesis. The <strong>horizontal axis is durability</strong> — time to add new supply, which sorts a shortage rent (left) from a durable premium (right). The <strong>vertical axis is demand-plateau exposure</strong> — how quickly a slowdown in AI capex would bite. Read it in three moves:</p>
+<ul>
+<li><strong>Top-left — the trade (rented premium, fully exposed).</strong> Memory, merchant GPUs, and the neocloud landlords that rent depreciating silicon on borrowed money. High return while the shortage lasts, but supply is being added fast <em>and</em> they are the first to feel a demand plateau. Own the move; don't marry it.</li>
+<li><strong>Bottom-right — the investment (durable premium, defensive).</strong> Turbines, firm and nuclear generation, grid equipment, utilities. Long lead times, few suppliers, and a demand plateau reaches them last and slowest. This is where the premium settles.</li>
+<li><strong>The middle — the payers.</strong> The hyperscalers themselves, handing the premium down the stack as their own free cash flow rolls over. Still the owners of the customer relationship — losers of <em>cash generation</em> today, not of the franchise.</li>
+</ul>
+<p>The diagonal is the whole thesis in one stroke: value is migrating out of the exposed, self-liquidating top-left and into the durable, defensive bottom-right. In a phrase — the one that runs through the whole series — <strong>the chips are the trade; the power is the investment.</strong></p>
+<h2><span class="n">§3</span> The Four Notes</h2>
+<p class="lede"><em>What each does, the call it makes, and where the two valuations sit relative to the map.</em></p>
+<div class="chart"><svg viewBox="0 0 760 352" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif"><rect x="250" y="14" width="260" height="46" rx="9" fill="#F7F1E1" stroke="#B8902F" stroke-width="1.3"/><text x="380" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#B8902F" letter-spacing="1.2" font-family="Helvetica, Arial, sans-serif">THE READER'S GUIDE</text><text x="380" y="51" text-anchor="middle" font-size="9.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">start here, then follow the two forces ↓</text><line x1="380" y1="60" x2="200" y2="84" stroke="#E2E4E8" stroke-width="1.5"/><line x1="380" y1="60" x2="560" y2="84" stroke="#E2E4E8" stroke-width="1.5"/><text x="200" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#B8902F" letter-spacing="1.5" font-family="Helvetica, Arial, sans-serif">DEMAND</text><text x="200" y="114" text-anchor="middle" font-size="9.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">does the buildout pay back?</text><text x="560" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#7B3FB5" letter-spacing="1.5" font-family="Helvetica, Arial, sans-serif">SUPPLY</text><text x="560" y="114" text-anchor="middle" font-size="9.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">where does the premium stay?</text><rect x="40" y="130" width="320" height="60" rx="9" fill="#F7F1E1" stroke="#E2E4E8" stroke-width="1"/><rect x="40" y="130" width="5" height="60" rx="2.5" fill="#B8902F"/><text x="58" y="155" font-size="13" font-weight="700" fill="#15161A" font-family="Helvetica, Arial, sans-serif"><tspan fill="#B8902F">①</tspan>  The AI Capex Payback Clock</text><text x="58" y="174" font-size="10.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">~$700bn/yr spend · ~$137bn short · thematic</text><rect x="400" y="130" width="320" height="60" rx="9" fill="#EFE9F8" stroke="#E2E4E8" stroke-width="1"/><rect x="400" y="130" width="5" height="60" rx="2.5" fill="#7B3FB5"/><text x="418" y="155" font-size="13" font-weight="700" fill="#15161A" font-family="Helvetica, Arial, sans-serif"><tspan fill="#7B3FB5">②</tspan>  The Power Wall</text><text x="418" y="174" font-size="10.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">silicon a 2-yr rent, power durable · thematic</text><line x1="200" y1="190" x2="200" y2="222" stroke="#5E626B" stroke-width="1.5"/><polygon points="196,222 204,222 200,228" fill="#5E626B"/><line x1="560" y1="190" x2="560" y2="222" stroke="#5E626B" stroke-width="1.5"/><polygon points="556,222 564,222 560,228" fill="#5E626B"/><rect x="40" y="230" width="320" height="60" rx="9" fill="#F7F1E1" stroke="#E2E4E8" stroke-width="1"/><rect x="40" y="230" width="5" height="60" rx="2.5" fill="#8A6D2B"/><text x="58" y="255" font-size="13" font-weight="700" fill="#15161A" font-family="Helvetica, Arial, sans-serif"><tspan fill="#8A6D2B">③</tspan>  NVIDIA — the supplier</text><text x="58" y="274" font-size="10.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">revenue = industry capex · FV ≈ $163 vs $203</text><rect x="400" y="230" width="320" height="60" rx="9" fill="#EFE9F8" stroke="#E2E4E8" stroke-width="1"/><rect x="400" y="230" width="5" height="60" rx="2.5" fill="#7B3FB5"/><text x="418" y="255" font-size="13" font-weight="700" fill="#15161A" font-family="Helvetica, Arial, sans-serif"><tspan fill="#7B3FB5">④</tspan>  GE Vernova — the winner</text><text x="418" y="274" font-size="10.5" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">backlog to 2030 · FV ≈ $655 vs $1,058</text><line x1="360" y1="260" x2="400" y2="260" stroke="#5E626B" stroke-width="1" stroke-dasharray="3 3"/><text x="380" y="325" text-anchor="middle" font-size="10.5" font-style="italic" fill="#5E626B" font-family="Helvetica, Arial, sans-serif">Both valuations sit below fair value — each priced for its own force to break its way.</text></svg></div>
+<table><thead><tr><th>Note</th><th class="num">Force</th><th class="num">What it establishes</th><th class="num">The call</th></tr></thead><tbody>
+<tr><td><a href="../ai-capex-payback-clock/">The AI Capex Payback Clock</a></td><td class="num">Demand</td><td class="num">~$700bn/yr must earn ~$221bn; ~$137bn short; payback needs a capex plateau</td><td class="num">Thematic — no target; the demand risk to the whole stack</td></tr>
+<tr><td><a href="../power-wall/">The Power Wall</a></td><td class="num">Supply</td><td class="num">Silicon a ~2-yr rent; power a 5-yr+ durable bottleneck; winners &amp; losers named</td><td class="num">Thematic — the durable premium is in power, not silicon</td></tr>
+<tr><td><a href="../nvda-valuation/">NVIDIA</a></td><td class="num">Both</td><td class="num">The supplier; revenue = the industry's capex; priced for the clock not breaking</td><td class="num"><strong>FV ≈ $163 vs $203</strong> — great business, full price</td></tr>
+<tr><td><a href="../gev-valuation/">GE Vernova</a></td><td class="num">Supply</td><td class="num">The purest durable-premium winner; backlog to 2030; but 26× its 2028 target</td><td class="num"><strong>FV ≈ $655 vs $1,058</strong> — best seat, worst price</td></tr>
+</tbody></table>
+<p>The two valuations rhyme, and the rhyme is the point. <strong>Both the most-exposed supplier (NVDA) and the most-durable winner (GEV) trade below a disciplined fair value</strong> — each priced for its own force to break its way: NVIDIA for the demand never to plateau, GE Vernova for the supply scarcity to be a secular decade rather than a cycle. The migration is real and the winners are the right winners; what the market has already done is <em>pay</em> for both outcomes in full. The series' net message is not "buy the picks-and-shovels" — it is "the picks-and-shovels thesis is correct and largely priced; the edge is in the discipline about <em>what you pay</em> and the <em>durability</em> of each bottleneck."</p>
+<h2><span class="n">§4</span> The One Number That Governs It All</h2>
+<p class="lede"><em>Two forces, but one of them is the master risk. Watch it.</em></p>
+<p>The supply force decides <em>who</em> wins; the demand force decides <em>whether anyone does</em>. A plateau in AI capital spending is the single risk that reaches every box on the map — the exposed top-left immediately, the durable bottom-right last and with a lag, but eventually all of them. That is why <a href="../ai-capex-payback-clock/">the Clock</a> is the keystone: it is the one note whose subject is the risk to every other note.</p>
+<p>So the signposts that matter most are the ones that would show the demand force turning, and the supply force confirming its split:</p>
+<ul>
+<li><strong>Capex guidance revisions</strong> — a <em>plateau</em> is the tell. Paradoxically it is bullish for payback and bearish for supplier revenue; watch the direction.</li>
+<li><strong>The FCF crossover</strong> — hyperscaler free cash flow already peaked (2024) and rolled over (2025); the quarter it turns negative is when the financing strain becomes reported fact.</li>
+<li><strong>GPU rental prices vs the interconnection wait</strong> — the two forces' own gauges. Falling GPU rents confirm silicon is a rent; a lengthening grid wait confirms power is durable. As of now both point the way the map is drawn.</li>
+<li><strong>The valuations</strong> — NVDA at $163 fair value and GEV at $655 are logged calls; if the market comes to them, the discipline was right; if it doesn't, the demand force stayed intact longer than a disciplined model assumed.</li>
+</ul>
+<p>The migration has happened; the cash flows prove it. What remains uncertain is only what the whole series is built to weigh: whether the spending that drove it pays back, and how long the scarcities that captured it last. Read the four notes for the answers. This map is where they connect.</p>
+<h2><span class="n">§5</span> Disclosures</h2>
+<p><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (§202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses. This guide references, among others, NVIDIA (NVDA), GE Vernova (GEV), Micron (MU), Microsoft (MSFT), Alphabet (GOOGL), Amazon (AMZN), Meta Platforms (META), and various utilities, independent power producers and electrical-equipment makers; the Fund holds no position, long or short, in any of them, and has no economic interest in the price of any security named here. The Fund receives no compensation from any party in connection with its research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <strong>not</strong> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <strong>not</strong> issued, reviewed, endorsed, certified, or approved by — nor affiliated with — CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome — please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>.</p>
+
+</main></body></html>
