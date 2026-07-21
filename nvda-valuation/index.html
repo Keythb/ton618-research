@@ -1,0 +1,1738 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVIDIA — Priced for the Clock Not Breaking — TON618 Capital</title>
+<meta name="description" content="A standalone equity valuation of NVIDIA (NVDA). The best business we cover, priced for the AI capital cycle to continue: disciplined three-stage FCFE fair value approximately 163 dollars vs 202.81, distribution 104 to 210. Includes Porter Five Forces, the Cisco test, and the capex-demand linkage.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+code{font-family:var(--sans);font-size:.85em;background:var(--soft);padding:1px 5px;border-radius:3px;}
+.coline{font-family:var(--serif);font-size:2.15rem;font-weight:700;color:var(--ink);margin:.4rem 0 .1rem;line-height:1.15;}
+.coline .tkr{font-family:var(--sans);font-size:1.05rem;font-weight:600;color:var(--gold-deep,#8A6D2B);letter-spacing:.04em;vertical-align:middle;margin-left:.55rem;white-space:nowrap;}
+.statstrip{font-family:var(--sans);font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:7px 0;margin:.6rem 0 1rem;letter-spacing:.01em;}
+.statstrip b{color:var(--ink);font-weight:600;}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Equity Valuation Note<br>As of July 19, 2026<br>v1.0</span>
+</div>
+
+<div class="kicker">Equity Valuation · Semiconductors &amp; AI Infrastructure</div>
+<div class="coline">NVIDIA Corporation <span class="tkr">NASDAQ: NVDA</span></div>
+<h1>NVIDIA — Priced for the Clock Not Breaking</h1>
+<p class="dek">The Best Business We Cover, at a Price That Already Assumes the AI Buildout Continues. What NVDA Is Worth on Disciplined Cash Flows — and Why the Swing Factor Sits Outside the Company</p>
+<p class="byline">TON618 Capital Research · As of July 19, 2026 · <a class="pdf-link" href="TON618_NVIDIA-Valuation_Note.pdf">Download PDF</a></p>
+<div class="statstrip"><b>Price</b> $202.81 (Jul 17, 2026 close) · <b>52-wk</b> $164.07–$236.54 · <b>Mkt cap</b> ~$4.91tn · <b>Net cash</b> ~$54bn (+$22bn strategic stakes) · <b>Dil. shares</b> ~24.35bn · <b>Fair value</b> ≈$163 (bull $210 / base $163 / bear $104) · <b>Next results</b> Q2 FY2027, late Aug</div>
+<p class="small">A valuation, not a trade. Fair value is an estimate, not a price target, and here it is unusually sensitive to two inputs we name in §7. Data: NVIDIA's FY2026 Form 10-K (fiscal year ended January 25, 2026; SEC EDGAR, CIK 0001045810), Q1-FY2027 10-Q, and SEC XBRL company facts, with market data as of the July 17, 2026 close ($202.81). Fact ("the filing shows…") is separated from opinion ("we estimate…") throughout; figures are DISCLOSED (in a filing), REPORTED (release/press), CONSENSUS (sell-side), or ESTIMATED (ours). This note stands on its own, but its demand section draws on our companion thematic note <a href="../ai-capex-payback-clock/">The AI Capex Payback Clock</a> (July 19, 2026) as one input among several; §5 says exactly where. It is the demand-side valuation in our five-note AI-infrastructure series — the <a href="../ai-infrastructure-map/">reader's guide</a> maps all five and is the place to start. Independently fact-checked before release; the Source &amp; Verification Note documents that pass and what we could not verify.</p>
+
+<h2><span class="n">§0</span> Verdict</h2>
+<div class="verdict"><div class="big">FV ≈ $163<small>vs $202.81 — roughly 20% below our central estimate, on a distribution that only reaches today's price at a below-normalized cost of capital</small></div><div class="txt"><b>NVIDIA is the highest-quality business we cover, and at $202.81 it is priced for the AI capital cycle to continue essentially uninterrupted.</b> The company is extraordinary on every operating measure — <b>$215.9bn of FY2026 revenue</b> (up 65%), <b>~71–75% gross margins</b>, <b>$96.7bn of free cash flow</b>, net cash, and roughly <b>80% share</b> of AI accelerators. None of that is the question. The question is what the equity is worth, and on a disciplined three-stage free-cash-flow model our central estimate is about <b>$163</b> — with an honest range from <b>$104 to $210</b>, because the value swings on the cost of capital and on one thing NVIDIA does not control: how long hyperscaler capital expenditure keeps compounding. Reverse the model and today's price implies NVIDIA reaches roughly <b>$1 trillion of annual revenue by FY2031</b>, a 36% five-year compound rate — a number that requires the very capex durability our companion note questions. We are not short quality; we are disciplined on price.</div></div>
+<table><thead><tr><th>Scenario</th><th>Weight</th><th>FY2031E revenue</th><th>FCF margin</th><th>Implied FV</th><th>vs $202.81</th></tr></thead><tbody>
+<tr><td><strong>Bull</strong> — capex compounds, share holds ~78%, margins firm</td><td>30%</td><td>$980bn</td><td>47%</td><td><strong>$210</strong></td><td>+4%</td></tr>
+<tr><td><strong>Base</strong> — growth decays, share drifts to ~75%, some ASIC loss</td><td>45%</td><td>$780bn</td><td>45%</td><td><strong>$163</strong></td><td>−20%</td></tr>
+<tr><td><strong>Bear</strong> — capex plateaus, share to ~72%, price competition</td><td>25%</td><td>$505bn</td><td>42%</td><td><strong>$104</strong></td><td>−49%</td></tr>
+<tr><td><strong>Central estimate (weighted)</strong></td><td></td><td></td><td></td><td><strong>≈ $163</strong></td><td><strong>−20%</strong></td></tr>
+</tbody></table>
+<p><strong>What this note is, and is not.</strong> It is a valuation of the equity, built to answer a question our companion thematic note poses from the demand side: if roughly $700bn of AI capex a year must eventually earn its cost of capital, what is the one company that collects that capex as revenue actually worth? The finding is not that NVIDIA is a bubble — on valuation it is dramatically cheaper than the Cisco analogy it is constantly compared to (§6), and its cash generation is real — but that at $202.81 the risk and reward are no longer balanced for a price-disciplined buyer, because you are paying a full price for a demand stream whose durability is decided outside the company. The street disagrees: consensus sits in the <strong>~$300–320 mean-target range</strong> (nearer $300–310 on most aggregators, ~$319 on others), a <strong>~$284–300 median</strong>, and a high of $500 — the whole distribution above spot, and its mean above even our bull case. §7 explains precisely where our numbers and the street's part company — and it is almost entirely the discount rate and the terminal multiple, not the growth.</p>
+<h2><span class="n">§1</span> The Story in Plain English</h2>
+<p class="lede"><em>Read this if you read nothing else.</em></p>
+<p>NVIDIA makes the chips that train and run artificial intelligence, and for the moment it makes almost all of them — roughly <strong>80% of the market</strong> by revenue. Three years ago it was mostly a gaming-graphics company; today <strong>90% of its revenue is data-center AI hardware</strong>, and that business went from $15bn to <strong>$194bn in three years</strong>. It is one of the great commercial expansions in corporate history, and it is not an illusion: the money is real, the margins are enormous (about <strong>71 cents of gross profit on every dollar</strong> as reported, ~73 on the clean margin, before the costs of running the company), and unlike most fast growers NVIDIA throws off cash rather than burning it — nearly <strong>$97bn of free cash flow</strong> last year, with more cash than debt.</p>
+<p>So why would the stock be worth less than its price? Because a great business and a good investment are not the same thing, and the difference is what you pay. At $202.81, NVIDIA is worth about <strong>$4.9 trillion</strong> — the most valuable company in the world. To justify that, the future has to deliver an enormous amount of growth, and <em>most of it has to actually arrive</em>. When we build NVIDIA's future cash flows carefully — letting revenue keep growing fast but not forever, and discounting those future dollars back at a normal rate for a stock this volatile — the value comes out around <strong>$163 a share</strong>, modestly below the price. Turn the calculation around and the current price is telling you the market expects NVIDIA to reach roughly <strong>$1 trillion of annual revenue within five years</strong> — nearly five times today. That is not impossible. It is a bet.</p>
+<p>And here is the crucial thing about that bet: <strong>it is not really a bet on NVIDIA.</strong> NVIDIA's revenue is, almost by definition, other companies' spending. Every dollar Microsoft, Amazon, Google, Meta, Oracle and the AI labs spend on AI computers, NVIDIA collects a large share of. So NVIDIA's revenue can only keep growing at this pace if <em>their</em> spending keeps growing at this pace — and that spending, roughly <strong>$700bn this year</strong>, has to eventually pay for itself. Our companion note, <a href="../ai-capex-payback-clock/">The AI Capex Payback Clock</a>, works through whether it does. The short version: the spending pays back only if it keeps growing <em>and</em> the AI revenue it produces keeps compounding — and NVIDIA is priced as though both happen. If the buildout so much as plateaus, NVIDIA's revenue plateaus with it. The company is superb. The price already knows that. What the price also assumes is that the customers keep spending — which is the one thing NVIDIA cannot decide.</p>
+<h2><span class="n">§2</span> The Business</h2>
+<p class="lede"><em>A platform, not a chip company — and that is the moat.</em></p>
+<p>NVIDIA reports two GAAP segments — Compute &amp; Networking and Graphics — but the business is now overwhelmingly one thing. <strong>Data Center revenue was $193.7bn of $215.9bn total in FY2026 (89.7%)</strong> [DISCLOSED], up from 39% of a much smaller total just four years earlier. Gaming ($16.0bn), Professional Visualization ($3.2bn) and Automotive ($2.3bn) are rounding error against the AI franchise. This is a company whose fortunes are now a single, concentrated bet on AI infrastructure demand — which is what makes the demand analysis in §5 the whole game.</p>
+<p>What NVIDIA sells is not really a chip; it is an integrated stack that is hard to leave:</p>
+<ul>
+<li><strong>The silicon</strong>, on NVIDIA's ~24-month architecture cadence — Ampere (2020), Hopper (2022), Blackwell (2024), and Rubin (2026) — each a step-change in performance per watt, which in a power-constrained data center is the binding constraint.</li>
+<li><strong>The networking</strong>, acquired with Mellanox in 2020: NVLink (the proprietary GPU-to-GPU interconnect), InfiniBand, and Spectrum-X Ethernet. This lets NVIDIA sell <em>rack-scale systems</em> (the GB200 NVL72) rather than loose chips, moving the unit of competition from the die to the whole machine — where its lead is widest.</li>
+<li><strong>The software</strong>, CUDA, a roughly twenty-year install base of libraries, tools and trained developers. This is the true switching cost: a competitor can match a chip far sooner than it can match two decades of software ecosystem and the muscle memory of every AI engineer who learned on it.</li>
+</ul>
+<p>The strategic point is that each layer defends the others. A buyer tempted by a cheaper accelerator must also give up the networking that makes thousands of them act as one computer, and the software its engineers already know. That is why NVIDIA has held ~80% share through the largest demand surge in the industry's history even as well-funded rivals attack the chip layer directly.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475.706562 239.096141" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-21T00:47:37.353548</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 239.096141 
+L 475.706562 239.096141 
+L 475.706562 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 42.986563 215.124109 
+L 467.066562 215.124109 
+L 467.066562 32.172109 
+L 42.986563 32.172109 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.262926 215.124109 
+L 112.549092 215.124109 
+L 112.549092 207.043729 
+L 62.262926 207.043729 
+z
+" clip-path="url(#p7118067f50)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 146.073203 215.124109 
+L 196.359369 215.124109 
+L 196.359369 203.689609 
+L 146.073203 203.689609 
+z
+" clip-path="url(#p7118067f50)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 229.883479 215.124109 
+L 280.169646 215.124109 
+L 280.169646 178.914859 
+L 229.883479 178.914859 
+z
+" clip-path="url(#p7118067f50)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 313.693756 215.124109 
+L 363.979922 215.124109 
+L 363.979922 127.307149 
+L 313.693756 127.307149 
+z
+" clip-path="url(#p7118067f50)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 397.504033 215.124109 
+L 447.790199 215.124109 
+L 447.790199 67.466599 
+L 397.504033 67.466599 
+z
+" clip-path="url(#p7118067f50)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 62.262926 207.043729 
+L 112.549092 207.043729 
+L 112.549092 194.618239 
+L 62.262926 194.618239 
+z
+" clip-path="url(#p7118067f50)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 146.073203 203.689609 
+L 196.359369 203.689609 
+L 196.359369 194.542009 
+L 146.073203 194.542009 
+z
+" clip-path="url(#p7118067f50)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 229.883479 178.914859 
+L 280.169646 178.914859 
+L 280.169646 168.700039 
+L 229.883479 168.700039 
+z
+" clip-path="url(#p7118067f50)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 313.693756 127.307149 
+L 363.979922 127.307149 
+L 363.979922 115.643959 
+L 313.693756 115.643959 
+z
+" clip-path="url(#p7118067f50)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 397.504033 67.466599 
+L 447.790199 67.466599 
+L 447.790199 50.543539 
+L 397.504033 50.543539 
+z
+" clip-path="url(#p7118067f50)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="md30d1a39d8" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#md30d1a39d8" x="87.406009" y="215.124109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="87.406009" y="228.580203" transform="rotate(-0 87.406009 228.580203)">FY22</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#md30d1a39d8" x="171.216286" y="215.124109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="171.216286" y="228.580203" transform="rotate(-0 171.216286 228.580203)">FY23</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#md30d1a39d8" x="255.026563" y="215.124109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="255.026563" y="228.580203" transform="rotate(-0 255.026563 228.580203)">FY24</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#md30d1a39d8" x="338.836839" y="215.124109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="338.836839" y="228.580203" transform="rotate(-0 338.836839 228.580203)">FY25</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#md30d1a39d8" x="422.647116" y="215.124109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="422.647116" y="228.580203" transform="rotate(-0 422.647116 228.580203)">FY26</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 42.986563 215.124109 
+L 467.066562 215.124109 
+" clip-path="url(#p7118067f50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="mdb725e2a1d" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdb725e2a1d" x="42.986563" y="215.124109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.986563" y="218.352156" transform="rotate(-0 35.986563 218.352156)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 42.986563 177.009109 
+L 467.066562 177.009109 
+" clip-path="url(#p7118067f50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mdb725e2a1d" x="42.986563" y="177.009109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.986563" y="180.237156" transform="rotate(-0 35.986563 180.237156)">50</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 42.986563 138.894109 
+L 467.066562 138.894109 
+" clip-path="url(#p7118067f50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mdb725e2a1d" x="42.986563" y="138.894109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.986563" y="142.122156" transform="rotate(-0 35.986563 142.122156)">100</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 42.986563 100.779109 
+L 467.066562 100.779109 
+" clip-path="url(#p7118067f50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mdb725e2a1d" x="42.986563" y="100.779109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.986563" y="104.007156" transform="rotate(-0 35.986563 104.007156)">150</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 42.986563 62.664109 
+L 467.066562 62.664109 
+" clip-path="url(#p7118067f50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#mdb725e2a1d" x="42.986563" y="62.664109" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.986563" y="65.892156" transform="rotate(-0 35.986563 65.892156)">200</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.096094" y="123.648109" transform="rotate(-90 15.096094 123.648109)">Revenue, $bn</text>
+    </g>
+   </g>
+   <g id="patch_13">
+    <path d="M 42.986563 215.124109 
+L 42.986563 32.172109 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 42.986563 215.124109 
+L 467.066562 215.124109 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="fill: #15161a; font: 700 8.6px 'Helvetica'; text-anchor: middle" x="87.406009" y="189.014177" transform="rotate(-0 87.406009 189.014177)">39%</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #15161a; font: 700 8.6px 'Helvetica'; text-anchor: middle" x="171.216286" y="188.937947" transform="rotate(-0 171.216286 188.937947)">56%</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #15161a; font: 700 8.6px 'Helvetica'; text-anchor: middle" x="255.026563" y="163.095977" transform="rotate(-0 255.026563 163.095977)">78%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #15161a; font: 700 8.6px 'Helvetica'; text-anchor: middle" x="338.836839" y="110.039897" transform="rotate(-0 338.836839 110.039897)">88%</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 700 8.6px 'Helvetica'; text-anchor: middle" x="422.647116" y="44.939477" transform="rotate(-0 422.647116 44.939477)">90%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="42.986563" y="27.049453" transform="rotate(-0 42.986563 27.049453)">Data Center went from 39% of a small total to 90% of a $216bn total in four years. % = Data Center share.</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="42.986563" y="16.172109" transform="rotate(-0 42.986563 16.172109)">One business now: Data Center as share of revenue</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_15">
+     <path d="M 50.186563 45.110859 
+L 66.186563 45.110859 
+L 66.186563 39.510859 
+L 50.186563 39.510859 
+z
+" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="fill: #26282e; font: 8px 'Helvetica'; text-anchor: start" x="72.586563" y="45.110859" transform="rotate(-0 72.586563 45.110859)">Data Center</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 50.186563 56.673359 
+L 66.186563 56.673359 
+L 66.186563 51.073359 
+L 50.186563 51.073359 
+z
+" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.7; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="fill: #26282e; font: 8px 'Helvetica'; text-anchor: start" x="72.586563" y="56.673359" transform="rotate(-0 72.586563 56.673359)">Gaming / ProViz / Auto / OEM</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7118067f50">
+   <rect x="42.986563" y="32.172109" width="424.08" height="182.952"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<h2><span class="n">§3</span> Porter's Five Forces</h2>
+<p class="lede"><em>The moat is real, and it is narrowing in exactly one place. The Five Forces locate where.</em></p>
+<p><strong>Rivalry — moderate, concentrated at the chip layer.</strong> The direct merchant challenger is AMD, whose entire Data Center <em>segment</em> (which includes EPYC server CPUs, not just Instinct GPUs) ran about <strong>$5.4–5.8bn a quarter</strong> in late-2025/early-2026 [REPORTED] — the GPU subset materially below that, against NVIDIA's $193.7bn annual Data Center line. AMD's MI350 is ramping and the MI400 (on TSMC 2nm) arrives in H2-2026, and a headline <strong>OpenAI–AMD deal for 6GW of GPUs</strong> signals real second-sourcing intent. But AMD competes at the chip; it has no answer yet to CUDA or to rack-scale networking. Rivalry pressures NVIDIA's <em>share</em> at the margin, not its position.</p>
+<p><strong>Buyer power — the sharpest force, and rising.</strong> This is where the moat is genuinely under pressure, and it shows up in NVIDIA's own 10-K. <strong>In FY2026, one direct customer was 22% of revenue and a second was 14% — 36% combined — up from three customers at 12/11/11% in FY2025</strong> [DISCLOSED]. Concentration is not just high; it is <em>increasing</em>, and the top customer alone jumped to 22%. Worse for pricing power, these same buyers are NVIDIA's most determined competitors: every large customer is building its own silicon (see substitutes). And the true concentration is higher than the direct table shows — NVIDIA discloses that <em>"one AI research and deployment company contributed to a meaningful amount of our revenue purchasing cloud services from our customers"</em> [DISCLOSED], i.e. OpenAI-type end-demand routed through the clouds. A handful of buyers, each large enough to matter and each building an alternative, is the structural weakness beneath the 80% share.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.704687 233.658781" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-21T00:47:37.381924</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 233.658781 
+L 478.704687 233.658781 
+L 478.704687 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.984688 209.68675 
+L 470.064687 209.68675 
+L 470.064687 32.27875 
+L 45.984688 32.27875 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 65.261051 209.68675 
+L 148.413992 209.68675 
+L 148.413992 158.43555 
+L 65.261051 158.43555 
+z
+" clip-path="url(#pad5922e8cd)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 216.448217 209.68675 
+L 299.601158 209.68675 
+L 299.601158 162.37795 
+L 216.448217 162.37795 
+z
+" clip-path="url(#pad5922e8cd)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 216.448217 162.37795 
+L 299.601158 162.37795 
+L 299.601158 119.01155 
+L 216.448217 119.01155 
+z
+" clip-path="url(#pad5922e8cd)" style="fill: #8a6d2b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 216.448217 119.01155 
+L 299.601158 119.01155 
+L 299.601158 75.64515 
+L 216.448217 75.64515 
+z
+" clip-path="url(#pad5922e8cd)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 367.635383 209.68675 
+L 450.788324 209.68675 
+L 450.788324 122.95395 
+L 367.635383 122.95395 
+z
+" clip-path="url(#pad5922e8cd)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 367.635383 122.95395 
+L 450.788324 122.95395 
+L 450.788324 67.76035 
+L 367.635383 67.76035 
+z
+" clip-path="url(#pad5922e8cd)" style="fill: #8a6d2b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="meca879047b" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#meca879047b" x="106.837522" y="209.68675" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="106.837522" y="223.142844" transform="rotate(-0 106.837522 223.142844)">FY2024</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#meca879047b" x="258.024688" y="209.68675" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="258.024688" y="223.142844" transform="rotate(-0 258.024688 223.142844)">FY2025</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#meca879047b" x="409.211853" y="209.68675" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="409.211853" y="223.142844" transform="rotate(-0 409.211853 223.142844)">FY2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 45.984688 209.68675 
+L 470.064687 209.68675 
+" clip-path="url(#pad5922e8cd)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="ma4a6eccd12" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma4a6eccd12" x="45.984688" y="209.68675" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="38.984688" y="212.914797" transform="rotate(-0 38.984688 212.914797)">0%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 45.984688 170.26275 
+L 470.064687 170.26275 
+" clip-path="url(#pad5922e8cd)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#ma4a6eccd12" x="45.984688" y="170.26275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="38.984688" y="173.490797" transform="rotate(-0 38.984688 173.490797)">10%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 45.984688 130.83875 
+L 470.064687 130.83875 
+" clip-path="url(#pad5922e8cd)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#ma4a6eccd12" x="45.984688" y="130.83875" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="38.984688" y="134.066797" transform="rotate(-0 38.984688 134.066797)">20%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 45.984688 91.41475 
+L 470.064687 91.41475 
+" clip-path="url(#pad5922e8cd)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#ma4a6eccd12" x="45.984688" y="91.41475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="38.984688" y="94.642797" transform="rotate(-0 38.984688 94.642797)">30%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 45.984688 51.99075 
+L 470.064687 51.99075 
+" clip-path="url(#pad5922e8cd)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#ma4a6eccd12" x="45.984688" y="51.99075" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="38.984688" y="55.218797" transform="rotate(-0 38.984688 55.218797)">40%</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.096094" y="120.98275" transform="rotate(-90 15.096094 120.98275)">Share of total revenue</text>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 45.984688 209.68675 
+L 45.984688 32.27875 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 45.984687 209.68675 
+L 470.064688 209.68675 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #ffffff; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="106.837522" y="186.198556" transform="rotate(-0 106.837522 186.198556)">13%</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #15161a; font: 700 9px 'Helvetica'; text-anchor: middle" x="106.837522" y="150.646012" transform="rotate(-0 106.837522 150.646012)">13%</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #ffffff; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="258.024688" y="188.169756" transform="rotate(-0 258.024688 188.169756)">12%</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #ffffff; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="258.024688" y="142.832156" transform="rotate(-0 258.024688 142.832156)">11%</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #ffffff; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="258.024688" y="99.465756" transform="rotate(-0 258.024688 99.465756)">11%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #15161a; font: 700 9px 'Helvetica'; text-anchor: middle" x="258.024688" y="67.855612" transform="rotate(-0 258.024688 67.855612)">34%</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #ffffff; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="409.211853" y="168.457756" transform="rotate(-0 409.211853 168.457756)">22%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #ffffff; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="409.211853" y="97.494556" transform="rotate(-0 409.211853 97.494556)">14%</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 700 9px 'Helvetica'; text-anchor: middle" x="409.211853" y="59.970812" transform="rotate(-0 409.211853 59.970812)">36%</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="45.984688" y="27.311326" transform="rotate(-0 45.984688 27.311326)">Each block is one &gt;10% direct customer. Top customer alone jumped to 22% in FY2026. Indirect concentration is on top.</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="45.984688" y="16.27875" transform="rotate(-0 45.984688 16.27875)">Buyer power, rising: direct customers over 10% of revenue</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pad5922e8cd">
+   <rect x="45.984688" y="32.27875" width="424.08" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p><strong>Supplier power — real, and a two-way street.</strong> NVIDIA is fabless; its growth is gated not by demand but by two suppliers. <strong>TSMC's CoWoS advanced packaging is sold out through 2026</strong> even as capacity climbs toward ~120–140k wafers/month, and <strong>HBM3e memory is sold out</strong> with prices up ~20% for 2026, dominated by SK Hynix (~50–62% share) [REPORTED]. NVIDIA depends on a near-monopoly (TSMC) and an oligopoly (HBM) it does not control — but that same bottleneck is a shared moat: it is equally a wall against new entrants, who cannot get allocation NVIDIA has locked up.</p>
+<p><strong>New entrants — barriered.</strong> The combination of CUDA's ecosystem, the capital to design leading-edge silicon, and — decisively — access to the very CoWoS and HBM allocation that is already sold out, makes de-novo entry near-impossible. The credible entrants are not startups; they are the trillion-dollar buyers building captive silicon.</p>
+<p><strong>Substitutes — the long-term share threat.</strong> Custom ASICs are the substitute that matters: <strong>Google's TPU (v7 "Ironwood" now GA), Amazon's Trainium (Trainium2 in volume for Anthropic, Trainium3/4 announced), Microsoft's Maia 200 (delayed ~6 months), and Meta's MTIA 300</strong> [REPORTED]. These are mostly <em>captive</em> — used internally rather than sold — so they do not compete for NVIDIA's merchant revenue directly, but they cap NVIDIA's share at the largest buyers and grow the share of AI compute that never touches an NVIDIA part.</p>
+<p><strong>Moat verdict.</strong> Durable, and narrowing in one place. CUDA plus rack-scale systems keeps the merchant moat wide against AMD and impassable to new entrants. The erosion is at the top of the customer base, where the buyers with the most volume are also the ones with the resources to in-source — so the realistic path is not a collapse in share but a slow drift from ~80% toward ~75% and below as ASICs scale, even as the absolute revenue keeps rising with the market. That drift is exactly what our base case assumes.</p>
+<h2><span class="n">§4</span> The Financials</h2>
+<p class="lede"><em>Almost nothing to criticize in the operating numbers. The two things worth watching are on the balance sheet.</em></p>
+<p>The income statement is close to unprecedented for a company this size. Revenue compounded from <strong>$16.7bn (FY2021) to $215.9bn (FY2026)</strong>; gross margin runs <strong>71–75%</strong> (the reported FY2026 71.1% was pulled down ~2.6 points by $7.2bn of inventory and purchase-obligation provisions, including a $4.5bn H20 charge — the clean rate is nearer 73–75%); operating margin is <strong>60%</strong>; net income was <strong>$120.1bn</strong> [DISCLOSED]. Cash conversion is the rarest part: NVIDIA is fabless, so capex is only ~3% of revenue, and it produced <strong>$96.7bn of free cash flow (44.8% margin)</strong> in FY2026, carries <strong>net cash</strong>, and returned <strong>$40bn</strong> in buybacks. On operations, there is essentially nothing to fault.</p>
+<p>Two balance-sheet items deserve the reader's attention, and both connect to the demand question:</p>
+<ul>
+<li><strong>$95.2bn of non-cancellable inventory, supply and capacity commitments</strong> at FY2026, against only $21.4bn of on-balance-sheet inventory [DISCLOSED, flagged as a Critical Audit Matter by PwC]. This is NVIDIA's own supply-side bet — it has pre-committed to buy components far in excess of what it holds, on the assumption demand continues. If demand plateaus, some of that converts to writedowns, exactly as the $4.5bn H20 charge already did when China demand fell.</li>
+<li><strong>Non-marketable equity securities — stakes in private companies — jumped from $3.4bn to $22.3bn in FY2026</strong> [DISCLOSED], and NVIDIA separately holds public-company stakes in its marketable-securities line (the 10-K names Intel; its ~$2bn CoreWeave position is public common stock). NVIDIA does not itemize the private holdings, but it has publicly announced large strategic commitments to AI customers and partners (OpenAI, xAI and others). Whatever the exact line-by-line split, the aggregate direction is the "circular financing" data point: NVIDIA increasingly helps fund the buyers who then buy its chips. It is small relative to the company, but it is the modern echo of a pattern §6 examines.</li>
+</ul>
+<p>One flag for anyone annualizing recent results: <strong>Q1-FY2027 net income ($58.3bn) exceeded operating income ($53.5bn)</strong> [DISCLOSED], implying a large non-operating gain (likely investment/equity-stake marks). We build our valuation on operating free cash flow, not on that quarter's net income, and readers should do the same.</p>
+<h2><span class="n">§5</span> Demand: Where NVIDIA's Revenue Actually Comes From</h2>
+<p class="lede"><em>This is the section the whole valuation turns on, and it is why the companion note exists.</em></p>
+<p>NVIDIA's revenue is not, in any meaningful sense, set by NVIDIA. It is an identity:</p>
+<p>&gt; <strong>Data-Center revenue ≈ (total AI-infrastructure capex) × (GPU share of that capex) × (NVIDIA's share of GPUs).</strong></p>
+<p>Put the FY2026 numbers in and the identity holds: roughly <strong>$600bn of calendar-2025 AI-infrastructure capex</strong> — the whole buyer base, broader than the four hyperscalers of the Clock — <strong>× ~40% GPU share × ~80% NVIDIA share ≈ $192bn</strong> [ESTIMATED], against the $193.7bn actually reported. The tie is close enough to trust the framework — and once you trust it, NVIDIA's forward revenue is simply the AI-capex forecast run through two shares that are, if anything, slowly declining.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550.835563 255.096219" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-21T00:47:37.414789</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 255.096219 
+L 550.835562 255.096219 
+L 550.835562 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.509687 220.873188 
+L 467.589687 220.873188 
+L 467.589687 32.377188 
+L 43.509687 32.377188 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.786051 220.873188 
+L 127.040597 220.873188 
+L 127.040597 134.703587 
+L 62.786051 134.703587 
+z
+" clip-path="url(#p4aadf7b627)" style="fill: #5e626b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 169.87696 220.873188 
+L 234.131506 220.873188 
+L 234.131506 80.847588 
+L 169.87696 80.847588 
+z
+" clip-path="url(#p4aadf7b627)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 276.967869 220.873188 
+L 341.222415 220.873188 
+L 341.222415 54.817188 
+L 276.967869 54.817188 
+z
+" clip-path="url(#p4aadf7b627)" style="fill: #c9a24b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 384.058778 220.873188 
+L 448.313324 220.873188 
+L 448.313324 118.995587 
+L 384.058778 118.995587 
+z
+" clip-path="url(#p4aadf7b627)" style="fill: #b23b3b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m16b3f1399e" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m16b3f1399e" x="94.913324" y="220.873188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(68.151683 234.505063)">CY25 implied</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(65.434105 244.207625)">(≈FY26 actual)</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m16b3f1399e" x="202.004233" y="220.873188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(190.747905 234.329281)">CY26</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(177.240874 244.580281)">$1.0T capex</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m16b3f1399e" x="309.095142" y="220.873188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(297.838814 234.329281)">CY27</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(284.331783 244.580281)">$1.3T capex</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m16b3f1399e" x="416.186051" y="220.873188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(394.673942 234.329281)">CY27 bear</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(391.422692 244.580281)">$0.9T capex</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <path d="M 43.509687 220.873188 
+L 467.589687 220.873188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <defs>
+       <path id="m93f6fca471" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="220.873188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="224.101234" transform="rotate(-0 36.509687 224.101234)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <path d="M 43.509687 198.433188 
+L 467.589687 198.433188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="198.433188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="201.661234" transform="rotate(-0 36.509687 201.661234)">50</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path d="M 43.509687 175.993188 
+L 467.589687 175.993188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="175.993188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="179.221234" transform="rotate(-0 36.509687 179.221234)">100</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <path d="M 43.509687 153.553188 
+L 467.589687 153.553188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="153.553188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="156.781234" transform="rotate(-0 36.509687 156.781234)">150</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13">
+      <path d="M 43.509687 131.113188 
+L 467.589687 131.113188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="131.113188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="134.341234" transform="rotate(-0 36.509687 134.341234)">200</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <path d="M 43.509687 108.673188 
+L 467.589687 108.673188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="108.673188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="111.901234" transform="rotate(-0 36.509687 111.901234)">250</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <path d="M 43.509687 86.233188 
+L 467.589687 86.233188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="86.233188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="89.461234" transform="rotate(-0 36.509687 89.461234)">300</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_19">
+      <path d="M 43.509687 63.793188 
+L 467.589687 63.793188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="63.793188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="67.021234" transform="rotate(-0 36.509687 67.021234)">350</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <path d="M 43.509687 41.353188 
+L 467.589687 41.353188 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m93f6fca471" x="43.509687" y="41.353188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.509687" y="44.581234" transform="rotate(-0 36.509687 44.581234)">400</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.619219" y="126.625188" transform="rotate(-90 15.619219 126.625188)">Implied Data Center revenue, $bn</text>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 43.509687 133.940628 
+L 467.589687 133.940628 
+" clip-path="url(#p4aadf7b627)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #15161a"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 43.509687 220.873188 
+L 43.509687 32.377188 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 43.509687 220.873188 
+L 467.589687 220.873188 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #15161a; font: 700 8.8px 'Helvetica'; text-anchor: middle" x="94.913324" y="130.176537" transform="rotate(-0 94.913324 130.176537)">$192bn</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 700 8.8px 'Helvetica'; text-anchor: middle" x="202.004233" y="76.320538" transform="rotate(-0 202.004233 76.320538)">$312bn</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 700 8.8px 'Helvetica'; text-anchor: middle" x="309.095142" y="50.290138" transform="rotate(-0 309.095142 50.290138)">$370bn</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 700 8.8px 'Helvetica'; text-anchor: middle" x="416.186051" y="114.468537" transform="rotate(-0 416.186051 114.468537)">$227bn</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 7.6px 'Helvetica'; text-anchor: end" x="459.022415" y="132.356503" transform="rotate(-0 459.022415 132.356503)"> FY26 actual $194bn</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="43.509687" y="27.0993" transform="rotate(-0 43.509687 27.0993)">The FY26 actual falls out of ~$600bn CY25 capex × 40% GPU × 80% share. Forward revenue is the capex forecast run through two slipping shares.</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="43.509687" y="16.377188" transform="rotate(-0 43.509687 16.377188)">NVDA revenue is an identity: capex × GPU-share × NVDA-share</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4aadf7b627">
+   <rect x="43.509687" y="32.377188" width="424.08" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p>That is why this valuation cannot be done honestly without a view on capex, and why our companion note builds one. <strong><a href="../ai-capex-payback-clock/">The AI Capex Payback Clock</a></strong> works through whether the ~$700bn of 2026 hyperscaler capex can earn its cost of capital, and finds that it does only under a specific condition: capex growth must plateau <em>and</em> AI revenue must keep compounding. We use that note here as one input — not as a forecast we import wholesale, but as the source of the three capex paths behind our three revenue scenarios:</p>
+<ul>
+<li><strong>Bull</strong> takes total AI capex compounding past $1.3T, GPU share holding near 38–40%, and NVIDIA holding ~78% — delivering the $980bn FY2031 revenue in our top case.</li>
+<li><strong>Base</strong> takes capex growth decelerating and NVIDIA's share drifting to ~75% as ASICs scale — $780bn.</li>
+<li><strong>Bear</strong> takes the Clock's plateau: capex growth stops, and NVIDIA's revenue flattens near $505bn.</li>
+</ul>
+<p>The reverse-DCF (§7) shows the current price requires roughly the <strong>$1 trillion FY2031 revenue</strong> of the bull path — which in turn requires <strong>total AI-infrastructure capex near $3 trillion a year</strong> at that horizon. That is the demand the price embeds. The Clock's finding is that even $700bn–$1T is not yet self-funding on a three-year hardware clock; $3T compounds the question rather than answering it. A reader can hold a more optimistic capex view than ours and still see the point: at $202.81, NVIDIA is not priced for AI to succeed — it is priced for AI <em>infrastructure spending</em> to keep accelerating, which is a narrower and more demanding claim.</p>
+<p>This locates NVIDIA in the wider series. Our companion <a href="../power-wall/">The Power Wall</a> sorts the AI-infrastructure complex by how fast new supply can arrive, and silicon lands on the fast side — a shortage rent that prices away in roughly two years, which is why NVIDIA defends its premium through CUDA and rack-scale systems rather than through chip scarcity. But that whole edifice rests on the one force this section has isolated: demand. NVIDIA is the finest business on the rented side of the trade — the chips — and its price is decided by whether the buyers keep buying.</p>
+<h2><span class="n">§6</span> The Cisco Test</h2>
+<p class="lede"><em>The comparison everyone reaches for. Run on the numbers, it exonerates the valuation and indicts the demand structure.</em></p>
+<p>NVIDIA is constantly likened to Cisco at the March-2000 peak — the last time a single company was <em>the</em> pick-and-shovel supplier to a technology buildout, at the top. We ran the comparison on the actual figures rather than the vibe, and it cuts both ways, cleanly.</p>
+<table><thead><tr><th></th><th>Cisco (Mar 2000)</th><th>NVIDIA (Jul 2026)</th></tr></thead><tbody>
+<tr><td>Market cap</td><td>~$555bn</td><td>$4.91tn</td></tr>
+<tr><td>Trailing P/E</td><td>~201x</td><td>~41x (FY26 EPS)</td></tr>
+<tr><td>Forward P/E</td><td>—</td><td>~22–23x</td></tr>
+<tr><td>Price / Sales</td><td>~29x</td><td>~23x trailing</td></tr>
+<tr><td>Gross margin</td><td>~65%</td><td>~71–75%</td></tr>
+<tr><td>Free cash flow</td><td>modest; growth vendor-financed</td><td>~$97bn, net cash</td></tr>
+</tbody></table>
+<p><strong>On valuation, the analogy fails, and it is not close.</strong> Cisco peaked at ~201x earnings; NVIDIA trades at ~41x trailing and ~22x forward. Cisco's growth was substantially <em>vendor-financed</em> — it lent money to the telecom and CLEC customers who bought its gear and then went bankrupt, taking the revenue with them. NVIDIA funds its growth from ~$97bn of real free cash flow and sits on net cash. A buyer at NVIDIA today is paying a fraction of Cisco's multiple for a more profitable, cash-generative business. The lazy "it's Cisco again" call is wrong on the arithmetic.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476.928 251.899281" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-21T00:47:37.458170</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 251.899281 
+L 476.928 251.899281 
+L 476.928 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 44.208 218.304 
+L 236.971636 218.304 
+L 236.971636 40.896 
+L 44.208 40.896 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 52.969983 218.304 
+L 115.151802 218.304 
+L 115.151802 70.464 
+L 52.969983 70.464 
+z
+" clip-path="url(#pd8a1964e50)" style="fill: #b23b3b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 166.027835 218.304 
+L 228.209653 218.304 
+L 228.209653 188.147582 
+L 166.027835 188.147582 
+z
+" clip-path="url(#pd8a1964e50)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m0c983a7dcc" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0c983a7dcc" x="84.060893" y="218.304" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(72.808783 231.760094)">Cisco</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(65.051908 241.383344)">Mar 2000</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m0c983a7dcc" x="197.118744" y="218.304" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(184.615775 231.760094)">NVDA</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(180.106634 241.383344)">Jul 2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 44.208 218.304 
+L 236.971636 218.304 
+" clip-path="url(#pd8a1964e50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <defs>
+       <path id="m697aee68ce" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m697aee68ce" x="44.208" y="218.304" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="37.208" y="221.532047" transform="rotate(-0 37.208 221.532047)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 44.208 181.527881 
+L 236.971636 181.527881 
+" clip-path="url(#pd8a1964e50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m697aee68ce" x="44.208" y="181.527881" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="37.208" y="184.755927" transform="rotate(-0 37.208 184.755927)">50</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 44.208 144.751761 
+L 236.971636 144.751761 
+" clip-path="url(#pd8a1964e50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m697aee68ce" x="44.208" y="144.751761" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="37.208" y="147.979808" transform="rotate(-0 37.208 147.979808)">100</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 44.208 107.975642 
+L 236.971636 107.975642 
+" clip-path="url(#pd8a1964e50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m697aee68ce" x="44.208" y="107.975642" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="37.208" y="111.203689" transform="rotate(-0 37.208 111.203689)">150</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 44.208 71.199522 
+L 236.971636 71.199522 
+" clip-path="url(#pd8a1964e50)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m697aee68ce" x="44.208" y="71.199522" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="37.208" y="74.427569" transform="rotate(-0 37.208 74.427569)">200</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="16.317531" y="129.6" transform="rotate(-90 16.317531 129.6)">Multiple</text>
+    </g>
+   </g>
+   <g id="patch_5">
+    <path d="M 44.208 218.304 
+L 44.208 40.896 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 44.208 218.304 
+L 236.971636 218.304 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: middle" x="84.060893" y="65.527044" transform="rotate(-0 84.060893 65.527044)">201x</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: middle" x="197.118744" y="183.210626" transform="rotate(-0 197.118744 183.210626)">41x</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: start" x="44.208" y="34.896" transform="rotate(-0 44.208 34.896)">Trailing P/E</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 275.524364 218.304 
+L 468.288 218.304 
+L 468.288 40.896 
+L 275.524364 40.896 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 284.286347 218.304 
+L 346.468165 218.304 
+L 346.468165 70.464 
+L 284.286347 70.464 
+z
+" clip-path="url(#p5de88541b2)" style="fill: #b23b3b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 397.344198 218.304 
+L 459.526017 218.304 
+L 459.526017 101.051586 
+L 397.344198 101.051586 
+z
+" clip-path="url(#p5de88541b2)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_3">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m0c983a7dcc" x="315.377256" y="218.304" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(304.125147 231.760094)">Cisco</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(296.368272 241.383344)">Mar 2000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m0c983a7dcc" x="428.435107" y="218.304" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(415.932139 231.760094)">NVDA</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(411.422998 241.383344)">Jul 2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <path d="M 275.524364 218.304 
+L 468.288 218.304 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="218.304" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="221.532047" transform="rotate(-0 268.524364 221.532047)">0</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <path d="M 275.524364 192.814345 
+L 468.288 192.814345 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="192.814345" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="196.042392" transform="rotate(-0 268.524364 196.042392)">5</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_19">
+      <path d="M 275.524364 167.32469 
+L 468.288 167.32469 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="167.32469" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="170.552737" transform="rotate(-0 268.524364 170.552737)">10</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <path d="M 275.524364 141.835034 
+L 468.288 141.835034 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="141.835034" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="145.063081" transform="rotate(-0 268.524364 145.063081)">15</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_23">
+      <path d="M 275.524364 116.345379 
+L 468.288 116.345379 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="116.345379" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="119.573426" transform="rotate(-0 268.524364 119.573426)">20</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_25">
+      <path d="M 275.524364 90.855724 
+L 468.288 90.855724 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="90.855724" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="94.083771" transform="rotate(-0 268.524364 94.083771)">25</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_27">
+      <path d="M 275.524364 65.366069 
+L 468.288 65.366069 
+" clip-path="url(#p5de88541b2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m697aee68ce" x="275.524364" y="65.366069" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="268.524364" y="68.594116" transform="rotate(-0 268.524364 68.594116)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_10">
+    <path d="M 275.524364 218.304 
+L 275.524364 40.896 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 275.524364 218.304 
+L 468.288 218.304 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: middle" x="315.377256" y="65.527044" transform="rotate(-0 315.377256 65.527044)">29x</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: middle" x="428.435107" y="96.11463" transform="rotate(-0 428.435107 96.11463)">23x</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: start" x="275.524364" y="34.896" transform="rotate(-0 275.524364 34.896)">Price / Sales</text>
+   </g>
+  </g>
+  <g id="text_24">
+   <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="8.64" y="16.377187" transform="rotate(-0 8.64 16.377187)">The Cisco test: on valuation, the analogy fails</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd8a1964e50">
+   <rect x="44.208" y="40.896" width="192.763636" height="177.408"/>
+  </clipPath>
+  <clipPath id="p5de88541b2">
+   <rect x="275.524364" y="40.896" width="192.763636" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p><strong>On demand structure, the analogy is uncomfortably apt — and that is the real warning.</strong> Two Cisco echoes are present in NVIDIA's own filings. First, the faint return of vendor financing: the <strong>$22.3bn of strategic stakes</strong> in its own customers (§4) is the same circularity that flattered Cisco's demand, in miniature. Second, and more serious, <strong>customer concentration is far higher than Cisco's ever was</strong> — Cisco sold to thousands of enterprises and carriers; NVIDIA's top two direct customers are <strong>36% of revenue</strong>, and end-demand concentrates in a handful of hyperscalers and AI labs. Cisco did not break because it was overvalued alone; it broke because the <em>demand</em> behind the revenue turned out to be an overbuild funded by cheap capital. That is precisely the risk the Payback Clock isolates. The honest read of the Cisco test: NVIDIA will not fall 80% on multiple compression from 41x. It could re-rate hard if the <em>demand</em> proves to be a capex overbuild — the same mechanism, a different valuation starting point.</p>
+<h2><span class="n">§7</span> Valuation</h2>
+<p class="lede"><em>Reverse-DCF first, to anchor what the price assumes; then a disciplined forward model; then the sensitivities that make the point.</em></p>
+<p><strong>What the price assumes.</strong> Hold NVIDIA's structure constant — 45% free-cash-flow margins, an 8-year fade to a 4% terminal, discounting at an 11.3% cost of equity (a normalized 4.3% risk-free rate and 4.8% equity risk premium on a normalized beta ~1.45, not the momentum-inflated trailing 2.2) — and solve for the revenue path that justifies $202.81. The answer: <strong>roughly $1 trillion of revenue by FY2031, a 36% five-year compound rate</strong> [ESTIMATED]. The price is not egregious; it is a specific, demanding forecast, and §5 shows it requires ~$3tn of annual AI capex to feed it.</p>
+<p><strong>The forward model.</strong> Our three-stage FCFE model — explicit revenue FY2027–31, an 8-year growth fade, a 4% Gordon terminal, plus the $76bn of net cash and strategic stakes — produces the scenario values in §0: <strong>bull $210, base $163, bear $104, weighted ≈ $163.</strong> The base case is not conservative on growth: it has revenue tripling to $780bn by FY2031. It comes in below the price because a disciplined discount rate and a disciplined terminal multiple (about 14× terminal FCF) do not, by themselves, support $4.9tn until the cash actually shows up.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 539.90394 257.519906" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-21T00:47:37.495442</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 257.519906 
+L 539.90394 257.519906 
+L 539.90394 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 84.68125 220.692719 
+L 508.76125 220.692719 
+L 508.76125 32.196719 
+L 84.68125 32.196719 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 84.68125 212.124719 
+L 207.19325 212.124719 
+L 207.19325 177.852719 
+L 84.68125 177.852719 
+z
+" clip-path="url(#pcfc50a0080)" style="fill: #b23b3b; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 84.68125 143.580719 
+L 276.69525 143.580719 
+L 276.69525 109.308719 
+L 84.68125 109.308719 
+z
+" clip-path="url(#pcfc50a0080)" style="fill: #b8902f; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 84.68125 75.036719 
+L 332.06125 75.036719 
+L 332.06125 40.764719 
+L 84.68125 40.764719 
+z
+" clip-path="url(#pcfc50a0080)" style="fill: #1f7a4d; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="ma6d19043fb" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma6d19043fb" x="84.68125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="84.68125" y="234.148812" transform="rotate(-0 84.68125 234.148812)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="143.58125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="143.58125" y="234.148812" transform="rotate(-0 143.58125 234.148812)">50</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="202.48125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="202.48125" y="234.148812" transform="rotate(-0 202.48125 234.148812)">100</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="261.38125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="261.38125" y="234.148812" transform="rotate(-0 261.38125 234.148812)">150</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="320.28125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="320.28125" y="234.148812" transform="rotate(-0 320.28125 234.148812)">200</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="379.18125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="379.18125" y="234.148812" transform="rotate(-0 379.18125 234.148812)">250</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="438.08125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="438.08125" y="234.148812" transform="rotate(-0 438.08125 234.148812)">300</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#ma6d19043fb" x="496.98125" y="220.692719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="496.98125" y="234.148812" transform="rotate(-0 496.98125 234.148812)">350</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="296.72125" y="247.003969" transform="rotate(-0 296.72125 247.003969)">Fair value per share, $</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 84.68125 194.988719 
+L 508.76125 194.988719 
+" clip-path="url(#pcfc50a0080)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <defs>
+       <path id="m1c5822380e" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1c5822380e" x="84.68125" y="194.988719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(58.671562 194.05075)">Bear</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(8.64 203.674)">$505bn FY31 rev</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 84.68125 126.444719 
+L 508.76125 126.444719 
+" clip-path="url(#pcfc50a0080)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m1c5822380e" x="84.68125" y="126.444719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(57.168281 125.50675)">Base</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(8.64 135.13)">$780bn FY31 rev</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <path d="M 84.68125 57.900719 
+L 508.76125 57.900719 
+" clip-path="url(#pcfc50a0080)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m1c5822380e" x="84.68125" y="57.900719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(62.67375 56.96275)">Bull</text>
+      <text style="fill: #5e626b; font: 9px 'Helvetica'" transform="translate(8.64 66.586)">$980bn FY31 rev</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_15">
+    <path d="M 323.59143 220.692719 
+L 323.59143 32.196719 
+" clip-path="url(#pcfc50a0080)" style="fill: none; stroke: #15161a; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 461.02869 220.692719 
+L 461.02869 32.196719 
+" clip-path="url(#pcfc50a0080)" style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #5e626b; stroke-width: 1.2"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 276.69525 220.692719 
+L 276.69525 32.196719 
+" clip-path="url(#pcfc50a0080)" style="fill: none; stroke-dasharray: 1.2,1.98; stroke-dashoffset: 0; stroke: #8a6d2b; stroke-width: 1.2"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 84.68125 220.692719 
+L 84.68125 32.196719 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 84.68125 220.692719 
+L 508.76125 220.692719 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: start" x="211.90525" y="197.406023" transform="rotate(-0 211.90525 197.406023)">$104</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: start" x="281.40725" y="128.862023" transform="rotate(-0 281.40725 128.862023)">$163</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #15161a; font: 700 9.5px 'Helvetica'; text-anchor: start" x="336.77325" y="60.318023" transform="rotate(-0 336.77325 60.318023)">$210</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 700 8.2px 'Helvetica'; text-anchor: start" x="327.12543" y="20.201519" transform="rotate(-0 327.12543 20.201519)">  price $203</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5e626b; font: italic 8px 'Helvetica'; text-anchor: start" x="464.56269" y="20.201519" transform="rotate(-0 464.56269 20.201519)">  street mean $319</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #8a6d2b; font: 700 8px 'Helvetica'; text-anchor: end" x="271.98325" y="232.687919" transform="rotate(-0 271.98325 232.687919)">weighted FV $163</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="84.68125" y="26.918831" transform="rotate(-0 84.68125 26.918831)">Even the bull case sits below the street mean. The price is reached only at a below-normalized discount rate.</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="84.68125" y="16.196719" transform="rotate(-0 84.68125 16.196719)">Fair-value distribution vs price and street</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcfc50a0080">
+   <rect x="84.68125" y="32.196719" width="424.08" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p><strong>The sensitivities are the honest core of the valuation</strong>, because the answer moves more on two assumptions than on the growth we argue about:</p>
+<table><thead><tr><th>Base-case FV</th><th>Terminal g 3.5%</th><th>4.0%</th><th>4.5%</th></tr></thead><tbody>
+<tr><td><strong>Cost of equity 10.0%</strong></td><td>$188</td><td>$199</td><td>$211</td></tr>
+<tr><td><strong>11.3% (base)</strong></td><td>$157</td><td>$163</td><td>$171</td></tr>
+<tr><td><strong>12.5%</strong></td><td>$134</td><td>$139</td><td>$144</td></tr>
+</tbody></table>
+<p>Read the top row: <strong>at a 10% cost of equity, the base case supports ~$199–211 — essentially today's price.</strong> The entire gap between our $163 and the $202.81 market — and most of the larger gap to the ~$300–320 street — is a disagreement about the <em>discount rate and terminal multiple</em>, not about how fast NVIDIA grows. We already grant the growth. The question is what a dollar of NVIDIA cash flow arriving in 2033 is worth today, for a stock with a 2.2 beta and a demand base decided by other companies' capital budgets. We think 11.3% is the honest number and 10% is generous; a reader who accepts 10% and base-case execution can justify the current price, and should own it with clear eyes about what they are assuming.</p>
+<p><strong>Where we land.</strong> Central FV <strong>≈ $163</strong>, roughly 20% below spot, on a distribution from <strong>$104 to $210</strong>. The skew is mildly negative and it is argued, not assumed: the point estimate sits below the price because the price requires a below-normalized cost of capital <em>and</em> uninterrupted capex growth, and we decline to assume both at once.</p>
+<h2><span class="n">§8</span> The Risk Ledger, Both Ways</h2>
+<p class="lede"><em>A valuation this sensitive owes the reader both tails, explicitly.</em></p>
+<p><strong>What makes us wrong on the upside:</strong></p>
+<ul>
+<li><strong>Inference eats training.</strong> If AI compute demand shifts decisively to inference (serving models, not training them) and that market is larger and stickier than the training buildout, NVIDIA's TAM re-rates upward and the $1tn revenue stops looking like a stretch.</li>
+<li><strong>The software and networking attach compounds.</strong> If NVIDIA converts its systems lead into high-margin recurring software and networking revenue, margins firm above our 45% and the terminal multiple deserves to be higher.</li>
+<li><strong>Sovereign AI.</strong> Government and national-champion buildouts (outside the four US hyperscalers) add a demand leg the capex debate largely ignores, and they are less price-sensitive.</li>
+<li><strong>Share holds.</strong> If CUDA and rack-scale systems keep share near 80% rather than drifting to 75%, the base case migrates toward the bull.</li>
+</ul>
+<p><strong>What makes us right, or worse:</strong></p>
+<ul>
+<li><strong>The Clock breaks.</strong> The dominant risk, and it is exogenous: if hyperscaler capex plateaus — the condition our companion note shows is <em>required</em> for the spending to pay back — NVIDIA's revenue plateaus with it, and the bear case ($104) governs.</li>
+<li><strong>ASIC substitution accelerates at the top buyers.</strong> The 36%-of-revenue top-two customers are the most able and most motivated to in-source; faster-than-expected TPU/Trainium/Maia scaling caps share below 72%.</li>
+<li><strong>Export controls.</strong> China fell from ~20% to 9.1% of revenue under controls, with a $4.5bn charge already taken; a further tightening (or the 15% licensed-sales levy the USG has signaled) removes a revenue leg outright.</li>
+<li><strong>The purchase-commitment and stake writedowns.</strong> $95.2bn of non-cancellable commitments and $22.3bn of customer stakes are geared to demand continuing; a plateau converts part of both into charges.</li>
+</ul>
+<p>The asymmetry we see: the upside cases make NVIDIA worth somewhat more than today; the downside case (a capex plateau) makes it worth roughly half. That is why, for a valuation-disciplined buyer, the risk/reward at $202.81 is unfavorable despite the quality — not because NVIDIA is a bad business, but because the price already pays for the good outcome and the bad outcome is decided elsewhere.</p>
+<h2><span class="n">§9</span> Recommendation, and What We Could Not Verify</h2>
+<p><strong>Recommendation.</strong> Fair value <strong>≈ $163</strong>, distribution <strong>$104–210</strong>, versus $202.81. We are constructive on the business and cautious on the equity at this price: this is a name to own on a demand-cycle pullback, not at a full price for a demand stream the company does not control. We are explicitly <em>not</em> short — net cash, real cash flow, dominant position and genuine upside optionality make a short thesis unattractive; the honest call is that the reward no longer compensates the risk at $203. We log this fair-value call against the $202.81 close to our signal ledger for out-of-sample scoring, per house practice on every single-name valuation.</p>
+<p><strong>What we could not verify, and how it would move the number.</strong></p>
+<ul>
+<li><strong>Forward consensus dispersion.</strong> Published sell-side consensus centers near $391bn revenue and ~$9.3 EPS for FY2027, but the spread across aggregators is wide (some FY2027 revenue reads as low as ~$342bn); we anchor the near-year ramp on the central figures. This affects the near-year ramp, not the terminal.</li>
+<li><strong>The Q1-FY2027 below-the-line gain</strong> (net income &gt; operating income) is not fully decomposed; we sidestep it by valuing on operating free cash flow.</li>
+<li><strong>The itemized strategic-stake list</strong> ($22.3bn) is not fully broken out in the sources we pulled; the aggregate is disclosed and used, the composition is not.</li>
+<li><strong>Networking revenue</strong> is not separately disclosed; we treat it inside Data Center.</li>
+</ul>
+<p>None of these move the central estimate materially, because the valuation is dominated by the discount rate, the terminal multiple, and the capex-demand path — the three things §7 and §5 make explicit. The swing factor is not a number hidden in NVIDIA's filings. It is the sustainability of everyone else's spending.</p>
+<h2><span class="n">§10</span> Disclosures</h2>
+<p><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (§202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses. This report values NVIDIA (NASDAQ: NVDA) and references, among others, Advanced Micro Devices (AMD), Microsoft (MSFT), Alphabet (GOOGL), Amazon (AMZN), Meta Platforms (META), Micron (MU) and Cisco (CSCO); the Fund holds no position, long or short, in any of them, and has no economic interest in the price of any security named here. The Fund receives no compensation from any party in connection with its research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <strong>not</strong> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <strong>not</strong> issued, reviewed, endorsed, certified, or approved by — nor affiliated with — CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome — please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>.</p>
+
+</main></body></html>
