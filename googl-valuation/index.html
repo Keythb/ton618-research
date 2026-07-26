@@ -1,0 +1,681 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Alphabet &mdash; The Convention Price &mdash; TON618 Capital</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --t618-obsidian: #0B0B0C; --t618-onyx: #16161A; --t618-graphite: #26262B; --t618-ash: #3A3A40;
+  --t618-gold: #C9A24B; --t618-champagne: #E6D2A2; --t618-antique: #8A6D2B;
+  --t618-ivory: #F6F3EC; --t618-ink: #111113; --t618-warmgray: #9A958A;
+  --t618-jade: #3F8F6B; --t618-oxblood: #B0413E;
+  --t618-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --t618-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --t618-gutter: 48px; --t618-hairline: 1px;
+}
+* { box-sizing: border-box; }
+body.t618 {
+  background: var(--t618-ivory); color: var(--t618-ink);
+  font-family: var(--t618-sans); font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased; font-feature-settings: "tnum" 1, "lnum" 1;
+  margin: 0; padding: var(--t618-gutter);
+}
+main { max-width: 880px; margin: 0 auto; }
+.t618 h1, .t618 h2, .t618 h3, .t618 h4, .t618 h5 { font-family: var(--t618-serif); font-weight: 500; letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 0.4em; }
+.t618 h1 { font-size: 2rem; }
+.t618 h2 { font-size: 1.5rem; margin-top: 2.2rem; }
+.t618 h3 { font-size: 1.2rem; margin-top: 1.6rem; }
+.t618 h4 { font-size: 1.03rem; margin-top: 1.25rem; color: #2A2822; }
+.t618 h5 { font-size: 0.95rem; margin-top: 1rem; color: #43403A; }
+.t618 h6 { font-family: var(--t618-sans); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin: 0.9rem 0 0.3rem; color: #5A564E; }
+.t618 p { margin: 0.65em 0; }
+.t618 ul { margin: 0.6em 0; padding-left: 1.15rem; }
+.t618 li { margin-bottom: 0.35rem; }
+.t618-eyebrow { font-family: var(--t618-sans); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--t618-antique); margin: 0 0 0.5em; display: block; }
+.t618-rule { border: 0; height: var(--t618-hairline); background: var(--t618-antique); margin: 1.5rem 0; opacity: 0.9; }
+.t618-rule--faint { background: #D8D2C4; }
+.t618-rule--quasar { border: 0; height: var(--t618-hairline); position: relative; background: #D8D2C4; margin: 1.5rem 0; }
+.t618-rule--quasar::before { content: ""; position: absolute; left: 0; top: 50%; width: 7px; height: 7px; border-radius: 50%; background: var(--t618-gold); transform: translateY(-50%); box-shadow: 0 0 8px 1px rgba(201,162,75,0.6); }
+.t618-title { display: inline-flex; align-items: center; gap: 0.55em; font-family: var(--t618-serif); }
+.t618-title .icon { height: 1.7em; width: auto; flex: none; }
+.t618-title .name { font-size: 1.9rem; font-weight: 600; letter-spacing: -0.01em; color: var(--t618-ink); white-space: nowrap; }
+.t618-title .name .six18 { color: var(--t618-gold); }
+.t618-title .name .cap { font-weight: 400; }
+.t618-figure { font-family: var(--t618-serif); font-size: 2.7rem; color: var(--t618-antique); line-height: 1; }
+.t618-figure .label { display: block; font-family: var(--t618-sans); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--t618-warmgray); margin-top: 0.45em; line-height: 1.4; }
+table.t618-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 1rem 0 1.5rem; background: #FFFFFF; }
+table.t618-table thead th { background: var(--t618-ink); color: var(--t618-champagne); font-family: var(--t618-sans); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.7rem; text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--t618-gold); }
+table.t618-table tbody td { padding: 0.55rem 0.75rem; border-bottom: 1px solid #E2DCCE; vertical-align: top; }
+table.t618-table td.num, table.t618-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.t618-table tbody tr:nth-child(even) { background: #F8F6F0; }
+/* wide-exhibit step-downs — kept in step with FIT_VARIANTS in build_report.py */
+table.t618-table--compact { font-size: 0.755rem; }
+table.t618-table--compact thead th { font-size: 0.6125rem; letter-spacing: 0.02em; padding: 0.42rem 7px; }
+table.t618-table--compact tbody td { padding: 0.38rem 7px; }
+table.t618-table--tight { font-size: 0.69rem; }
+table.t618-table--tight thead th { font-size: 0.55rem; letter-spacing: 0; padding: 0.34rem 4.5px; }
+table.t618-table--tight tbody td { padding: 0.3rem 4.5px; }
+.t618-landscape { overflow-x: auto; }
+.pos { color: var(--t618-jade); } .neg { color: var(--t618-oxblood); }
+.t618-caption { font-size: 0.8125rem; color: var(--t618-warmgray); }
+/* authored analysis reads at body size in body colour; .t618-caption is
+   reserved for source, basis and method notes */
+.t618-analysis { font-size: 1rem; color: var(--t618-ink); line-height: 1.55; margin: 0.9rem 0 0.5rem; }
+.t618-analysis strong { color: var(--t618-antique); }
+.cover-note { margin-bottom: 1.1rem; }
+.t618-disclosure { font-size: 0.72rem; color: var(--t618-warmgray); line-height: 1.55; border-top: 1px solid var(--t618-antique); padding-top: 0.75rem; margin-top: 2.5rem; }
+.t618 a { color: var(--t618-antique); text-decoration: none; border-bottom: 1px solid #D8D2C4; }
+.t618 a:hover { color: var(--t618-gold); }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2rem 0; }
+.exhibit-label { font-family: var(--t618-sans); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--t618-antique); margin: 1.8rem 0 0.3rem; display: block; }
+.exhibit-note { font-size: 0.75rem; color: var(--t618-warmgray); margin-top: 0.35rem; margin-bottom: 1.4rem; }
+.sources { font-size: 0.78rem; color: #4A4840; line-height: 1.6; }
+.sources li { margin-bottom: 0.25rem; }
+.fact { font-weight: 600; }
+.masthead { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+sup { font-size: 0.68em; color: var(--t618-antique); }
+.pdf-link { font-family: var(--t618-sans); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--t618-antique); border: 1px solid var(--t618-antique); border-radius: 2px; padding: 0.32rem 0.7rem; }
+.pdf-link:hover { background: var(--t618-champagne); }
+
+/* --- cover ------------------------------------------------------------- */
+.cover { margin: 2.2rem 0 0; }
+.cover-company { font-family: var(--t618-serif); font-size: 3.9rem; line-height: 1.02; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 0.1em; }
+.cover-ticker { font-family: var(--t618-sans); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--t618-antique); margin: 0 0 1.1rem; }
+.cover-thesis { font-family: var(--t618-serif); font-size: 1.3rem; font-weight: 400; font-style: italic; line-height: 1.3; color: #2A2822; margin: 0 0 0.5rem; max-width: 46ch; }
+.cover-sub { font-size: 0.94rem; line-height: 1.5; color: #4A4840; margin: 0 0 1.3rem; max-width: 60ch; }
+.t618-figure--sm { font-size: 1.85rem; }
+.cover-rec { display: inline-block; background: var(--t618-ink); color: var(--t618-champagne); font-family: var(--t618-sans); font-size: 0.92rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.5rem 1.1rem; margin-bottom: 0.6rem; }
+.cover-meta { font-size: 0.84rem; color: #4A4840; line-height: 1.7; }
+.cover-meta strong { color: var(--t618-ink); }
+
+/* --- sections ---------------------------------------------------------- */
+.section { }
+.section-eyebrow { display: block; font-family: var(--t618-sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--t618-antique); margin-bottom: 0.25rem; }
+.t618-callout { background: #FFFFFF; border-left: 3px solid var(--t618-gold); padding: 0.75rem 1rem; margin: 1.1rem 0; }
+.t618-callout p { margin: 0; font-size: 0.94rem; }
+.t618-callout-label { display: block; font-family: var(--t618-sans); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--t618-antique); margin-bottom: 0.35rem; }
+dl.qa { margin: 1rem 0; }
+dl.qa dt { font-family: var(--t618-serif); font-size: 1.05rem; font-weight: 600; margin-top: 1rem; color: var(--t618-ink); }
+dl.qa dd { margin: 0.35rem 0 0; padding-left: 0; }
+.exhibit { margin: 1.2rem 0 1.6rem; }
+svg.t618-chart { display: block; width: 100%; height: auto; background: #FFFFFF; border: 1px solid #E8E2D4; }
+.toc { columns: 2; column-gap: 2.4rem; font-size: 0.86rem; }
+.toc a { border-bottom: none; }
+.toc li { margin-bottom: 0.3rem; break-inside: avoid; }
+
+@media screen and (max-width: 700px) {
+  body.t618 { padding: 20px; }
+  .kpis { grid-template-columns: 1fr; gap: 1.2rem; }
+  .t618-title .name { font-size: 1.4rem; }
+  .cover-company { font-size: 2.2rem; }
+  .toc { columns: 1; }
+}
+
+@page { size: Letter; margin: 0.9in; }
+@page t618landscape { size: Letter landscape; margin: 0.9in; }
+@media print {
+  body.t618 { padding: 0; font-size: 10.2pt; background: #FFFFFF; }
+  table.t618-table--compact { font-size: 7.2pt; }
+  table.t618-table--tight { font-size: 6.6pt; }
+  .t618-landscape { page: t618landscape; break-before: page; break-after: page; overflow: visible; }
+  main { max-width: none; }
+  .kpis { gap: 1.2rem; margin: 1.2rem 0; }
+  .t618-figure { font-size: 2rem; }
+  .t618-figure--sm { font-size: 1.45rem; }
+  table.t618-table { font-size: 8.2pt; break-inside: avoid; page-break-inside: avoid; }
+  h2, h3, h4, .exhibit-label, .section-eyebrow { break-after: avoid; page-break-after: avoid; }
+  h2, h3, h4 { orphans: 3; widows: 3; }
+  p, li { orphans: 3; widows: 3; }
+  .exhibit { break-inside: avoid; page-break-inside: avoid; }
+  .t618-callout { break-inside: avoid; page-break-inside: avoid; }
+  dl.qa dt { break-after: avoid; page-break-after: avoid; }
+  dl.qa dd { break-inside: avoid; page-break-inside: avoid; }
+  .t618 a { border-bottom: none; color: inherit; }
+  .pdf-link { display: none; }
+  .cover { page-break-after: always; break-after: page; }
+  .section { page-break-before: always; break-before: page; }
+  .cover-company { font-size: 3.1rem; }
+  .cover-ticker { font-size: 1.3rem; }
+  .cover-thesis { font-size: 1.15rem; }
+  svg.t618-chart { break-inside: avoid; page-break-inside: avoid; }
+  .exhibit + .exhibit { break-before: auto; }
+}
+
+/* ===================================================================
+   Ledger design layer — GOOGL condensed report (report-designer skill)
+   Motif: the reconciliation. Paper is white; ink #111; paper gold #8a6d2a.
+   =================================================================== */
+:root { --paper: #FFFFFF; --ink: #111111; --mut: #6B665C; --gold: #8a6d2a;
+        --rule: #DCD6C8; --black: #0B0B0C; --screengold: #C9A24B; }
+body.t618 { background: var(--paper); color: var(--ink); }
+main { max-width: 830px; }
+.t618 h2, .t618 h3 { color: var(--ink); }
+.t618-eyebrow, .exhibit-label, .t618-callout-label, .t618-analysis strong,
+.t618 a, .section-eyebrow, .t618-figure { color: var(--gold); }
+.t618-rule { background: var(--gold); }
+.t618-rule--faint, .t618-rule--quasar { background: var(--rule); }
+.t618-rule--quasar::before { background: var(--gold); box-shadow: none; }
+
+/* hairline rules, not boxes ---------------------------------------- */
+svg.t618-chart { border: 0; border-top: 1px solid var(--rule);
+                 border-bottom: 1px solid var(--rule); }
+.t618-callout { background: transparent; border-left: 0;
+                border-top: 1px solid var(--gold); border-bottom: 1px solid var(--rule);
+                padding: 0.7rem 0 0.8rem; margin: 1.25rem 0; }
+/* the callout opens on its own gold hairline; keep it clear of the section rule
+   above so the two do not read as one doubled rule */
+hr.t618-rule--faint + .t618-callout { margin-top: 2.3rem; }
+table.t618-table { background: transparent; }
+table.t618-table thead th { background: transparent; color: var(--ink);
+  border-bottom: 1px solid var(--ink); border-top: 1px solid var(--rule); }
+table.t618-table tbody tr:nth-child(even) { background: transparent; }
+table.t618-table tbody td { border-bottom: 1px solid var(--rule); }
+.pdf-link { border-color: var(--gold); color: var(--gold); }
+.pdf-link:hover { background: #F4EEDE; }
+
+/* icons ------------------------------------------------------------ */
+.ico { display: inline-block; vertical-align: -0.18em; color: var(--gold); }
+
+/* --- cover -------------------------------------------------------- */
+.cover-ticker, .cover-company { color: var(--ink); }
+.cover-ticker { color: var(--gold); }
+
+/* the note's ONE black band: the viral number as a ledger entry */
+.band { background: var(--black); color: var(--screengold); margin: 1.6rem 0 1.9rem;
+        padding: 1.5rem 1.9rem 1.6rem; -webkit-print-color-adjust: exact;
+        print-color-adjust: exact; }
+.band-kicker { display: block; font-family: var(--t618-sans); font-size: 0.66rem;
+  font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #9C8C63; margin-bottom: 1rem; }
+.band-entry { display: flex; align-items: flex-start; gap: 1.6rem; }
+.band-entry .count { flex: 1 1 0; }
+.count-carry { flex: 0 0 auto; align-self: center; color: #7E6B3D; padding-top: 1.4rem; }
+.count-lab { display: block; font-family: var(--t618-sans); font-size: 0.63rem;
+  font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #8E805C; margin-bottom: 0.1rem; }
+.count-fig { display: inline-block; font-family: var(--t618-serif); font-size: 5.4rem;
+  line-height: 1.02; font-weight: 500; color: var(--screengold); position: relative; }
+.count-sub { display: block; font-family: var(--t618-sans); font-size: 0.7rem;
+  color: #8E805C; margin-top: 0.55rem; max-width: 26ch; line-height: 1.45; }
+
+/* the two motif marks: a struck convention figure, a closed total */
+.struck { position: relative; }
+.struck::after { content: ""; position: absolute; left: -5%; right: -5%; top: 54%;
+  height: 1px; background: currentColor; -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
+.closed { position: relative; padding-bottom: 5px;
+  border-bottom: 1px solid currentColor; }
+.closed::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+  height: 1px; background: currentColor; -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
+.count-fig.closed { padding-bottom: 8px; }
+
+/* the cover figures as ruled ledger entries, closed by the verdict stamp */
+.verdict-row { display: grid; grid-template-columns: 1fr auto; gap: 2.4rem;
+  align-items: center; margin: 1.6rem 0 1.4rem; }
+.le { display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1.2rem; padding: 0.42rem 0; border-bottom: 1px solid var(--rule); }
+.le:first-child { border-top: 1px solid var(--gold); }
+.le-lab { font-family: var(--t618-sans); font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--mut); }
+.le-fig { font-family: var(--t618-serif); font-size: 2.1rem; line-height: 1;
+  color: var(--gold); font-variant-numeric: tabular-nums; }
+.le-fig.closed { color: var(--ink); }
+.le-fig.neg { color: var(--t618-oxblood); }
+.stamp { display: inline-block; transform: rotate(-4deg); border: 2px solid var(--ink);
+  color: var(--ink); padding: 0.5rem 1.1rem; font-family: var(--t618-sans);
+  font-weight: 700; font-size: 1.15rem; letter-spacing: 0.16em; white-space: nowrap;
+  /* the rotation grows the painted box past the type box; keep it inside the
+     printable column so the print-width gate's overflow probe stays clean */
+  margin-right: 6px; }
+.stamp .stamp-sub { display: block; font-size: 0.55rem; font-weight: 600;
+  letter-spacing: 0.14em; color: var(--mut); margin-top: 0.25rem; text-align: center; }
+
+/* --- section markers ---------------------------------------------- */
+.entry-mark { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem; }
+.entry-ico { line-height: 0; color: var(--gold); }
+.entry-txt { font-family: var(--t618-sans); font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.section + .section { margin-top: 2.6rem; }
+.t618 h2 { font-size: 1.72rem; max-width: 26ch; margin-top: 0; }
+.t618 h3 { font-size: 1.16rem; margin-top: 1.9rem; max-width: 34ch; }
+
+/* --- device: the two-count entry / the bridge ledger --------------- */
+.pair, .ledger { margin: 1.5rem 0 1.7rem; }
+.pair-label, .ledger-label { display: flex; align-items: center; gap: 0.45rem;
+  font-family: var(--t618-sans); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 0.5rem; }
+.pair-ico { line-height: 0; }
+table.tally { width: 100%; border-collapse: collapse; margin: 0;
+  font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+table.tally thead th { font-family: var(--t618-sans); font-size: 0.63rem;
+  font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--mut); text-align: left; padding: 0 0.5rem 0.35rem 0;
+  border-bottom: 1px solid var(--ink); }
+table.tally th.num, table.tally td.num { text-align: right; padding-right: 0; }
+table.tally tbody td { padding: 0.5rem 0.5rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+table.tally tbody tr.close td { border-bottom: 1px solid var(--ink); }
+table.tally tbody tr.against td, table.tally tbody tr.residual td { color: var(--mut); }
+table.tally tbody tr.residual td { border-bottom: 0; }
+table.tally .why { display: block; font-family: var(--t618-sans); font-size: 0.72rem;
+  color: var(--mut); margin-top: 0.14rem; }
+.pair-tbl td.num, .pair-tbl td .struck { font-family: var(--t618-serif);
+  font-size: 1.5rem; line-height: 1.1; }
+.pair-tbl td.num.closed { color: var(--ink); }
+.pair-tbl td .struck { color: var(--mut); }
+.ledger-tbl td.num { font-family: var(--t618-serif); font-size: 1.02rem; }
+.ledger-tbl td.num.closed { font-size: 1.24rem; }
+.pair-foot, .ledger-foot { font-size: 0.82rem; color: var(--mut); margin: 0.6rem 0 0;
+  max-width: 68ch; }
+.pair-foot .fact { color: var(--ink); }
+.dag { line-height: 0; margin-right: 0.25rem; }
+
+/* --- device: big-number strip (white; the band is spent on the hero) */
+.strip { display: grid; grid-template-columns: auto 1fr; gap: 1.8rem;
+  align-items: center; border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold); padding: 1.1rem 0 1.2rem; margin: 1.8rem 0; }
+.strip-fig { font-family: var(--t618-serif); font-size: 4.6rem; line-height: 1;
+  color: var(--gold); font-variant-numeric: tabular-nums; }
+.strip-claim { margin: 0; font-size: 0.95rem; line-height: 1.5; max-width: 52ch; }
+
+/* --- disclosure block: no motif treatment ------------------------- */
+#disclosures .t618-callout { border-top-color: var(--rule); }
+
+@media screen and (max-width: 700px) {
+  .band-entry { flex-direction: column; gap: 0.9rem; }
+  .count-carry { transform: rotate(90deg); padding: 0; }
+  .count-fig { font-size: 3.6rem; }
+  .verdict-row { grid-template-columns: 1fr; gap: 1.2rem; }
+  .strip { grid-template-columns: 1fr; gap: 0.7rem; }
+}
+
+@media print {
+  /* the cover is one sheet: the band, the ruled entries and the stamp all sit
+     above the fold, so the print sizes below are set to make that true */
+  .cover-company { font-size: 2.7rem; }
+  .cover .t618-rule, .cover .t618-rule--quasar, .cover .t618-rule--faint { margin: 0.9rem 0; }
+  .band { break-inside: avoid; page-break-inside: avoid;
+          margin: 1rem 0 1.1rem; padding: 0.85rem 1.2rem 0.95rem; }
+  .band-kicker { margin-bottom: 0.6rem; }
+  .count-fig { font-size: 3.4rem; }
+  .count-sub { font-size: 0.64rem; margin-top: 0.35rem; }
+  .count-carry { padding-top: 0.9rem; }
+  .band-entry { gap: 1.1rem; }
+  .verdict-row { break-inside: avoid; page-break-inside: avoid; margin: 1rem 0 0.9rem; }
+  .le { padding: 0.28rem 0; }
+  .le-fig { font-size: 1.5rem; }
+  .stamp { font-size: 0.95rem; padding: 0.4rem 0.9rem; }
+
+  /* Sections are folios of one ledger, not chapters: they run on rather than
+     each claiming a fresh sheet.  The folio marker plus a rule does the work a
+     forced page break used to do, and the note stops printing half-empty
+     pages at every part boundary. */
+  .section { break-before: auto; page-break-before: auto; margin-top: 2.4rem; }
+  .section:first-of-type { margin-top: 0; }
+  .entry-mark, .t618 h2 { break-after: avoid; page-break-after: avoid; }
+
+  .pair, .ledger, .strip { break-inside: avoid; page-break-inside: avoid; }
+  .pair, .ledger { margin: 1.1rem 0 1.2rem; }
+  table.tally { font-size: 8.2pt; }
+  table.tally tbody td { padding: 0.34rem 0.5rem 0.34rem 0; }
+  .pair-tbl td.num, .pair-tbl td .struck { font-size: 12.5pt; }
+  .ledger-tbl td.num { font-size: 9.6pt; }
+  .ledger-tbl td.num.closed { font-size: 11.5pt; }
+  .pair-foot, .ledger-foot { font-size: 7.8pt; margin-top: 0.45rem; }
+  .strip { margin: 1.4rem 0; padding: 0.9rem 0 1rem; }
+  .strip-fig { font-size: 3.4rem; }
+  .entry-mark { break-after: avoid; page-break-after: avoid; }
+}
+</style></head><body class="t618"><main><section class="cover"><header class="masthead"><span class="t618-title"><svg class="icon" width="280" height="280" viewBox="116 116 280 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TON618 Capital icon">
+  <defs>
+    <linearGradient id="disk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A6D2B" stop-opacity="0"/><stop offset="12%" stop-color="#8A6D2B"/><stop offset="36%" stop-color="#C9A24B"/><stop offset="50%" stop-color="#F2E2B0"/><stop offset="64%" stop-color="#C9A24B"/><stop offset="88%" stop-color="#8A6D2B"/><stop offset="100%" stop-color="#8A6D2B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ringg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F2E2B0"/><stop offset="45%" stop-color="#C9A24B"/><stop offset="100%" stop-color="#8A6D2B"/>
+    </linearGradient>
+    <radialGradient id="coin" cx="42%" cy="36%" r="72%">
+      <stop offset="0%" stop-color="#F4E6B8"/><stop offset="42%" stop-color="#D8B25C"/><stop offset="80%" stop-color="#C9A24B"/><stop offset="100%" stop-color="#9A7B30"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frontHalf"><rect x="-160" y="256" width="832" height="300"/></clipPath>
+    <clipPath id="boxWin"><rect x="121" y="121" width="270" height="270"/></clipPath>
+  </defs>
+  <rect x="120" y="120" width="272" height="272" fill="#0B0B0C"/>
+  <g clip-path="url(#boxWin)">
+    <ellipse cx="256" cy="256" rx="307" ry="34" fill="url(#disk)" opacity="0.77" filter="url(#glow)" transform="rotate(-22 256 256)"/>
+    <ellipse cx="256" cy="256" rx="307" ry="34" fill="none" stroke="#F2E2B0" stroke-width="1.5" opacity="0.5" transform="rotate(-22 256 256)"/>
+    <ellipse cx="256" cy="256" rx="316" ry="42" fill="none" stroke="#F2E2B0" stroke-width="1" opacity="0.3" transform="rotate(-22 256 256)"/>
+  </g>
+  <circle cx="256" cy="256" r="100" fill="#0B0B0C"/>
+  <circle cx="256" cy="256" r="91.56" fill="none" stroke="url(#ringg)" stroke-width="22.87" filter="url(#glow)"/>
+  <g clip-path="url(#boxWin)">
+    <path d="M 156 314 A 116 116 0 1 1 356 314" fill="none" stroke="url(#ringg)" stroke-width="6" stroke-linecap="round" opacity="0.85" filter="url(#glow)"/>
+  </g>
+  <circle cx="256" cy="256" r="56" fill="#0B0B0C"/>
+  <circle cx="256" cy="256" r="52" fill="url(#coin)"/>
+  <circle cx="256" cy="256" r="52" fill="none" stroke="#7A5F22" stroke-width="2.5"/>
+  <circle cx="256" cy="256" r="45" fill="none" stroke="#F4E6B8" stroke-width="1.6" opacity="0.45"/>
+  <g transform="translate(256 256) scale(0.55) translate(-256 -256)">
+    <g fill="#141417">
+      <rect x="240" y="190" width="11" height="20" rx="3"/><rect x="261" y="190" width="11" height="20" rx="3"/><rect x="240" y="302" width="11" height="20" rx="3"/><rect x="261" y="302" width="11" height="20" rx="3"/><rect x="226" y="206" width="17" height="100" rx="3"/>
+    </g>
+    <g fill="none" stroke="#141417" stroke-width="16" stroke-linecap="butt">
+      <path d="M 243 214 H 276 A 21 21 0 0 1 276 256 H 243"/><path d="M 243 256 H 282 A 23 23 0 0 1 282 300 H 243"/>
+    </g>
+  </g>
+  <g clip-path="url(#boxWin)">
+    <g transform="rotate(-22 256 256)">
+      <g clip-path="url(#frontHalf)">
+        <ellipse cx="256" cy="256" rx="307" ry="34" fill="url(#disk)" opacity="0.51" filter="url(#glow)"/>
+        <ellipse cx="256" cy="256" rx="307" ry="34" fill="none" stroke="#F2E2B0" stroke-width="1.5" opacity="0.5"/>
+        <ellipse cx="256" cy="256" rx="316" ry="42" fill="none" stroke="#F2E2B0" stroke-width="1" opacity="0.3"/>
+      </g>
+    </g>
+  </g>
+  <rect x="120" y="120" width="272" height="272" fill="none" stroke="url(#ringg)" stroke-width="6"/>
+</svg><span class="name">TON<span class="six18">618</span> <span class="cap">Capital</span></span></span><span class="t618-caption">Equity Research &middot; 2026-07-24&nbsp;&nbsp;<a class="pdf-link" href="TON618_GOOGL-Valuation_Note.pdf" download>&#8595; Download PDF</a></span></header><hr class="t618-rule"><span class="t618-eyebrow">Tech-Equity Valuation &middot; Communication Services / Interactive Media &amp; Services</span><div class="cover-company">Alphabet Inc.</div><div class="cover-ticker">NASDAQ: GOOGL</div><p class="cover-thesis">The Convention Premium: What You Are Really Paying For Alphabet</p>
+
+<div class="band">
+<span class="band-kicker">One company &middot; one day &middot; one price</span>
+<div class="band-entry">
+  <div class="count"><span class="count-lab">As reported</span><span class="count-fig struck">17&times;</span><span class="count-sub">trailing price to earnings</span></div>
+  <div class="count-carry"><svg class="ico" viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M3 18h7v-6h7V6h3"/><circle cx="20" cy="6" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+  <div class="count"><span class="count-lab">As counted here</span><span class="count-fig closed">33&times;</span><span class="count-sub">the $99.0bn securities gain removed</span></div>
+</div>
+</div>
+
+<div class="verdict-row"><div class="entries">
+<div class="le"><span class="le-lab">TON618 fair value per share</span><span class="le-fig closed">$256.42</span></div>
+<div class="le"><span class="le-lab">Anchor price &mdash; 2026-07-23 close</span><span class="le-fig">$317.69</span></div>
+<div class="le"><span class="le-lab">Implied return to fair value</span><span class="le-fig neg">&minus;19.3%</span></div>
+</div><div class="stamp">SELL / AVOID<span class="stamp-sub">12&ndash;18 month horizon</span></div></div>
+
+<hr class="t618-rule--quasar"><p class="cover-meta"><strong>Report date</strong> 2026-07-24 &middot; <strong>Analyst</strong> TON618 Equity Research &middot; <strong>Version</strong> 1.0 &middot; <strong>Pre-print close</strong> $342.09 (2026-07-22) &middot; <strong>52-week range</strong> $187.82&ndash;$408.61 &middot; <strong>Market cap</strong> $3,885bn &middot; <strong>EV</strong> $3,741bn &middot; <strong>Data as-of</strong> 2026-07-23</p><p class="t618-caption cover-note">52-week range is intraday high/low over the 52 weeks ended 2026-07-23 (251 sessions, 2025-07-24 to 2026-07-23).</p><hr class="t618-rule--faint"><p class="t618-caption">This is the condensed report. The complete analysis — 144 pages across eighteen sections, with the full forecast model, peer set, risk register, source and evidence log and key-assumptions log — is available as the annex, on request. Every figure here is carried unchanged from it.</p></section>
+
+<section class="section" id="story"><span class="entry-mark"><span class="entry-ico"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M3 4v16M12 4v16M21 4v16"/><path d="M5 9h5M14 9h5M5 14h5M14 14h5"/></svg></span><span class="entry-txt">Folio one &middot; the two counts</span></span><h2>Two ways to count the same company</h2><p class="t618-caption">Report date 2026-07-24 &middot; Data as-of 2026-07-23</p><hr class="t618-rule--faint">
+
+<div class="t618-callout"><span class="t618-callout-label">The opening entry</span><p>Alphabet trades at 17 times earnings — a 35% discount to the US stock market. That discount is the work of one accounting entry: a $99.0bn increase in the value of shares Alphabet owns in other companies, $98.8bn of it an unrealised mark and only $278M an actual sale. Count the company without it and the same stock, on the same day, at the same price, trades at 33 times — a 23% premium. <em>We believe</em> this is the single most misleading number in the stock today.</p></div>
+
+<div class="exhibit"><span class="exhibit-label">Exhibit 1 — One company, one day, two price-to-earnings ratios</span>
+<svg class="t618-chart" viewBox="0 0 860 400" width="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Helvetica Neue, Arial, sans-serif">
+<rect x="0" y="0" width="860" height="400" fill="#FFFFFF"/>
+<text x="36" y="34" font-size="16.5" fill="#111113" font-weight="700">Alphabet&#8217;s reported P/E is 17x. Strip one accounting gain and it&#8217;s 33x.</text>
+<text x="36" y="55" font-size="9.6" fill="#5A564E" font-weight="400">Trailing twelve months to 30 June 2026. Clean earnings exclude the $99.0bn gain on equity securities &#8212; $98.8bn of it unrealised, $278M realised.</text>
+<line x1="36" y1="68" x2="824" y2="68" stroke="#E2DCCE" stroke-width="1"/>
+
+<text x="48" y="96" font-size="11" fill="#8A6D2B" font-weight="600">Trailing earnings per share</text>
+<line x1="48" y1="330" x2="400" y2="330" stroke="#E2DCCE" stroke-width="1"/>
+<rect x="100" y="230.3" width="86" height="99.7" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/>
+<rect x="100" y="140" width="86" height="90.3" fill="#8a6d2a" fill-opacity="0.09" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="143" y="132" font-size="14" fill="#111113" text-anchor="middle" font-weight="700">$19.87</text>
+<text x="143" y="178" font-size="8.2" fill="#4A4840" text-anchor="middle" font-weight="600">the $99.0bn</text>
+<text x="143" y="190" font-size="8.2" fill="#4A4840" text-anchor="middle" font-weight="600">securities gain</text>
+<text x="143" y="348" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">Reported TTM EPS</text>
+<line x1="186" y1="230.3" x2="250" y2="230.3" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="250" y="230.3" width="86" height="99.7" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="293" y="222.3" font-size="14" fill="#111113" text-anchor="middle" font-weight="700">$10.43</text>
+<text x="293" y="348" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">Clean TTM EPS</text>
+
+<line x1="424" y1="84" x2="424" y2="356" stroke="#E2DCCE" stroke-width="1"/>
+
+<text x="460" y="96" font-size="11" fill="#8A6D2B" font-weight="600">Trailing price-to-earnings on the same earnings</text>
+<line x1="460" y1="330" x2="816" y2="330" stroke="#E2DCCE" stroke-width="1"/>
+<line x1="466" y1="175.9" x2="816" y2="175.9" stroke="#B0413E" stroke-width="1.4" stroke-dasharray="6 3"/>
+<text x="466" y="170" font-size="9" fill="#B0413E" font-weight="600">S&amp;P 500 26.6x</text>
+<rect x="490" y="230.4" width="68" height="99.6" fill="#8a6d2a" fill-opacity="0.09" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="524" y="222.4" font-size="14" fill="#111113" text-anchor="middle" font-weight="700">17.2x</text>
+<text x="524" y="348" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">Reported P/E</text>
+<text x="524" y="359" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">@ $342.09</text>
+<rect x="600" y="140" width="68" height="190" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="634" y="132" font-size="14" fill="#111113" text-anchor="middle" font-weight="700">32.8x</text>
+<text x="634" y="348" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">Clean P/E</text>
+<text x="634" y="359" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">@ $342.09</text>
+<rect x="710" y="153.3" width="68" height="176.7" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="744" y="145.3" font-size="14" fill="#111113" text-anchor="middle" font-weight="700">30.5x</text>
+<text x="744" y="348" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">Clean P/E</text>
+<text x="744" y="359" font-size="8.8" fill="#111113" text-anchor="middle" font-weight="400">@ $317.69</text>
+
+<line x1="36" y1="374" x2="824" y2="374" stroke="#E2DCCE" stroke-width="1"/>
+<text x="36" y="389" font-size="7.8" fill="#9A958A" font-weight="400">Sources: SEC Form 8-K EX-99.1 (filed 2026-07-22), Form 10-Q (filed 2026-07-23); SPY key statistics (2026-07-24).</text>
+<text x="824" y="389" font-size="7.8" fill="#8A6D2B" text-anchor="end" font-weight="600">TON618 Capital &#183; Equity Research</text>
+</svg>
+<p class="exhibit-note">Source: TON618 analysis of SEC Form 8-K Exhibit 99.1 (accession 0001652044-26-000066, filed 2026-07-22) and Form 10-Q (accession 0001652044-26-000071, filed 2026-07-23); data as of 2026-07-23. Reported trailing EPS is trailing-twelve-month net income over trailing-twelve-month diluted shares; the four reported quarterly EPS figures sum to $19.93. Clean EPS excludes the gain on equity securities. Index multiples are ETF-proxy trailing P/Es (SPY and QQQ key statistics, 2026-07-24).</p></div>
+
+<h3>An advertising business buying an infrastructure company</h3>
+
+<p>Most people think of Alphabet as Google, and Google as search. That was a fair description five years ago. It is no longer one. In the three months to June 2026, Alphabet's advertising businesses — Search, YouTube and its ad network — produced $81.6bn of the company's $119.8bn of revenue and almost all of its profit. Google Cloud produced $24.8bn, growing 82% year on year. The company spent $44.9bn building data centres in that single quarter, which was more than the entire $39.1bn of cash its operations generated over the same three months.</p>
+
+<p>One quarter's data-centre bill exceeded one quarter's operating cash. Alphabet is an extraordinarily profitable advertising business pouring every dollar it earns, plus a great deal that it has borrowed, into becoming an infrastructure company. For the full year it plans to spend between $195bn and $205bn on capital expenditure — buildings, chips, power. Three years ago that number was $32.3bn. Management has said 2027 will be "significantly higher" and has not given a figure. Everything in this report is, in one way or another, a question about that spending: <strong>does it earn its keep?</strong></p>
+
+<h3>The operating business performed. The capital plan changed.</h3>
+
+<p>Data shows the operating business performed. Q2 2026 revenue grew 24.0% to $119,796M. Operating income was $40,770M at a 34.0% margin, against 32.4% a year earlier. Google Cloud grew 81.8% to $24,768M and its operating margin went from 20.7% to 35.6% in a year. The Cloud order book stands at $514bn, up more than $50bn in a single quarter. Search grew 16.8% on record query volume. This is not a broken company.</p>
+
+<p>Data also shows a capital pivot, in the same filing. In the June quarter Alphabet spent $44,924M of capital expenditure against $39,069M of operating cash flow, so free cash flow for the quarter was negative $5,855M. It repurchased $0 of its own stock, against $13,238M in the prior-year quarter and $45,709M across FY2025. In the first half it borrowed $56,226M, sold $49.6bn of new common stock and mandatory convertible preferred, and registered a further $40bn at-the-market equity facility, undrawn at 30 June 2026 and primarily intended to meet tax obligations on employee equity grants. Long-term debt roughly doubled, from $46,547M at 31 December 2025 to $98,165M, and the share count rose rather than fell.</p>
+
+<p>None of this is hidden and none of it is improper. But an investor who owned Alphabet because it was a machine for buying back its own stock now owns something different.</p>
+
+<p>And the headline number flattered all of it. Reported diluted EPS for the quarter was $9.11, up 294% from $2.31. Of that, $6.26 — 69% — came from the $99,031M pre-tax gain on equity securities: $77,354M of marks on privately held stakes that have no market price, plus $21,399M on marketable and other holdings, against $278M actually realised. Alphabet attributes the gain primarily to unrealised gains from SpaceX and one other private company. It is a real gain in the accounting sense. It is not money the business earned, it cannot be spent, and it can reverse.</p>
+
+<div class="pair">
+<span class="pair-label"><span class="pair-ico"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M7 5h10v14H7z"/><path d="M9.5 9h5M9.5 15h5"/><path d="M3.5 12h17"/></svg></span>The same twelve months, counted twice</span>
+<table class="tally pair-tbl"><thead><tr><th>Trailing twelve months to 30 June 2026</th><th class="num">As reported</th><th class="num">As counted here</th></tr></thead><tbody>
+<tr><td>Earnings per share<span class="why">removes the $99.0bn gain on equity securities</span></td><td class="num"><span class="struck">$19.87</span></td><td class="num closed">$10.43</td></tr>
+<tr><td>Free cash flow<span class="why">deducts the $28,147M of stock compensation added back</span></td><td class="num"><span class="struck">$53,273M</span></td><td class="num closed">$25,126M</td></tr>
+</tbody></table>
+<p class="pair-foot"><span class="fact">Data shows</span> both columns. <em>We believe</em> the right-hand one describes the business.</p>
+</div>
+
+</section>
+
+<section class="section" id="houseview"><span class="entry-mark"><span class="entry-ico"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M3 18h7v-6h7V6h3"/><circle cx="20" cy="6" r="1.5" fill="currentColor" stroke="none"/></svg></span><span class="entry-txt">Folio two &middot; the reconciliation</span></span><h2>The market pays the convention price</h2><hr class="t618-rule--faint">
+
+<div class="t618-callout"><span class="t618-callout-label">The balance, first</span><p>The $108 per share between our base case of $233.13 and the pre-print close of $342.09 is not a disagreement about Alphabet's business. It is reproduced, to within about a dollar, by three accounting conventions we do not use and most of the Street does. The market is paying a Street-convention price for Alphabet, not a fantasy price. Under house standards it is worth $256.42.</p></div>
+
+<h3>Three conventions, and the gap closes</h3>
+
+<p>There is a technique called a reverse discounted cash flow — instead of forecasting a company's future and calculating what it is worth, you take today's price and work backwards to find what the market must be assuming. We expected to find heroic growth. We did not. Solved one variable at a time and holding our own conventions, the pre-print close of $342.09 requires a 22.2% six-year revenue CAGR ($1.66tn of 2032 revenue), <em>or</em> a 58.3% terminal EBITDA margin, <em>or</em> an 8.14% cost of equity (a 2.79% equity risk premium), <em>or</em> 6.0% perpetual growth. None is individually defensible, which usually means the model is being asked the wrong question.</p>
+
+<p>So we asked a different one. Take our base case — free cash flow to equity, the cash left for common shareholders after operating costs, tax, capital expenditure, working capital and net debt movements — and apply, one at a time, three conventions professional analysts customarily use and we do not. The walk is short, and it ends where the market already is.</p>
+
+<div class="ledger">
+<span class="ledger-label"><span class="pair-ico"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M3 18h7v-6h7V6h3"/><circle cx="20" cy="6" r="1.5" fill="currentColor" stroke="none"/></svg></span>The reconciliation &mdash; our number to the market's, one convention at a time</span>
+<table class="tally ledger-tbl"><thead><tr><th>Entry</th><th class="num">Effect</th><th class="num">Value per share</th></tr></thead><tbody>
+<tr><td>TON618 base case &mdash; free cash flow to equity, stock compensation expensed, cost of equity 10.28%, terminal growth 3.5%</td><td class="num">&mdash;</td><td class="num">$233.13</td></tr>
+<tr><td>Add stock-based compensation back to the flow, as the Street customarily does</td><td class="num">+$47.66</td><td class="num">$280.79</td></tr>
+<tr><td>Lower the required return from the textbook CAPM figure to 9.50%, roughly where sell-side models sit</td><td class="num">+$36.81</td><td class="num">$317.60</td></tr>
+<tr class="close"><td>Assume the company grows forever at 4.0% rather than 3.5%</td><td class="num">+$23.43</td><td class="num closed">$341.03</td></tr>
+<tr class="against"><td>Alphabet's close the day before its results, 22 July 2026</td><td class="num">&mdash;</td><td class="num">$342.09</td></tr>
+<tr class="residual"><td><span class="dag"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M12 3v18M7.5 7.5h9"/></svg></span>Unexplained residual</td><td class="num">&mdash;</td><td class="num">$1.06</td></tr>
+</tbody></table>
+<p class="ledger-foot"><span class="dag"><svg class="ico" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M12 3v18M7.5 7.5h9"/></svg></span>Shown, not plugged. Three convention choices reproduce the market price of a $3.9tn company to within a dollar and six cents; the ledger does not quite close, and we let it stand open.</p>
+</div>
+
+<div class="exhibit"><span class="exhibit-label">Exhibit 2 — The same reconciliation, drawn to scale</span>
+<svg class="t618-chart" viewBox="0 0 860 460" width="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Helvetica Neue, Arial, sans-serif"><rect x="0" y="0" width="860" height="460" fill="#FFFFFF"/><line x1="66" y1="352.0" x2="712" y2="352.0" stroke="#E2DCCE" stroke-width="1"/><text x="58.0" y="355.5" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">$0</text><line x1="66" y1="278.7" x2="712" y2="278.7" stroke="#E2DCCE" stroke-width="1"/><text x="58.0" y="282.2" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">$100</text><line x1="66" y1="205.3" x2="712" y2="205.3" stroke="#E2DCCE" stroke-width="1"/><text x="58.0" y="208.8" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">$200</text><line x1="66" y1="132.0" x2="712" y2="132.0" stroke="#E2DCCE" stroke-width="1"/><text x="58.0" y="135.5" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">$300</text><line x1="66" y1="58.7" x2="712" y2="58.7" stroke="#E2DCCE" stroke-width="1"/><text x="58.0" y="62.2" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">$400</text><rect x="97.0" y="181.0" width="67.2" height="171.0" fill="#8a6d2a" fill-opacity="0.42" stroke="#8A6D2B" stroke-width="0.8"/><text x="130.6" y="173.0" font-size="11" fill="#111113" text-anchor="middle" font-weight="600">$233.13</text><text x="130.6" y="368.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">TON618 base FCFE (SBC</text><text x="130.6" y="378.5" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">expensed, CAPM Ke</text><text x="130.6" y="389.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">10.28%, g 3.5%)</text><rect x="226.2" y="146.1" width="67.2" height="35.0" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/><line x1="164.2" y1="181.0" x2="226.2" y2="181.0" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/><text x="259.8" y="138.1" font-size="11" fill="#111113" text-anchor="middle" font-weight="600">$280.79</text><text x="259.8" y="124.1" font-size="9.5" fill="#8A6D2B" text-anchor="middle" font-weight="600">+$47.66</text><text x="259.8" y="368.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">+ SBC added back to the</text><text x="259.8" y="378.5" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">flow (Street "FCF"</text><text x="259.8" y="389.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">convention)</text><rect x="355.4" y="119.1" width="67.2" height="27.0" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/><line x1="293.4" y1="146.1" x2="355.4" y2="146.1" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/><text x="389.0" y="111.1" font-size="11" fill="#111113" text-anchor="middle" font-weight="600">$317.60</text><text x="389.0" y="97.1" font-size="9.5" fill="#8A6D2B" text-anchor="middle" font-weight="600">+$36.81</text><text x="389.0" y="368.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">+ Ke 9.50% (ERP ~3.9%</text><text x="389.0" y="378.5" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">instead of 4.5%)</text><rect x="484.6" y="101.9" width="67.2" height="17.2" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/><line x1="422.6" y1="119.1" x2="484.6" y2="119.1" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/><text x="518.2" y="93.9" font-size="11" fill="#111113" text-anchor="middle" font-weight="600">$341.03</text><text x="518.2" y="79.9" font-size="9.5" fill="#8A6D2B" text-anchor="middle" font-weight="600">+$23.43</text><text x="518.2" y="368.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">+ terminal g 4.0%</text><text x="518.2" y="378.5" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">(nominal GDP+)</text><rect x="613.8" y="101.9" width="67.2" height="250.1" fill="#8a6d2a" fill-opacity="0.42" stroke="#8A6D2B" stroke-width="0.8"/><line x1="551.8" y1="101.9" x2="613.8" y2="101.9" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/><text x="647.4" y="93.9" font-size="11" fill="#111113" text-anchor="middle" font-weight="600">$341.03</text><text x="647.4" y="368.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">Cumulative — all</text><text x="647.4" y="378.5" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">convention changes</text><text x="647.4" y="389.0" font-size="8.2" fill="#111113" text-anchor="middle" font-weight="400">applied</text><line x1="66" y1="101.1" x2="848" y2="101.1" stroke="#B0413E" stroke-width="1.6" stroke-dasharray="6 3"/><text x="70.0" y="95.1" font-size="9.5" fill="#B0413E" text-anchor="start" font-weight="600">Market close $342.09 (2026-07-22)</text><line x1="691.0" y1="101.1" x2="691.0" y2="101.9" stroke="#B0413E" stroke-width="1.2"/><line x1="687.0" y1="101.1" x2="695.0" y2="101.1" stroke="#B0413E" stroke-width="1.2"/><line x1="687.0" y1="101.9" x2="695.0" y2="101.9" stroke="#B0413E" stroke-width="1.2"/><text x="699.0" y="97.5" font-size="9" fill="#B0413E" text-anchor="start" font-weight="600">$1.06 residual</text><text x="699.0" y="108.5" font-size="8.2" fill="#9A958A" text-anchor="start" font-weight="400">unexplained, not plugged</text><text x="66.0" y="22.0" font-size="10.5" fill="#8A6D2B" text-anchor="start" font-weight="600">Value per share — TON618 base case bridged to the market price by three convention choices</text><text x="66.0" y="38.0" font-size="9" fill="#9A958A" text-anchor="start" font-weight="400">Solid bars are levels; pale bars are the incremental effect of each convention change.</text></svg>
+<p class="exhibit-note">Source: TON618 analysis; data as of 2026-07-23. Each step re-runs the same FCFE engine changing one convention; the residual against the market close is shown, not plugged.</p></div>
+
+<p class="t618-analysis">We believe this is the whole argument. <strong>An investor's answer to two questions — "is stock compensation a real expense?" and "what return should I require on a $3.9tn equity?" — determines everything else.</strong> We think employee share grants are a genuine cost and that a company of this size should be discounted at the rate the standard model produces, not the rate that makes the answer comfortable. On that basis Alphabet is worth less than it trades for, and we say so. But an investor should understand precisely what they are disagreeing with us about. It is not Alphabet's future. It is arithmetic convention.</p>
+
+<h3>What is actually free about the free cash flow</h3>
+
+<p>The same convention shows up in the cash-flow statement, and it is the second number we would put in front of a reader. Alphabet's reported trailing free cash flow is $53,273M. That figure is struck after adding back $28,147M of stock-based compensation — 53% of the total. Deduct it, as this report does throughout, and genuinely free cash is $25,126M, which the $3,885bn market capitalisation at the anchor close covers 155 times, and the $4,184bn capitalisation at the pre-print close 167 times.</p>
+
+<div class="exhibit"><span class="exhibit-label">Exhibit 3 — Reported free cash flow, and what is actually free</span>
+<svg class="t618-chart" viewBox="0 0 860 350" width="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Helvetica Neue, Arial, sans-serif">
+<rect x="0" y="0" width="860" height="350" fill="#FFFFFF"/>
+<text x="36" y="30" font-size="14" fill="#111113" font-weight="700">Alphabet&#8217;s free cash flow, and what is actually free</text>
+<text x="36" y="48" font-size="9.4" fill="#5A564E" font-weight="400">Trailing twelve months to 30 June 2026 on the left; the June quarter on the right. Figures in $M.</text>
+<line x1="36" y1="60" x2="824" y2="60" stroke="#E2DCCE" stroke-width="1"/>
+
+<text x="48" y="80" font-size="10.5" fill="#8A6D2B" font-weight="600">Trailing free cash flow, before and after stock compensation</text>
+<line x1="48" y1="262" x2="408" y2="262" stroke="#E2DCCE" stroke-width="1"/>
+<rect x="80" y="112" width="76" height="150" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="118" y="104" font-size="11.5" fill="#111113" text-anchor="middle" font-weight="700">$53,273M</text>
+<text x="118" y="280" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">Reported free</text>
+<text x="118" y="291" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">cash flow</text>
+<line x1="156" y1="112" x2="196" y2="112" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="196" y="112" width="76" height="79.3" fill="#8a6d2a" fill-opacity="0.09" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="234" y="104" font-size="11.5" fill="#111113" text-anchor="middle" font-weight="700">−$28,147M</text>
+<text x="234" y="148" font-size="8" fill="#4A4840" text-anchor="middle" font-weight="600">53% of reported</text>
+<text x="234" y="159" font-size="8" fill="#4A4840" text-anchor="middle" font-weight="600">free cash flow</text>
+<text x="234" y="280" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">Stock comp</text>
+<text x="234" y="291" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">added back</text>
+<line x1="272" y1="191.3" x2="312" y2="191.3" stroke="#8A6D2B" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="312" y="191.3" width="76" height="70.7" fill="#8a6d2a" fill-opacity="0.42" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="350" y="183.3" font-size="11.5" fill="#111113" text-anchor="middle" font-weight="700">$25,126M</text>
+<text x="350" y="280" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">Genuinely free</text>
+<text x="350" y="291" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">cash</text>
+
+<line x1="428" y1="70" x2="428" y2="316" stroke="#E2DCCE" stroke-width="1"/>
+
+<text x="470" y="80" font-size="10.5" fill="#8A6D2B" font-weight="600">The June quarter: capital expenditure exceeded operating cash flow</text>
+<line x1="470" y1="262" x2="816" y2="262" stroke="#E2DCCE" stroke-width="1"/>
+<rect x="500" y="140.2" width="70" height="121.8" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="535" y="132.2" font-size="11.5" fill="#111113" text-anchor="middle" font-weight="700">$39,069M</text>
+<text x="535" y="280" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">Q2 operating</text>
+<text x="535" y="291" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">cash flow</text>
+<rect x="610" y="122" width="70" height="140" fill="#8a6d2a" fill-opacity="0.42" stroke="#8A6D2B" stroke-width="0.8"/>
+<text x="645" y="114" font-size="11.5" fill="#111113" text-anchor="middle" font-weight="700">$44,924M</text>
+<text x="645" y="280" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">Q2 capital</text>
+<text x="645" y="291" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">expenditure</text>
+<rect x="720" y="262" width="70" height="18.2" fill="#B0413E" fill-opacity="0.92" stroke="#B0413E" stroke-width="0.8"/>
+<text x="755" y="294" font-size="11.5" fill="#B0413E" text-anchor="middle" font-weight="700">−$5,855M</text>
+<text x="755" y="308" font-size="8.4" fill="#111113" text-anchor="middle" font-weight="400">Q2 free cash flow</text>
+
+<line x1="36" y1="326" x2="824" y2="326" stroke="#E2DCCE" stroke-width="1"/>
+<text x="36" y="340" font-size="7.8" fill="#9A958A" font-weight="400">Source: SEC Form 8-K EX-99.1 (filed 2026-07-22). Q2 stock repurchases were $0, against $13,238M a year earlier.</text>
+<text x="824" y="340" font-size="7.8" fill="#8A6D2B" text-anchor="end" font-weight="600">TON618 Capital</text>
+</svg>
+<p class="exhibit-note">Source: TON618 analysis of SEC Form 8-K Exhibit 99.1 (accession 0001652044-26-000066, filed 2026-07-22); data as of 2026-07-23. Trailing twelve months to 30 June 2026 on the left; the June quarter on the right. Free cash flow is operating cash flow less capital expenditure.</p></div>
+
+<p>Meeting the $195,000–205,000M full-year capital-expenditure guide — raised from $180–190bn, roughly 40.3% of revenue — requires roughly $119bn of spending in the second half alone.</p>
+
+<h3>The depreciation wave arrives in every scenario</h3>
+
+<p>A fourth force runs underneath the whole model. When a company spends $200bn on equipment, the accountants spread that cost across the following years as depreciation. Alphabet's depreciation and amortisation charge is currently about 5.8% of revenue. In every version of the future we model — good, middling and bad — it rises to somewhere between 11.9% (base) and 15.8% (bear) by 2032. That means operating margin, measured properly, falls in every scenario, including the ones where EBITDA margin expands: base-case EBIT margin goes from 34.7% in 2026E to 30.8% in 2030E. First-half 2026 D&amp;A already grew 43% year on year, and net property and equipment stands at $321,212M, 72.0% of trailing revenue, against 48.9% in FY2024. Return on invested capital has already fallen from 41.3% in FY2024 to 36.2% in FY2025 to 33.9% trailing — though the spread over a 10.14% WACC remains a wide +23.7 percentage points.</p>
+
+<p class="t618-caption">Investors anchored on cash-flow-style measures will not see this coming. Investors anchored on earnings will.</p>
+
+<div class="exhibit"><span class="exhibit-label">Exhibit 4 — The depreciation wave against operating margin</span>
+<svg class="t618-chart" viewBox="0 0 820 380" width="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Helvetica Neue, Arial, sans-serif"><rect x="0" y="0" width="820" height="380" fill="#FFFFFF"/><line x1="60" y1="322.0" x2="670" y2="322.0" stroke="#E2DCCE" stroke-width="1"/><text x="52.0" y="325.5" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">0%</text><line x1="60" y1="246.0" x2="670" y2="246.0" stroke="#E2DCCE" stroke-width="1"/><text x="52.0" y="249.5" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">10%</text><line x1="60" y1="170.0" x2="670" y2="170.0" stroke="#E2DCCE" stroke-width="1"/><text x="52.0" y="173.5" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">20%</text><line x1="60" y1="94.0" x2="670" y2="94.0" stroke="#E2DCCE" stroke-width="1"/><text x="52.0" y="97.5" font-size="9" fill="#9A958A" text-anchor="end" font-weight="400">30%</text><polygon points="103.6,277.6 190.7,260.4 277.9,239.6 365.0,222.1 452.1,210.4 539.3,203.2 626.4,201.9 626.4,242.7 539.3,238.9 452.1,238.9 365.0,243.1 277.9,252.8 190.7,266.3 103.6,277.6" fill="#8a6d2a" fill-opacity="0.05" stroke="#8a6d2a" stroke-opacity="0.45" stroke-width="0.8"/><rect x="88.8" y="277.6" width="29.6" height="44.4" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="103.6" y="272.6" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">5.8%</text><text x="103.6" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2026</text><rect x="175.9" y="264.4" width="29.6" height="57.6" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="190.7" y="259.4" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">7.6%</text><text x="190.7" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2027</text><rect x="263.0" y="248.7" width="29.6" height="73.3" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="277.9" y="243.7" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">9.7%</text><text x="277.9" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2028</text><rect x="350.2" y="236.8" width="29.6" height="85.2" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="365.0" y="231.8" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">11.2%</text><text x="365.0" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2029</text><rect x="437.3" y="230.6" width="29.6" height="91.4" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="452.1" y="225.6" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">12.0%</text><text x="452.1" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2030</text><rect x="524.5" y="229.1" width="29.6" height="92.9" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="539.3" y="224.1" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">12.2%</text><text x="539.3" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2031</text><rect x="611.6" y="231.9" width="29.6" height="90.1" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.7"/><text x="626.4" y="226.9" font-size="8.4" fill="#8A6D2B" text-anchor="middle" font-weight="600">11.8%</text><text x="626.4" y="338.0" font-size="9" fill="#111113" text-anchor="middle" font-weight="400">2032</text><polyline points="103.6,58.6 190.7,67.4 277.9,78.6 365.0,86.1 452.1,87.8 539.3,85.0 626.4,77.7" fill="none" stroke="#B0413E" stroke-width="2"/><circle cx="103.6" cy="58.6" r="2.6" fill="#B0413E"/><circle cx="190.7" cy="67.4" r="2.6" fill="#B0413E"/><circle cx="277.9" cy="78.6" r="2.6" fill="#B0413E"/><circle cx="365.0" cy="86.1" r="2.6" fill="#B0413E"/><circle cx="452.1" cy="87.8" r="2.6" fill="#B0413E"/><circle cx="539.3" cy="85.0" r="2.6" fill="#B0413E"/><circle cx="626.4" cy="77.7" r="2.6" fill="#B0413E"/><text x="634.4" y="81.2" font-size="9" fill="#B0413E" text-anchor="start" font-weight="600">32.1%</text><rect x="60" y="18" width="11" height="8" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.6"/><text x="76.0" y="26.0" font-size="9" fill="#111113" text-anchor="start" font-weight="400">D&amp;A % of revenue (base)</text><rect x="205.60000000000002" y="18" width="11" height="8" fill="#8a6d2a" fill-opacity="0.05" stroke="#8A6D2B" stroke-width="0.6"/><text x="221.6" y="26.0" font-size="9" fill="#111113" text-anchor="start" font-weight="400">D&amp;A % of revenue, bear–bull range</text><rect x="403.20000000000005" y="18" width="11" height="8" fill="#B0413E" stroke="#8A6D2B" stroke-width="0.6"/><text x="419.2" y="26.0" font-size="9" fill="#111113" text-anchor="start" font-weight="400">Operating margin (base)</text></svg>
+<p class="exhibit-note">Source: TON618 analysis; data as of 2026-07-23. D&amp;A and operating margin as modelled percentages of revenue across the forecast; the band spans the bear and bull scenarios.</p></div>
+
+<h3>The counter-evidence, stated plainly</h3>
+
+<p>We are not arguing that the business is broken. The evidence against our conclusion is set out at full strength later, under the case against us, rather than summarised into weakness here. In short: the capital programme has a $514bn order book behind it; Cloud's incremental operating margin was 53.7% while cost of revenue grew 17.7% against 24% revenue growth; and Cloud's growth is substantially organic — Wiz, consolidated from 2026-03-11, contributed about 2% of Cloud's $11,144M year-over-year increment, leaving ex-Wiz growth near 80% against the reported 81.8%.</p>
+
+<p>The offsetting fact is the interface rather than the machine room. AI Overviews appear on roughly 18% of queries and 57% of long-tail queries; within those results, organic click-through on informational queries fell from 1.76% to 0.61% between June 2024 and September 2025 — a 61% decline — per Seer Interactive, published November 2025, measuring 3,119 informational queries across 42 organisations. That is a change over time inside AI-answer results, not a comparison of AI answers against ordinary ones, and it does not cover commercial queries. On assistant share, Momentic put ChatGPT at 54.7% of worldwide assistant web visits in June 2026 against Gemini's 27.4%; Sensor Tower, counting users rather than visits, put the split at 46.4% to 27.7% in May 2026. <em>We believe</em> Alphabet is winning the machine room and losing, for now, the front door — and that so far the front door has cost it nothing measurable.</p>
+
+</section>
+
+<section class="section" id="valuation"><span class="entry-mark"><span class="entry-ico"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 6h11M4 10h14M4 14h8"/><path d="M4 17.5h16M4 20h16"/></svg></span><span class="entry-txt">Folio three &middot; the close</span></span><h2>Three methods, one balance</h2><hr class="t618-rule--faint">
+
+<p>Three methods, weighted by how much independent information each carries. The intrinsic method takes half the weight because the pivotal question — whether $1.3tn of cumulative capital expenditure earns its cost of capital — is a cash-flow question that relative multiples silently assume the answer to. The two relative lenses are capped at 50% combined because both inherit the market's own conventions and so cannot independently test the thesis.</p>
+
+<div class="exhibit"><table class="t618-table t618-table--compact"><caption class="exhibit-note" style="caption-side:top;text-align:left;margin:0 0 .4rem">Methods, weights and outcomes (fair value $256.42; anchor close $317.69 on 2026-07-23)</caption><thead><tr><th>Method</th><th class="num">Weight</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th class="num">Prob-weighted</th></tr></thead><tbody>
+<tr><td>FCFE — multi-stage, SBC expensed, Ke 10.28%</td><td class="num">50%</td><td class="num">$92.67</td><td class="num">$233.13</td><td class="num">$334.23</td><td class="num">$223.29</td></tr>
+<tr><td>Relative — comps-implied, like-for-like</td><td class="num">25%</td><td class="num">$208.42</td><td class="num">$250.84</td><td class="num">$302.94</td><td class="num">$250.84</td></tr>
+<tr><td>Relative — sum of the parts, FY2027E</td><td class="num">25%</td><td class="num">$221.27</td><td class="num">$331.14</td><td class="num">$429.51</td><td class="num">$328.27</td></tr>
+<tr><td><strong>Blended fair value</strong></td><td class="num"><strong>100%</strong></td><td class="num"><strong>$153.76</strong></td><td class="num"><strong>$262.06</strong></td><td class="num"><strong>$350.23</strong></td><td class="num"><strong>$256.42</strong></td></tr>
+</tbody></table></div>
+
+<div class="exhibit"><span class="exhibit-label">Exhibit 5 — Football field: value per share by method</span>
+<svg class="t618-chart" viewBox="0 0 820 332" width="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Helvetica Neue, Arial, sans-serif"><rect x="0" y="0" width="820" height="332" fill="#FFFFFF"/><line x1="297.1" y1="48" x2="297.1" y2="298" stroke="#E2DCCE" stroke-width="1"/><text x="297.1" y="312.0" font-size="9" fill="#9A958A" text-anchor="middle" font-weight="400">$100</text><line x1="392.2" y1="48" x2="392.2" y2="298" stroke="#E2DCCE" stroke-width="1"/><text x="392.2" y="312.0" font-size="9" fill="#9A958A" text-anchor="middle" font-weight="400">$200</text><line x1="487.4" y1="48" x2="487.4" y2="298" stroke="#E2DCCE" stroke-width="1"/><text x="487.4" y="312.0" font-size="9" fill="#9A958A" text-anchor="middle" font-weight="400">$300</text><line x1="582.5" y1="48" x2="582.5" y2="298" stroke="#E2DCCE" stroke-width="1"/><text x="582.5" y="312.0" font-size="9" fill="#9A958A" text-anchor="middle" font-weight="400">$400</text><line x1="677.6" y1="48" x2="677.6" y2="298" stroke="#E2DCCE" stroke-width="1"/><text x="677.6" y="312.0" font-size="9" fill="#9A958A" text-anchor="middle" font-weight="400">$500</text><rect x="290.1" y="58" width="229.8" height="21" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/><line x1="423.7" y1="55" x2="423.7" y2="82" stroke="#8A6D2B" stroke-width="2.2"/><text x="246.0" y="72.0" font-size="8.9" fill="#111113" text-anchor="end" font-weight="600">FCFE — bear/base/bull</text><text x="732.0" y="72.0" font-size="8.8" fill="#111113" text-anchor="start" font-weight="400">$92.67–$334.23</text><text x="246.0" y="82.5" font-size="8" fill="#8A6D2B" text-anchor="end" font-weight="500">weight 50%</text><rect x="341.6" y="96" width="97.3" height="21" fill="#8a6d2a" fill-opacity="0.09" stroke="#8A6D2B" stroke-width="0.8"/><line x1="386.8" y1="93" x2="386.8" y2="120" stroke="#8A6D2B" stroke-width="2.2"/><text x="246.0" y="110.0" font-size="8.9" fill="#111113" text-anchor="end" font-weight="400">FCFE — Monte Carlo P10/P50/P90</text><text x="732.0" y="110.0" font-size="8.8" fill="#111113" text-anchor="start" font-weight="400">$146.78–$249.02</text><rect x="338.9" y="134" width="214.8" height="21" fill="#8a6d2a" fill-opacity="0.09" stroke="#8A6D2B" stroke-width="0.8"/><line x1="469.2" y1="131" x2="469.2" y2="158" stroke="#8A6D2B" stroke-width="2.2"/><text x="246.0" y="148.0" font-size="8.9" fill="#111113" text-anchor="end" font-weight="400">FCFE — 18x exit-P/E terminal</text><text x="732.0" y="148.0" font-size="8.8" fill="#111113" text-anchor="start" font-weight="400">$143.91–$369.72</text><rect x="400.2" y="172" width="89.9" height="21" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/><line x1="440.6" y1="169" x2="440.6" y2="196" stroke="#8A6D2B" stroke-width="2.2"/><text x="246.0" y="186.0" font-size="8.9" fill="#111113" text-anchor="end" font-weight="600">Relative — comps-implied (like-for-like)</text><text x="732.0" y="186.0" font-size="8.8" fill="#111113" text-anchor="start" font-weight="400">$208.42–$302.94</text><text x="246.0" y="196.5" font-size="8" fill="#8A6D2B" text-anchor="end" font-weight="500">weight 25%</text><rect x="412.5" y="210" width="198.1" height="21" fill="#8a6d2a" fill-opacity="0.20" stroke="#8A6D2B" stroke-width="0.8"/><line x1="517.0" y1="207" x2="517.0" y2="234" stroke="#8A6D2B" stroke-width="2.2"/><text x="246.0" y="224.0" font-size="8.9" fill="#111113" text-anchor="end" font-weight="600">Relative — SOTP bear/base/bull</text><text x="732.0" y="224.0" font-size="8.8" fill="#111113" text-anchor="start" font-weight="400">$221.27–$429.51</text><text x="246.0" y="234.5" font-size="8" fill="#8A6D2B" text-anchor="end" font-weight="500">weight 25%</text><rect x="525.4" y="248" width="166.5" height="21" fill="#8a6d2a" fill-opacity="0.09" stroke="#8A6D2B" stroke-width="0.8"/><line x1="613.9" y1="245" x2="613.9" y2="272" stroke="#8A6D2B" stroke-width="2.2"/><text x="246.0" y="256.8" font-size="8.9" fill="#111113" text-anchor="end" font-weight="400">Street price targets (memo, not</text><text x="246.0" y="267.2" font-size="8.9" fill="#111113" text-anchor="end" font-weight="400">weighted)</text><text x="732.0" y="262.0" font-size="8.8" fill="#111113" text-anchor="start" font-weight="400">$340–$515</text><line x1="445.9" y1="42" x2="445.9" y2="298" stroke="#B0413E" stroke-width="1.6"/><line x1="504.2" y1="42" x2="504.2" y2="298" stroke="#111113" stroke-width="1.6" stroke-dasharray="5 3"/><line x1="614.4" y1="42" x2="614.4" y2="298" stroke="#8A6D2B" stroke-width="1.6" stroke-dasharray="5 3"/><rect x="258" y="12" width="10" height="3" fill="#B0413E"/><text x="273.0" y="16.0" font-size="9" fill="#111113" text-anchor="start" font-weight="500">Fair value $256.42</text><rect x="369.8" y="12" width="10" height="3" fill="#111113"/><text x="384.8" y="16.0" font-size="9" fill="#111113" text-anchor="start" font-weight="500">Close $317.69 (2026-07-23)</text><rect x="522.4" y="12" width="10" height="3" fill="#8A6D2B"/><text x="537.4" y="16.0" font-size="9" fill="#111113" text-anchor="start" font-weight="500">Street mean $433.55</text><text x="248.0" y="20.0" font-size="9.5" fill="#8A6D2B" text-anchor="end" font-weight="600">Value per share</text></svg>
+<p class="exhibit-note">Source: TON618 analysis; data as of 2026-07-23. Bars are each method's low/high with a tick at the mid; weighted methods are shaded. Fair value, the anchor close and the Street mean are drawn as reference lines.</p></div>
+
+<h3>The payoff is skewed the wrong way</h3>
+
+<div class="exhibit"><table class="t618-table t618-table--compact"><caption class="exhibit-note" style="caption-side:top;text-align:left;margin:0 0 .4rem">Probability-weighted payoff from the anchor close of $317.69 (2026-07-23), blended at the method weights above</caption><thead><tr><th>Scenario</th><th class="num">Prob.</th><th class="num">Value</th><th class="num">Return</th><th>What it requires</th></tr></thead><tbody>
+<tr><td>Bear</td><td class="num">25%</td><td class="num">$154</td><td class="num neg">−51.6%</td><td>8.0% revenue CAGR, 38% terminal EBITDA margin, 22% terminal capex/revenue; Cloud at 5x FY2027E sales</td></tr>
+<tr><td>Base</td><td class="num">50%</td><td class="num">$262</td><td class="num neg">−17.5%</td><td>13.5% revenue CAGR, 44% terminal EBITDA margin, 15% terminal capex/revenue; Cloud at 8x FY2027E sales</td></tr>
+<tr><td>Bull</td><td class="num">25%</td><td class="num">$350</td><td class="num pos">+10.2%</td><td>16.5% revenue CAGR, 46.5% terminal EBITDA margin, 13% terminal capex/revenue; Cloud at 11x FY2027E sales; no ATM drawn</td></tr>
+<tr><td><strong>Expected value</strong></td><td class="num"><strong>100%</strong></td><td class="num"><strong>$257</strong></td><td class="num neg"><strong>−19.1%</strong></td><td>The $256.42 point estimate is the reported fair value</td></tr>
+</tbody></table></div>
+
+<div class="strip">
+<span class="strip-fig">+10.2%</span>
+<p class="strip-claim">The return in the case where we are wrong. Six years of 16.5% revenue growth, a 46.5% terminal EBITDA margin, capital intensity falling to 13% of revenue and Cloud awarded eleven times forward sales &mdash; and the bull case still pays a tenth.</p>
+</div>
+
+<p class="t618-analysis">We believe the shape of this payoff matters as much as its centre. The case against runs to a <strong>&minus;51.6% de-rating</strong>, four times the reward on the other side, and no probability weighting makes that attractive. For completeness on where we sit against others: the Street mean target is $433.55, with 57 of 64 covering analysts at Buy or Strong Buy, 7 at Hold and none at Sell (analyst actions dated through 2026-07-23). It sits above every method here; we report it neutrally and it does not move our number.</p>
+
+<h3>What would change our mind</h3>
+
+<p>This report is one variable away from a different conclusion, and the variable is named. Terminal capital expenditure as a share of revenue is worth $77 per share across its plausible range — $173 at 22%, $250 at 13% — and it is the input on which management has given the least guidance beyond 2027. It carries the highest ratio of value-at-stake to available information anywhere in the model. <span class="fact">The FY2027 capital-expenditure guide, expected with FY2026 results in late January or early February 2027, is the single disclosure that resolves it.</span> For scale, the other two levers are revenue CAGR at $85 per share across its range and terminal EBITDA margin at $65.</p>
+
+<p>We would move to HOLD on either of two showings: FY2027 capex implying capital intensity below 35% of revenue with a stated glide path, or Cloud backlog converting at or above the 50%-in-24-months rate with segment margin holding above 30% after capacity eases. We would buy at $192 or below absent a corresponding deterioration in the operating KPIs — that is, on a de-rating in convention rather than in fundamentals; $192 is a 25% margin of safety to fair value and coincides with the $194 Monte Carlo median of the intrinsic distribution. Conviction hardens the other way if Search &amp; other growth prints below 10% for two consecutive quarters, if the DC Circuit broadens the search-data sharing remedy, or if FY2027 capex is guided above roughly $260bn. And we concede the thesis outright if revenue CAGR tracks above 16% while terminal EBITDA margin holds above 44%: in that world the FCFE value is $334 and the argument was about conventions that had ceased to matter.</p>
+
+<div class="exhibit"><table class="t618-table t618-table--compact"><caption class="exhibit-note" style="caption-side:top;text-align:left;margin:0 0 .4rem">Levels and actions, all against the $256.42 fair value</caption><thead><tr><th>Level</th><th class="num">Implied return to fair value</th><th>Action</th></tr></thead><tbody>
+<tr><td>Above $400</td><td class="num">−36%</td><td>Maximum conviction on the negative view; the point at which a hedge-sleeve short is worth its carry</td></tr>
+<tr><td>$360</td><td class="num">−29%</td><td>Initiate short exposure if expressed at all; the $370.92 close of 2026-07-15 sat here</td></tr>
+<tr><td>$317.69 — anchor close (2026-07-23)</td><td class="num">−19.3%</td><td>SELL / AVOID. No long. Short is optional and small</td></tr>
+<tr><td>$270</td><td class="num">−5%</td><td>Neutral. Cover any short; the valuation argument is exhausted</td></tr>
+<tr><td>$192</td><td class="num">+34%</td><td>Long interest begins — a 25% margin of safety to fair value</td></tr>
+<tr><td>$170</td><td class="num">+51%</td><td>Genuinely attractive; sits between the P10 ($147) and P25 ($168) of the intrinsic distribution</td></tr>
+</tbody></table></div>
+
+<div class="t618-callout"><span class="t618-callout-label">Why this is not a short</span><p>The thesis is a claim that the market applies conventions that overstate value by $108 per share, not a claim that the business will deteriorate. A view that depends on a change in convention rather than a change in fundamentals has no reliable timing, and a short pays carry for every quarter the convention persists. The Fund holds no position in GOOGL and this report does not recommend initiating one. If the view is expressed at all it belongs in the equity hedge sleeve, capped at 1.5% of NAV, preferably as defined-risk downside optionality dated beyond the FY2027 capex guide — though 39.4% thirty-day realised volatility makes that premium expensive, which is itself an argument for patience.</p></div>
+
+</section>
+
+<section class="section" id="risks"><span class="entry-mark"><span class="entry-ico"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M14.6 14.6l5.4 5.4"/><path d="M7 10h6"/></svg></span><span class="entry-txt">Folio four &middot; the audit</span></span><h2>The case against this ledger</h2><hr class="t618-rule--faint">
+
+<p class="t618-caption">Likelihood and magnitude are each scored 1–5 over a twelve-month horizon; score is the product. Likelihood: 1 = &lt;10%, 5 = &gt;75%. Magnitude: 1 = &lt;$10 per share of fair value, 5 = &gt;$100. The five highest-scoring risks are shown; the full thirteen-risk register is in the annex.</p>
+
+<div class="exhibit"><table class="t618-table t618-table--compact"><caption class="exhibit-note" style="caption-side:top;text-align:left;margin:0 0 .4rem">Risk register — top five by score, twelve-month horizon</caption><thead><tr><th>Risk</th><th class="num">L</th><th class="num">M</th><th class="num">Score</th><th>Quantification</th></tr></thead><tbody>
+<tr><td>Valuation-convention risk — the market re-prices Alphabet on expensed SBC and a CAPM discount rate</td><td class="num">3</td><td class="num">5</td><td class="num">15</td><td>The full bridge is worth $108 per share ($233 → $341). Any partial reversal transmits directly. Trailing SBC is $28,147M, 6.3% of revenue and 53% of reported free cash flow</td></tr>
+<tr><td>The depreciation wave compresses operating margin faster than modelled</td><td class="num">5</td><td class="num">3</td><td class="num">15</td><td>Near-certain in direction, uncertain in degree. D&amp;A rises from 5.8% of revenue to 11.9% (base) or 15.8% (bear) by 2032; H1 2026 D&amp;A already grew 43%</td></tr>
+<tr><td>Earnings quality — reported earnings are not earnings power</td><td class="num">5</td><td class="num">3</td><td class="num">15</td><td>The $99,031M gain, $98.8bn of it unrealised, contributed $6.26 of the $9.11 quarterly EPS and will not repeat. Unrealised marks reverse</td></tr>
+<tr><td>Terminal capital intensity never normalises</td><td class="num">3</td><td class="num">4</td><td class="num">12</td><td>$77 per share across the range ($173 at 22% versus $250 at 13%) and the least-guided input in the model</td></tr>
+<tr><td>AI substitution erodes Search monetisation</td><td class="num">3</td><td class="num">4</td><td class="num">12</td><td>Search &amp; other is 52.8% of revenue; organic CTR within AI-Overview informational results fell 1.76% → 0.61% June 2024 – September 2025 (Seer Interactive, November 2025). Counter-evidence: Search grew 16.8% in Q2 2026</td></tr>
+</tbody></table></div>
+
+<p class="t618-caption">Next in the register, and material: an adverse DC Circuit ruling broadening the December 2025 search-data sharing remedy (2 × 5 = 10); Cloud margin mean-reverting once capacity ceases to be the binding constraint (3 × 3 = 9); and dilution from the $40bn ATM plus the loss of a roughly $45bn annual buyback bid (4 × 2 = 8).</p>
+
+<h3>The steelmanned bull case</h3>
+
+<p>The capital programme has an order book behind it. A $514bn backlog, up more than $50bn sequentially, with capacity rather than demand as the stated constraint. If it converts at the pace management implies, the spending is underwritten by contracts rather than by hope.</p>
+
+<p>The unit economics are improving while it converts. Cloud's incremental operating margin was 53.7% and cost of revenue grew 17.7% against 24% revenue growth. If that persists, the depreciation wave lands on a business whose gross economics are getting better, not worse — and our terminal margin assumption of 44% is too low.</p>
+
+<p>And the franchise has not broken, while the silicon is genuinely rare. Search grew 16.8% on record queries with traffic acquisition cost falling to 19.8% of advertising revenue from 20.6%, and Alphabet owns the only fully integrated silicon-to-model-to-distribution stack among US-listed companies, with the majority of contracted third-party TPU revenue expected in 2027. We concede the thesis if revenue CAGR tracks above 16% with terminal EBITDA margin above 44%: the FCFE value is then $334 and the convention argument stops mattering.</p>
+
+<div class="t618-callout"><span class="t618-callout-label">Honest landing</span><p>No skew was imposed on this conclusion. The three methods disagree by $105 per share — FCFE $223, comps $251, sum-of-the-parts $328 — and the report prices that disagreement rather than averaging it into a comfortable answer. The Street's mean target of $433.55 sits above every method here, and we identify precisely why: adding stock compensation back, discounting at 9.5% and using 4.0% terminal growth reproduces $341.03 against the $342.09 pre-print close. The market is paying a Street-convention price for Alphabet, not an irrational one. Under TON618 house standards the stock is worth $256. Both statements are true, and an investor has to choose which convention they are willing to underwrite.</p></div>
+
+</section>
+
+<section class="section" id="disclosures"><span class="entry-mark"><span class="entry-ico"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M12 4v16"/><path d="M7.5 9h3M13.5 9h3M7.5 13.5h3M13.5 13.5h3"/></svg></span><span class="entry-txt">Folio five &middot; the record</span></span><h2>Disclosures &amp; Data Integrity</h2><p class="t618-caption">Report date 2026-07-24 &middot; Data as-of 2026-07-23</p><hr class="t618-rule--faint">
+
+<div class="t618-callout"><span class="t618-callout-label">Ownership Statement</span><p>the Fund holds no position in GOOGL as of the report date, and GOOGL is not a Fund holding or a BTC-correlated instrument</p></div>
+
+<h3>Price and date convention</h3>
+<p class="t618-caption">Report date: 24 July 2026. Data as-of 23 July 2026 (snapshot 2026-07-23-134714). Two price references are used throughout and are named consistently. The <strong>anchor close</strong> is $317.69, the 23 July 2026 close and the last completed session at the time of analysis; the recommendation and every fair-value comparison are struck against it. The <strong>pre-print close</strong> is $342.09, the 22 July 2026 close and the last session before the Q2 2026 release; it is the reference for the convention bridge and for the trailing multiples quoted at the pre-print price. 52-week range $187.82–$408.61, intraday, over the 52 weeks ended 23 July 2026.</p>
+
+<h3>Sources, assumptions and limitations</h3>
+<p class="t618-caption">Every figure in this report traces to a dated source in the manifest of the 23 July 2026 data capture. Primary sources are Alphabet's Q2 2026 Form 8-K Exhibit 99.1 (accession 0001652044-26-000066, filed 2026-07-22) and Form 10-Q (accession 0001652044-26-000071, filed 2026-07-23), the FY2025 Form 10-K (accession 0001652044-26-000018, filed 2026-02-05) and prior 10-Ks, the DEF 14A (accession 0001308179-26-000342, filed 2026-04-24), Form 4 insider filings, verified end-of-day price data and a dated media sweep for the independently reported rows. Where a figure is derived rather than disclosed it is labelled as such and its method stated; where a needed disclosure does not exist it is flagged as a gap rather than estimated. The full source-and-evidence log, the key-assumptions log, the thirteen-row risk register, the disclosed limitations and the glossary are reproduced unabridged in the annex and are not summarised here.</p>
+<p class="t618-caption">Three limitations bear directly on figures a reader of this condensed edition will quote. First, the five-year clean-EPS percentile band is <em>internally constructed</em> — built from daily closes divided by the last-reported fiscal-year diluted EPS across 1,255 sessions, with the current placement using this report's own clean-EPS adjustment. No external data provider publishes a series that reproduces it; the 77th-percentile figure is a TON618 construction, not a vendor statistic. Second, the 4.5% equity risk premium inside the 10.28% cost of equity is an analyst assumption rather than a market-implied measurement, and it is among the inputs with the most leverage on the output; the annex runs the cost of equity across 9.50%–11.00%, a $53.34 per-share range, so the disagreement is arithmetic rather than rhetorical. Third, Alphabet does not disclose acquired revenue separately, so the inorganic contribution to reported growth is <em>bounded rather than measured</em>: Wiz had passed roughly $1bn of annual recurring revenue at close, about 2% of Cloud's $11,144M year-over-year increment, which puts ex-Wiz Cloud growth at approximately 80% against the reported 81.8%. Alphabet also does not disclose Cloud customer concentration, so the composition of the $514bn backlog is carried as an unquantified exposure.</p>
+<p class="t618-caption">This condensed edition selects from and does not add to the audited section set. No figure, method, scenario, probability or conclusion differs from the full analysis; where the full analysis carries a caveat on a figure, the caveat is carried here with it.</p>
+
+<h3>Standard disclosures</h3>
+<p class="t618-caption"><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+
+<p class="t618-caption"><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+
+<p class="t618-caption"><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material conflicts are disclosed where they exist. <em>Ownership:</em> the Fund holds no position in GOOGL as of the report date, and GOOGL is not a Fund holding or a BTC-correlated instrument. <em>Compensation:</em> the Fund received no compensation from any party in connection with this report and charges nothing for it.</p>
+
+<p class="t618-caption"><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+
+<p class="t618-caption"><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <strong>not</strong> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <strong>not</strong> issued, reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+
+<p class="t618-caption"><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome &mdash; please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>. <strong>Version</strong> 1.0 &middot; analyst: TON618 Equity Research.</p>
+
+<h3>Version and change log</h3><div class="exhibit"><table class="t618-table" data-tbl="160" data-fit="plain" data-print-width="643.2"><caption class="exhibit-note" style="caption-side:top;text-align:left;margin:0 0 .4rem">Version history</caption><thead><tr><th>Version</th><th class="num">Date</th><th class="num">Analyst</th><th class="num">Change</th></tr></thead><tbody><tr><td>1.0</td><td class="num">2026-07-24</td><td class="num">TON618 Equity Research</td><td class="num">Initial publication. Data capture 2026-07-23-134714; valuation anchored to the anchor close of $317.69 (2026-07-23) with the pre-print close of $342.09 (2026-07-22) as the secondary reference. QA, 2026-07-24: the Monte Carlo probabilities of intrinsic value exceeding the two market prices were re-simulated on 200,000 draws and corrected to 0.0028 and 0.0005; no model input, scenario, weight or conclusion changed.</td></tr></tbody></table></div>
+
+<hr class="t618-rule--faint">
+<p class="t618-caption"><strong>Annex.</strong> The complete 144-page analysis &mdash; eighteen sections covering the business model, moat, proprietary technology, five-year financial statement analysis, unit economics, the gearing map, the operating forecast, the intrinsic and relative valuations, the full risk register, catalysts, ESG and governance, and the unabridged source, assumption and limitation logs &mdash; is available as the annex, on request.</p>
+
+</section><p class="t618-disclosure">TON618 Capital &middot; Equity Research &middot; Alphabet Inc. (NASDAQ: GOOGL) &middot; condensed edition &middot; report date 2026-07-24 &middot; data snapshot 2026-07-23-134714 &middot; version 1.0 &middot; analyst TON618 Equity Research. Full disclosures are set out in the disclosures section above; the complete analysis is available as the annex, on request.</p>
+</main></body></html>
