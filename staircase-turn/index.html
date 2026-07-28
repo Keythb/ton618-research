@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Staircase Turn — TON618 Capital</title>
+<meta name="description" content="Ahead of the July 2026 Fed decision, prediction markets price a near one-in-three chance of a rate hike — the first live hike debate in three years. A data-driven walk through the two staircases that got us here: the Fed's rate path down, and inflation momentum's seven-month climb back up.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+/* --- staircase motif --- */
+.emblem{text-align:center;margin:30px 0 2px;}
+h2 .stepmark{color:#8a6d2a;margin-right:12px;vertical-align:-3px;}
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+.chart figcaption{margin-top:.35rem;}
+/* odds board */
+.oddsboard{border:1px solid var(--line);border-top:2px solid var(--ink);padding:14px 18px 10px;margin:1.1rem 0;page-break-inside:avoid;}
+.obhead{display:flex;justify-content:space-between;align-items:baseline;font-size:.7rem;font-weight:700;
+ text-transform:uppercase;letter-spacing:.11em;color:var(--ink);margin-bottom:10px;}
+.obhead .obsrc{font-weight:500;letter-spacing:.06em;color:var(--muted);text-transform:none;}
+.obrow{display:grid;grid-template-columns:190px 1fr 110px;gap:14px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);}
+.obrow:last-of-type{border-bottom:none;}
+.obname{font-size:.85rem;color:var(--ink);font-weight:600;}
+.obtag{display:block;font-size:.66rem;font-weight:500;color:var(--antique);text-transform:uppercase;letter-spacing:.08em;}
+.obtrack{height:14px;background:var(--soft);position:relative;}
+.obbar{height:100%;background:#8a6d2a;min-width:2px;}
+.obval{font-size:1rem;font-family:var(--serif);color:var(--ink);text-align:right;font-weight:600;}
+.obval .obprice{display:block;font-family:var(--sans);font-size:.66rem;color:var(--muted);font-weight:400;}
+.obfoot{font-size:.7rem;color:var(--muted);margin-top:9px;}
+/* the single black band */
+.statband{background:#0B0B0C;color:#C9A24B;text-align:center;padding:34px 24px 30px;margin:1.6rem 0;page-break-inside:avoid;}
+.statband .sbnum{font-family:var(--serif);font-size:5.6rem;line-height:1;font-weight:600;}
+.statband .sbunit{font-size:2.6rem;vertical-align:.9rem;margin-left:.05em;}
+.statband .sbclaim{font-family:var(--sans);font-size:.82rem;color:#D8CBA6;margin-top:12px;line-height:1.6;}
+/* dials */
+.dials .dlname{white-space:nowrap;font-weight:600;color:var(--ink);}
+.dials .dlicon{color:#8a6d2a;margin-right:9px;vertical-align:-4px;}
+.dials .chip{display:inline-block;border:1.5px solid #8a6d2a;color:#8a6d2a;font-size:.68rem;font-weight:700;
+ letter-spacing:.14em;padding:2px 9px;text-transform:uppercase;}
+.dials .dlnote{display:block;font-size:.66rem;color:var(--muted);margin-top:5px;}
+@media print{.oddsboard,.statband,.dials{page-break-inside:avoid;}
+ .statband{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+@media screen and (max-width:680px){.obrow{grid-template-columns:1fr;gap:4px;}.obval{text-align:left;}}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Macro Research Note<br>As of July 27, 2026<br>v1.1</span>
+</div>
+
+<div class="emblem" aria-hidden="true"><svg viewBox="0 0 240 96" width="240" height="96" fill="none"
+ stroke="#8a6d2a" stroke-width="1.4" stroke-linecap="square">
+<path d="M14 18 h22 v14 h22 v14 h22 v14 h22"/>
+<path d="M118 74 h18 v-11 h18 v-11 h18 v-11 h18 v-11 h18 v-11 h18"/>
+<circle cx="112" cy="74" r="3.2" fill="#8a6d2a" stroke="none"/>
+</svg></div>
+<div class="kicker">Macro Research &middot; The Federal Reserve &amp; the July 2026 Decision</div>
+<h1>The Staircase Turn</h1>
+<p class="dek">The Federal Reserve spent late 2025 walking interest rates down. Inflation has spent 2026 walking back up. On Wednesday afternoon, the market says there is a real chance the Fed turns around on the stairs.</p>
+<p class="byline">TON618 Capital Research &middot; As of July 27, 2026 &middot; Fed funds target 3.50&ndash;3.75%<span class="pdf-link"> &middot; <a href="TON618_Staircase-Turn_Research_Note.pdf">Download PDF</a></span></p>
+<p class="small">Every figure in this note is computed from Federal Reserve Economic Data (FRED) vintages, US Treasury fiscal data, and live prediction-market prices as of July 27, 2026; series IDs and pull dates are listed in the appendix.</p>
+
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="3.0" cy="17.4" r="1.9" fill="currentColor" stroke="none"/></svg>The strangest bet board of the year</h2>
+<p>On Wednesday, July 29, at 2:00 p.m. Eastern, the Federal Reserve's rate-setting committee — the FOMC — announces what it will do with the short-term interest rate that anchors the price of every mortgage, car loan, and corporate borrowing in America.</p>
+<p>Most Fed meetings are foregone conclusions. The market usually knows the answer weeks in advance, and the announcement lands like a weather report confirming yesterday's forecast. This one is different, and you can see it in the betting.</p>
+<p>On Polymarket, a prediction market where traders stake real money on real-world outcomes, five contracts cover Wednesday's decision. Together they traded roughly $9.5 million in the past 24 hours. A contract's price is, in effect, the crowd's probability: pay 71 cents for a contract that pays $1 if the Fed does nothing, and the crowd is telling you there's about a 71% chance the Fed does nothing.</p>
+<p><div class="oddsboard">
+<div class="obhead"><span>Wednesday’s decision — the board</span><span class="obsrc">Polymarket · Jul 27 2026 · ≈$9.5M traded in 24h</span></div>
+<div class="obrow"><div class="obname">Hold — no change<span class="obtag">the favorite</span></div>
+<div class="obtrack"><div class="obbar" style="width:71.00%"></div></div>
+<div class="obval">71%<span class="obprice">71¢ / $1</span></div></div>
+<div class="obrow"><div class="obname">Hike +25bp<span class="obtag">the live outsider</span></div>
+<div class="obtrack"><div class="obbar" style="width:28.35%"></div></div>
+<div class="obval">28%<span class="obprice">28¢ / $1</span></div></div>
+<div class="obrow"><div class="obname">Hike +50bp or more</div>
+<div class="obtrack"><div class="obbar" style="width:0.55%"></div></div>
+<div class="obval">0.6%<span class="obprice">0.6¢ / $1</span></div></div>
+<div class="obrow"><div class="obname">Cut −25bp</div>
+<div class="obtrack"><div class="obbar" style="width:0.45%"></div></div>
+<div class="obval">0.2%<span class="obprice">0.2¢ / $1</span></div></div>
+<div class="obrow"><div class="obname">Cut −50bp or more</div>
+<div class="obtrack"><div class="obbar" style="width:0.45%"></div></div>
+<div class="obval">0.2%<span class="obprice">0.2¢ / $1</span></div></div>
+<div class="obfoot">Contract prices ≈ crowd probabilities; lightly rounded, needn’t sum to exactly 100%. Kalshi’s July market carried no live quotes at pull time.</div>
+</div></p>
+<p>Read the board from the bottom up, because that's where the story is. The two <em>cut</em> contracts — the direction the Fed was moving as recently as December — are priced at a fifth of a penny. Dead. And the second-most-likely outcome, at 28 cents on the dollar, is a rate <strong>hike</strong>.</p>
+<p>The Federal Reserve has not raised interest rates since July 2023. For most of the past year, the argument in markets was about how fast the <em>cuts</em> would come. Now, real money — not pundits, not surveys, money — assigns nearly a three-in-ten chance that the Fed's next step is back up the staircase it just walked down.</p>
+<p>This note is about why that bet exists, whether the data supports it, and what Wednesday actually decides. We wrote it before the meeting on purpose: the answer will grade our reasoning in public within 48 hours.</p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="7.0" cy="15.0" r="1.9" fill="currentColor" stroke="none"/></svg>How the Fed got to this landing</h2>
+<p>Rewind three years. In 2022 and 2023 the Fed raised rates at the fastest clip in four decades to break the post-pandemic inflation wave, topping out at a 5.25–5.50% target range in July 2023. It worked, slowly. Inflation fell, and the Fed began easing: a first round of cuts in late 2024, a pause through mid-2025, then three quarter-point cuts in quick succession — September, October, and December of 2025 — bringing the target range to 3.50–3.75%, where it sits today.</p>
+<p>A quarter point, by the way, is 25 <em>basis points</em> in market language — a basis point is a hundredth of a percentage point. The board above is priced in those units.</p>
+<p>Then, starting in January 2026, the Fed stopped. Four consecutive meetings — January, March, April, June — no move. The official line was patience. The staircase down had reached a landing.</p>
+<p>Here is the problem. To see it, you need the right speedometer.</p>
+<p>The inflation number that makes headlines is the 12-month rate — "prices are up X% from a year ago." That number is honest but slow, like judging a car's speed by averaging the last hour of driving. The Fed's staff and every serious forecaster also watch a faster gauge: take the last three months of price changes and ask, <em>if this pace continued for a year, what would inflation be?</em> That's the three-month annualized rate. It tells you what inflation is doing <em>now</em>.</p>
+<p>Run that gauge on the Fed's own preferred price index — the PCE deflator, a broader basket than the better-known CPI — and this is what the two staircases look like on one chart:</p>
+<p><figure class="chart"><svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" role="img"
+  aria-label="Fed funds target stepping down while PCE three-month annualized inflation steps up">
+<text x="64" y="20" font-size="12" font-weight="700" letter-spacing=".08em" fill="#15161A"
+  font-family="Inter,Arial,sans-serif">TWO STAIRCASES, ONE LANDING</text>
+<text x="64" y="34" font-size="10.5" fill="#5E626B" font-family="Inter,Arial,sans-serif">Fed funds target (upper bound) vs. PCE inflation, 3-month pace annualized · Jan 2025–Jul 2026</text>
+<line x1="64" y1="268.0" x2="664" y2="268.0" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="271.5" text-anchor="end" font-size="10.5" fill="#5E626B">1%</text><line x1="64" y1="230.3" x2="664" y2="230.3" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="233.8" text-anchor="end" font-size="10.5" fill="#5E626B">2%</text><line x1="64" y1="192.7" x2="664" y2="192.7" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="196.2" text-anchor="end" font-size="10.5" fill="#5E626B">3%</text><line x1="64" y1="155.0" x2="664" y2="155.0" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="158.5" text-anchor="end" font-size="10.5" fill="#5E626B">4%</text><line x1="64" y1="117.3" x2="664" y2="117.3" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="120.8" text-anchor="end" font-size="10.5" fill="#5E626B">5%</text><line x1="64" y1="79.7" x2="664" y2="79.7" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="83.2" text-anchor="end" font-size="10.5" fill="#5E626B">6%</text><line x1="64" y1="42.0" x2="664" y2="42.0" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="45.5" text-anchor="end" font-size="10.5" fill="#5E626B">7%</text><text x="64.0" y="286" text-anchor="middle" font-size="10.5" fill="#5E626B">Jan ’25</text><text x="197.3" y="286" text-anchor="middle" font-size="10.5" fill="#5E626B">May</text><text x="330.7" y="286" text-anchor="middle" font-size="10.5" fill="#5E626B">Sep</text><text x="464.0" y="286" text-anchor="middle" font-size="10.5" fill="#5E626B">Jan ’26</text><text x="597.3" y="286" text-anchor="middle" font-size="10.5" fill="#5E626B">May</text><text x="664.0" y="286" text-anchor="middle" font-size="10.5" fill="#5E626B">Jul</text>
+<line x1="64" y1="230.3" x2="664" y2="230.3" stroke="#5E626B" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="664" y="225.3" text-anchor="end" font-size="9.5" fill="#5E626B">Fed’s 2% target</text>
+<path d="M 64.0 136.2 H 330.7 V 145.6 H 364.0 V 155.0 H 430.7 V 164.4 H 664.0 V 164.4" fill="none" stroke="#8a6d2a" stroke-width="2.4"/>
+<path d="M 64.0 192.7 L 97.3 148.0 L 130.7 188.3 L 164.0 216.8 L 197.3 250.4 L 230.7 208.8 L 264.0 208.0 L 297.3 195.6 L 330.7 199.7 L 364.0 196.4 L 397.3 203.0 L 430.7 192.1 L 464.0 168.1 L 497.3 139.9 L 530.7 87.0 L 564.0 77.0 L 597.3 69.1" fill="none" stroke="#15161A" stroke-width="2"/>
+<circle cx="64.0" cy="192.7" r="2.2" fill="#15161A"/><circle cx="97.3" cy="148.0" r="2.2" fill="#15161A"/><circle cx="130.7" cy="188.3" r="2.2" fill="#15161A"/><circle cx="164.0" cy="216.8" r="2.2" fill="#15161A"/><circle cx="197.3" cy="250.4" r="2.2" fill="#15161A"/><circle cx="230.7" cy="208.8" r="2.2" fill="#15161A"/><circle cx="264.0" cy="208.0" r="2.2" fill="#15161A"/><circle cx="297.3" cy="195.6" r="2.2" fill="#15161A"/><circle cx="330.7" cy="199.7" r="2.2" fill="#15161A"/><circle cx="364.0" cy="196.4" r="2.2" fill="#15161A"/><circle cx="397.3" cy="203.0" r="3.4" fill="#8a6d2a"/><circle cx="430.7" cy="192.1" r="3.4" fill="#8a6d2a"/><circle cx="464.0" cy="168.1" r="3.4" fill="#8a6d2a"/><circle cx="497.3" cy="139.9" r="3.4" fill="#8a6d2a"/><circle cx="530.7" cy="87.0" r="3.4" fill="#8a6d2a"/><circle cx="564.0" cy="77.0" r="3.4" fill="#8a6d2a"/><circle cx="597.3" cy="69.1" r="3.4" fill="#8a6d2a"/>
+<text x="130.7" y="127.2" font-size="10.5" fill="#8a6d2a" font-weight="600">Fed target: down 3 steps</text>
+<text x="464.0" y="180.4" font-size="10" fill="#8a6d2a">last cut · Dec ’25, then 4 holds</text>
+<text x="393.3" y="222.0" text-anchor="middle" font-size="10" fill="#5E626B">the last low · 2.7%</text>
+<text x="597.3" y="58.4" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d2a">6.3%</text>
+<line x1="664.0" y1="42" x2="664.0" y2="268" stroke="#15161A" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="658.0" y="52" text-anchor="end" font-size="9.5" fill="#15161A" font-weight="600">Jul 29 · the decision</text>
+<text x="64" y="300" font-size="9.5" fill="#5E626B">Source: FRED (DFEDTARU, PCEPI), pulled Jul 27 2026. Ink line: ((P/P₋₃)⁴−1); gold dots mark the climb from the November low.</text>
+</svg><figcaption class="small">The Fed walked the policy rate down three quarter-point steps in late 2025 and has held since. Inflation’s
+three-month pace made its last low in November 2025, between the final two cuts — and has risen every month since.</figcaption></figure></p>
+<p>In November 2025 — the month between the final two cuts — the three-month pace stood at 2.7%, within sight of the Fed's 2% target. It was the last low it would see. The pace has risen <strong>every single month since</strong>: 2.7, then 3.0, 3.7, 4.4, 5.8, 6.1, and, as of the May data, 6.3% annualized. Six readings after that low, six increases, no interruptions. The 12-month rate has followed the fast gauge upward, reaching 4.1% — double the target.</p>
+<p>One staircase walked down. The other turned and walked up. Wednesday is where they meet.</p>
+<p><div class="statband">
+<div class="sbnum">6.3<span class="sbunit">%</span></div>
+<div class="sbclaim">Inflation’s three-month pace, annualized — up from 2.7% last November, as the Fed finished cutting.<br>
+Six monthly readings since. Six increases. No interruptions.</div>
+</div></p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="11.0" cy="12.6" r="1.9" fill="currentColor" stroke="none"/></svg>Three dials on the Fed's desk</h2>
+<p>The Fed's mandate is jobs and prices, refereed through a third thing it never quite admits to watching: how loose or tight financial markets themselves are. Three dials. Before every meeting, this is the read:</p>
+<p><table class="dials"><caption>Three dials, one desk — readings into the July 28–29 meeting</caption>
+<thead><tr><th>Dial</th><th>Reading (as of Jul 27 2026)</th><th class="num">Verdict</th></tr></thead>
+<tbody><tr><td class="dlname"><span class="dlicon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l4.2-6"/><path d="M3 16h2M19 16h2"/><circle cx="12" cy="16" r="1.6" fill="currentColor" stroke="none"/></svg></span>Prices</td>
+<td>Headline PCE +4.1% YoY, 3-month pace 6.3% annualized and rising 6 months straight; core +3.4% YoY, 3.5% pace</td><td class="num"><span class="chip">HOT</span><span class="dlnote">argues against ease</span></td></tr><tr><td class="dlname"><span class="dlicon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l0-7"/><path d="M3 16h2M19 16h2"/><circle cx="12" cy="16" r="1.6" fill="currentColor" stroke="none"/></svg></span>Jobs</td>
+<td>Unemployment 4.2% · weekly claims 187k, a 15-year low · openings rising</td><td class="num"><span class="chip">FIRM</span><span class="dlnote">no cover for a cut</span></td></tr><tr><td class="dlname"><span class="dlicon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l-4.2-6"/><path d="M3 16h2M19 16h2"/><circle cx="12" cy="16" r="1.6" fill="currentColor" stroke="none"/></svg></span>Credit conditions</td>
+<td>High-yield spread 2.79pp and IG 0.80pp, near 3-yr tights · Chicago Fed NFCI −0.55 (looser than average)</td><td class="num"><span class="chip">EASY</span><span class="dlnote">policy isn’t biting</span></td></tr></tbody></table>
+<p class="small">The wrinkle that ties them together: at a 3.6% policy rate against 4.1% headline inflation, the Fed’s rate is
+negative in real terms — while the 10-year Treasury yield (4.69%, near the top of its 15-year range) is tightening on its own.</p></p>
+<p><strong>Prices: hot, and accelerating.</strong> The numbers above speak for themselves, but two honest footnotes. First, the burst is strongest in the headline index; the <em>core</em> measure — which strips out volatile food and energy to reveal the underlying trend — is running cooler, at 3.5% annualized over three months and 3.4% over the year. Cooler, but still nearly a point and a half above target, and its own path this year (2.4% last November, peaking near 4.8% in February) hardly reads as mission accomplished. Second, the better-known CPI runs cooler than PCE right now — 3.5% headline over the past year. Whichever gauge you prefer, none of them is at 2%, and the fast gauges are pointing up.</p>
+<p><strong>Jobs: firm.</strong> The historical case for cutting rates is a weakening job market, and it simply isn't there. Unemployment is 4.2% — low by the standard of any decade you care to compare. New claims for unemployment benefits are running at 187,000 a week — the lowest weekly reading in 15 years. Job openings are rising, not falling. If the labor market were cracking, the cut contracts wouldn't be trading at a fifth of a penny. They're priced that way because it isn't.</p>
+<p><strong>Financial conditions: easy.</strong> This dial is the least familiar to non-professionals and the most striking to us. When the Fed worries its policy is too tight, it looks for stress: companies paying punishing premiums to borrow, markets seizing up. The opposite is true today. The extra yield that lenders demand from risky "high-yield" companies over safe Treasury bonds — the <em>spread</em>, markets' fear gauge for defaults — is 2.79 percentage points, near the bottom of its three-year range. Investment-grade spreads are similarly compressed. The Chicago Fed's overall financial-conditions index reads looser than average. Money, in short, is not hard to get. Policy that was billed as "restrictive" is not restraining much.</p>
+<p>And there is a wrinkle that ties the three dials together: with headline inflation at 4.1% and the policy rate at 3.6%, the Fed's rate is now <em>below</em> inflation — negative in real terms, against the headline gauge. Meanwhile the bond market has stopped waiting: the 10-year Treasury yield, which the Fed does not control, has climbed to 4.69%, near the top of its 15-year range, and is still rising. Long-term borrowing costs are going up without the Fed lifting a finger. The market is, in a sense, already hiking.</p>
+<p>Add it up: not one of the three dials argues for a cut. Two of the three argue the current setting is too easy for the inflation actually being printed. That is why a hike contract that would have been free money to sell a year ago costs 28 cents today.</p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="15.0" cy="10.2" r="1.9" fill="currentColor" stroke="none"/></svg>The honest case for standing still</h2>
+<p>If the data leans hawkish, why is "do nothing" still the 71-cent favorite? Not because the committee is blind. There is a real case for holding, and a note written the day before the verdict owes you its strongest version.</p>
+<p>First, <strong>the fast gauge is fast in both directions.</strong> Three-month momentum swings hard, and the current burst is concentrated in the volatile headline components. Core momentum — the series the Fed trusts most — has actually <em>decelerated</em> for three straight months, from 4.8% annualized in February to 3.5% in May. A committee that reacts to every headline swerve whipsaws the economy; that is precisely why core exists.</p>
+<p>Second, <strong>the bond market's own inflation forecast is calm.</strong> The 5-year <em>breakeven</em> rate — the inflation forecast you can extract from the gap between ordinary Treasury bonds and inflation-protected ones — sits at 2.18% and has been falling since spring. Traders with money at stake believe this burst fades on its own. In the 1970s — the comparison we take up next — that anchor was gone entirely. Its presence is the single best argument that this time is genuinely different.</p>
+<p>Third, <strong>a hike is a heavy tool with a long delay.</strong> By the standard central-banking rule of thumb, rate changes bite the economy a year or more after the fact. Tighten into a price burst that was going to fade anyway and the bill — in jobs — arrives just in time for the slowdown. The 10-year yield at 4.69% is already doing quiet tightening work on mortgages and corporate borrowing, unpaid and unannounced.</p>
+<p>That is a serious case. It is also, word for word, the case a patient central bank makes right before the moments history remembers it for being wrong. Which brings us to the ghost.</p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="19.0" cy="7.8" r="1.9" fill="currentColor" stroke="none"/></svg>The ghost on the staircase</h2>
+<p>Once before in the modern era, the Fed cut rates while inflation was structurally alive, watched it re-accelerate, and had to turn around on the stairs. The decade was the 1970s; the chairman was Arthur Burns; and the episode is the reason every central banker alive today uses the phrase "stop-go" as an insult.</p>
+<p>The sequence, from the data: coming out of the 1974 oil-shock recession, the Fed cut the funds rate from a peak of 12.9% in mid-1974 to 4.6% by January 1977, as inflation fell from 12.2% to 5.0%. Declaring the fever broken, policy stayed easy at the landing. Inflation turned within months — back to 6.7% by mid-1977, 9% by the end of 1978, 13.3% by the end of 1979. The Fed spent the rest of the decade chasing what it had released, the funds rate ended up above 17%, and the episode was finally closed only by the Volcker recessions — the deepest downturn between the Depression and 2008.</p>
+<p><figure class="chart"><svg viewBox="0 0 700 292" xmlns="http://www.w3.org/2000/svg" role="img"
+  aria-label="Fed funds rate and CPI inflation 1972 to 1982, showing the 1977 landing and the re-acceleration that followed">
+<text x="64" y="20" font-size="12" font-weight="700" letter-spacing=".08em" fill="#15161A"
+  font-family="Inter,Arial,sans-serif">THE LAST TIME THE FED PAUSED ON THE STAIRS</text>
+<text x="64" y="34" font-size="10.5" fill="#5E626B" font-family="Inter,Arial,sans-serif">Fed funds rate (gold) vs. CPI inflation, year over year (ink) · 1972–1982</text>
+<line x1="64" y1="240.0" x2="664" y2="240.0" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="243.5" text-anchor="end" font-size="10.5" fill="#5E626B">0%</text><line x1="64" y1="190.5" x2="664" y2="190.5" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="194.0" text-anchor="end" font-size="10.5" fill="#5E626B">5%</text><line x1="64" y1="141.0" x2="664" y2="141.0" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="144.5" text-anchor="end" font-size="10.5" fill="#5E626B">10%</text><line x1="64" y1="91.5" x2="664" y2="91.5" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="95.0" text-anchor="end" font-size="10.5" fill="#5E626B">15%</text><line x1="64" y1="42.0" x2="664" y2="42.0" stroke="#E2E4E8" stroke-width="1"/><text x="56" y="45.5" text-anchor="end" font-size="10.5" fill="#5E626B">20%</text><text x="64.0" y="258" text-anchor="middle" font-size="10.5" fill="#5E626B">1972</text><text x="173.9" y="258" text-anchor="middle" font-size="10.5" fill="#5E626B">1974</text><text x="283.8" y="258" text-anchor="middle" font-size="10.5" fill="#5E626B">1976</text><text x="393.8" y="258" text-anchor="middle" font-size="10.5" fill="#5E626B">1978</text><text x="503.7" y="258" text-anchor="middle" font-size="10.5" fill="#5E626B">1980</text><text x="613.6" y="258" text-anchor="middle" font-size="10.5" fill="#5E626B">1982</text>
+<rect x="283.8" y="42" width="77.9" height="198" fill="#F4F0E4"/>
+<path d="M 64.0 205.3 L 68.6 207.3 L 73.2 202.1 L 77.7 198.7 L 82.3 197.7 L 86.9 195.8 L 91.5 195.0 L 96.1 192.4 L 100.6 191.8 L 105.2 190.0 L 109.8 189.9 L 114.4 187.2 L 119.0 181.2 L 123.5 174.9 L 128.1 169.8 L 132.7 169.5 L 137.3 162.4 L 141.9 155.9 L 146.4 137.0 L 151.0 136.1 L 155.6 133.3 L 160.2 140.9 L 164.8 140.7 L 169.3 141.5 L 173.9 144.5 L 178.5 151.2 L 183.1 147.4 L 187.7 136.0 L 192.2 128.0 L 196.8 121.9 L 201.4 112.1 L 206.0 121.1 L 210.6 127.7 L 215.1 140.4 L 219.7 146.4 L 224.3 155.6 L 228.9 169.4 L 233.5 178.2 L 238.0 185.2 L 242.6 185.6 L 247.2 188.3 L 251.8 185.1 L 256.4 179.6 L 260.9 179.2 L 265.5 178.2 L 270.1 182.4 L 274.7 188.3 L 279.3 188.5 L 283.8 191.8 L 288.4 192.8 L 293.0 192.1 L 297.6 192.3 L 302.2 187.6 L 306.7 185.7 L 311.3 187.4 L 315.9 187.6 L 320.5 188.0 L 325.1 190.3 L 329.6 191.0 L 334.2 194.0 L 338.8 194.4 L 343.4 193.7 L 348.0 193.6 L 352.5 193.2 L 357.1 187.0 L 361.7 186.6 L 366.3 186.3 L 370.9 181.6 L 375.5 179.2 L 380.0 175.9 L 384.6 175.6 L 389.2 175.1 L 393.8 173.7 L 398.4 172.9 L 402.9 172.8 L 407.5 171.8 L 412.1 167.1 L 416.7 164.8 L 421.3 162.7 L 425.8 160.4 L 430.4 156.3 L 435.0 151.3 L 439.6 143.4 L 444.2 140.7 L 448.7 140.3 L 453.3 140.4 L 457.9 140.1 L 462.5 140.9 L 467.1 138.6 L 471.6 138.1 L 476.2 136.3 L 480.8 131.7 L 485.4 126.8 L 490.0 103.7 L 494.5 109.5 L 499.1 103.6 L 503.7 103.2 L 508.3 100.1 L 512.9 69.8 L 517.4 65.7 L 522.0 131.3 L 526.6 146.2 L 531.2 150.6 L 535.8 144.9 L 540.3 132.4 L 544.9 113.2 L 549.5 83.1 L 554.1 52.9 L 558.7 51.1 L 563.2 82.3 L 567.8 94.5 L 572.4 84.4 L 577.0 56.7 L 581.6 50.9 L 586.1 51.5 L 590.7 63.6 L 595.3 82.9 L 599.9 90.7 L 604.5 108.2 L 609.0 117.5 L 613.6 109.1 L 618.2 93.7 L 622.8 94.7 L 627.4 92.1 L 631.9 96.9 L 636.5 99.9 L 641.1 115.4 L 645.7 139.8 L 650.3 137.9 L 654.8 143.9 L 659.4 148.9 L 664.0 151.4" fill="none" stroke="#8a6d2a" stroke-width="2"/>
+<path d="M 64.0 207.7 L 68.6 202.8 L 73.2 205.4 L 77.7 205.4 L 82.3 208.1 L 86.9 210.7 L 91.5 210.7 L 96.1 210.8 L 100.6 208.5 L 105.2 208.5 L 109.8 206.2 L 114.4 206.3 L 119.0 204.0 L 123.5 201.7 L 128.1 192.2 L 132.7 187.5 L 137.3 185.3 L 141.9 180.6 L 146.4 183.2 L 151.0 166.8 L 155.6 167.1 L 160.2 160.2 L 164.8 158.3 L 169.3 151.5 L 173.9 144.9 L 178.5 141.0 L 183.1 139.6 L 187.7 140.3 L 192.2 134.0 L 196.8 132.5 L 201.4 125.8 L 206.0 132.2 L 210.6 121.7 L 215.1 122.8 L 219.7 119.2 L 224.3 120.3 L 228.9 123.7 L 233.5 129.1 L 238.0 136.4 L 242.6 139.1 L 247.2 148.3 L 251.8 149.1 L 256.4 145.6 L 260.9 154.7 L 265.5 161.7 L 270.1 164.3 L 274.7 167.0 L 279.3 169.4 L 283.8 173.7 L 288.4 177.9 L 293.0 180.0 L 297.6 182.1 L 302.2 178.5 L 306.7 180.8 L 311.3 185.0 L 315.9 183.4 L 320.5 185.6 L 325.1 185.9 L 329.6 189.9 L 334.2 190.1 L 338.8 188.5 L 343.4 179.8 L 348.0 176.4 L 352.5 171.2 L 357.1 173.3 L 361.7 173.7 L 366.3 174.0 L 370.9 174.3 L 375.5 176.4 L 380.0 176.7 L 384.6 173.5 L 389.2 173.9 L 393.8 172.5 L 398.4 178.2 L 402.9 176.9 L 407.5 175.7 L 412.1 169.3 L 416.7 166.4 L 421.3 163.5 L 425.8 162.2 L 430.4 156.0 L 435.0 151.6 L 439.6 152.2 L 444.2 151.0 L 448.7 148.4 L 453.3 142.6 L 457.9 138.5 L 462.5 136.2 L 467.1 134.1 L 471.6 130.3 L 476.2 126.6 L 480.8 122.8 L 485.4 122.4 L 490.0 120.5 L 494.5 115.3 L 499.1 108.8 L 503.7 102.7 L 508.3 99.8 L 512.9 95.5 L 517.4 95.6 L 522.0 97.2 L 526.6 98.8 L 531.2 109.8 L 535.8 112.4 L 540.3 113.6 L 544.9 114.9 L 549.5 114.9 L 554.1 117.7 L 558.7 123.2 L 563.2 127.2 L 567.8 134.9 L 572.4 139.7 L 577.0 143.1 L 581.6 144.0 L 586.1 133.3 L 590.7 132.9 L 595.3 131.4 L 599.9 138.3 L 604.5 145.2 L 609.0 151.8 L 613.6 158.3 L 618.2 164.6 L 622.8 171.8 L 627.4 174.4 L 631.9 171.6 L 636.5 168.9 L 641.1 175.1 L 645.7 180.9 L 650.3 191.1 L 654.8 190.2 L 659.4 195.7 L 664.0 202.1" fill="none" stroke="#15161A" stroke-width="2"/>
+<circle cx="338.8" cy="194.4" r="3.4" fill="#8a6d2a"/>
+<text x="338.8" y="212.4" text-anchor="middle" font-size="10" fill="#8a6d2a" font-weight="600">the landing · 4.6%</text>
+<text x="196.8" y="98.3" text-anchor="middle" font-size="10" fill="#5E626B">cut from 12.9%…</text>
+<text x="471.6" y="86.6" text-anchor="middle" font-size="10" fill="#5E626B">…then the chase</text>
+<text x="64" y="272" font-size="9.5" fill="#5E626B">Source: FRED (FEDFUNDS, CPIAUCSL). Shaded: the 1976–77 pause. CPI re-accelerated from 5.0% (Dec ’76) to 13.3% (Dec ’79).</text>
+</svg><figcaption class="small">Burns’s Fed cut from 12.9% to 4.6% as inflation fell — then paused. Inflation turned within months, and
+the decade ended with the funds rate above 17%. The shape, not the scale, is the lesson.</figcaption></figure></p>
+<p>We show this chart to be honest about the stakes, not to predict a rerun. The differences are real and they matter: inflation today is 4%, not 12%; expectations, as the breakeven shows, are anchored, not unmoored; and today's Fed carries the 1970s in its institutional memory precisely because it is determined not to repeat them. Rhyme is not prophecy.</p>
+<p>But the <em>shape</em> — cut while the underlying trend is unbroken, pause at the landing, watch momentum turn against you within months — is not a loose analogy. It is the same staircase. The 28-cent hike contract is the market pricing the possibility that this Fed knows the shape too, and would rather take one hard step early than ten harder ones late.</p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="23.0" cy="5.4" r="1.9" fill="currentColor" stroke="none"/></svg>The third staircase</h2>
+<p>There is one more staircase in this story, and it is the reason we do not treat Wednesday as a routine meeting. It appears nowhere in the Fed's statement, and nobody at the press conference will volunteer it. It belongs to the borrower.</p>
+<p>The United States government owes $39.7 trillion as of last Friday's Treasury statement. The interest on that debt now runs at roughly $1.2 trillion a year gross — about $970 billion net, the figure budget scorekeepers use — and it climbs regardless of what the economy does, because of a quirk of arithmetic: the average interest rate on the government's marketable debt is just 3.41%, a legacy of the cheap-money years, while a newly issued 10-year Treasury pays 4.69%. Every maturing bond that rolls over refinances at today's higher rates, so the average ratchets upward mechanically, month after month. The Treasury's average maturity is about six years and deliberately skews shorter than that, so rate changes reach the interest bill unusually fast. One percentage point on $39.7 trillion is roughly $400 billion a year once fully rolled — real money even by Washington standards.</p>
+<p>Economists have a name for what happens when a debt gets this large: <em>fiscal dominance</em> — the point at which interest rates start being set with one eye on the borrower's bill rather than both eyes on the price level. Last month we published a full note on exactly this — <a href="https://keythb.github.io/ton618-research/debt-endgame-2026/">The Debt Endgame</a> — and its argument bears directly on Wednesday. The newly seated chair, Kevin Warsh, is by reputation a hawk; he has also inherited an instrument that doubles as a fiscal weapon pointed at his own government. A hike that would have been routine at 2007's debt levels now lands on the Treasury's bill almost immediately, and the political pressure to move rates the other way — down, so that $39.7 trillion can be refinanced cheaply — is neither subtle nor secret. That is the endgame note's thesis in one line: the textbook says the data decides, and the debt says the textbook is out of date.</p>
+<p>Hold that against everything above and the collision is clean. The economic staircase argues up: 6.3% momentum, 15-year-low claims, loose credit. The fiscal staircase argues down: every basis point of tightening invoices the Treasury. The odds board is the market's attempt to price both forces at once — and it explains what the economic data alone cannot: why <em>hold</em> trades at 71 cents rather than far lower against inflation this hot, and why the cut contracts, dead on the economics, will resurrect the moment the data gives an inch.</p>
+<p>There is a check on all of this, and it is the bond market. If the Fed is ever seen easing for the borrower's sake while inflation momentum runs above 6%, the 10-year — already near the top of its 15-year range — does the tightening itself, and the refinancing problem gets worse, not better. That is the knife's edge the chair walks on Wednesday: hike, and invoice the Treasury; ease, and risk the bond market concluding the inflation fight is no longer the priority. The staircase turn is not just a policy choice. It is a solvency argument conducted in public, 25 basis points at a time.</p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="27.0" cy="3.0" r="1.9" fill="currentColor" stroke="none"/></svg>What Wednesday actually decides</h2>
+<p>Strip the theater away and Wednesday resolves one question: <strong>how much does this Fed fear the ghost — and how much does it owe the borrower?</strong></p>
+<p><strong>The favorite — hold, with harder language (about 71%).</strong> The committee stands still but rewrites the story around the stand. Watch the statement's characterization of inflation: for months the language has leaned on "elevated." If it shifts toward "has risen" or "progress has reversed," and the chair's press conference declines to rule a hike out, then the pause has quietly become a coiled spring, and the odds boards for September — the next meeting — become the most-watched numbers in finance. A hold with hawkish language is not "nothing happened." It is the Fed acknowledging the second staircase without stepping onto it yet.</p>
+<p><strong>The live outsider — a quarter-point hike (about 28%).</strong> The shock would not be the 25 basis points. It would be the regime change: confirmation, three years after the last one, that rates can still go up, priced at less than one-in-three. Every asset that spent 2026 assuming the next move was down — and most did — would have to re-underwrite that assumption at once.</p>
+<p><strong>The dead branch — a cut (well under 1%).</strong> The board says it plainly: on this data, with claims at 187,000 and momentum at 6.3%, there is no version of Wednesday where the Fed eases. The era of asking "when's the next cut" is, at least for this stretch of the staircase, over.</p>
+<p>For readers keeping score at home, four numbers tell you the next chapter regardless of the announcement: the June PCE release (this Thursday, July 30 — it either extends or breaks the climb), weekly jobless claims (still under 200,000 means the hold-vs-hike debate stays alive), the September hike odds on the same betting boards the moment the chair stops talking — and the 10-year Treasury yield's reaction, the bond market's running referendum on whether policy is serving the price level or the borrower.</p>
+<h2><svg class="stepmark" viewBox="0 0 30 20" width="30" height="20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M 1 19 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4 h 4 v -2.4"/><circle cx="31.0" cy="0.6" r="1.9" fill="currentColor" stroke="none"/></svg>The landing</h2>
+<p>We opened by calling the bet board strange. The data says it is not strange at all — it is priced almost exactly where the evidence points. Inflation momentum has more than doubled since the Fed stopped cutting, and every month of 2026 has made it worse, not better. The job market gives no cover to ease. Credit markets say policy isn't restrictive now. Against that: a calm expectations anchor, a decelerating core, and a bond market already tightening on the Fed's behalf. That is a legitimate two-sided argument between <em>hold</em> and <em>hike</em> — and, on the economics, no argument at all for the direction everyone spent a year assuming. Unless the argument was never only about the economics: $39.7 trillion is leaning on the handrail, and it wants the staircase to go down.</p>
+<p>Whatever the committee announces at 2 p.m. Wednesday, one thing has already happened, and it happened before the meeting: the market stopped assuming the staircase only goes down. The turn is priced. Now we find out if the Fed takes it.</p>
+<p class="lede"><em>This note will be graded in public on Wednesday afternoon. That is the point of writing it now.</em></p>
+<h2>Appendix — data and method</h2>
+<p><strong>Prediction-market prices.</strong> Polymarket July 2026 FOMC contracts, pulled July 27, 2026: no change $0.71; +25bp $0.28; +50bp or more $0.006; −25bp $0.002; −50bp or more $0.002; 24-hour volume across the five contracts ≈ $9.5M. Prices are lightly rounded and, as with all prediction markets, need not sum to exactly 100%. Kalshi's July FOMC market was checked first (house convention for date-bounded events) and carried no live quotes at pull time.</p>
+<p><strong>Rates and inflation.</strong> All series from FRED (St. Louis Fed), pulled July 27, 2026: fed funds target upper bound (DFEDTARU — cuts effective 2025-09-18, 2025-10-30, 2025-12-11); effective funds rate (FEDFUNDS, 3.63% June 2026); headline and core PCE deflators (PCEPI / PCEPILFE, May 2026 vintage); CPI (CPIAUCSL / CPILFESL, June 2026); unemployment (UNRATE), initial claims (ICSA), job openings (JTSJOL); financial conditions (NFCI), high-yield and investment-grade spreads (BAMLH0A0HYM2 / BAMLC0A0CM), 10-year yield (DGS10), 5-year breakeven (T5YIE). Three-month annualized momentum = ((P_t / P_{t−3})^4 − 1) × 100. Percentile framings use each series' own history: 15 years for the macro series, three years for the spread series (the window available on FRED for those tickers). 1970s panel: FEDFUNDS and CPIAUCSL, 1972–1982.</p>
+<p><strong>Debt and interest.</strong> Total public debt outstanding $39.69T (US Treasury, Debt to the Penny, July 24, 2026); average interest rate on total marketable debt 3.411% (US Treasury, Average Interest Rates, June 30, 2026); gross federal interest payments $1.219T annualized (FRED A091RC1Q027SBEA, Q1 2026); net interest outlays $970B (FRED FYOINT, FY2025). The ~6-year weighted-average maturity, the short-bill skew, and the full fiscal-dominance argument are developed in our June 30 note, The Debt Endgame.</p>
+<p><strong>Method notes.</strong> This is a point-in-time read of re-estimated indicators, not a forecast; indicators sitting near their historical average can flip on a single print. The odds quoted are market prices, which move continuously — they are cited as of the pull time above and will differ by publication time.</p>
+
+<section class="disc">
+<h3>Disclosures</h3>
+<p><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher&rsquo;s exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher&rsquo;s exclusion from the definition of &ldquo;investment adviser&rdquo; under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material conflicts are disclosed where they exist. This note discusses no individual security; the Fund holds instruments whose prices are sensitive to Federal Reserve policy, including Bitcoin. The Fund receives no compensation from any party in connection with its research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. All methodology and data integrity are reviewed and approved before publication by TON618 Capital&rsquo;s Chief Investment Officer, Keyth Beck; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does not imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is not issued, reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome &mdash; please direct them to CIO Keyth Beck at <a href="mailto:keyth@ton618capital.com">keyth@ton618capital.com</a>.</p>
+</section>
+</main></body></html>
