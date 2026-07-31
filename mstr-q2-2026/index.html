@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TON618 Capital — MSTR Q2 2026: The Drain, Made Visible</title>
+<meta name="description" content="Addendum to our June 2026 Strategy (MSTR) valuation: the Q2 print scorecarded against our thesis, the funding loop nobody asked about, and two management claims that do not survive scrutiny.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--black:#0B0B0C;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .ic{width:19px;height:19px;color:var(--antique);vertical-align:-3px;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+.ic{display:inline-block;width:22px;height:22px;}
+/* ---- hero: the balance entry */
+.entry{margin:26px 0 8px;padding:20px 0 14px;
+background:repeating-linear-gradient(#fff,#fff 27px,var(--line) 27px,var(--line) 28px);}
+.entry .row{display:flex;align-items:baseline;gap:26px;flex-wrap:wrap;}
+.entry .amt{font-family:var(--serif);font-size:4.6rem;font-weight:600;color:var(--antique);line-height:1;
+border-bottom:3.5px double var(--antique);padding:0 .18em .06em;}
+.entry .desc{font-size:.92rem;color:var(--body);max-width:420px;}
+.entry .desc b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+/* ---- drop cap */
+.lead:first-letter{font-family:var(--serif);font-size:3.3em;line-height:.82;float:left;color:var(--antique);padding:.06em .12em 0 0;}
+/* ---- docket / tally */
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+.tally tbody tr td{padding:9px 10px;}
+.tally tr.total td{font-weight:700;color:var(--ink);border-top:3px double var(--ink);border-bottom:none;background:none;}
+.chip{display:inline-block;font:700 .64rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;
+border:1.4px solid currentColor;padding:4px 8px;transform:rotate(-2deg);white-space:nowrap;}
+.chip.ok{color:var(--pos);} .chip.mid{color:var(--antique);} .chip.bad{color:var(--neg);}
+/* ---- black band (the one dark surface) */
+.band{background:var(--black);color:#C9A24B;margin:1.8rem -44px;padding:30px 44px 26px;}
+.band .n{font-family:var(--serif);font-size:5rem;line-height:1;font-weight:600;}
+.band .t{font-size:.9rem;color:#E8DFC9;margin-top:.4rem;max-width:560px;}
+.band .t b{color:#C9A24B;}
+/* ---- exhibits */
+.exh{border:1px solid var(--line);border-left:3px solid var(--gold);padding:14px 18px;margin:1.1rem 0;}
+.exh .tag{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--antique);}
+.exh blockquote{margin:.5rem 0;padding:.2rem 0 .2rem 14px;border-left:3px solid var(--gold);
+font-family:var(--serif);font-size:1.0rem;font-style:italic;color:#33363d;}
+.exh blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.72rem;color:var(--muted);margin-top:.3rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.5rem 0 .15rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.src{font-size:.68rem;color:var(--muted);margin:.15rem 0 .9rem;}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.small{font-size:.78rem;color:var(--muted);}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+h1{font-size:1.85rem;} .entry .amt{font-size:3.6rem;}
+h2,h3{page-break-after:avoid;}
+table,.callout,.chart,.kpis,.exh,.band,.entry,blockquote{page-break-inside:avoid;}
+.band{margin:1.8rem 0;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.band{margin:1.8rem -18px;padding:24px 18px;}}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Equity Research &middot; Addendum<br>As of 31 Jul 2026<br>v1.0</span>
+</div>
+
+<div class="kicker">Equity Valuation &middot; Addendum to the June 2026 note &middot; Strategy Inc. (NASDAQ: MSTR)</div>
+<h1>The Drain, Made Visible</h1>
+<p class="dek">Q2 2026 ran our June scenario in real time: the reserve drained, bitcoin was sold at a loss to pay the dividend, and the flagship preferred broke to $70. We scorecard our own note, update the numbers, and audit two claims from the call.</p>
+<p class="byline">TON618 Capital Research &middot; Prices as of 31 Jul 2026 (MSTR $90.96 intraday &middot; BTC ~$62,542) &middot; <a class="pdf-link" href="TON618_MSTR-Q2-2026_Addendum.pdf">Download PDF</a> &middot; <a href="../mstr-valuation/">June 2026 valuation note</a></p>
+
+<div class="entry">
+  <div class="row">
+    <span class="amt">&asymp;$93</span>
+    <span class="desc"><b>Updated sum-of-the-parts fair value per share at spot bitcoin, vs $90.96 on screen.</b> The June verdict — fairly valued, a geared claim on bitcoin — survives the print. The mix behind it is worse: a larger coupon, more shares, and a funding premium nearly spent — 5.5% on management's own slide at the call; gone, on our numbers, at today's price. Same balance; thinner margin.</span>
+  </div>
+</div>
+
+<section class="kpis">
+  <div class="fig">0.98&times;<span class="label">mNAV at $90.96. June: 0.95&times;. The premium engine idles at stall speed.</span></div>
+  <div class="fig">&minus;$11B<span class="label">Stack vs cost: $63.7B basis (avg $75,476) against ~$53B at spot.</span></div>
+  <div class="fig">$1.76B<span class="label">Preferred dividends + interest per year, perpetual. June run-rate: $1.55B. It grows with every STRC sold.</span></div>
+  <div class="fig">~$20k<span class="label">BTC price that wipes the common — improved from ~$23k in June. The reserve build bought real cushion.</span></div>
+</section>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>The quarter that audited the note</h2>
+<p class="lead">Strategy reported its second quarter after the close on 30 July: a net loss to common of $8.62&nbsp;billion, or &minus;$24.45 per share, against a consensus of +$16.85. Nearly all of it is one line — an $8.32&nbsp;billion unrealized mark on the bitcoin stack, taken at the quarter-end price of roughly $58,700. Our June note argued that for this company GAAP earnings are noise and the funding structure is the signal. Q2 was the quarter that tested the claim, because both moved violently at once.</p>
+<p>The stack itself crossed a line it had never sustainably crossed before: <strong>underwater against cost</strong>. As of 26 July the company holds 843,775 BTC with an original cost basis of $63.7B — an average of $75,476 per coin against a market near $62,542. The accumulation machine spent six years buying; the last eighteen months of buying happened above the current price.</p>
+<div class="chart"><svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><text x="180" y="20" font-size="11" fill="#5E626B" font-weight="600">THE STACK, MARKED HONESTLY — $B</text><text x="168" y="73.0" font-size="12" fill="#15161A" text-anchor="end" font-weight="600">Original cost basis</text><rect x="180" y="52" width="443.39622641509436" height="34" fill="none" stroke="#15161A" stroke-width="1.2"/><text x="631.3962264150944" y="73.0" font-size="13" fill="#15161A" font-weight="700">$63.7B</text><text x="168" y="129.0" font-size="12" fill="#15161A" text-anchor="end" font-weight="600">Market value @ $62,542</text><rect x="180" y="108" width="367.3830900188709" height="34" fill="#B8902F" fill-opacity="0.18" stroke="#8A6D2B" stroke-width="1.2"/><text x="555.3830900188709" y="129.0" font-size="13" fill="#8A6D2B" font-weight="700">$52.8B</text><path d="M547.3830900188709 158 v6 H623.3962264150944 v-6" stroke="#B23B3B" fill="none" stroke-width="1.2"/><text x="585.3896582169826" y="178" font-size="12" fill="#B23B3B" text-anchor="middle" font-weight="700">−$10.9B (−17%) — avg cost $75,476/BTC vs spot $62,542</text></svg></div>
+<p class="src">Source: Strategy 8-K Ex-99.1 (30 Jul 2026), holdings & cost basis as of 26 Jul 2026; BTC spot 31 Jul 2026 (Coinbase). Chart: TON618 Capital.</p>
+<p>And the funding side ran, in miniature and in fast-forward, exactly the sequence the June note called the real risk — not a margin call, but a <em>drain</em>. What follows is the scorecard: every material claim from the June note, judged against what the quarter actually did.</p>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 5h10L11 12l6 7H7" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>The scorecard — June's claims vs. Q2's facts</h2>
+<p class="small">Verdicts on our own note, same standard we apply to everyone else's. Sources: 8-K Ex-99.1, Q2 balance sheet, and the 30 July earnings webinar.</p>
+<table class="tally">
+<caption>Docket — eight claims, judged</caption>
+<thead><tr><th style="width:34%">June claim (28 Jun 2026)</th><th>What Q2 showed</th><th style="width:14%">Verdict</th></tr></thead>
+<tbody>
+<tr><td>FV ~$86 at BTC ~$60k; &ldquo;roughly fairly valued&rdquo; — any target is a geared BTC bet</td><td>BTC +5% to ~$62.5k; MSTR +10% to ~$91. Tracked the base scenario almost exactly; the excess is the gearing</td><td><span class="chip ok">Confirmed</span></td></tr>
+<tr><td>mNAV ~1.0&times;; &ldquo;the famous premium is essentially gone&rdquo;</td><td>Management's own slide: $38B market cap vs $36.3B net reserves — a 5.5% premium. Saylor: the price &ldquo;implies a near zero value for the digital credit business&rdquo;</td><td><span class="chip ok">Confirmed</span></td></tr>
+<tr><td>&ldquo;Not a liquidation risk; a slow funding-drain and discount-to-NAV risk&rdquo;</td><td>The drain ran: USD reserve down to 0.5 years of coverage in May; 3,588 BTC sold at a <b>$203M realized loss</b> to fund the 30 June preferred dividend; STRC broke to $70 on 26 June</td><td><span class="chip ok">Confirmed</span></td></tr>
+<tr><td>Watch item: &ldquo;any further bitcoin sales beyond the first 32-BTC sale&rdquo;</td><td>$218.4M of BTC sold YTD; selling is now a standing, board-authorized &ldquo;BTC Monetization Program.&rdquo; <em>Never sell your bitcoin</em> is formally retired</td><td><span class="chip ok">Confirmed</span></td></tr>
+<tr><td>A permanent ~$1.55B/yr preferred coupon</td><td>Now $1.76B/yr and compounding with every STRC issued; Q2 alone: $400.7M of preferred dividends</td><td><span class="chip ok">Understated</span></td></tr>
+<tr><td>No margin-call channel — debt unsecured, nothing pledged</td><td>True of the company; wrong about the system. 26 June was a margin event in <b>shadow leverage built on top of STRC</b>: broker-dealers cut 70–80% advance ratios when vol spiked, cascading liquidations. Leverage migrated outside the balance sheet — we did not model that channel</td><td><span class="chip bad">Partial — our miss</span></td></tr>
+<tr><td>2027–28 convertible maturities are &ldquo;the first hard cash walls&rdquo;</td><td>Softer than framed: $1.5B of converts repurchased at an 8% discount in May; debt $8.2B &rarr; $6.7B; management reports standing reverse inquiry for new converts on better terms than the originals</td><td><span class="chip mid">Softened</span></td></tr>
+<tr><td>Common wiped near ~$23k BTC; option struck ~$26k</td><td>Recomputed below on the new structure: the strike is unchanged (~$26k) but the wipe-out falls to ~$20k — the $3.75B reserve is real cushion under the common</td><td><span class="chip mid">Restated</span></td></tr>
+<tr class="total"><td>Carried forward <svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 7h10a3 3 0 0 1 3 3v7" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 14l3 3 3-3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td colspan="2">Thesis intact — the stock remains a geared BTC claim priced near NAV. One genuine miss: we cleared the company's balance sheet and did not look for the leverage stacked on top of its paper.</td></tr>
+</tbody>
+</table>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 7h10a3 3 0 0 1 3 3v7" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 14l3 3 3-3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>The drain, quarter by quarter</h2>
+<p>The third row of the docket is the one that carries the note's title, and it deserves the full tracing. Trace the reserve. It opened the year at $2.25B (2.7 years of coverage), was spent down to <strong>$871M — half a year of coverage</strong> — retiring converts, and then, with the account nearly dry and a dividend due, the company sold 3,588 BTC at an average of ~$60,000 against a ~$116,000 cost basis: a $203M realized loss, taken to pay a preferred coupon. By late July the reserve had been rebuilt to $3.75B, or 2.1 years of coverage — but rebuilt with <em>equity</em>: roughly $1.28B of common sold through the ATM in July, ~13M new shares, issued at roughly 1.0&times; NAV.</p>
+<div class="chart"><svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><text x="64" y="18" font-size="11" fill="#5E626B" font-weight="600">USD RESERVE — YEARS OF DIVIDEND + INTEREST COVERAGE, 2026</text><rect x="64" y="40.625" width="678" height="53.125" fill="#B8902F" fill-opacity="0.10"/><text x="738" y="54.625" font-size="10.5" fill="#8A6D2B" text-anchor="end" font-weight="600">stated target: 2–3 years</text><line x1="64" y1="146.875" x2="742" y2="146.875" stroke="#B23B3B" stroke-width="1" stroke-dasharray="4 4"/><text x="738" y="140.875" font-size="10.5" fill="#B23B3B" text-anchor="end" font-weight="600">policy floor: 1.0 year</text><text x="56" y="204.0" font-size="10.5" fill="#5E626B" text-anchor="end">0.0</text><line x1="64" y1="200.0" x2="742" y2="200.0" stroke="#E2E4E8" stroke-width="0.7"/><text x="56" y="150.875" font-size="10.5" fill="#5E626B" text-anchor="end">1.0</text><line x1="64" y1="146.875" x2="742" y2="146.875" stroke="#E2E4E8" stroke-width="0.7"/><text x="56" y="97.75" font-size="10.5" fill="#5E626B" text-anchor="end">2.0</text><line x1="64" y1="93.75" x2="742" y2="93.75" stroke="#E2E4E8" stroke-width="0.7"/><text x="56" y="44.625" font-size="10.5" fill="#5E626B" text-anchor="end">3.0</text><line x1="64" y1="40.625" x2="742" y2="40.625" stroke="#E2E4E8" stroke-width="0.7"/><path d="M64.0 56.5625 L290.0 173.4375 L516.0 125.625 L742.0 88.4375" fill="none" stroke="#8A6D2B" stroke-width="2"/><circle cx="64.0" cy="56.5625" r="4" fill="#fff" stroke="#8A6D2B" stroke-width="1.8"/><text x="64.0" y="46.5625" font-size="11.5" fill="#15161A" text-anchor="middle" font-weight="700">2.7y</text><text x="64.0" y="226" font-size="11" fill="#5E626B" text-anchor="middle">Jan</text><circle cx="290.0" cy="173.4375" r="4" fill="#fff" stroke="#8A6D2B" stroke-width="1.8"/><text x="290.0" y="191.4375" font-size="11.5" fill="#15161A" text-anchor="middle" font-weight="700">0.5y</text><text x="290.0" y="226" font-size="11" fill="#5E626B" text-anchor="middle">May</text><circle cx="516.0" cy="125.625" r="4" fill="#fff" stroke="#8A6D2B" stroke-width="1.8"/><text x="516.0" y="115.625" font-size="11.5" fill="#15161A" text-anchor="middle" font-weight="700">1.4y</text><text x="516.0" y="226" font-size="11" fill="#5E626B" text-anchor="middle">Jun 30</text><circle cx="742.0" cy="88.4375" r="4" fill="#fff" stroke="#8A6D2B" stroke-width="1.8"/><text x="742.0" y="78.4375" font-size="11.5" fill="#15161A" text-anchor="middle" font-weight="700">2.1y</text><text x="742.0" y="226" font-size="11" fill="#5E626B" text-anchor="middle">late Jul</text><text x="306.0" y="183.4375" font-size="10.5" fill="#B23B3B">reserve spent retiring $1.5B of converts;</text><text x="306.0" y="195.4375" font-size="10.5" fill="#B23B3B">BTC then sold at a loss to pay the June dividend</text></svg></div>
+<p class="src">Source: 30 Jul 2026 earnings webinar (management figures; Jun 30 point computed from the Q2 balance sheet cash + short-term investments against the $1.76B/yr obligation). Chart: TON618 Capital.</p>
+<p>Management, to its credit, said the quiet part out loud: <em>&ldquo;we learned the hard way&rdquo;</em> that the reserve was too thin, and a formal policy now targets 2–3 years of coverage with a 1-year floor. The candor is genuine and we note it. So is the arithmetic: the reserve was rebuilt by issuing equity at roughly NAV — dilution as the price of credibility — and the coupon it defends grew 13% in a single quarter.</p>
+<p>Meanwhile the funding mix narrowed. Of the $8.4B raised through the ATM in Q2, every dollar came from exactly two instruments: $2.9B of MSTR common and $5.5B of STRC. The other four preferreds — STRK, STRF, STRD, STRE — raised <strong>zero</strong>. And STRC itself now trades near $89.50 against a $99–100 objective, which is why the company has begun buying it back at a 13% discount <em>while still issuing it at par through the ATM</em>. When a company is simultaneously the largest buyer and the largest seller of its own funding instrument, the instrument is no longer just a funding channel. It is a price target.</p>
+
+<div class="band">
+  <div class="n">$1.76B</div>
+  <div class="t"><b>The perpetual coupon, per year — the drain itself.</b> Software gross profit covers about 19% of it. The rest must come from selling securities or selling bitcoin, forever, in every market. It has grown from $49M in Q2 2025 to $401M in Q2 2026 — an 8&times; increase in four quarters.</div>
+</div>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 5a7 7 0 1 1-6.3 4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 5.5L5.7 9l3.5-1.7" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>One dollar, four jobs</h2>
+<p>That coupon is the drain's fixed flow — $1.76B out, every year, in every market. Here is the question no analyst asked on the call: what refills it? Every remedy management described draws on the same scarce resource:</p>
+<div class="chart"><svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><circle cx="380.0" cy="156.0" r="104" fill="none" stroke="#8A6D2B" stroke-width="1.4"/><path d="M454 82 L469 102" stroke="#8A6D2B" stroke-width="1.4" marker-end="none"/><path d="M469 102 l-3.6 5.7 M469 102 l-6.7 0.5" stroke="#8A6D2B" stroke-width="1.4" fill="none"/><path d="M306 82 L326 67" stroke="#8A6D2B" stroke-width="1.4" marker-end="none"/><path d="M326 67 l5.7 3.6 M326 67 l0.5 6.7" stroke="#8A6D2B" stroke-width="1.4" fill="none"/><path d="M306 230 L291 210" stroke="#8A6D2B" stroke-width="1.4" marker-end="none"/><path d="M291 210 l3.6 -5.7 M291 210 l6.7 -0.5" stroke="#8A6D2B" stroke-width="1.4" fill="none"/><path d="M454 230 L434 245" stroke="#8A6D2B" stroke-width="1.4" marker-end="none"/><path d="M434 245 l-5.7 -3.6 M434 245 l-0.5 -6.7" stroke="#8A6D2B" stroke-width="1.4" fill="none"/><circle cx="380" cy="52" r="5" fill="#fff" stroke="#15161A" stroke-width="1.6"/><text x="380" y="12" font-size="13" fill="#15161A" font-weight="700" text-anchor="middle">mNAV premium</text><text x="380" y="27" font-size="10.5" fill="#5E626B" text-anchor="middle">ATM issues equity above NAV</text><circle cx="484" cy="156" r="5" fill="#fff" stroke="#15161A" stroke-width="1.6"/><text x="506" y="154" font-size="13" fill="#15161A" font-weight="700" text-anchor="start">USD Reserve</text><text x="506" y="169" font-size="10.5" fill="#5E626B" text-anchor="start">funds the dividend + buybacks</text><circle cx="380" cy="260" r="5" fill="#fff" stroke="#15161A" stroke-width="1.6"/><text x="380" y="294" font-size="13" fill="#15161A" font-weight="700" text-anchor="middle">STRC at par</text><text x="380" y="309" font-size="10.5" fill="#5E626B" text-anchor="middle">cheap perpetual funding</text><circle cx="276" cy="156" r="5" fill="#fff" stroke="#15161A" stroke-width="1.6"/><text x="254" y="154" font-size="13" fill="#15161A" font-weight="700" text-anchor="end">BTC per share</text><text x="254" y="169" font-size="10.5" fill="#5E626B" text-anchor="end">the metric the equity pays for</text><text x="380.0" y="150.0" font-size="12" fill="#8A6D2B" text-anchor="middle" font-weight="700">ONE DOLLAR,</text><text x="380.0" y="166.0" font-size="12" fill="#8A6D2B" text-anchor="middle" font-weight="700">FOUR JOBS</text><path d="M304 48 l12 12 M316 48 l-12 12" stroke="#B23B3B" stroke-width="1.6"/><text x="294" y="58" font-size="10.5" fill="#B23B3B" text-anchor="end">margin left: +5.5% at the call &middot; &asymp;1.0&times; today</text></svg></div>
+<p class="src">Schematic: TON618 Capital, from the capital flows described in the 30 Jul 2026 earnings webinar and 8-K.</p>
+<p>Returning STRC to par is funded by buybacks. Buybacks are funded by bitcoin sales or by the ATM. The ATM is accretive only while MSTR trades <em>above</em> net asset value — and management's own deck valued it at <strong>$2.0B, or ~5.5% of net reserves</strong>, at 27 July prices — and at today's post-print price it rounds to zero on our numbers. If the premium closes, the ATM stops feeding the reserve; the reserve stops covering the dividend; the dividend gets paid by selling bitcoin; and selling bitcoin shrinks the collateral behind the credit whose discount started the loop. That is not a hypothetical: <strong>it is the observed sequence of May and June 2026</strong>, run once and arrested by $9.7B of new issuance.</p>
+<p>The June note called this structure &ldquo;a reflexive premium machine whose accretion only works above NAV.&rdquo; The addendum's update is simply that the machine has now been observed running in reverse, briefly, in production. The margin between forward motion and reverse is the mNAV premium — five and a half points at the call, and at today's price, on our numbers, roughly nothing.</p>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 4v16M4 8h16M6 8l-2 5h4l-2-5M18 8l-2 5h4l-2-5" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Two exhibits from the call</h2>
+<p>Q2 audited our note; fair is fair — we audited the call. We ran the full 2h35m webinar through a structured argument scan. Management was, in the main, more candid than the genre requires — the reserve failure, the realized loss, and the STRC crash were all volunteered with specifics, and the STRC-at-$70 explanation (third-party credit lines withdrawn) actually <em>undercuts</em> management's control narrative, which is the opposite of spin. Two claims, however, do not survive scrutiny, and both are load-bearing for the equity story.</p>
+
+<div class="exh">
+<span class="tag">Exhibit A &middot; &ldquo;The laws of statistics&rdquo;</span>
+<blockquote>&ldquo;In four hundred and ninety five windows of four years or longer, MSTR has outperformed Bitcoin one hundred percent of the time&hellip; the laws of statistics start to work in our favor.&rdquo;<cite>Michael Saylor, Q2 2026 earnings webinar, 30 Jul 2026 (company recording)</cite></blockquote>
+<p>The sample is the stock's own bitcoin era — August 2020 to today. Six years contain roughly 1,500 trading days; a four-year window spans ~1,008 of them; that leaves ~495 possible start dates, which is precisely where &ldquo;495 windows&rdquo; comes from. These are not 495 trials. They are <strong>one price path, re-sliced 495 times</strong>, with adjacent windows sharing ~99% of their days — about one and a half independent observations, none containing a complete bear cycle.</p>
+<div class="chart"><svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Arial,sans-serif"><text x="64" y="20" font-size="11" fill="#5E626B" font-weight="600">&ldquo;495 WINDOWS&rdquo; — EVERY 4-YEAR WINDOW THE SAMPLE CONTAINS (18 OF 495 DRAWN)</text><rect x="64.0" y="34.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="77.29411764705883" y="44.0" width="451.99999999999994" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="90.58823529411765" y="54.0" width="451.9999999999999" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="103.88235294117646" y="64.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="117.1764705882353" y="74.0" width="452.00000000000006" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="130.47058823529412" y="84.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="143.76470588235293" y="94.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="157.05882352941177" y="104.0" width="452.00000000000006" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="170.3529411764706" y="114.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="183.6470588235294" y="124.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="196.94117647058823" y="134.0" width="451.99999999999994" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="210.23529411764704" y="144.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="223.52941176470588" y="154.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="236.8235294117647" y="164.0" width="451.99999999999994" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="250.11764705882354" y="174.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="263.4117647058823" y="184.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="276.7058823529412" y="194.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><rect x="290.0" y="204.0" width="452.0" height="8.0" fill="#B8902F" fill-opacity="0.22" stroke="#8A6D2B" stroke-width="0.6"/><text x="64.0" y="234" font-size="11" fill="#5E626B" text-anchor="start">Aug 2020</text><line x1="64.0" y1="34" x2="64.0" y2="214" stroke="#E2E4E8" stroke-width="0.7"/><text x="290.0" y="234" font-size="11" fill="#5E626B" text-anchor="middle">2022</text><line x1="290.0" y1="34" x2="290.0" y2="214" stroke="#E2E4E8" stroke-width="0.7"/><text x="516.0" y="234" font-size="11" fill="#5E626B" text-anchor="middle">2024</text><line x1="516.0" y1="34" x2="516.0" y2="214" stroke="#E2E4E8" stroke-width="0.7"/><text x="742.0" y="234" font-size="11" fill="#5E626B" text-anchor="end">Jul 2026</text><line x1="742.0" y1="34" x2="742.0" y2="214" stroke="#E2E4E8" stroke-width="0.7"/><rect x="70.0" y="108.0" width="440" height="40" fill="#fff" fill-opacity="0.88"/><text x="290.0" y="124.0" font-size="12.5" fill="#15161A" font-weight="700" text-anchor="middle">every window shares the same middle two years</text><text x="290.0" y="140.0" font-size="11" fill="#5E626B" text-anchor="middle">adjacent windows overlap ~99% &middot; independent observations: ~1.5, not 495</text></svg></div>
+<p class="src">Diagram: TON618 Capital. 18 of the ~495 possible 4-year windows in a 6-year sample, drawn to scale on the calendar.</p>
+<p>The counter-datapoint comes from our June note's own chart: MSTR peaked in November 2024 near $474 — <strong>eleven months before</strong> bitcoin's October 2025 top — and has drawn down roughly 80% against bitcoin's ~50%. The gearing works exactly as the convexity math says: both ways. A levered claim on an asset that rose 5&times; will beat the asset in hindsight; that is a description of one bull cycle, not a law.</p>
+</div>
+
+<div class="exh">
+<span class="tag">Exhibit B &middot; Issuance is not income</span>
+<blockquote>&ldquo;If Bitcoin outperforms the hurdle rate, we're never paying back the credit, which means that the ten billion dollars is ten billion dollars of net income&hellip; you could put a ten P/E on that.&rdquo;<cite>Michael Saylor, Q2 2026 earnings webinar, 30 Jul 2026 (company recording)</cite></blockquote>
+<p>Three steps, each doing quiet work. First, perpetual-preferred <em>proceeds</em> are reclassified as income on the ground that the principal is never repaid — but the 12% dividend is equally perpetual, so what is earned is at most the <em>spread</em> between bitcoin's return and the $1.76B coupon, not the proceeds. Second, the income is explicitly conditional on bitcoin beating a 10.8% hurdle rate forever, yet the conclusion — &ldquo;the digital credit business is dramatically undervalued&rdquo; — is asserted unconditionally. Third, a 10&times; earnings multiple, the kind paid for a fee stream, is applied to what is structurally a leveraged directional position.</p>
+<p>This matters to our valuation because it is a direct challenge to it. Our sum-of-the-parts carries the &ldquo;digital credit franchise&rdquo; at approximately zero beyond NAV; the market, by management's own math, carries it near $2B. We hold our treatment, for a reason the loop above makes visual: <strong>the franchise is not an income stream — it is a call option on the company's own premium.</strong> Accretive issuance requires mNAV &gt; 1.0&times;. With the call's five and a half points of margin already gone at today's price, we are not paying a multiple for it — and the market, at 0.98&times; on our numbers, agrees.</p>
+</div>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>The valuation, restated</h2>
+<p>Same method as June — software on comps, bitcoin at NAV, senior claims at face — new inputs throughout. Two structural changes since the June note: $1.5B of converts retired at a discount (claims shifted from dated debt to perpetual preferred, roughly one-for-one), and ~28M new common shares, most of them sold to rebuild the reserve.</p>
+<table>
+<caption>Sum of the parts — 31 Jul 2026</caption>
+<thead><tr><th>Component</th><th class="num">$B</th><th>Basis</th></tr></thead>
+<tbody>
+<tr><td>Bitcoin — 843,775 BTC @ $62,542</td><td class="num">52.8</td><td>Mark-to-market NAV (8-K count, 26 Jul)</td></tr>
+<tr><td>USD Reserve</td><td class="num">3.75</td><td>Company disclosure, late Jul</td></tr>
+<tr><td>Software stub</td><td class="num">1.4</td><td>Comps; $122M/qtr revenue, ~breakeven</td></tr>
+<tr><td>Convertible notes</td><td class="num">(6.71)</td><td>Principal, post-May repurchase</td></tr>
+<tr><td>Preferred (STRK/STRF/STRD/STRC/STRE)</td><td class="num">(15.46)</td><td>Liquidation preference, 30 Jun balance sheet</td></tr>
+<tr><td><strong>Equity NAV</strong></td><td class="num"><strong>35.7</strong></td><td>&asymp; <strong>$93/share</strong> on ~385M shares (est.)</td></tr>
+</tbody>
+</table>
+<p class="small">The call quoted preferred at both $14.4B and $15.4B; the balance sheet resolves it — $14.44B is carrying value, $15.46B is liquidation preference. We use liquidation preference, as in June.</p>
+
+<table>
+<caption>Scenario fair value — conditional on bitcoin and the premium (12–18 month frame)</caption>
+<thead><tr><th>Scenario</th><th class="num">BTC</th><th class="num">Equity NAV</th><th class="num">mNAV</th><th class="num">FV/share</th><th class="num">vs $91</th></tr></thead>
+<tbody>
+<tr><td>Bear</td><td class="num">$32k</td><td class="num">$10B</td><td class="num">0.85&times;</td><td class="num">$22</td><td class="num">-76%</td></tr>
+<tr><td>Base</td><td class="num">$62.5k</td><td class="num">$36B</td><td class="num">1.00&times;</td><td class="num">$93</td><td class="num">+2%</td></tr>
+<tr><td>Bull</td><td class="num">$120k</td><td class="num">$84B</td><td class="num">1.20&times;</td><td class="num">$263</td><td class="num">+189%</td></tr>
+</tbody>
+</table>
+<p class="small">Share count held constant at ~385M; further accretion/dilution ignored. Directional, not point forecasts; probabilities omitted because the expected value is a bitcoin view.</p>
+
+<p>The threshold map moved in an interesting way. The <strong>strike is unchanged</strong>: bitcoin alone covers all $22.2B of senior claims down to ~$26k, same as June, because total claims are almost exactly what they were — only the mix rotated. But the <strong>common's wipe-out price fell from ~$23k to ~$20k</strong>, because the reserve tripled: there is simply more non-BTC value under the equity than there was in May. That cushion was bought with ~8% more shares outstanding. Both facts are true at once, and they are the quarter in one sentence: <strong>the structure is safer, and the per-share claim on it is smaller.</strong></p>
+<div class="callout"><b>Verdict, restated.</b> Fair value &asymp; $93 against $90.96 on screen — the stock remains, as in June, a roughly fairly-priced, ~1.6&times; geared, convex claim on bitcoin. What changed is the mix behind the number: a $1.76B perpetual coupon (up 13% in a quarter), a funding engine whose accretion margin has thinned from 5.5 points at the call to roughly zero at today's price, and a demonstrated willingness to sell bitcoin at a loss to defend the credit. We would not pay a franchise premium for the credit business, and the market currently does not either.</div>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 7h10a3 3 0 0 1 3 3v7" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 14l3 3 3-3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Carried forward</h2>
+<ul>
+<li><strong>The 10-Q</strong> (due ~early Aug) — verify every 8-K figure; watch the preferred rollforward and the July ATM share count.</li>
+<li><strong>STRC vs par by ~8 September</strong> — management's own 70-trading-day benchmark. We scored their analogy weak (IPO seasoning &ne; post-crash repair); the date is now on the record either way.</li>
+<li><strong>mNAV through 1.0&times;</strong> — the loop's switch. Sustained sub-NAV trading turns the ATM dilutive and the flywheel into a ratchet.</li>
+<li><strong>September 2027 put</strong> on the 2028 converts ($183 conversion) — management expects equitization; at today's price that requires a double.</li>
+<li><strong>BTC Yield trajectory</strong> — 4.5% YTD vs 22.8% in 2025; the deceleration is the accretion engine slowing in public.</li>
+<li><strong>MSCI / index question</strong> — deferred in January, unresolved; a live overhang on a thinner premium.</li>
+</ul>
+<p>The June note inferred the drain from the structure. Q2 made it visible: the reserve ran to half a year, bitcoin was sold at a loss to pay a coupon, and the flagship credit broke to $70 before $9.7B of new paper arrested the slide. The balance we carry forward is the same one we opened with — a geared claim on bitcoin, priced at about its net asset value — and the question the next two quarters will answer is whether the premium that refills the reserve comes back, or whether the loop runs again.</p>
+
+<div class="disc">
+<h3>Sources &amp; method</h3>
+<p><b>Primary documents.</b> Strategy Inc Form 8-K (30 Jul 2026), Exhibit 99.1 — Q2 2026 results press release incl. consolidated statements of operations, balance sheet, and digital-asset rollforward (SEC EDGAR, CIK 1050446, accession 0001628280-26-051027); Q2 2026 earnings presentation (strategy.com IR, retrieved 31 Jul 2026); Q2 2026 earnings webinar, 30 Jul 2026 5:00pm ET — quotations transcribed from the caption track of the company's own webinar recording (strategy.com IR &rarr; Events &amp; Presentations; Wistia media emniccf949, retrieved 31 Jul 2026). Captions are auto-generated; quoted figures were cross-checked against the 8-K and deck, but phrasing may vary slightly from delivery.</p>
+<p><b>Prices &amp; vintages.</b> MSTR $90.96 — Schwab Market Data quote, 31 Jul 2026 intraday (post-earnings session); BTC ~$62,542 — Coinbase spot, 31 Jul 2026. Holdings (843,775 BTC), cost basis ($63.7B / $75,476 avg), USD Reserve ($3.75B), and YTD capital figures are company disclosures as of 26 Jul 2026. Balance-sheet items (converts $6.71B principal; preferred carrying $14.44B / liquidation preference $15.46B; shares outstanding 371.6M) are as of 30 Jun 2026.</p>
+<p><b>Formulas.</b> Equity NAV = BTC&times;spot + USD Reserve + software value &minus; convert principal &minus; preferred liquidation preference. FV/share = NAV &divide; ~385M shares (371.6M filed at 30 Jun + ~13M estimated from the $1.276B July common ATM at an assumed ~$97 average; the 10-Q will refine this). Wipe-out BTC price = (senior claims &minus; reserve &minus; software) &divide; BTC held. Coverage years = USD Reserve &divide; $1.76B/yr obligations (management figure). mNAV = market cap &divide; equity NAV. Scenario mNAV multiples (0.85&times;/1.00&times;/1.20&times;) carried unchanged from the June note.</p>
+<p><b>Analytic method.</b> The scorecard restates the June note's claims verbatim-in-substance and judges each against Q2 disclosures. The call analysis applied a structured argument-evaluation pass (logical fallacies, rhetorical tactics, audience-directed devices) to the full webinar; the two exhibits shown are the findings rated most material to valuation. Window-overlap arithmetic: ~1,500 trading days (Aug 2020–Jul 2026) &minus; ~1,008-day windows &rArr; ~495 start dates; independent 4-year periods &asymp; 1.5.</p>
+<h3>Disclosures</h3>
+<p><b>Methodology &amp; data.</b> Valuation is sum-of-the-parts: software on comparable multiples, bitcoin at mark-to-market NAV, less senior claims at face/liquidation value. Fair-value and scenario figures are estimates with wide uncertainty, dominated by the bitcoin price path; they are not forecasts. This is a point-in-time addendum to our 28 Jun 2026 note and should be read with it. Share count and July-issuance figures are approximate pending the Q2 10-Q.</p>
+<p><b>1 &middot; Information only.</b> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><b>2 &middot; Publisher&rsquo;s exclusion.</b> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher&rsquo;s exclusion from the definition of &ldquo;investment adviser&rdquo; under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><b>3 &middot; Registration &amp; conflicts.</b> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material conflicts are disclosed where they exist. The Fund receives no compensation from any party in connection with its research. As of this report, the Fund is <b>long bitcoin</b> and holds <b>no position in MSTR common stock, MSTR derivatives, or MSTR preferred or convertible securities</b>, long or short.</p>
+<p><b>4 &middot; Use of AI.</b> Artificial intelligence is used in the creation of this research. All methodology and data integrity are reviewed and approved before publication by TON618 Capital&rsquo;s Chief Investment Officer, <b>Keyth Beck</b>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><b>5 &middot; CFA.</b> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <b>not</b> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <b>not</b> issued, reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+<p><b>6 &middot; Risk &amp; feedback.</b> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome &mdash; please direct them to CIO <b>Keyth Beck</b> at <a href="mailto:keyth@ton618capital.com">keyth@ton618capital.com</a>.</p>
+<p class="small">&copy; 2026 TON618 Capital. Strategy&trade;, MicroStrategy&reg;, and ticker MSTR are marks of Strategy Inc., used for identification only.</p>
+</div>
+</main></body></html>
