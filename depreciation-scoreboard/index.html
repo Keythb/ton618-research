@@ -1,0 +1,2065 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The First Invoice — TON618 Capital</title>
+<meta name="description" content="Scoring The Depreciation Question out-of-sample against Q2 2026 earnings: depreciation accelerated at all four hyperscalers, the model's Microsoft capex assumption landed within 1%, Amazon's trailing free cash flow went negative, and no company touched its clock.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{
+h2+p,h3+p,h2+p.lede,h3+p.lede,h2+ul,h3+ul{break-after:avoid-page;page-break-after:avoid;}
+
+p,li{orphans:3;widows:3;}
+h2,h3{break-after:avoid-page;break-inside:avoid;}
+ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+code{font-family:var(--sans);font-size:.85em;background:var(--soft);padding:1px 5px;border-radius:3px;}
+.chart svg{max-width:100%;height:auto;}
+
+/* ---- ledger motif devices (report-designer: The First Invoice) ---- */
+.emblem{margin:30px 0 6px;}
+.emblem svg{display:block;width:100%;height:auto;max-width:700px;}
+.chip{display:inline-block;border:1.5px solid currentColor;padding:3px 10px;font:700 10px/1.3 var(--sans);
+  letter-spacing:.12em;white-space:nowrap;transform:rotate(-3deg);}
+.chip.ok{color:var(--pos);} .chip.open{color:var(--antique);transform:none;}
+.tally{background:repeating-linear-gradient(to bottom,transparent 0,transparent 27px,#EFF1F4 27px,#EFF1F4 28px);
+  padding:2px 0;}
+.tally table{margin:.4rem 0;}
+.band{background:#0B0B0C;color:#C9A24B;margin:1.6rem -44px;padding:26px 44px 20px;page-break-inside:avoid;}
+.band .b-kick{font:700 .68rem var(--sans);text-transform:uppercase;letter-spacing:.16em;color:#8d8d90;margin-bottom:12px;}
+.band .b-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+.band .b-num{display:block;font-family:var(--serif);font-size:2.9rem;font-weight:600;line-height:1;color:#C9A24B;}
+.band .b-lab{display:block;font:400 .72rem/1.45 var(--sans);color:#a7a7ab;margin-top:7px;max-width:230px;}
+.band .b-arrow{font-family:var(--serif);font-size:2rem;color:#5E626B;}
+.band .b-foot{font:400 .66rem/1.5 var(--sans);color:#77777b;margin-top:14px;border-top:1px solid #2a2a2e;padding-top:9px;}
+.gloss{display:grid;grid-template-columns:1fr 1fr;gap:8px 26px;margin:1rem 0;font-size:.82rem;color:var(--body);}
+.gloss div{border-top:1px solid var(--line);padding-top:6px;}
+.gloss b{display:inline-block;color:var(--ink);margin-right:.5em;font-family:var(--sans);}
+.doors{margin:.9rem 0;}
+.door{border-left:2px solid var(--gold);padding:7px 0 7px 16px;margin:.55rem 0;font-size:.9rem;}
+.door b{color:var(--ink);}
+@media print{
+  .band{margin:1.4rem -0.8in;padding:22px 0.8in 16px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .chip,.band,.door,.gloss div{break-inside:avoid;}
+  .tally{background:none;}
+}
+@media(max-width:680px){.gloss{grid-template-columns:1fr;}.band{margin:1.4rem -18px;padding:20px 18px 16px;}}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Thematic Research Note<br>As of July 30, 2026<br>v1.0</span>
+</div>
+
+<div class="emblem"><svg viewBox="0 0 700 216" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ledger emblem: four entries and a carried-forward balance">
+<style>.ee{font:500 13px Inter,Arial,sans-serif;fill:#5E626B}.ea{font:600 13px Inter,Arial,sans-serif;fill:#15161A}.et{font:600 44px 'EB Garamond',Georgia,serif;fill:#8a6d2a}.el{font:700 11px Inter,Arial,sans-serif;fill:#5E626B;letter-spacing:.14em}</style>
+<text class="ee" x="20" y="30">Microsoft &#8212; depreciation, FY2026</text><text class="ea" x="680" y="30" text-anchor="end">+56%</text><line x1="20" y1="40" x2="680" y2="40" stroke="#E2E4E8" stroke-width="1"/>
+<text class="ee" x="20" y="66">Meta &#8212; D&amp;A, Q2</text><text class="ea" x="680" y="66" text-anchor="end">+46%</text><line x1="20" y1="76" x2="680" y2="76" stroke="#E2E4E8" stroke-width="1"/>
+<text class="ee" x="20" y="102">Alphabet &#8212; depreciation, H1</text><text class="ea" x="680" y="102" text-anchor="end">+43%</text><line x1="20" y1="112" x2="680" y2="112" stroke="#E2E4E8" stroke-width="1"/>
+<text class="ee" x="20" y="138">Amazon &#8212; PP&amp;E depreciation, Q2 (10-Q)</text><text class="ea" x="680" y="138" text-anchor="end">+42%</text><line x1="20" y1="148" x2="680" y2="148" stroke="#E2E4E8" stroke-width="1"/>
+<text class="el" x="20" y="192">BALANCE CARRIED FORWARD, 2026&#8211;28E</text>
+<text class="et" x="680" y="200" text-anchor="end">USD 221bn</text>
+<line x1="440" y1="208" x2="680" y2="208" stroke="#8a6d2a" stroke-width="1.5"/>
+<line x1="440" y1="212" x2="680" y2="212" stroke="#8a6d2a" stroke-width="1.5"/>
+</svg></div>
+
+<div class="kicker">Thematic Research · The Depreciation Reckoning, No. 2 · Scoring Our Own Note</div>
+<h1>The First Invoice</h1>
+<p class="dek">Two weeks ago we published the arithmetic of Big Tech's stretched depreciation schedules and said the bill was coming. Q2 earnings just delivered the first installment. Here we score our own note, line by line — and post the balance still outstanding.</p>
+<p class="byline">TON618 Capital Research · As of July 30, 2026 · <a class="pdf-link" href="TON618_First-Invoice_Research_Note.pdf">Download PDF</a></p>
+<p class="small">Every figure is drawn from the companies' own SEC filings released this earnings cycle and is as-of dated. Fact ("the filing says…") is separated from estimate ("our model implies…") throughout. This note adjudicates a prior published claim out-of-sample; the tally in §2 states plainly what is confirmed, what is open, and what would falsify us. Independently red-teamed against primary filings before release; §7 documents the sourcing standard.</p>
+
+<div class="verdict"><div class="big">4 for 4<small>Every company in the July note reported sharply faster depreciation this cycle</small></div><div class="txt"><b>The score.</b> On 17 July we published <a href="../depreciation-question/">The Depreciation Question</a>: Microsoft, Alphabet, Amazon and Meta (plus Oracle and CoreWeave) are expensing a record AI hardware build on schedules that flatter current earnings, deferring <b>~$221bn of depreciation out of 2026–28</b>. That note made forward claims a single earnings season could start to test. The season just ended. Depreciation accelerated at <b>all four</b> names — Microsoft +56%, Meta +46%, Alphabet +43%, Amazon +42% — while the control stock, Apple, grew just 16%. Our capex assumption for Microsoft missed its actual by <b>0.8%</b>. Amazon's trailing free cash flow went <b>negative</b>. And not one company shortened a depreciation schedule — while Microsoft, per its own earnings call, stretched a new one: datacenter <i>buildings</i>, to 25 years. The invoice is arriving. The server clocks haven't moved, and the ratchet found a new asset class.</div></div>
+<div class="kpis">
+<div class="fig">+56%<span class="label">Microsoft FY2026 depreciation growth — USD 22.0bn to 34.3bn in one year</span></div>
+<div class="fig">$169bn<span class="label">Amazon trailing-12-month capex, +64% — its free cash flow is now negative</span></div>
+<div class="fig">$122.8bn<span class="label">Alphabet hardware bought but not yet in service — the clock hasn't started</span></div>
+<div class="fig">0.07&times;<span class="label">Apple's capex-to-income ratio — the control group, confirmed</span></div>
+</div>
+<h2><span class="n">§0</span> How to read this invoice</h2>
+<p class="lede"><em>This section is the reader's guide. If you already live in 10-Ks, skip to §1 — nothing here is new to you. If you don't, five minutes here makes the rest of the note self-explanatory.</em></p>
+<p><strong>Depreciation is how a company spreads a purchase over the years it expects to use it.</strong> Buy $12bn of servers and you don't expense $12bn this year; you expense a slice of it each year across the machine's "useful life." The size of that slice is a choice. On a three-year life the slice is $4bn a year. On a six-year life it is $2bn a year. Same machines, same cash out the door — but the six-year version reports <strong>$2bn more profit this year</strong>, every year, until the schedules catch up.</p>
+<p><strong>The useful life is an estimate management selects, and changing it is legal.</strong> It is disclosed, justified to auditors, and applied <em>prospectively</em> — the past is never restated; the benefit lands entirely in current and future quarters. Between 2020 and 2025 the companies in this note disclosed thirteen separate server-life extensions worth roughly $24bn of first-year earnings benefit — and exactly one change in the other direction. Nothing in this note alleges fraud. The question is not legality; it is whether the reported profits mean what a reader assumes they mean.</p>
+<p><strong>One ratio does most of the work in this series: capex divided by net income.</strong> Call it the dose. It measures how much a company spends on hardware per dollar it earns. When the dose is low — Apple's is 0.07&times; — the depreciation schedule barely matters; earnings are what they look like. When the dose is high — Meta now spends about $2 for every $1 it earns — the schedule <em>is</em> the earnings, and the choice of clock decides what the bottom line says. Our July finding: rank companies by dose and you have ranked how overstated their earnings are, nine concordant pairs out of ten.</p>
+<p><strong>Why the bill is already fixed.</strong> A "vintage" is one year's purchases. The record hardware vintages of 2024–26 are already bought; their depreciation through 2028 is baked in the moment the machines land. The only question the schedule answers is <em>when</em> the expense shows up. That is why we call it an invoice: the amount exists; only the due date was chosen.</p>
+<div class="gloss">
+<div><b>Capex</b>Capital expenditure — cash spent buying long-lived assets like servers and datacenters.</div>
+<div><b>D&amp;A</b>Depreciation and amortisation — the yearly expense slices from past purchases.</div>
+<div><b>Useful life</b>Management's estimate of how many years an asset earns its keep.</div>
+<div><b>Straight-line</b>Equal slices: cost divided by useful life, each year.</div>
+<div><b>Vintage</b>One year's worth of purchases, depreciating on its own schedule.</div>
+<div><b>Prospective change</b>A life change that applies only forward — no restatement of the past.</div>
+<div><b>Hyperscaler</b>A company operating cloud datacenters at giant scale (Microsoft, Alphabet, Amazon, Meta).</div>
+<div><b>The dose</b>Capex &divide; net income — this series' one carry-away ratio.</div>
+</div>
+<h2><span class="n">§1</span> The entry we opened in July</h2>
+<p>The July note made four claims a reader could hold us to. Stated as ledger entries:</p>
+<ol>
+<li><strong>The bill accelerates.</strong> As the record 2024–25 vintages land, reported depreciation must grow sharply at every high-dose name — schedule or no schedule.</li>
+<li><strong>The spend continues.</strong> Guided capex holds or rises; the model assumed Microsoft would spend ~$115bn in FY2026 and the four hyperscalers roughly $630bn (model basis) in calendar 2026.</li>
+<li><strong>The clocks stay long.</strong> Companies keep five-to-six-year server schedules through the fastest hardware-obsolescence cycle in computing history — and the pressure is to extend, not shorten. Amazon's February 2025 cut was the lone exception; we said watch whether anyone follows it down.</li>
+<li><strong>The dose keeps rising, so the gap widens.</strong> Capex grows faster than income at every hyperscaler, pushing each name up the distortion curve toward Oracle's end of it — and the reported-versus-economic earnings gap widens through 2028.</li>
+</ol>
+<p>Claims 1, 2 and 4 are testable every quarter. Claim 3 is testable every time a 10-K or 10-Q appears. This earnings season produced a Microsoft 10-K (filed the same day it reported — a full year-end filing, not a press release), an Alphabet 10-Q, and releases from Meta, Amazon and Apple whose 10-Qs all followed within a day. Every document needed to post a complete first tally is on file.</p>
+<h2><span class="n">§2</span> The tally</h2>
+<div class="tally">
+<table><caption>Q2 2026 earnings season vs the July note — the docket</caption>
+<thead><tr><th>Claim (July 17)</th><th>What Q2 delivered</th><th class="num">Stamp</th></tr></thead>
+<tbody>
+<tr><td><b>1 · The bill accelerates</b></td><td>Depreciation growth at the four: Microsoft <b>+56%</b> (FY26, 10-K), Meta <b>+46%</b> (Q2 D&amp;A), Alphabet <b>+43%</b> (H1, 10-Q), Amazon <b>+42%</b> (Q2 PP&amp;E depreciation, 10-Q segment table — <b>AWS alone +67%</b>). Control: Apple <b>+16%</b> (9M).</td><td class="num"><span class="chip ok">CONFIRMED</span></td></tr>
+<tr><td><b>2 · The spend continues</b></td><td>Microsoft actual FY26 capex <b>$115.9bn</b> vs the model's $115.0bn assumption — a 0.8% miss. Alphabet H1 capex <b>+103%</b> (~$161bn pace). Amazon TTM capex <b>$169.0bn, +64%</b>. Meta <i>raised the floor</i> of its guide to $130–145bn.</td><td class="num"><span class="chip ok">CONFIRMED</span></td></tr>
+<tr><td><b>3 · The clocks stay long</b></td><td>All five checks closed on filings: Microsoft's 10-K, <b>no server-life change</b> + a disclosure upgrade (§4); Alphabet's 10-Q, <b>no change</b>, six years holds; Meta's 10-Q, <b>5.5 years holds</b>; Amazon's 10-Q, <b>no further change</b>; Apple's 10-Q, none disclosed. No company followed Amazon down — and per Microsoft's own call, one clock stretched <i>further</i>: <b>buildings, 15&rarr;25 years</b> eff. FY2027 (press-sourced; filing check FQ1-27).</td><td class="num"><span class="chip ok">CONFIRMED</span></td></tr>
+<tr><td><b>4 · The dose keeps rising</b></td><td>Microsoft 0.63&times; &rarr; <b>0.87&times;</b> (FY26). Alphabet 0.69&times; &rarr; <b>~1.19&times;</b> (H1, ex-gains). Meta 1.15&times; &rarr; <b>~1.96&times;</b> (Q2). Amazon 1.70&times; &rarr; <b>~2.34&times;</b> (TTM, ex-gains). Every arrow points right. Control: Apple <b>0.07&times;</b>, capex <i>falling</i>.</td><td class="num"><span class="chip ok">CONFIRMED</span></td></tr>
+</tbody></table>
+</div>
+<p class="exnote">Measurement windows differ by company (fiscal years and quarter-ends differ); each figure's window and source filing are stated in §7. Doses marked "ex-gains" strip disclosed non-operating investment gains — Alphabet's and Amazon's second quarters both contain large ones (§5) — at the 21% statutory rate. Every claim is scored against documents on file; the Meta, Amazon and Apple 10-Qs all landed within a day of their releases and are scored here.</p>
+<p>Four confirmations, zero refutations, no open entries — the tally closed when the Meta, Amazon and Apple 10-Qs landed within a day of their releases and every policy note held. On the evidence a single season can produce, the July arithmetic is running ahead of schedule — and the strongest single item is the one we least expected to land within one per cent.</p>
+<div class="band"><div class="b-kick">The model, checked against the filing</div>
+<div class="b-row"><div class="b-cell"><span class="b-num">$115.0bn</span><span class="b-lab">Microsoft FY2026 capex — the July model's assumption</span></div>
+<div class="b-arrow">&rarr;</div>
+<div class="b-cell"><span class="b-num">$115.9bn</span><span class="b-lab">Microsoft FY2026 capex — actual, per the 10-K filed July 29</span></div></div>
+<div class="b-foot">Miss: 0.8%. Source: Microsoft FY2026 Form 10-K (0001193125-26-323660), cash flow statement; model assumption published 17 July 2026.</div></div>
+<h2><span class="n">§3</span> The bill is arriving</h2>
+<p>The core forward claim of the July note was mechanical, not directional: <em>the vintages are bought, so the depreciation must come.</em> One season in, it is coming at every name.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470.838125 252.703" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T08:09:38.579235</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 252.703 
+L 470.838125 252.703 
+L 470.838125 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 38.118125 228.2505 
+L 462.198125 228.2505 
+L 462.198125 50.8425 
+L 38.118125 50.8425 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 57.394489 207.570655 
+L 109.131915 207.570655 
+L 109.131915 79.104954 
+L 57.394489 79.104954 
+z
+" clip-path="url(#pc31052a464)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 140.84195 207.570655 
+L 192.579376 207.570655 
+L 192.579376 100.990976 
+L 140.84195 100.990976 
+z
+" clip-path="url(#pc31052a464)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 224.289412 207.570655 
+L 276.026838 207.570655 
+L 276.026838 108.223098 
+L 224.289412 108.223098 
+z
+" clip-path="url(#pc31052a464)" style="fill: #8a6d2b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 307.736874 207.570655 
+L 359.4743 207.570655 
+L 359.4743 111.034598 
+L 307.736874 111.034598 
+z
+" clip-path="url(#pc31052a464)" style="fill: #5e626b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 391.184335 207.570655 
+L 442.921761 207.570655 
+L 442.921761 169.985073 
+L 391.184335 169.985073 
+z
+" clip-path="url(#pc31052a464)" style="fill: #e2e4e8; stroke: #15161a; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="ma00110ec9d" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma00110ec9d" x="83.263202" y="228.2505" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="83.263202" y="241.993531" transform="rotate(-0 83.263202 241.993531)">Microsoft</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#ma00110ec9d" x="166.710663" y="228.2505" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="166.710663" y="241.993531" transform="rotate(-0 166.710663 241.993531)">Meta</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#ma00110ec9d" x="250.158125" y="228.2505" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="250.158125" y="242.015562" transform="rotate(-0 250.158125 242.015562)">Alphabet</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#ma00110ec9d" x="333.605587" y="228.2505" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="333.605587" y="241.993531" transform="rotate(-0 333.605587 241.993531)">Amazon</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#ma00110ec9d" x="417.053048" y="228.2505" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="417.053048" y="242.103687" transform="rotate(-0 417.053048 242.103687)">Apple (control)</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 38.118125 207.570655 
+L 462.198125 207.570655 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="m35c589cd64" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="207.570655" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="210.798702" transform="rotate(-0 31.118125 210.798702)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 38.118125 184.59305 
+L 462.198125 184.59305 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="184.59305" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="187.821097" transform="rotate(-0 31.118125 187.821097)">10</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 38.118125 161.615445 
+L 462.198125 161.615445 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="161.615445" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="164.843492" transform="rotate(-0 31.118125 164.843492)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 38.118125 138.63784 
+L 462.198125 138.63784 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="138.63784" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="141.865887" transform="rotate(-0 31.118125 141.865887)">30</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 38.118125 115.660235 
+L 462.198125 115.660235 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="115.660235" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="118.888282" transform="rotate(-0 31.118125 118.888282)">40</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 38.118125 92.68263 
+L 462.198125 92.68263 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="92.68263" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="95.910677" transform="rotate(-0 31.118125 95.910677)">50</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_18">
+      <path d="M 38.118125 69.705025 
+L 462.198125 69.705025 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m35c589cd64" x="38.118125" y="69.705025" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.118125" y="72.933072" transform="rotate(-0 31.118125 72.933072)">60</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.117188" y="139.5465" transform="rotate(-90 15.117188 139.5465)">growth in reported depreciation, %</text>
+    </g>
+   </g>
+   <g id="line2d_20">
+    <path d="M 38.118125 207.570655 
+L 462.198125 207.570655 
+" clip-path="url(#pc31052a464)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 38.118125 228.2505 
+L 38.118125 50.8425 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 38.118125 228.2505 
+L 462.198125 228.2505 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="fill: #15161a; font: 700 11.2px 'Helvetica'; text-anchor: middle" x="83.263202" y="76.347642" transform="rotate(-0 83.263202 76.347642)">+56%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(56.653577 213.406274)">FY26 vs FY25</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(61.087858 222.506099)">(dep., 10-K)</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 700 11.2px 'Helvetica'; text-anchor: middle" x="166.710663" y="98.233664" transform="rotate(-0 166.710663 98.233664)">+46%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(136.832913 213.450374)">Q2-26 vs Q2-25</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(155.277476 222.506099)">(D&amp;A)</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 700 11.2px 'Helvetica'; text-anchor: middle" x="250.158125" y="105.465785" transform="rotate(-0 250.158125 105.465785)">+43%</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(220.747625 213.327524)">H1-26 vs H1-25</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(227.5175 222.506099)">(dep., 10-Q)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 700 11.2px 'Helvetica'; text-anchor: middle" x="333.605587" y="108.277285" transform="rotate(-0 333.605587 108.277285)">+42%</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(303.727837 213.327524)">Q2-26 vs Q2-25</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(298.592024 222.506099)">(PP&amp;E dep., 10-Q)</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #15161a; font: 700 11.2px 'Helvetica'; text-anchor: middle" x="417.053048" y="167.227761" transform="rotate(-0 417.053048 167.227761)">+16%</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(376.441673 213.450374)">9M FY26 vs 9M FY25</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(405.619861 222.506099)">(D&amp;A)</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(38.118125 32.592069)">freshest disclosed window per company (windows differ; labels beneath each bar). Amazon = segment-</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(38.118125 43.049937)">allocated PP&amp;E depreciation per its 10-Q (AWS alone +67%). Apple is the control.</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="38.118125" y="16.6425" transform="rotate(-0 38.118125 16.6425)">Four for four — every name in the July note is depreciating faster</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc31052a464">
+   <rect x="38.118125" y="50.8425" width="424.08" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p class="exnote">Sources: Microsoft FY2026 10-K; Meta Q2-26 8-K Ex-99.1; Alphabet Q2-26 10-Q; Amazon Q2-26 10-Q segment table (0001018724-26-000026 — PP&E depreciation ex-corporate, $9.77bn&rarr;$13.87bn; the release's bundled D&amp;A line grew +31%); Apple FQ3-26 8-K Ex-99.1.</p>
+<p>Microsoft is the cleanest read because its fiscal year just closed and the full 10-K is on file. Depreciation expense ran <strong>$15.2bn &rarr; $22.0bn &rarr; $34.3bn</strong> across FY2024–26 — 56% growth in the latest year. The servers-and-network gross book grew <strong>$83bn in one year</strong> (to $215.9bn), and another <strong>$26.7bn of equipment purchases sat unpaid in accounts payable</strong> at year-end, nearly four times the prior year's balance. The machine is being bought faster than it is being paid for, let alone expensed.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470.8775 257.766531" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T08:09:38.615257</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 257.766531 
+L 470.8775 257.766531 
+L 470.8775 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 38.1575 233.7945 
+L 462.2375 233.7945 
+L 462.2375 50.8425 
+L 38.1575 50.8425 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 57.433864 233.7945 
+L 88.802224 233.7945 
+L 88.802224 198.301812 
+L 57.433864 198.301812 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 108.027994 233.7945 
+L 139.396355 233.7945 
+L 139.396355 194.642772 
+L 108.027994 194.642772 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 158.622124 233.7945 
+L 189.990485 233.7945 
+L 189.990485 199.765428 
+L 158.622124 199.765428 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 209.216254 233.7945 
+L 240.584615 233.7945 
+L 240.584615 187.690596 
+L 209.216254 187.690596 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 259.810385 233.7945 
+L 291.178746 233.7945 
+L 291.178746 193.54506 
+L 259.810385 193.54506 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 310.404515 233.7945 
+L 341.772876 233.7945 
+L 341.772876 178.177092 
+L 310.404515 178.177092 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 360.998645 233.7945 
+L 392.367006 233.7945 
+L 392.367006 153.29562 
+L 360.998645 153.29562 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 411.592776 233.7945 
+L 442.961136 233.7945 
+L 442.961136 108.289428 
+L 411.592776 108.289428 
+z
+" clip-path="url(#p92cf58f353)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m74513e7901" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m74513e7901" x="73.118044" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="73.118044" y="247.250594" transform="rotate(-0 73.118044 247.250594)">FY2019</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m74513e7901" x="123.712174" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="123.712174" y="247.250594" transform="rotate(-0 123.712174 247.250594)">FY2020</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m74513e7901" x="174.306305" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="174.306305" y="247.250594" transform="rotate(-0 174.306305 247.250594)">FY2021</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m74513e7901" x="224.900435" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="224.900435" y="247.250594" transform="rotate(-0 224.900435 247.250594)">FY2022</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m74513e7901" x="275.494565" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="275.494565" y="247.250594" transform="rotate(-0 275.494565 247.250594)">FY2023</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m74513e7901" x="326.088695" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="326.088695" y="247.250594" transform="rotate(-0 326.088695 247.250594)">FY2024</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m74513e7901" x="376.682826" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="376.682826" y="247.250594" transform="rotate(-0 376.682826 247.250594)">FY2025</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m74513e7901" x="427.276956" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="427.276956" y="247.250594" transform="rotate(-0 427.276956 247.250594)">FY2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 38.1575 233.7945 
+L 462.2375 233.7945 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <defs>
+       <path id="m40ed71e22f" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m40ed71e22f" x="38.1575" y="233.7945" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="237.022547" transform="rotate(-0 31.1575 237.022547)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 38.1575 197.2041 
+L 462.2375 197.2041 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m40ed71e22f" x="38.1575" y="197.2041" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="200.432147" transform="rotate(-0 31.1575 200.432147)">10</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <path d="M 38.1575 160.6137 
+L 462.2375 160.6137 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m40ed71e22f" x="38.1575" y="160.6137" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="163.841747" transform="rotate(-0 31.1575 163.841747)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_15">
+      <path d="M 38.1575 124.0233 
+L 462.2375 124.0233 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m40ed71e22f" x="38.1575" y="124.0233" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="127.251347" transform="rotate(-0 31.1575 127.251347)">30</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17">
+      <path d="M 38.1575 87.4329 
+L 462.2375 87.4329 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m40ed71e22f" x="38.1575" y="87.4329" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="90.660947" transform="rotate(-0 31.1575 90.660947)">40</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_19">
+      <path d="M 38.1575 50.8425 
+L 462.2375 50.8425 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m40ed71e22f" x="38.1575" y="50.8425" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="54.070547" transform="rotate(-0 31.1575 54.070547)">50</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.271875" y="142.3185" transform="rotate(-90 15.271875 142.3185)">reported depreciation, USD bn</text>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 411.592776 74.845802 
+L 442.961136 74.845802 
+" clip-path="url(#p92cf58f353)" style="fill: none; stroke: #b23b3b; stroke-width: 2.2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 38.1575 233.7945 
+L 38.1575 50.8425 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 38.1575 233.7945 
+L 462.2375 233.7945 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 314.061891 84.314684 
+Q 361.073657 79.678348 408.085423 75.042011 
+" style="fill: none; stroke: #b23b3b; stroke-width: 0.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_16">
+    <text style="fill: #b23b3b; font: 8.7px 'Helvetica'; text-anchor: start" x="179.365718" y="92.92146" transform="rotate(-0 179.365718 92.92146)">on our 3-yr server clock: ~USD 43bn</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="326.088695" y="175.615764" transform="rotate(-0 326.088695 175.615764)">+38%</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="376.682826" y="150.734292" transform="rotate(-0 376.682826 150.734292)">+45%</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="427.276956" y="105.7281" transform="rotate(-0 427.276956 105.7281)">+56%</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(38.1575 32.631709)">property-and-equipment depreciation expense per 10-K. FY2026 = 34.3bn, +56% — the model gap the 6-yr</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(38.1575 42.998875)">schedule still defers in FY26 is ~9bn (server-only, pre-tax).</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="38.1575" y="16.6425" transform="rotate(-0 38.1575 16.6425)">Microsoft: the bill, arriving on schedule</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p92cf58f353">
+   <rect x="38.1575" y="50.8425" width="424.08" height="182.952"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p class="exnote">Source: Microsoft Forms 10-K, FY2019–FY2026 (depreciation expense per PP&E note); house-clock marker from the July model (v3), server-only delta, pre-tax.</p>
+<p>Two honest cautions on this exhibit. The red marker is a <em>model</em> figure — the July note's estimate of what FY2026 depreciation would be on a three-year server clock — and it is server-only, so it is added to the reported total rather than replacing it. And 56% growth under the <em>current</em> schedule partially reflects Microsoft recognising its bill faster as huge vintages land even on six-year math: acceleration was always going to happen; the dispute is about the size of the remaining deferral, which the model puts at roughly <strong>$9bn pre-tax for FY2026 alone</strong> and growing through 2028.</p>
+<h2><span class="n">§4</span> The server clocks held. A building clock stretched.</h2>
+<p>Claim 3 said the pressure runs one way: toward longer schedules. This season delivered both halves of the proof — no server clock moved anywhere in the group, and the one clock that did move moved &lt;em&gt;longer&lt;/em&gt;, in an asset class the July note never even covered. The details deserve to be reported straight, because two of them count in the companies' favour.</p>
+<p><strong>Microsoft held its schedule and improved its disclosure.</strong> For years Microsoft was the least transparent name in the group: no server-specific line anywhere, server hardware buried in "computer equipment" with a 2-to-6-year range. The FY2026 10-K changes that — the policy note now reads <em>"servers and network equipment, two to six years,"</em> and the PP&amp;E table breaks out a <strong>"Servers, network equipment, and software"</strong> line for the first time ($215.9bn gross). The range is unchanged and there is still no point estimate, but naming the category is a real step toward the disclosure standard Amazon and Meta already meet. Credit where due.</p>
+<p><strong>Alphabet held six years, again.</strong> The Q2 10-Q discloses no change in estimate — and under GAAP a change must be disclosed in the quarter it occurs, so silence is confirmation. Its 60%-servers footnote, the disclosure our Alphabet share estimate rests on, is restated as of June 30 unchanged.</p>
+<p><strong>And on the same call, Microsoft stretched a clock the July note never covered — buildings.</strong> Per its earnings call (press reports; Microsoft publishes no transcript we cite from primary), Microsoft extended the useful life of datacenter and office <strong>buildings from 15 to 25 years, effective FY2027</strong> — and because longer building lives push more future datacenter leases from finance leases (which count in Microsoft's capex-inclusive guidance) to operating leases (which don't), the calendar-2026 capex <em>optic</em> fell from roughly $190bn to roughly $175bn. CFO Amy Hood was explicit that spending itself is unchanged: <em>"outside of this useful-life impact, our calendar year 2026 capex investment expectations remain unchanged."</em> Nothing here touches servers, and buildings genuinely last decades — but the ledger should record what happened: the group's <strong>fourteenth disclosed life extension against one reversal</strong>, this one announced the same week the depreciation bill visibly arrived, with the side effect of making guided capex look $15bn smaller while every dollar still goes out the door. Sourced from three named press carriers pending the FQ1-2027 filing, and labeled accordingly.</p>
+<p><strong>Amazon's reversal remains the only reversal.</strong> Eighteen months after cutting a subset of servers back to five years — and realising double the cost it guided for — Amazon still stands alone. The remaining checks closed as this note went to press: <strong>Meta's 10-Q (filed July 30) holds the 5.5-year schedule</strong> with no change in estimate — and files a sharper figure than its release carried, servers-and-network depreciation of <strong>$4.62bn for the quarter, $9.01bn for the half</strong>; <strong>Amazon's 10-Q (July 31) discloses no further change</strong> ("we review the useful lives of equipment on an ongoing basis" is all it says); and <strong>Apple's (July 31) discloses none</strong>, which under the disclosure rules means none occurred.</p>
+<p>The scoreboard read: <strong>on servers, the ratchet has paused, not reversed — and off servers, it is still ratcheting.</strong> No server schedule stretched this season, which removes the easiest fuel for the cynical version of this thesis — but no company moved toward the hardware cycle either, and the one life change announced anywhere in the group went the familiar direction. Holding a six-year clock while NVIDIA ships a new architecture every two years is a choice that compounds: the July note's arithmetic assumed exactly this stasis, and the arithmetic is what Q2 confirmed.</p>
+<h2><span class="n">§5</span> The dose keeps rising</h2>
+<p>The July note's cleanest finding was that a single ratio — capex divided by net income — ranks the earnings distortion across companies. Q2 moved every company's ratio in the same direction: up.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470.701719 292.81925" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T08:09:38.663383</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 292.81925 
+L 470.701719 292.81925 
+L 470.701719 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.981719 255.884563 
+L 462.061719 255.884563 
+L 462.061719 50.756562 
+L 37.981719 50.756562 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mef950289ba" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mef950289ba" x="51.303604" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="51.303604" y="269.340656" transform="rotate(-0 51.303604 269.340656)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mef950289ba" x="106.811457" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="106.811457" y="269.340656" transform="rotate(-0 106.811457 269.340656)">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mef950289ba" x="162.31931" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="162.31931" y="269.340656" transform="rotate(-0 162.31931 269.340656)">1.0</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mef950289ba" x="217.827164" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="217.827164" y="269.340656" transform="rotate(-0 217.827164 269.340656)">1.5</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mef950289ba" x="273.335017" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="273.335017" y="269.340656" transform="rotate(-0 273.335017 269.340656)">2.0</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mef950289ba" x="328.842871" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="328.842871" y="269.340656" transform="rotate(-0 328.842871 269.340656)">2.5</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mef950289ba" x="384.350724" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="384.350724" y="269.340656" transform="rotate(-0 384.350724 269.340656)">3.0</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mef950289ba" x="439.858577" y="255.884563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="439.858577" y="269.340656" transform="rotate(-0 439.858577 269.340656)">3.5</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="fill: #5e626b; font: 9.5px 'Helvetica'; text-anchor: middle" x="250.021719" y="282.142688" transform="rotate(-0 250.021719 282.142688)">capex divided by net income (the dose)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 37.981719 228.330055 
+L 462.061719 228.330055 
+" clip-path="url(#pa237f191c2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <defs>
+       <path id="m6c70c547ba" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m6c70c547ba" x="37.981719" y="228.330055" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="30.981719" y="231.558102" transform="rotate(-0 30.981719 231.558102)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 37.981719 197.713936 
+L 462.061719 197.713936 
+" clip-path="url(#pa237f191c2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m6c70c547ba" x="37.981719" y="197.713936" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="30.981719" y="200.941983" transform="rotate(-0 30.981719 200.941983)">5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <path d="M 37.981719 167.097816 
+L 462.061719 167.097816 
+" clip-path="url(#pa237f191c2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m6c70c547ba" x="37.981719" y="167.097816" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="30.981719" y="170.325863" transform="rotate(-0 30.981719 170.325863)">10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_15">
+      <path d="M 37.981719 136.481697 
+L 462.061719 136.481697 
+" clip-path="url(#pa237f191c2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m6c70c547ba" x="37.981719" y="136.481697" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="30.981719" y="139.709744" transform="rotate(-0 30.981719 139.709744)">15</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17">
+      <path d="M 37.981719 105.865577 
+L 462.061719 105.865577 
+" clip-path="url(#pa237f191c2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m6c70c547ba" x="37.981719" y="105.865577" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="30.981719" y="109.093624" transform="rotate(-0 30.981719 109.093624)">20</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_19">
+      <path d="M 37.981719 75.249458 
+L 462.061719 75.249458 
+" clip-path="url(#pa237f191c2)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m6c70c547ba" x="37.981719" y="75.249458" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="30.981719" y="78.477505" transform="rotate(-0 30.981719 78.477505)">25</text>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.096094" y="153.320562" transform="rotate(-90 15.096094 153.320562)">FY2025 NI overstatement, %</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.981719 255.884563 
+L 37.981719 50.756562 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 37.981719 255.884563 
+L 462.061719 255.884563 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m975157797a" d="M 0 3.391165 
+C 0.899347 3.391165 1.761981 3.03385 2.397916 2.397916 
+C 3.03385 1.761981 3.391165 0.899347 3.391165 0 
+C 3.391165 -0.899347 3.03385 -1.761981 2.397916 -2.397916 
+C 1.761981 -3.03385 0.899347 -3.391165 0 -3.391165 
+C -0.899347 -3.391165 -1.761981 -3.03385 -2.397916 -2.397916 
+C -3.03385 -1.761981 -3.391165 -0.899347 -3.391165 0 
+C -3.391165 0.899347 -3.03385 1.761981 -2.397916 2.397916 
+C -1.761981 3.03385 -0.899347 3.391165 0 3.391165 
+z
+" style="stroke: #b8902f"/>
+    </defs>
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#m975157797a" x="121.676128" y="198.326258" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 9.2px 'Helvetica'; text-anchor: start" x="84.608316" y="185.467488" transform="rotate(-0 84.608316 185.467488)">Microsoft</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 123.674947 198.326258 
+Q 134.608591 198.326258 144.08879 198.326258 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 140.28879 196.426258 
+L 144.08879 198.326258 
+L 140.28879 200.226258 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="mb7f1321c60" d="M 0 3.391165 
+C 0.899347 3.391165 1.761981 3.03385 2.397916 2.397916 
+C 3.03385 1.761981 3.391165 0.899347 3.391165 0 
+C 3.391165 -0.899347 3.03385 -1.761981 2.397916 -2.397916 
+C 1.761981 -3.03385 0.899347 -3.391165 0 -3.391165 
+C -0.899347 -3.391165 -1.761981 -3.03385 -2.397916 -2.397916 
+C -3.03385 -1.761981 -3.391165 -0.899347 -3.391165 0 
+C -3.391165 0.899347 -3.03385 1.761981 -2.397916 2.397916 
+C -1.761981 3.03385 -0.899347 3.391165 0 3.391165 
+z
+" style="stroke: #8a6d2b; stroke-width: 1.4"/>
+    </defs>
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#mb7f1321c60" x="147.543943" y="198.326258" style="fill: #ffffff; stroke: #8a6d2b; stroke-width: 1.4"/>
+    </g>
+   </g>
+   <g id="PathCollection_3">
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#m975157797a" x="127.904441" y="201.38787" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 9.2px 'Helvetica'; text-anchor: start" x="97.9302" y="218.532897" transform="rotate(-0 97.9302 218.532897)">Alphabet</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 129.90335 201.38787 
+Q 155.895439 201.38787 180.434084 201.38787 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 176.634084 199.48787 
+L 180.434084 201.38787 
+L 176.634084 203.28787 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#mb7f1321c60" x="183.887553" y="201.38787" style="fill: #ffffff; stroke: #8a6d2b; stroke-width: 1.4"/>
+    </g>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#m975157797a" x="240.030305" y="171.384073" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 9.2px 'Helvetica'; text-anchor: start" x="231.149049" y="159.749948" transform="rotate(-0 231.149049 159.749948)">Amazon</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 242.029499 171.384073 
+Q 275.554735 171.384073 307.626526 171.384073 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 303.826526 169.484073 
+L 307.626526 171.384073 
+L 303.826526 173.284073 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#mb7f1321c60" x="311.081917" y="171.384073" style="fill: #ffffff; stroke: #8a6d2b; stroke-width: 1.4"/>
+    </g>
+   </g>
+   <g id="PathCollection_7">
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#m975157797a" x="178.971666" y="173.22104" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 9.2px 'Helvetica'; text-anchor: start" x="167.870096" y="159.749948" transform="rotate(-0 167.870096 159.749948)">Meta</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 180.969502 173.22104 
+Q 223.993771 173.22104 265.564596 173.22104 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 261.764596 171.32104 
+L 265.564596 173.22104 
+L 261.764596 175.12104 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_8">
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#mb7f1321c60" x="269.019919" y="173.22104" style="fill: #ffffff; stroke: #8a6d2b; stroke-width: 1.4"/>
+    </g>
+   </g>
+   <g id="PathCollection_9">
+    <defs>
+     <path id="m64ea68bef1" d="M 0 3.391165 
+C 0.899347 3.391165 1.761981 3.03385 2.397916 2.397916 
+C 3.03385 1.761981 3.391165 0.899347 3.391165 0 
+C 3.391165 -0.899347 3.03385 -1.761981 2.397916 -2.397916 
+C 1.761981 -3.03385 0.899347 -3.391165 0 -3.391165 
+C -0.899347 -3.391165 -1.761981 -3.03385 -2.397916 -2.397916 
+C -3.03385 -1.761981 -3.391165 -0.899347 -3.391165 0 
+C -3.391165 0.899347 -3.03385 1.761981 -2.397916 2.397916 
+C -1.761981 3.03385 -0.899347 3.391165 0 3.391165 
+z
+" style="stroke: #b23b3b"/>
+    </defs>
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#m64ea68bef1" x="413.214808" y="70.350879" style="fill: #b23b3b; stroke: #b23b3b"/>
+    </g>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 9.2px 'Helvetica'; text-anchor: middle" x="413.214808" y="89.945195" transform="rotate(-0 413.214808 89.945195)">Oracle</text>
+   </g>
+   <g id="PathCollection_10">
+    <defs>
+     <path id="m223aa3b46a" d="M 0 3.605551 
+C 0.956203 3.605551 1.873372 3.225648 2.54951 2.54951 
+C 3.225648 1.873372 3.605551 0.956203 3.605551 0 
+C 3.605551 -0.956203 3.225648 -1.873372 2.54951 -2.54951 
+C 1.873372 -3.225648 0.956203 -3.605551 0 -3.605551 
+C -0.956203 -3.605551 -1.873372 -3.225648 -2.54951 -2.54951 
+C -3.225648 -1.873372 -3.605551 -0.956203 -3.605551 0 
+C -3.605551 0.956203 -3.225648 1.873372 -2.54951 2.54951 
+C -1.873372 3.225648 -0.956203 3.605551 0 3.605551 
+z
+" style="stroke: #15161a; stroke-width: 1.4"/>
+    </defs>
+    <g clip-path="url(#pa237f191c2)">
+     <use xlink:href="#m223aa3b46a" x="58.742654" y="228.330055" style="fill: #ffffff; stroke: #15161a; stroke-width: 1.4"/>
+    </g>
+   </g>
+   <g id="text_22">
+    <text style="fill: #15161a; font: 9.2px 'Helvetica'; text-anchor: start" x="64.293439" y="244.250437" transform="rotate(-0 64.293439 244.250437)">Apple (control): 0.07x, capex falling</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(57.964546 84.356445)">open markers = latest disclosed dose</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(57.964546 93.45627)">(vertical position unchanged; the overstatement</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(57.964546 102.66372)">re-mark comes with full-year filings)</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(37.981719 32.455069)">filled = FY2025 (July note). Open = latest disclosed window (MSFT FY26; GOOGL H1-26 and AMZN TTM ex-</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(37.981719 42.853812)">non-operating gains at 21% statutory; META Q2-26). Windows differ; see Sources &amp; Method.</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="37.981719" y="16.556562" transform="rotate(-0 37.981719 16.556562)">The dose keeps rising — every arrow points right</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa237f191c2">
+   <rect x="37.981719" y="50.756562" width="424.08" height="205.128"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p class="exnote">Filled markers: FY2025 dose vs FY2025 overstatement, per the July note (v3 model). Open markers: latest disclosed dose (Microsoft FY26 annual; Alphabet H1-26 and Amazon TTM ex- non-operating gains at 21% statutory; Meta Q2-26). Vertical position is held at the FY2025 overstatement; the re-mark of overstatement itself requires full-year filings. Apple from FQ3-26 9-month figures.</p>
+<p>Walk the arrows. <strong>Microsoft</strong> moved from 0.63&times; to 0.87&times; on full-year numbers — the gentlest move, on the strongest income growth (net income +31% to $133.7bn), and still a one-third jump in dose. <strong>Alphabet</strong> roughly doubled its H1 spend and its dose rose from 0.69&times; toward ~1.2&times;. <strong>Meta</strong> now spends about $1.96 per dollar earned in the latest quarter — near double its full-year 2025 ratio, with net income <em>falling</em> (Q2: $15.8bn vs $18.3bn, weighed by $3.6bn of legal and severance charges) while the floor of its capex guide rose for the second time this year: <strong>$115bn in January, $125bn in April, $130bn in July</strong>, per its own successive releases. <strong>Amazon</strong> reached ~2.34&times; on trailing numbers. In July we wrote that Oracle — at 3.26&times; and 25.8% overstatement — is what a hyperscaler looks like when capex outruns earnings. The group is walking toward it.</p>
+<p>Two companies' headline profits this quarter illustrate why the dose must be computed with care — and both cut the same way. <strong>Alphabet's</strong> H1 net income of $174.8bn includes <strong>$135.8bn of gains on equity securities</strong> (primarily unrealised, per its own MD&amp;A); <strong>Amazon's</strong> Q2 net income of $62.6bn includes <strong>$53.4bn of pre-tax non-operating income, "primarily from our investments in Anthropic."</strong> Strip the gains and the underlying engines earned about $67bn and $72bn respectively on the windows shown. We flag it because a casual reader of either release would conclude earnings comfortably cover the capex. On operating earnings, they don't: that is precisely what a negative free cash flow means.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475.997656 252.481125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T08:09:38.706349</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 252.481125 
+L 475.997656 252.481125 
+L 475.997656 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.277656 228.138781 
+L 467.357656 228.138781 
+L 467.357656 50.730781 
+L 43.277656 50.730781 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.55402 228.138781 
+L 103.860513 228.138781 
+L 103.860513 145.991407 
+L 62.55402 145.991407 
+z
+" clip-path="url(#pdcf48c34f9)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 131.398176 228.138781 
+L 172.704669 228.138781 
+L 172.704669 132.008856 
+L 131.398176 132.008856 
+z
+" clip-path="url(#pdcf48c34f9)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 200.242332 228.138781 
+L 241.548825 228.138781 
+L 241.548825 119.9171 
+L 200.242332 119.9171 
+z
+" clip-path="url(#pdcf48c34f9)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 269.086487 228.138781 
+L 310.392981 228.138781 
+L 310.392981 108.32302 
+L 269.086487 108.32302 
+z
+" clip-path="url(#pdcf48c34f9)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 337.930643 228.138781 
+L 379.237137 228.138781 
+L 379.237137 90.601829 
+L 337.930643 90.601829 
+z
+" clip-path="url(#pdcf48c34f9)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 406.774799 228.138781 
+L 448.081293 228.138781 
+L 448.081293 70.332498 
+L 406.774799 70.332498 
+z
+" clip-path="url(#pdcf48c34f9)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mddbdca67fb" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mddbdca67fb" x="83.207267" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="83.207267" y="241.881813" transform="rotate(-0 83.207267 241.881813)">Q1-25</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mddbdca67fb" x="152.051422" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="152.051422" y="241.881813" transform="rotate(-0 152.051422 241.881813)">Q2-25</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mddbdca67fb" x="220.895578" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="220.895578" y="241.881813" transform="rotate(-0 220.895578 241.881813)">Q3-25</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mddbdca67fb" x="289.739734" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="289.739734" y="241.881813" transform="rotate(-0 289.739734 241.881813)">Q4-25</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mddbdca67fb" x="358.58389" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="358.58389" y="241.881813" transform="rotate(-0 358.58389 241.881813)">Q1-26</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mddbdca67fb" x="427.428046" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="427.428046" y="241.881813" transform="rotate(-0 427.428046 241.881813)">Q2-26</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 43.277656 228.138781 
+L 467.357656 228.138781 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <defs>
+       <path id="m1737a53254" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="228.138781" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="231.366828" transform="rotate(-0 36.277656 231.366828)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 43.277656 204.795623 
+L 467.357656 204.795623 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="204.795623" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="208.02367" transform="rotate(-0 36.277656 208.02367)">25</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 43.277656 181.452465 
+L 467.357656 181.452465 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="181.452465" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="184.680512" transform="rotate(-0 36.277656 184.680512)">50</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 43.277656 158.109308 
+L 467.357656 158.109308 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="158.109308" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="161.337354" transform="rotate(-0 36.277656 161.337354)">75</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 43.277656 134.76615 
+L 467.357656 134.76615 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="134.76615" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="137.994197" transform="rotate(-0 36.277656 137.994197)">100</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 43.277656 111.422992 
+L 467.357656 111.422992 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="111.422992" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="114.651039" transform="rotate(-0 36.277656 114.651039)">125</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <path d="M 43.277656 88.079834 
+L 467.357656 88.079834 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="88.079834" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="91.307881" transform="rotate(-0 36.277656 91.307881)">150</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_21">
+      <path d="M 43.277656 64.736676 
+L 467.357656 64.736676 
+" clip-path="url(#pdcf48c34f9)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m1737a53254" x="43.277656" y="64.736676" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.277656" y="67.964723" transform="rotate(-0 36.277656 67.964723)">175</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.271875" y="139.434781" transform="rotate(-90 15.271875 139.434781)">trailing-12-month capex, USD bn</text>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 43.277656 228.138781 
+L 43.277656 50.730781 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 43.277656 228.138781 
+L 467.357656 228.138781 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 10.1px 'Helvetica'; text-anchor: middle" x="83.207267" y="143.657092" transform="rotate(-0 83.207267 143.657092)">88</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 10.1px 'Helvetica'; text-anchor: middle" x="152.051422" y="129.67454" transform="rotate(-0 152.051422 129.67454)">103</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 10.1px 'Helvetica'; text-anchor: middle" x="220.895578" y="117.582784" transform="rotate(-0 220.895578 117.582784)">116</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 10.1px 'Helvetica'; text-anchor: middle" x="289.739734" y="105.988705" transform="rotate(-0 289.739734 105.988705)">128</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 10.1px 'Helvetica'; text-anchor: middle" x="358.58389" y="88.267513" transform="rotate(-0 358.58389 88.267513)">147</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 700 10.1px 'Helvetica'; text-anchor: middle" x="427.428046" y="67.998182" transform="rotate(-0 427.428046 67.998182)">169</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #b23b3b; font: 700 9.4px 'Helvetica'; text-anchor: start" x="107.302721" y="71.27276" transform="rotate(-0 107.302721 71.27276)">TTM free cash flow: +18.2bn a year ago, now −7.6bn</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(43.277656 32.479006)">purchases of PP&amp;E net of proceeds, trailing twelve months, per Q2-26 release. +64% YoY; per the release,</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(43.277656 42.828031)">the increase "primarily reflects investments in artificial intelligence."</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="43.277656" y="16.530781" transform="rotate(-0 43.277656 16.530781)">Amazon's invoice ladder — and the cash flow it consumed</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdcf48c34f9">
+   <rect x="43.277656" y="50.730781" width="424.08" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p class="exnote">Source: Amazon Q2-2026 earnings release (8-K Ex-99.1, 0001018724-26-000024), supplemental TTM series. Free cash flow figures as defined and reported by Amazon (Ex-99.2).</p>
+<p>Amazon is the starkest exhibit in the series. AWS grew <strong>37% — its fastest in eighteen quarters</strong> — and operating income rose 43%. The boom is real. And trailing free cash flow still went from <strong>+$18.2bn to −$7.6bn</strong>, because trailing capex reached <strong>$169bn, up 64%</strong> — an increase that, in the release's own words, <em>"primarily reflects investments in artificial intelligence."</em> The best quarter AWS has had in four years did not cover the invoice for building it.</p>
+<p>Meanwhile the queue of hardware that hasn't even begun depreciating keeps growing:</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 527.278168 212.904844" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T08:09:38.758725</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 212.904844 
+L 527.278168 212.904844 
+L 527.278168 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 30.654531 188.5625 
+L 254.321349 188.5625 
+L 254.321349 39.2425 
+L 30.654531 39.2425 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.821205 188.5625 
+L 108.599028 188.5625 
+L 108.599028 104.738518 
+L 40.821205 104.738518 
+z
+" clip-path="url(#p8cbe538111)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 176.376852 188.5625 
+L 244.154676 188.5625 
+L 244.154676 57.572597 
+L 176.376852 57.572597 
+z
+" clip-path="url(#p8cbe538111)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m7c00c5d2c6" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7c00c5d2c6" x="74.710117" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="74.710117" y="202.305531" transform="rotate(-0 74.710117 202.305531)">Dec 2025</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m7c00c5d2c6" x="210.265764" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="210.265764" y="202.305531" transform="rotate(-0 210.265764 202.305531)">Jun 2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 30.654531 188.5625 
+L 254.321349 188.5625 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <defs>
+       <path id="m96eb9ab8e8" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="191.790547" transform="rotate(-0 23.654531 191.790547)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 30.654531 167.231071 
+L 254.321349 167.231071 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="167.231071" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="170.459118" transform="rotate(-0 23.654531 170.459118)">20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 30.654531 145.899643 
+L 254.321349 145.899643 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="145.899643" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="149.12769" transform="rotate(-0 23.654531 149.12769)">40</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 30.654531 124.568214 
+L 254.321349 124.568214 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="124.568214" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="127.796261" transform="rotate(-0 23.654531 127.796261)">60</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 30.654531 103.236786 
+L 254.321349 103.236786 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="103.236786" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="106.464833" transform="rotate(-0 23.654531 106.464833)">80</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <path d="M 30.654531 81.905357 
+L 254.321349 81.905357 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="81.905357" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="85.133404" transform="rotate(-0 23.654531 85.133404)">100</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15">
+      <path d="M 30.654531 60.573929 
+L 254.321349 60.573929 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="60.573929" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="63.801975" transform="rotate(-0 23.654531 63.801975)">120</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_17">
+      <path d="M 30.654531 39.2425 
+L 254.321349 39.2425 
+" clip-path="url(#p8cbe538111)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="30.654531" y="39.2425" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="23.654531" y="42.470547" transform="rotate(-0 23.654531 42.470547)">140</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_5">
+    <path d="M 30.654531 188.5625 
+L 30.654531 39.2425 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 30.654531 188.5625 
+L 254.321349 188.5625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="74.710117" y="102.605375" transform="rotate(-0 74.710117 102.605375)">79bn</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="210.265764" y="55.439454" transform="rotate(-0 210.265764 55.439454)">123bn</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: start" x="30.654531" y="31.33975" transform="rotate(-0 30.654531 31.33975)">PP&amp;E not yet depreciating, USD bn (Q2-26 10-Q)</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="30.654531" y="16.6425" transform="rotate(-0 30.654531 16.6425)">Alphabet: assets not yet in service</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 294.971349 188.5625 
+L 518.638168 188.5625 
+L 518.638168 39.2425 
+L 294.971349 39.2425 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 305.138023 188.5625 
+L 345.804717 188.5625 
+L 345.804717 168.497625 
+L 305.138023 168.497625 
+z
+" clip-path="url(#pa4d4da5e77)" style="fill: #e2e4e8"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 386.471411 188.5625 
+L 427.138106 188.5625 
+L 427.138106 156.365375 
+L 386.471411 156.365375 
+z
+" clip-path="url(#pa4d4da5e77)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 467.8048 188.5625 
+L 508.471494 188.5625 
+L 508.471494 63.973625 
+L 467.8048 63.973625 
+z
+" clip-path="url(#pa4d4da5e77)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_3">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m7c00c5d2c6" x="325.47137" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="325.47137" y="202.305531" transform="rotate(-0 325.47137 202.305531)">FY2024</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m7c00c5d2c6" x="406.804759" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="406.804759" y="202.305531" transform="rotate(-0 406.804759 202.305531)">FY2025</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m7c00c5d2c6" x="488.138147" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="488.138147" y="202.305531" transform="rotate(-0 488.138147 202.305531)">FY2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_9">
+     <g id="line2d_22">
+      <path d="M 294.971349 188.5625 
+L 518.638168 188.5625 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="188.5625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="191.790547" transform="rotate(-0 287.971349 191.790547)">0</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_24">
+      <path d="M 294.971349 165.23125 
+L 518.638168 165.23125 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="165.23125" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="168.459297" transform="rotate(-0 287.971349 168.459297)">5</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_26">
+      <path d="M 294.971349 141.9 
+L 518.638168 141.9 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="141.9" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="145.128047" transform="rotate(-0 287.971349 145.128047)">10</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_28">
+      <path d="M 294.971349 118.56875 
+L 518.638168 118.56875 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="118.56875" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="121.796797" transform="rotate(-0 287.971349 121.796797)">15</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_30">
+      <path d="M 294.971349 95.2375 
+L 518.638168 95.2375 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="95.2375" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="98.465547" transform="rotate(-0 287.971349 98.465547)">20</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_32">
+      <path d="M 294.971349 71.90625 
+L 518.638168 71.90625 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="71.90625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="75.134297" transform="rotate(-0 287.971349 75.134297)">25</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_34">
+      <path d="M 294.971349 48.575 
+L 518.638168 48.575 
+" clip-path="url(#pa4d4da5e77)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#m96eb9ab8e8" x="294.971349" y="48.575" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="287.971349" y="51.803047" transform="rotate(-0 287.971349 51.803047)">30</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_11">
+    <path d="M 294.971349 188.5625 
+L 294.971349 39.2425 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 294.971349 188.5625 
+L 518.638168 188.5625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_25">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="325.47137" y="165.697875" transform="rotate(-0 325.47137 165.697875)">4.3bn</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="406.804759" y="153.565625" transform="rotate(-0 406.804759 153.565625)">6.9bn</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="488.138147" y="61.173875" transform="rotate(-0 488.138147 61.173875)">26.7bn</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: start" x="294.971349" y="31.398875" transform="rotate(-0 294.971349 31.398875)">purchases of PP&amp;E unpaid at year-end, USD bn (10-K)</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="294.971349" y="16.6425" transform="rotate(-0 294.971349 16.6425)">Microsoft: capex sitting in accounts payable</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8cbe538111">
+   <rect x="30.654531" y="39.2425" width="223.666818" height="149.32"/>
+  </clipPath>
+  <clipPath id="pa4d4da5e77">
+   <rect x="294.971349" y="39.2425" width="223.666818" height="149.32"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p class="exnote">Sources: Alphabet Q2-26 10-Q (assets not yet in service, PP&E note); Microsoft FY2024–26 10-Ks (purchases of PP&E in accounts payable).</p>
+<p>Alphabet's <strong>"assets not yet in service" reached $122.8bn</strong> — up from $78.6bn six months earlier. That is hardware bought and owned on which the depreciation clock <em>has not started</em>. It is the purest picture of the series' central idea: the bill exists; only its due date was chosen. When those assets enter service, the depreciation arrives at whatever schedule is then in force — and it arrives on top of the acceleration already visible in §3.</p>
+<p><strong>And the control group behaved exactly as a control should.</strong> Apple posted a record June quarter — revenue $109.4bn, up 16%; EPS $2.02, up 29% (of which about $0.11 came from tariff refunds, worth noting) — while its nine-month capex <em>fell</em>, from $9.5bn to $6.8bn. Dose: 0.07&times;. Apple's depreciation schedule could halve or double and its earnings would barely notice. That is what an income statement looks like when the accounting choice doesn't matter — and it is the cleanest evidence that for the other four, it does.</p>
+<h2><span class="n">§6</span> Balance carried forward</h2>
+<p><strong>What would change our mind.</strong> The tally stays honest only if the falsifiers stay posted. Four things that would score <em>against</em> the July note in coming quarters: a second company following Amazon's schedule cut (would confirm the hardware clock but shrink the forward deferral we compute); depreciation growth <em>decelerating</em> at high-dose names while capex still grows (would suggest the vintage model mis-times recognition); a sustained capex decline group-wide (would shrink the 2027–28 gap directly — watch Meta's next guide); or disclosed server-life studies with utilisation data justifying six years (would weaken the two-year-architecture argument at its root). None appeared this season. All four remain open entries.</p>
+<p><strong>The balance outstanding.</strong> Nothing this quarter reduced the July estimate: <strong>roughly $221bn of depreciation deferred out of 2026–28 earnings across the five profitable names</strong> (band $192–240bn), with the FY2025 overstatement standing at 4.4–17.2% per company. The acceleration now visible is the early portion of that number arriving — on schedule, on the companies' own filings.</p>
+<p><strong>Where this series goes next.</strong> Each company in the scoreboard now gets its own valuation note, in which the depreciation re-mark meets a fair-value model:</p>
+<div class="doors">
+<div class="door"><b>Microsoft — "The $116 Billion Question."</b> The name that held its server clock, stretched its building clock, and has the bill arriving fastest: capex +80%, depreciation +56%, and a premium multiple on an EPS of $17.95 that our clock re-marks. <i>Publishing next.</i></div>
+<div class="door"><b>Alphabet — "The Benchmark."</b> The gentlest dose of the four, the only clean point-estimate life — and a $122.8bn not-yet-in-service queue that says the benchmark is drifting.</div>
+<div class="door"><b>Meta — "Paying Twice."</b> Income falling, capex floor rising, dose near 2&times; — the name compounding fastest toward the Oracle end of the curve.</div>
+<div class="door"><b>Amazon — "The Honest Machine."</b> The only company that shortened its clock — and, at ~2.3&times; dose with negative free cash flow, the one whose honesty costs the most.</div>
+<div class="door"><b>Apple — "The Control Group."</b> The Mag7 income statement the buildout hasn't touched. What is asset-light AI worth — and what does it cede?</div>
+</div>
+<p>The scoreboard itself will be re-scored each earnings season, same format, same falsifiers, until the 2026–28 window closes. The next hard checkpoints: Microsoft's FQ1-2027 10-Q, where the building-life change enters the filing record, and October's Q3 prints.</p>
+<h2><span class="n">§7</span> Sources &amp; Method</h2>
+<p>Every figure in this note is drawn from SEC filings via EDGAR, pulled and verified on <strong>July 29–30, 2026</strong> (the evenings each document was filed), or from the July note's published model. No figure is sourced from press coverage, transcripts, or third-party aggregators.</p>
+<p><strong>Filings relied upon (this note).</strong> Microsoft FY2026 Form 10-K, filed 29 Jul 2026 (0001193125-26-323660) — useful-life policy, PP&amp;E components, depreciation expense, cash-flow capex (XBRL <code>PaymentsToAcquirePropertyPlantAndEquipment</code>), net income, EPS; FY2025 10-K (0000950170-25-100235) for the prior-year policy wording. Alphabet Q2-2026 Form 10-Q, filed 23 Jul 2026 (0001652044-26-000071) — H1 depreciation and capex, PP&amp;E note incl. assets not yet in service and the 60%-servers footnote. Meta Q2-2026 Form 8-K Ex-99.1, filed 29 Jul 2026 (0001628280-26-050596) — Q2 capex, D&amp;A, net income, charges, FY2026 capex and expense guidance. Amazon Q2-2026 Form 8-K Ex-99.1/99.2, filed 30 Jul 2026 (0001018724-26-000024) — segment results, D&amp;A, TTM capex series, TTM free cash flow as Amazon defines it, Q3 guidance. Apple FQ3-2026 Form 8-K Ex-99.1, filed 30 Jul 2026 (0000320193-26-000018) — quarterly results and nine-month cash-flow figures.</p>
+<p><strong>Model figures</strong> (the $221bn balance, the 4.4–17.2% overstatements, the $115.0bn Microsoft capex assumption, the FY2026 server-depreciation delta, and the FY2025 dose/overstatement pairs in the dose chart) are from the July note's v3 vintage model, published 17 Jul 2026 and unchanged since; its construction, validation against five disclosed life-change benefits, and limitations are documented in that note's §2 and §7. Nothing in the model was refit for this scoreboard.</p>
+<p><strong>Formulas.</strong> Depreciation growth = current-period reported depreciation (or D&amp;A where that is what the release discloses; the difference is stated per chart) ÷ prior comparable period − 1. Dose = capex ÷ net income over the same window, using each company's freshest disclosed window: Microsoft FY2026 (annual, cash capex); Alphabet H1-2026; Meta Q2-2026 (capex incl. finance-lease principal, as Meta guides); Amazon TTM (capex net of proceeds, as Amazon reports); Apple nine-month FY2026. Where a window contains disclosed non-operating investment gains (Alphabet H1: ~$135.8bn unrealised; Amazon Q2/TTM: $53.4bn/$79.8bn pre-tax), net income is adjusted by the pre-tax gain × (1 − 21% statutory rate) before the ratio is taken; both adjusted figures are estimates and are labelled as such. Measurement windows differ across companies because fiscal calendars differ; no cross-company figure in this note nets windows against each other.</p>
+<p><strong>Late filings, incorporated.</strong> The Meta 10-Q (0001628280-26-050705, filed 30 Jul), Amazon 10-Q (0001018724-26-000026, 31 Jul) and Apple 10-Q (0000320193-26-000020, 31 Jul) all landed while this note was in preparation and are scored in the tally: no useful-life change is disclosed in any of the three, which closes claim 3's checks (a change in estimate must be disclosed in the period it occurs, so silence is confirmation). Meta's 10-Q additionally discloses servers-and-network depreciation of $4.62bn (Q2) / $9.01bn (H1) — a directly-filed figure sharper than the release's blended D&amp;A. Amazon's release-basis D&amp;A line includes content and lease amortisation; its 10-Q allocates PP&amp;E depreciation by segment. Microsoft's earnings-call items — FY2027 capex guidance, and the datacenter/office building life extension (15&rarr;25 years, effective FY2027) with its finance-to-operating lease reclassification (~$190bn&rarr;~$175bn calendar-2026 capex-inclusive optic, spend unchanged per CFO Amy Hood) — are <strong>press-sourced</strong> (Benzinga, CFO Dive; Microsoft publishes its webcast but we cite no third-party transcript as primary) and are labeled as such wherever they appear; the building change enters the filing record with the FQ1-2027 10-Q, which is its verification checkpoint. The 10-K's commitments note ($34.6bn contracted construction) is the only issuer-document forward capex figure used. This note carries no target price and takes no position in any name; reference prices are therefore not cited. Each chart carries its source beneath it.</p>
+<h2><span class="n">§8</span> Disclosures</h2>
+<p><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (§202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses. This report discusses Microsoft (MSFT), Alphabet (GOOGL), Amazon (AMZN), Meta Platforms (META), Apple (AAPL), Oracle (ORCL), CoreWeave (CRWV) and NVIDIA (NVDA); the Fund holds no position, long or short, in any of them, and has no economic interest in the price of any security named here. The Fund receives no compensation from any party in connection with its research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. The AI used is developed by Anthropic; this note separately reports Amazon's disclosed gain on its investments in Anthropic, and readers should weigh that connection — the Fund has no economic interest in Anthropic and the figure is quoted directly from Amazon's release. All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <strong>not</strong> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <strong>not</strong> issued, reviewed, endorsed, certified, or approved by — nor affiliated with — CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome — please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>.</p>
+
+</main></body></html>
