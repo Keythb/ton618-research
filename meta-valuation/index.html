@@ -1,0 +1,1738 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meta — Paying Twice — TON618 Capital</title>
+<meta name="description" content="Meta pays for its AI machines twice — cash today, earnings tomorrow. Q2 2026: capex 31.1bn vs net income 15.8bn, free cash flow 784M, and a 5.5-year server clock deferring ~38bn of depreciation out of 2026-28. TON618 fair value 370 vs the 539.03 close.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{
+h2+p,h3+p,h2+p.lede,h3+p.lede,h2+ul,h3+ul{break-after:avoid-page;page-break-after:avoid;}
+
+p,li{orphans:3;widows:3;}
+h2,h3{break-after:avoid-page;break-inside:avoid;}
+ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+code{font-family:var(--sans);font-size:.85em;background:var(--soft);padding:1px 5px;border-radius:3px;}
+.chart svg{max-width:100%;height:auto;}
+
+/* ---- double-entry motif devices (report-designer: Paying Twice) ---- */
+.emblem{margin:30px 0 6px;}
+.emblem svg{display:block;width:100%;height:auto;max-width:700px;}
+.coname{font-family:var(--serif);font-size:2.5rem;font-weight:600;color:var(--ink);
+  margin:1.4rem 0 0;line-height:1.05;}
+.coname .tick{display:block;font:700 .78rem var(--sans);letter-spacing:.14em;color:var(--antique);
+  margin-top:8px;}
+.band{background:#0B0B0C;color:#C9A24B;margin:1.6rem -44px;padding:26px 44px 20px;page-break-inside:avoid;}
+.band .b-kick{font:700 .68rem var(--sans);text-transform:uppercase;letter-spacing:.16em;color:#8d8d90;margin-bottom:12px;}
+.band .b-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+.band .b-num{display:block;font-family:var(--serif);font-size:2.9rem;font-weight:600;line-height:1;color:#C9A24B;}
+.band .b-lab{display:block;font:400 .72rem/1.45 var(--sans);color:#a7a7ab;margin-top:7px;max-width:250px;}
+.band .b-arrow{font-family:var(--serif);font-size:2rem;color:#5E626B;}
+.band .b-foot{font:400 .66rem/1.5 var(--sans);color:#77777b;margin-top:14px;border-top:1px solid #2a2a2e;padding-top:9px;}
+.exlabel{font:700 .78rem var(--sans);letter-spacing:.04em;color:var(--ink);margin:1.2rem 0 .2rem;}
+@media print{
+  .band{margin:1.4rem -0.8in;padding:22px 0.8in 16px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .band{break-inside:avoid;}
+  .coname{font-size:2.1rem;}
+}
+@media(max-width:680px){.band{margin:1.4rem -18px;padding:20px 18px 16px;}.coname{font-size:1.9rem;}}
+</style></head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Equity Research Note<br>As of July 31, 2026<br>v1.0 (draft — not published)</span>
+</div>
+
+<div class="emblem"><svg viewBox="0 0 700 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ledger emblem: the same machines entered twice — cash now, earnings later">
+<style>.ee{font:500 13px Inter,Arial,sans-serif;fill:#5E626B}.ea{font:600 13px Inter,Arial,sans-serif;fill:#15161A}.et{font:600 40px 'EB Garamond',Georgia,serif;fill:#8a6d2a}.el{font:700 11px Inter,Arial,sans-serif;fill:#5E626B;letter-spacing:.14em}</style>
+<text class="ee" x="20" y="30">Payment one &#8212; cash, now &#183; capital expenditure, FY2026 guide</text><text class="ea" x="680" y="30" text-anchor="end">USD 130&#8211;145bn</text><line x1="20" y1="40" x2="680" y2="40" stroke="#E2E4E8" stroke-width="1"/>
+<text class="ee" x="20" y="66">Payment two &#8212; earnings, later &#183; depreciation the 5.5-year clock defers out of 2026&#8211;28E</text><text class="ea" x="680" y="66" text-anchor="end">~USD 38bn</text><line x1="20" y1="76" x2="680" y2="76" stroke="#E2E4E8" stroke-width="1"/>
+<text class="el" x="20" y="150">THE DOSE &#183; CAPEX PER DOLLAR OF NET INCOME, Q2 2026</text>
+<text class="et" x="680" y="158" text-anchor="end">USD 1.96</text>
+<line x1="480" y1="166" x2="680" y2="166" stroke="#8a6d2a" stroke-width="1.5"/>
+<line x1="480" y1="170" x2="680" y2="170" stroke="#8a6d2a" stroke-width="1.5"/>
+</svg></div>
+
+<div class="kicker">Tech-Equity Valuation &middot; Communication Services / Interactive Media &middot; The Depreciation Reckoning — &ldquo;Paying Twice&rdquo;</div>
+<h1>Paying Twice</h1>
+<p class="dek">Meta buys its machines with cash today and pays for them again in earnings tomorrow. In the June quarter the first payment reached $31.1bn against $15.8bn of net income — and the second payment, on the longest server clock in Big Tech, has barely begun. We value the stock with both invoices on the table.</p>
+<p class="byline">TON618 Capital Research &middot; As of July 31, 2026 &middot; Report date 2026-07-31 &middot; Data as-of 2026-07-30 close &middot; <a class="pdf-link" href="TON618_META-Valuation_Research_Note.pdf">Download PDF</a></p>
+<p class="small">Every filed figure is drawn from Meta's own SEC filings and investor-relations documents and is as-of dated; model figures are labelled as estimates and separated from filed fact throughout. Prices are as of the July 30, 2026 close. This note is a satellite of The Depreciation Reckoning series and applies its published July model to Meta; §7 documents sources, formulas and the model's disclosed limitations, including the fitted parameter inside the Meta re-mark.</p>
+
+<div class="coname">Meta Platforms, Inc. <span class="tick">NASDAQ: META</span></div>
+<div class="verdict"><div class="big">$1.96<small>spent on infrastructure per dollar of net income, Q2 2026 — twelve months earlier the ratio was $1.15</small></div><div class="txt"><b>The view.</b> We value Meta at <b>$370 per share</b> against the July 30 close of <b>$539.03</b> — a <b>31% gap</b> to fair value, on a 12–18 month evaluation window. The operating engine is genuinely strong: revenue grew 28% in Q2 on both more ads (+14%) and dearer ads (+12%). But net income <i>fell 14%</i>, the capital-expenditure guide's floor <i>rose again</i> — $115bn in January, $125bn in April, $130bn now — free cash flow was $784M — 2.5 cents kept per dollar of operating cash — and depreciation, growing at 46%, is only the front edge of a wave Meta's 5.5-year server schedule defers into 2027–28. Even our bull case, blended across methods, sits at $532 — below today's price. The market is no longer ignoring this: the stock fell 8% on the print. We think it has another instalment to go.</div></div>
+<div class="kpis">
+<div class="fig">$130&ndash;145bn<span class="label">FY2026 capex guide — the floor has risen $15bn since January while income fell</span></div>
+<div class="fig">&minus;14%<span class="label">Q2 net income, $15.8bn vs $18.3bn — the first down quarter of the AI build</span></div>
+<div class="fig">$784M<span class="label">Q2 free cash flow, down from $8.5bn — 2.5% of the quarter's capex</span></div>
+<div class="fig">+46%<span class="label">Q2 depreciation &amp; amortisation growth — 1.6&times; the pace of revenue</span></div>
+</div>
+<h2>Executive summary</h2>
+<p><strong>Fair value $370 per share against the $539.03 close of 30 July 2026 — a 31% gap.</strong> Bull blend $532, base $370; 12–18 month evaluation window.</p>
+<ul>
+<li><strong>The revenue machine is genuinely strong.</strong> Q2 revenue +28% to $60.8bn, on 14% more ad impressions <em>and</em> 12% higher pricing at once.</li>
+<li><strong>The cost of producing it is now the story.</strong> Net income <em>fell 14%</em>; free cash flow was $784M against $31.1bn of capex; buybacks went to zero and $24.9bn of new debt was issued.</li>
+<li><strong>The dose has nearly doubled in a year.</strong> Capex per dollar of net income went 1.15× (FY2025) to <strong>1.96×</strong> in the June quarter — and the capex guide's floor rose again, $115bn in January to $130bn now.</li>
+<li><strong>The second payment has barely begun.</strong> Meta runs the longest server clock in Big Tech at 5.5 years; the house three-year clock re-marks FY2025 EPS $23.49 to <strong>$21.56</strong> and defers roughly $38bn across 2026–28.</li>
+</ul>
+<p class="lede"><em>Where to find the work: the re-mark is §3, the valuation §4, the case against us §5, and the series context §6.</em></p>
+<h2>The story so far</h2>
+<p>On 17 July we published <a href="../depreciation-question/">The Depreciation Question</a> — Big Tech expensing a record hardware build on schedules that flatter earnings, roughly $221bn deferred out of 2026–28. On 30 July, <a href="../depreciation-scoreboard/">The First Invoice</a> scored it against the Q2 prints: four-for-four on accelerating depreciation, every clock held. This note applies that framework to the name it bears hardest on. <strong>Meta's chapter role: the extender at the limit</strong> — the longest clock in the group, the steepest shift of capex into server-class assets, and now a dose approaching 2×. Meta reported Q2 on 29 July; the stock fell 8%, its second consecutive ~8% earnings-day decline.</p>
+<h2><span class="n">§1</span> Two payments for the same machines</h2>
+<p><strong>Every server Meta buys is paid for twice.</strong> The first payment is cash, immediately: capital expenditure, running at $31.1bn in the June quarter alone. The second payment is earnings, later: depreciation, the accounting charge that spreads each machine's cost across the years of its assumed useful life. The cash payment is visible the day it happens. The earnings payment arrives on a schedule management chooses — and Meta has chosen the longest server schedule in Big Tech: <strong>5.5 years</strong>, extended in January 2025, at a moment when the hardware it is buying turns over on a roughly two-year architecture cycle.</p>
+<p>The choice is legal, disclosed, and audited, and this note alleges nothing improper. What the choice does is <em>move</em> the second payment. Meta's own FY2025 10-K quantifies the move: the extension cut 2025 depreciation by <strong>$2.92bn</strong> and added <strong>$2.59bn to net income — $1.00 of the year's $23.49 of diluted EPS</strong> — from the stroke of an estimate. Our July research (<a href="../depreciation-question/">The Depreciation Question</a>) put the cumulative version of that arithmetic at roughly <strong>$38bn of depreciation deferred out of Meta's 2026–28 earnings</strong> on the house clock (a model estimate; §3). The deferral does not cancel the bill. It schedules it.</p>
+<p><strong>What makes Meta the extreme case in our series is the dose</strong> — capital expenditure divided by net income, the one ratio this series carries everywhere. When the dose is low, as at Apple (0.07&times;), the schedule is a rounding error. When it approaches 2&times;, the schedule <em>is</em> the income statement. Meta's dose was 1.15&times; across FY2025. In the June quarter it reached <strong>1.96&times;</strong> — and on our full-year estimates it holds near <strong>1.8&times;</strong> for 2026. Among the hyperscalers only Amazon (~2.3&times; trailing, ex-gains) runs hotter, and both are walking toward Oracle — at 3.26&times;, the company whose fiscal-2026 earnings our July note found 26% overstated (17% in fiscal 2025).</p>
+<p class="exlabel">Exhibit 1 — The first payment, drawn against what the company earns</p>
+<p><div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.307937 263.866" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T14:08:26.298474</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 263.866 
+L 478.307937 263.866 
+L 478.307937 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.238281 239.3385 
+L 467.318281 239.3385 
+L 467.318281 50.8425 
+L 43.238281 50.8425 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.514645 211.99193 
+L 87.860729 211.99193 
+L 87.860729 193.728328 
+L 62.514645 193.728328 
+z
+" clip-path="url(#p1c69861875)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 129.214865 211.99193 
+L 154.560949 211.99193 
+L 154.560949 181.520038 
+L 129.214865 181.520038 
+z
+" clip-path="url(#p1c69861875)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 195.915085 211.99193 
+L 221.261169 211.99193 
+L 221.261169 184.544764 
+L 195.915085 184.544764 
+z
+" clip-path="url(#p1c69861875)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 262.615305 211.99193 
+L 287.961389 211.99193 
+L 287.961389 173.682316 
+L 262.615305 173.682316 
+z
+" clip-path="url(#p1c69861875)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 329.315526 211.99193 
+L 354.661609 211.99193 
+L 354.661609 141.462196 
+L 329.315526 141.462196 
+z
+" clip-path="url(#p1c69861875)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 396.015746 211.99193 
+L 421.36183 211.99193 
+L 421.36183 77.700738 
+L 396.015746 77.700738 
+z
+" clip-path="url(#p1c69861875)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 89.194733 211.99193 
+L 114.540817 211.99193 
+L 114.540817 173.511399 
+L 89.194733 173.511399 
+z
+" clip-path="url(#p1c69861875)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 155.894953 211.99193 
+L 181.241037 211.99193 
+L 181.241037 189.333344 
+L 155.894953 189.333344 
+z
+" clip-path="url(#p1c69861875)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 222.595173 211.99193 
+L 247.941257 211.99193 
+L 247.941257 173.806352 
+L 222.595173 173.806352 
+z
+" clip-path="url(#p1c69861875)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 289.295394 211.99193 
+L 314.641477 211.99193 
+L 314.641477 151.087212 
+L 289.295394 151.087212 
+z
+" clip-path="url(#p1c69861875)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 355.995614 211.99193 
+L 381.341697 211.99193 
+L 381.341697 152.944826 
+L 355.995614 152.944826 
+z
+" clip-path="url(#p1c69861875)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 422.695834 211.99193 
+L 448.041918 211.99193 
+L 448.041918 136.042885 
+L 422.695834 136.042885 
+z
+" clip-path="url(#p1c69861875)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 422.695834 211.99193 
+L 448.041918 211.99193 
+L 448.041918 136.042885 
+L 422.695834 136.042885 
+L 422.695834 211.99193 
+z
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #15161a; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m61f850701c" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m61f850701c" x="88.527731" y="239.3385" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="88.527731" y="253.225" transform="rotate(-0 88.527731 253.225)">2021</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m61f850701c" x="155.227951" y="239.3385" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="155.227951" y="253.225" transform="rotate(-0 155.227951 253.225)">2022</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m61f850701c" x="221.928171" y="239.3385" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="221.928171" y="253.225" transform="rotate(-0 221.928171 253.225)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m61f850701c" x="288.628391" y="239.3385" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="288.628391" y="253.225" transform="rotate(-0 288.628391 253.225)">2024</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m61f850701c" x="355.328612" y="239.3385" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="355.328612" y="253.225" transform="rotate(-0 355.328612 253.225)">2025</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m61f850701c" x="422.028832" y="239.3385" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="422.028832" y="253.225" transform="rotate(-0 422.028832 253.225)">2026E</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 43.238281 236.40851 
+L 467.318281 236.40851 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <defs>
+       <path id="m0673f1e336" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="236.40851" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="239.636557" transform="rotate(-0 36.238281 239.636557)">−25</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 43.238281 211.99193 
+L 467.318281 211.99193 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="211.99193" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="215.219977" transform="rotate(-0 36.238281 215.219977)">0</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 43.238281 187.57535 
+L 467.318281 187.57535 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="187.57535" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="190.803397" transform="rotate(-0 36.238281 190.803397)">25</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 43.238281 163.158769 
+L 467.318281 163.158769 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="163.158769" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="166.386816" transform="rotate(-0 36.238281 166.386816)">50</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 43.238281 138.742189 
+L 467.318281 138.742189 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="138.742189" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="141.970236" transform="rotate(-0 36.238281 141.970236)">75</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 43.238281 114.325609 
+L 467.318281 114.325609 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="114.325609" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="117.553656" transform="rotate(-0 36.238281 117.553656)">100</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <path d="M 43.238281 89.909028 
+L 467.318281 89.909028 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="89.909028" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="93.137075" transform="rotate(-0 36.238281 93.137075)">125</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_21">
+      <path d="M 43.238281 65.492448 
+L 467.318281 65.492448 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m0673f1e336" x="43.238281" y="65.492448" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="36.238281" y="68.720495" transform="rotate(-0 36.238281 68.720495)">150</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.096094" y="145.0905" transform="rotate(-90 15.096094 145.0905)">USD bn</text>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 43.238281 211.99193 
+L 467.318281 211.99193 
+" clip-path="url(#p1c69861875)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 43.238281 239.3385 
+L 43.238281 50.8425 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 43.238281 239.3385 
+L 467.318281 239.3385 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 9.4px 'Helvetica'; text-anchor: middle" x="75.187687" y="191.28667" transform="rotate(-0 75.187687 191.28667)">19</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="101.867775" y="171.069741" transform="rotate(-0 101.867775 171.069741)">39</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #1f7a4d; font: 700 9.9px 'Helvetica'; text-anchor: middle" x="88.527731" y="225.665215" transform="rotate(-0 88.527731 225.665215)">0.47x</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 9.4px 'Helvetica'; text-anchor: middle" x="141.887907" y="179.07838" transform="rotate(-0 141.887907 179.07838)">31</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="168.567995" y="186.891685" transform="rotate(-0 168.567995 186.891685)">23</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #b23b3b; font: 700 9.9px 'Helvetica'; text-anchor: middle" x="155.227951" y="225.665215" transform="rotate(-0 155.227951 225.665215)">1.34x</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #15161a; font: 9.4px 'Helvetica'; text-anchor: middle" x="208.588127" y="182.103106" transform="rotate(-0 208.588127 182.103106)">28</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="235.268215" y="171.364694" transform="rotate(-0 235.268215 171.364694)">39</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #1f7a4d; font: 700 9.9px 'Helvetica'; text-anchor: middle" x="221.928171" y="225.665215" transform="rotate(-0 221.928171 225.665215)">0.72x</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #15161a; font: 9.4px 'Helvetica'; text-anchor: middle" x="275.288347" y="171.240658" transform="rotate(-0 275.288347 171.240658)">39</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="301.968435" y="148.645554" transform="rotate(-0 301.968435 148.645554)">62</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #1f7a4d; font: 700 9.9px 'Helvetica'; text-anchor: middle" x="288.628391" y="225.665215" transform="rotate(-0 288.628391 225.665215)">0.63x</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #15161a; font: 9.4px 'Helvetica'; text-anchor: middle" x="341.988568" y="139.020538" transform="rotate(-0 341.988568 139.020538)">72</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="368.668656" y="150.503168" transform="rotate(-0 368.668656 150.503168)">60</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #b23b3b; font: 700 9.9px 'Helvetica'; text-anchor: middle" x="355.328612" y="225.665215" transform="rotate(-0 355.328612 225.665215)">1.19x</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #15161a; font: 700 9.4px 'Helvetica'; text-anchor: middle" x="408.688788" y="75.25908" transform="rotate(-0 408.688788 75.25908)">138</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="435.368876" y="133.601227" transform="rotate(-0 435.368876 133.601227)">78</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #b23b3b; font: 700 9.9px 'Helvetica'; text-anchor: middle" x="422.028832" y="225.665215" transform="rotate(-0 422.028832 225.665215)">1.77x</text>
+   </g>
+   <g id="text_34">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'; text-anchor: start" x="58.512632" y="236.896842" transform="rotate(-0 58.512632 236.896842)">the dose (capex divided by net income):</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(43.238281 32.481881)">capex and net income, FY2021-FY2026E. 2026E: capex = guidance midpoint (130-145bn guided); net income =</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(43.238281 42.93975)">house estimate from guidance (incl. the Q1 one-time tax benefit). Sources beneath.</text>
+   </g>
+   <g id="text_36">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="43.238281" y="16.6425" transform="rotate(-0 43.238281 16.6425)">The first payment now runs near double what the company earns</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_18">
+     <path d="M 50.888281 64.689531 
+L 67.888281 64.689531 
+L 67.888281 58.739531 
+L 50.888281 58.739531 
+z
+" style="fill: #c9a24b"/>
+    </g>
+    <g id="text_37">
+     <text style="fill: #26282e; font: 8.5px 'Helvetica'; text-anchor: start" x="74.688281" y="64.689531" transform="rotate(-0 74.688281 64.689531)">capital expenditure (incl. finance leases)</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 50.888281 76.808672 
+L 67.888281 76.808672 
+L 67.888281 70.858672 
+L 50.888281 70.858672 
+z
+" style="fill: #5e626b; opacity: 0.85"/>
+    </g>
+    <g id="text_38">
+     <text style="fill: #26282e; font: 8.5px 'Helvetica'; text-anchor: start" x="74.688281" y="76.808672" transform="rotate(-0 74.688281 76.808672)">net income</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1c69861875">
+   <rect x="43.238281" y="50.8425" width="424.08" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></p>
+<p class="exnote">Source: Meta Forms 10-K FY2023–FY2025 (capex = purchases of property and equipment + principal payments on finance leases, per cash-flow statements); FY2021–22 capex from the July model's cash-basis series; FY2026E = guidance midpoint per the Q2-26 8-K Ex-99.1 (0001628280-26-050596) and TON618 net-income estimate from that guidance. Net income per 10-Ks. Data as of 2026-07-31.</p>
+<h2><span class="n">§2</span> What the quarter actually said</h2>
+<p><strong>Data shows a very strong revenue machine.</strong> Q2 revenue was <strong>$60.80bn, up 28%</strong> (27% constant-currency) — faster than Alphabet, faster than Microsoft — on 3.60bn daily active people (+3%), <strong>14% more ad impressions and a 12% higher average price per ad</strong>. Growth is coming from volume <em>and</em> price at once, which is what a working AI-recommendation flywheel looks like. Family of Apps produced $23.4bn of operating income; Reality Labs lost another $4.6bn.</p>
+<p><strong>Data also shows the cost of producing it.</strong> Total costs and expenses rose <strong>55%</strong>, to $42.0bn. Operating income <em>fell 8%</em> to $18.8bn — a <strong>31% operating margin against 43%</strong> a year earlier. Net income fell 14% to $15.8bn; diluted EPS fell 13% to $6.18. Two charges the company disclosed depress the quarter: <strong>$2.40bn of legal-proceedings charges and $1.18bn of severance</strong> from the May headcount reduction (~8,000 roles). We normalise transparently: add back the $3.58bn pre-tax at the quarter's 16% tax rate and normalised net income is roughly <strong>$18.9bn — up about 3%</strong> on a year ago; management's own framing is that operating income ex-charges rose 9%. Either way, a company growing revenue 28% grew underlying profit at mid-single digits, because infrastructure costs, depreciation, AI compensation and third-party compute are growing faster than the top line. Share-based compensation alone rose <strong>52%</strong> in the half, to $13.7bn — 11.7% of revenue.</p>
+<p><strong>And the guidance moved the wrong way for the bulls' story.</strong> Three revisions, all in the same direction:</p>
+<table><thead><tr><th>Guide (FY2026)</th><th class="num">Before</th><th class="num">After Q2</th><th class="num">Reading</th></tr></thead><tbody>
+<tr><td>Capital expenditure (incl. finance leases)</td><td class="num">$115–135bn (Jan) &rarr; $125–145bn (Apr)</td><td class="num"><strong>$130–145bn</strong></td><td class="num">The <em>floor</em> has risen $15bn in six months. Midpoint $137.5bn ≈ +90% on FY2025's $72.2bn</td></tr>
+<tr><td>Total expenses</td><td class="num">$162–169bn (Apr, "unchanged from our prior outlook")</td><td class="num"><strong>$165–169bn</strong></td><td class="num">Lower end raised $3bn to absorb the $2.4bn legal charge</td></tr>
+<tr><td>Tax rate (remaining quarters)</td><td class="num">13–16%</td><td class="num"><strong>15–17%</strong></td><td class="num">Raised</td></tr>
+<tr><td>2027 capex</td><td class="num">—</td><td class="num"><strong>No outlook offered</strong></td><td class="num">"Infrastructure planning remains highly dynamic" — plans are "geared towards maximizing 2026 and '27 capacity" (call)</td></tr>
+</tbody></table>
+<p><strong>The funding of the build has quietly changed the shareholder's deal.</strong> Free cash flow for the quarter was <strong>$784M</strong> — against $8.5bn a year ago — because $31.1bn of the $31.9bn of operating cash went straight back out the door as capex. Buybacks, $22.9bn in the first half of 2025, were <strong>zero</strong> in the first half of 2026; the dividend ($1.35bn a quarter) continues. In their place: <strong>$24.9bn of new long-term debt</strong> issued in the quarter, taking the debt balance from $58.7bn at year-end to <strong>$83.7bn</strong>, plus what the CFO described as a broadened "aperture" including financing partnerships. Property and equipment on the balance sheet grew <strong>$49.3bn in six months</strong> — more than Meta's entire 2023 capex year — to $225.7bn. None of this is concealed; all of it is a different company from the buyback machine of 2023–24.</p>
+<p class="exlabel">Exhibit 2 — Where the cash went, and where it came from</p>
+<p><div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 544.069687 211.837866" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T14:08:26.362287</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 211.837866 
+L 544.069687 211.837866 
+L 544.069687 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 25.649687 178.729625 
+L 260.214687 178.729625 
+L 260.214687 39.345625 
+L 25.649687 39.345625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 36.311733 178.729625 
+L 82.30487 178.729625 
+L 82.30487 67.7033 
+L 36.311733 67.7033 
+z
+" clip-path="url(#p98ba31f718)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 119.935619 178.729625 
+L 165.928756 178.729625 
+L 165.928756 70.435226 
+L 119.935619 70.435226 
+z
+" clip-path="url(#p98ba31f718)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 203.559505 178.729625 
+L 249.552642 178.729625 
+L 249.552642 175.997699 
+L 203.559505 175.997699 
+z
+" clip-path="url(#p98ba31f718)" style="fill: #b23b3b"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m3f5bf1f705" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3f5bf1f705" x="59.308302" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(41.170841 191.970516)">operating</text>
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(41.176278 201.384459)">cash flow</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m3f5bf1f705" x="142.932187" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(122.381156 191.970516)">capex incl.</text>
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(123.347672 201.272991)">fin. leases</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m3f5bf1f705" x="226.556073" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(219.061159 191.970516)">free</text>
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(208.42405 201.272991)">cash flow</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 25.649687 178.729625 
+L 260.214687 178.729625 
+" clip-path="url(#p98ba31f718)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="m46b89631a6" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m46b89631a6" x="25.649687" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="18.649687" y="181.957672" transform="rotate(-0 18.649687 181.957672)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 25.649687 143.883625 
+L 260.214687 143.883625 
+" clip-path="url(#p98ba31f718)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m46b89631a6" x="25.649687" y="143.883625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="18.649687" y="147.111672" transform="rotate(-0 18.649687 147.111672)">10</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 25.649687 109.037625 
+L 260.214687 109.037625 
+" clip-path="url(#p98ba31f718)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m46b89631a6" x="25.649687" y="109.037625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="18.649687" y="112.265672" transform="rotate(-0 18.649687 112.265672)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 25.649687 74.191625 
+L 260.214687 74.191625 
+" clip-path="url(#p98ba31f718)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m46b89631a6" x="25.649687" y="74.191625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="18.649687" y="77.419672" transform="rotate(-0 18.649687 77.419672)">30</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 25.649687 39.345625 
+L 260.214687 39.345625 
+" clip-path="url(#p98ba31f718)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m46b89631a6" x="25.649687" y="39.345625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="18.649687" y="42.573672" transform="rotate(-0 18.649687 42.573672)">40</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 25.649687 178.729625 
+L 25.649687 39.345625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 25.649687 178.729625 
+L 260.214687 178.729625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="59.308302" y="65.26408" transform="rotate(-0 59.308302 65.26408)">31.9</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="142.932187" y="67.996006" transform="rotate(-0 142.932187 67.996006)">31.1</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #15161a; font: 700 10.6px 'Helvetica'; text-anchor: middle" x="226.556073" y="173.558479" transform="rotate(-0 226.556073 173.558479)">0.8</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: start" x="25.649687" y="31.553062" transform="rotate(-0 25.649687 31.553062)">USD bn, three months ended June 30, 2026 (8-K)</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="25.649687" y="16.745625" transform="rotate(-0 25.649687 16.745625)">Q2: spent 31.1bn, kept 0.8bn</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 300.864687 178.729625 
+L 535.429687 178.729625 
+L 535.429687 39.345625 
+L 300.864687 39.345625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 311.526733 178.729625 
+L 339.543787 178.729625 
+L 339.543787 68.563395 
+L 311.526733 68.563395 
+z
+" clip-path="url(#p4d939608b8)" style="fill: #e2e4e8; stroke: #5e626b; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 389.351882 178.729625 
+L 417.368936 178.729625 
+L 417.368936 165.963973 
+L 389.351882 165.963973 
+z
+" clip-path="url(#p4d939608b8)" style="fill: #e2e4e8; stroke: #5e626b; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 467.177032 178.729625 
+L 495.194085 178.729625 
+L 495.194085 178.729625 
+L 467.177032 178.729625 
+z
+" clip-path="url(#p4d939608b8)" style="fill: #e2e4e8; stroke: #5e626b; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 341.10029 178.729625 
+L 369.117343 178.729625 
+L 369.117343 178.729625 
+L 341.10029 178.729625 
+z
+" clip-path="url(#p4d939608b8)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 418.925439 178.729625 
+L 446.942493 178.729625 
+L 446.942493 165.7573 
+L 418.925439 165.7573 
+z
+" clip-path="url(#p4d939608b8)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 496.750588 178.729625 
+L 524.767642 178.729625 
+L 524.767642 59.003575 
+L 496.750588 59.003575 
+z
+" clip-path="url(#p4d939608b8)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_4">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m3f5bf1f705" x="340.322038" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'; text-anchor: middle" x="340.322038" y="191.990906" transform="rotate(-0 340.322038 191.990906)">buybacks</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m3f5bf1f705" x="418.147187" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'; text-anchor: middle" x="418.147187" y="191.970516" transform="rotate(-0 418.147187 191.970516)">dividends</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m3f5bf1f705" x="495.972337" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(477.110329 191.970516)">new debt,</text>
+      <text style="fill: #5e626b; font: 8.7px 'Helvetica'" transform="translate(489.925837 201.272991)">net</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 300.864687 178.729625 
+L 535.429687 178.729625 
+" clip-path="url(#p4d939608b8)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m46b89631a6" x="300.864687" y="178.729625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="293.864687" y="181.957672" transform="rotate(-0 293.864687 181.957672)">0</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <path d="M 300.864687 154.697901 
+L 535.429687 154.697901 
+" clip-path="url(#p4d939608b8)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m46b89631a6" x="300.864687" y="154.697901" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="293.864687" y="157.925948" transform="rotate(-0 293.864687 157.925948)">5</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_21">
+      <path d="M 300.864687 130.666177 
+L 535.429687 130.666177 
+" clip-path="url(#p4d939608b8)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m46b89631a6" x="300.864687" y="130.666177" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="293.864687" y="133.894224" transform="rotate(-0 293.864687 133.894224)">10</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_23">
+      <path d="M 300.864687 106.634453 
+L 535.429687 106.634453 
+" clip-path="url(#p4d939608b8)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m46b89631a6" x="300.864687" y="106.634453" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="293.864687" y="109.862499" transform="rotate(-0 293.864687 109.862499)">15</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_25">
+      <path d="M 300.864687 82.602728 
+L 535.429687 82.602728 
+" clip-path="url(#p4d939608b8)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m46b89631a6" x="300.864687" y="82.602728" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="293.864687" y="85.830775" transform="rotate(-0 293.864687 85.830775)">20</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_27">
+      <path d="M 300.864687 58.571004 
+L 535.429687 58.571004 
+" clip-path="url(#p4d939608b8)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m46b89631a6" x="300.864687" y="58.571004" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="293.864687" y="61.799051" transform="rotate(-0 293.864687 61.799051)">25</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_15">
+    <path d="M 300.864687 178.729625 
+L 300.864687 39.345625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 300.864687 178.729625 
+L 535.429687 178.729625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_23">
+    <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="325.53526" y="65.679588" transform="rotate(-0 325.53526 65.679588)">22.9</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="355.108817" y="175.845818" transform="rotate(-0 355.108817 175.845818)">0.0</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="403.360409" y="163.080166" transform="rotate(-0 403.360409 163.080166)">2.7</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="432.933966" y="162.873493" transform="rotate(-0 432.933966 162.873493)">2.7</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #5e626b; font: 9.6px 'Helvetica'; text-anchor: middle" x="481.185558" y="175.845818" transform="rotate(-0 481.185558 175.845818)">0.0</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="510.759115" y="56.119768" transform="rotate(-0 510.759115 56.119768)">24.9</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: start" x="300.864687" y="31.553062" transform="rotate(-0 300.864687 31.553062)">USD bn, first half (8-K cash-flow statement)</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="300.864687" y="16.745625" transform="rotate(-0 300.864687 16.745625)">Buybacks stopped. Borrowing started.</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_17">
+     <path d="M 390.509219 52.931313 
+L 407.309219 52.931313 
+L 407.309219 47.051313 
+L 390.509219 47.051313 
+z
+" style="fill: #e2e4e8; stroke: #5e626b; stroke-width: 0.6; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_31">
+     <text style="fill: #26282e; font: 8.4px 'Helvetica'; text-anchor: start" x="414.029219" y="52.931313" transform="rotate(-0 414.029219 52.931313)">H1 2025</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 390.509219 64.907875 
+L 407.309219 64.907875 
+L 407.309219 59.027875 
+L 390.509219 59.027875 
+z
+" style="fill: #b8902f"/>
+    </g>
+    <g id="text_32">
+     <text style="fill: #26282e; font: 8.4px 'Helvetica'; text-anchor: start" x="414.029219" y="64.907875" transform="rotate(-0 414.029219 64.907875)">H1 2026</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p98ba31f718">
+   <rect x="25.649687" y="39.345625" width="234.565" height="139.384"/>
+  </clipPath>
+  <clipPath id="p4d939608b8">
+   <rect x="300.864687" y="39.345625" width="234.565" height="139.384"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></p>
+<p class="exnote">Source: Meta Q2-2026 Form 8-K Ex-99.1 (0001628280-26-050596, filed 2026-07-29), condensed consolidated statements of cash flows and non-GAAP reconciliation. Data as of 2026-07-31.</p>
+<p>The market's verdict on the quarter was not gentle: <strong>−8.0% the next session</strong> (to $539.03, on 3.5&times; average volume), the second consecutive earnings day the stock has dropped roughly 8%, leaving it 32% below its 52-week high. Press accounts of the sell-off centred on the capex floor and the absence of any 2027 spending frame — press-sourced, and consistent with what the filing shows.</p>
+<h2><span class="n">§3</span> The clock at the limit: the second payment, re-marked</h2>
+<p class="lede"><em>Everything in this section that is not from a filing is a model estimate, and is labelled as such.</em></p>
+<p>Meta discloses more about its depreciation choices than most of its peers, and the disclosures tell a clean story. Servers and network assets carry a <strong>"five to 5.5 years"</strong> life, the top end set by the January 2025 extension from the prior disclosed "four to five years" — worth a disclosed <strong>$2.92bn of depreciation relief in 2025</strong>, and pre-announced in the FY2024 10-K at "approximately $2.9 billion" before the year began. Server-class purchases have gone from <strong>27% of capex in 2021 to 58% in 2024</strong> (43% in 2025 as data-centre construction surged alongside): the fastest disclosed shift toward short-lived assets in the group, expensed on the group's longest clock. At year-end, another <strong>$50.5bn sat in construction-in-progress</strong> — bought, on the balance sheet, not yet depreciating at all.</p>
+<p>The July model re-marks Meta's earnings onto a three-year server clock — our estimate of the economic life of AI-cycle compute, argued in the July note from NVIDIA's two-year architecture cadence and the resale-value evidence. On that clock:</p>
+<div class="band"><div class="b-kick">FY2025, re-marked on the house clock (model estimate)</div>
+<div class="b-row"><div class="b-cell"><span class="b-num">$23.49</span><span class="b-lab">Diluted EPS as reported, FY2025 Form 10-K</span></div>
+<div class="b-arrow">&rarr;</div>
+<div class="b-cell"><span class="b-num">$21.56</span><span class="b-lab">Diluted EPS on a 3-year server clock — net income 9.0% lower</span></div></div>
+<div class="b-foot">July v3 vintage model (published 17 Jul 2026, unchanged): server share of capex 43%, straight-line, pre-tax delta $7.06bn taxed at the year's effective rate. A model estimate, not a restatement; Meta's reported figures comply with GAAP.</div></div>
+<p><strong>Forward, the deferral compounds.</strong> On the model's assumptions (43% server share, capex held at $130bn — the <em>floor</em> of the current guide, so the estimate is conservative), the 5.5-year schedule defers roughly <strong>$10.2bn of depreciation out of 2026, $13.6bn out of 2027 and $14.8bn out of 2028</strong> — about $38bn across the window, pre-tax. Marked against our FY2026 estimates, reported EPS of ~$30.3 would read ~<strong>$27.0</strong> on the house clock (~$24.7 if one also normalises the one-time Q1 tax benefit and Q2 charges).</p>
+<p><strong>The wave has started arriving on Meta's own numbers.</strong> The model's core forward claim — depreciation must accelerate sharply as the 2024–25 vintages land, schedule or no schedule — was published on 17 July. Twelve days later Meta reported Q2 D&amp;A of $6.36bn, <strong>up 46%</strong>, with the half up 50% — against 28% revenue growth. That is the acceleration, on schedule. It is worth remembering what FY2025's gentler 20% D&amp;A growth actually was: growth <em>after</em> a $2.92bn subsidy from the extension.</p>
+<p class="exlabel">Exhibit 3 — The second payment, arriving</p>
+<p><div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 470.8775 258.239969" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T14:08:26.403251</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 258.239969 
+L 470.8775 258.239969 
+L 470.8775 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 38.1575 233.897625 
+L 462.2375 233.897625 
+L 462.2375 50.945625 
+L 38.1575 50.945625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 57.433864 233.897625 
+L 117.079433 233.897625 
+L 117.079433 185.206257 
+L 57.433864 185.206257 
+z
+" clip-path="url(#p31942eeea1)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 165.880354 233.897625 
+L 225.525923 233.897625 
+L 225.525923 166.388337 
+L 165.880354 166.388337 
+z
+" clip-path="url(#p31942eeea1)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 274.326844 233.897625 
+L 333.972414 233.897625 
+L 333.972414 152.806329 
+L 274.326844 152.806329 
+z
+" clip-path="url(#p31942eeea1)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 382.773334 233.897625 
+L 442.418904 233.897625 
+L 442.418904 114.107625 
+L 382.773334 114.107625 
+z
+" clip-path="url(#p31942eeea1)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mfaf5808251" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mfaf5808251" x="87.256648" y="233.897625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="87.256648" y="247.640656" transform="rotate(-0 87.256648 247.640656)">FY2023</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mfaf5808251" x="195.703139" y="233.897625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="195.703139" y="247.640656" transform="rotate(-0 195.703139 247.640656)">FY2024</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mfaf5808251" x="304.149629" y="233.897625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="304.149629" y="247.640656" transform="rotate(-0 304.149629 247.640656)">FY2025</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mfaf5808251" x="412.596119" y="233.897625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9.4px 'Helvetica'; text-anchor: middle" x="412.596119" y="247.640656" transform="rotate(-0 412.596119 247.640656)">FY2026E</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <path d="M 38.1575 233.897625 
+L 462.2375 233.897625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <defs>
+       <path id="mc49e639922" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="233.897625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="237.125672" transform="rotate(-0 31.1575 237.125672)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <path d="M 38.1575 212.117625 
+L 462.2375 212.117625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="212.117625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="215.345672" transform="rotate(-0 31.1575 215.345672)">5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path d="M 38.1575 190.337625 
+L 462.2375 190.337625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="190.337625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="193.565672" transform="rotate(-0 31.1575 193.565672)">10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <path d="M 38.1575 168.557625 
+L 462.2375 168.557625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="168.557625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="171.785672" transform="rotate(-0 31.1575 171.785672)">15</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13">
+      <path d="M 38.1575 146.777625 
+L 462.2375 146.777625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="146.777625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="150.005672" transform="rotate(-0 31.1575 150.005672)">20</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <path d="M 38.1575 124.997625 
+L 462.2375 124.997625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="124.997625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="128.225672" transform="rotate(-0 31.1575 128.225672)">25</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <path d="M 38.1575 103.217625 
+L 462.2375 103.217625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="103.217625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="106.445672" transform="rotate(-0 31.1575 106.445672)">30</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_19">
+      <path d="M 38.1575 81.437625 
+L 462.2375 81.437625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="81.437625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="84.665672" transform="rotate(-0 31.1575 84.665672)">35</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <path d="M 38.1575 59.657625 
+L 462.2375 59.657625 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#mc49e639922" x="38.1575" y="59.657625" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="31.1575" y="62.885672" transform="rotate(-0 31.1575 62.885672)">40</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="15.271875" y="142.421625" transform="rotate(-90 15.271875 142.421625)">depreciation and amortisation, USD bn</text>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 382.231102 69.894225 
+L 442.961136 69.894225 
+" clip-path="url(#p31942eeea1)" style="fill: none; stroke: #b23b3b; stroke-width: 2.2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 38.1575 233.897625 
+L 38.1575 50.945625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 38.1575 233.897625 
+L 462.2375 233.897625 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 319.576583 75.04598 
+Q 350.993245 72.549184 382.409907 70.052387 
+" style="fill: none; stroke: #b23b3b; stroke-width: 0.7; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #b23b3b; font: 8.7px 'Helvetica'; text-anchor: start" x="146.902218" y="83.615625" transform="rotate(-0 146.902218 83.615625)">FY2026E on our 3-yr server clock: ~USD 37.6bn</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="195.703139" y="162.903537" transform="rotate(-0 195.703139 162.903537)">+39%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="304.149629" y="149.321529" transform="rotate(-0 304.149629 149.321529)">+20%</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #15161a; font: 700 9.6px 'Helvetica'; text-anchor: middle" x="412.596119" y="110.622825" transform="rotate(-0 412.596119 110.622825)">+48%</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 296.366034 128.341362 
+Q 299.79511 134.897551 303.224187 141.453739 
+" style="fill: none; stroke: #5e626b; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_19">
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(211.970112 113.612175)">growth damped by the 5.5-yr extension</text>
+    <text style="fill: #5e626b; font: 8.4px 'Helvetica'" transform="translate(211.970112 122.819625)">(disclosed benefit: 2.92bn of depreciation)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(38.1575 32.845022)">reported D&amp;A per 10-K cash-flow statements; FY2026E = H1 actual (12.36bn, +50%) plus house H2 estimate.</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(38.1575 43.102)">Red marker: FY2026E plus the July model’s deferred slice (server-only, pre-tax, estimate).</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="38.1575" y="16.745625" transform="rotate(-0 38.1575 16.745625)">The second payment is arriving anyway — Q2 D&amp;A grew 46%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p31942eeea1">
+   <rect x="38.1575" y="50.945625" width="424.08" height="182.952"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></p>
+<p class="exnote">Source: Meta FY2025 Form 10-K (D&amp;A per consolidated cash-flow statements, FY2023–25) and Q2-2026 8-K Ex-99.1 (H1 D&amp;A); FY2026E is H1 actual plus TON618 H2 estimate. Red marker: FY2026E plus the July model's 2026 deferred slice of $10.2bn (server-only, pre-tax) — a model estimate. Data as of 2026-07-31.</p>
+<p><strong>An honesty note the reader should carry.</strong> The Meta leg of the July model contains a <strong>fitted parameter</strong>: Meta's pre-2025 blended server life is set at <strong>4.65 years</strong>, chosen <em>inside</em> Meta's own disclosed "four to five years" range so that modelled depreciation tracks reported server depreciation. The model's agreement with Meta's disclosed 2025 extension benefit is therefore <strong>not an independent validation</strong> — the validation work in the July note rests on the other companies' disclosed life-change benefits. And the deeper uncertainty runs in Meta's favour if resolved one way: if AI-era servers really do earn for 5.5 years — management cited demand for its compute "at a significant premium" to cost on the Q2 call — then the schedule is honest and our re-mark is too harsh. We hold the three-year view for the reasons argued in July, and we flag the assumption because the reader deserves to know which numbers are load-bearing.</p>
+<p><strong>The confirmation, on file.</strong> The Q2 Form 10-Q (accession 0001628280-26-050705, filed July 30) discloses <strong>no change in estimate: the 5.5-year server schedule held</strong>. It also files a figure sharper than the release's blended D&amp;A line — <strong>servers-and-network depreciation of $4.62bn for the quarter and $9.01bn for the half</strong> — the directly-disclosed form of the acceleration this section models. Both facts cut the same way: the clock is unchanged, and the bill on it is compounding.</p>
+<h2><span class="n">§4</span> What the stock is worth when both payments count</h2>
+<p><strong>Method selection.</strong> Meta is a leveraged, dividend-paying, high-growth equity in the middle of a capital-structure shift (buybacks suspended, debt rising). We therefore value the equity directly with a <strong>multi-stage FCFE model</strong> (60% weight), cross-checked by <strong>relative multiples</strong> on forward earnings run on both the reported and the re-marked basis (40% weight). A sum-of-the-parts adds nothing here — Reality Labs is a cost centre, not a valuation segment — and we say so rather than manufacture a third method.</p>
+<p><strong>House conventions, stated up front.</strong> Stock-based compensation is treated as the real expense it is: it stays inside our EBITDA and is never added back to cash flow; in exchange, the diluted share count (2,566M) is held flat rather than inflated forward — grant cost is charged at grant value once. Cost of equity is built from CAPM with nothing softened: 4.67% ten-year Treasury (July 29, FRED), beta 1.35 (computed, two years of daily closes against SPY), 4.5% equity risk premium — <strong>10.75%</strong>. Tax 17% (top of guide). Terminal growth 3.5%. Every scenario funds the capex trough with modelled debt issuance and pays the after-tax interest on it.</p>
+<p><strong>The 2026 base year is built from Meta's own guidance,</strong> not hope: H1 actuals, Q3 at the guide midpoint ($62.5bn, +22%), Q4 fading to +19%, gives <strong>$250.9bn of revenue (+25%)</strong>; the $165–169bn expense guide gives <strong>$83.9bn of operating income</strong> — Meta's own "above 2025" language, just barely. Net income ~$77.8bn (<strong>EPS ~$30.3</strong>, flattered by the Q1 one-time tax benefit; ~$28.0 normalised). Capex at the guide midpoint: <strong>$137.5bn</strong>. Free cash flow before new borrowing: approximately <strong>zero</strong>.</p>
+<table><thead><tr><th>Scenario (prob.)</th><th class="num">What it assumes</th><th class="num">Revenue 2032E</th><th class="num">FCFE value/sh</th></tr></thead><tbody>
+<tr><td>Bear (25%)</td><td class="num">AI monetisation stalls; ads decelerate to +10%&rarr;+4%; EBITDA margin stuck at 44%; capex never below 28% of revenue (terminal 26%)</td><td class="num">$364bn</td><td class="num"><strong>$137</strong></td></tr>
+<tr><td>Base (50%)</td><td class="num">Growth fades +16.5%&rarr;+7% (10.8% CAGR); margin recovers to 47%; capex glides 55%&rarr;25% of revenue (terminal 22%)</td><td class="num">$464bn</td><td class="num"><strong>$289</strong></td></tr>
+<tr><td>Bull (25%)</td><td class="num">AI ads + agents + compute sales; +19%&rarr;+9% growth; 49% margin; capex to 19% (terminal 16%)</td><td class="num">$520bn</td><td class="num"><strong>$480</strong></td></tr>
+</tbody></table>
+<p>Probability-weighted FCFE value: <strong>$299</strong>. The interim years are the story: even in the base case, cumulative 2026–29 free cash flow to equity is barely positive <em>including</em> $125bn of modelled new debt — the equity holder is paying the first invoice for years before the model lets them collect.</p>
+<p><strong>The comps lens — and the $82 the clock is worth.</strong> On FY2027E earnings the three scenarios give EPS of $26.2 / $30.1 / $32.1. At 16&times; / 18.5&times; / 22&times; — a discount to Microsoft's 25&times; and the market's ~23&times;, for a company whose margin is falling and whose earnings carry a 2&times; dose — the reported-EPS comps value is <strong>$560</strong>: on reported earnings and a market-average multiple, Meta is roughly fairly priced today. Apply the same multiples to <em>re-marked</em> FY2027E EPS (less the model's $4.38/share 2027 deferral, after tax) and the value is <strong>$477</strong>. The spread between those two numbers — <strong>$82 per share</strong> on unrounded figures — is what the 5.5-year clock is worth in the multiple lens, and it is the cleanest single expression of this note's thesis: the P/E is only reasonable if you believe the E.</p>
+<table><thead><tr><th>Method</th><th class="num">Weight</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th class="num">Prob-weighted</th></tr></thead><tbody>
+<tr><td>FCFE — multi-stage, SBC expensed, Ke 10.75%</td><td class="num">60%</td><td class="num">$137</td><td class="num">$289</td><td class="num">$480</td><td class="num">$299</td></tr>
+<tr><td>Comps — 16–22&times; FY2027E EPS, re-marked</td><td class="num">40%</td><td class="num">$349</td><td class="num">$476</td><td class="num">$610</td><td class="num">$477</td></tr>
+<tr><td><em>Comps — same multiples, reported EPS (shown for the spread; unweighted)</em></td><td class="num">—</td><td class="num"><em>$419</em></td><td class="num"><em>$557</em></td><td class="num"><em>$706</em></td><td class="num"><em>$560</em></td></tr>
+<tr><td><strong>Blended fair value</strong></td><td class="num">100%</td><td class="num"><strong>$222</strong></td><td class="num"><strong>$364</strong></td><td class="num"><strong>$532</strong></td><td class="num"><strong>$370</strong></td></tr>
+</tbody></table>
+<p>Run the whole blend on reported-basis comps instead and fair value is $403 — the re-mark moves the house number by $33; the FCFE leg, being cash-based, does not move at all (a depreciation schedule changes no cash flow; it changes what reported earnings mean while the cash goes out regardless).</p>
+<p class="exlabel">Exhibit 4 — The football field</p>
+<p><div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 467.462818 259.100406" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-31T14:08:26.431917</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.100406 
+L 467.462818 259.100406 
+L 467.462818 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 11.142422 222.620563 
+L 435.222422 222.620563 
+L 435.222422 50.756563 
+L 11.142422 50.756563 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 94.195549 111.863763 
+L 301.800078 111.863763 
+L 301.800078 89.903363 
+L 94.195549 89.903363 
+z
+" clip-path="url(#p1a2ed143fd)" style="fill: #c9a24b; opacity: 0.9; stroke: #8a6d2b; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 222.443534 159.603763 
+L 380.545476 159.603763 
+L 380.545476 137.643363 
+L 222.443534 137.643363 
+z
+" clip-path="url(#p1a2ed143fd)" style="fill: #c9a24b; opacity: 0.9; stroke: #8a6d2b; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 264.92803 207.343763 
+L 438.961658 207.343763 
+L 438.961658 185.383363 
+L 264.92803 185.383363 
+z
+" clip-path="url(#p1a2ed143fd)" style="fill: #f4f5f7; stroke: #5e626b; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="md4238c5b9e" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#md4238c5b9e" x="11.142422" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="11.142422" y="236.076656" transform="rotate(-0 11.142422 236.076656)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="71.725279" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="71.725279" y="236.076656" transform="rotate(-0 71.725279 236.076656)">100</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="132.308136" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="132.308136" y="236.076656" transform="rotate(-0 132.308136 236.076656)">200</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="192.890993" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="192.890993" y="236.076656" transform="rotate(-0 192.890993 236.076656)">300</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="253.47385" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="253.47385" y="236.076656" transform="rotate(-0 253.47385 236.076656)">400</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="314.056708" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="314.056708" y="236.076656" transform="rotate(-0 314.056708 236.076656)">500</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="374.639565" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="374.639565" y="236.076656" transform="rotate(-0 374.639565 236.076656)">600</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#md4238c5b9e" x="435.222422" y="222.620563" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="435.222422" y="236.076656" transform="rotate(-0 435.222422 236.076656)">700</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="223.182422" y="248.584469" transform="rotate(-0 223.182422 248.584469)">value per share, USD</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_9">
+    <path d="M 192.252599 111.863763 
+L 192.252599 89.903363 
+" clip-path="url(#p1a2ed143fd)" style="fill: none; stroke: #15161a; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 300.393367 159.603763 
+L 300.393367 137.643363 
+" clip-path="url(#p1a2ed143fd)" style="fill: none; stroke: #15161a; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 350.179885 207.343763 
+L 350.179885 185.383363 
+" clip-path="url(#p1a2ed143fd)" style="fill: none; stroke: #15161a; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 337.702197 222.620563 
+L 337.702197 50.756563 
+" clip-path="url(#p1a2ed143fd)" style="fill: none; stroke: #b23b3b; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 235.508906 222.620563 
+L 235.508906 50.756563 
+" clip-path="url(#p1a2ed143fd)" style="fill: none; stroke-dasharray: 5.6,2.8; stroke-dashoffset: 0; stroke: #15161a; stroke-width: 1.4"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 11.142422 222.620563 
+L 11.142422 50.756563 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 11.142422 222.620563 
+L 435.222422 222.620563 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="89.348921" y="103.173641" transform="rotate(-0 89.348921 103.173641)">137</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: start" x="306.646707" y="103.173641" transform="rotate(-0 306.646707 103.173641)">480</text>
+   </g>
+   <g id="text_12">
+    <g id="patch_8">
+     <path d="M 26.575622 111.106938 
+L 170.402263 111.106938 
+L 170.402263 90.60175 
+L 26.575622 90.60175 
+z
+" style="fill: #ffffff; opacity: 0.88"/>
+    </g>
+    <text style="fill: #26282e; font: 8.5px 'Helvetica'" transform="translate(28.105622 98.453625)">FCFE — multi-stage, SBC expensed,</text>
+    <text style="fill: #26282e; font: 8.5px 'Helvetica'" transform="translate(28.105622 107.75475)">cost of equity 10.75%</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="217.596905" y="150.913641" transform="rotate(-0 217.596905 150.913641)">349</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: start" x="385.392105" y="150.913641" transform="rotate(-0 385.392105 150.913641)">610</text>
+   </g>
+   <g id="text_15">
+    <g id="patch_9">
+     <path d="M 26.575622 158.752906 
+L 155.300153 158.752906 
+L 155.300153 138.494219 
+L 26.575622 138.494219 
+z
+" style="fill: #ffffff; opacity: 0.88"/>
+    </g>
+    <text style="fill: #26282e; font: 8.5px 'Helvetica'" transform="translate(28.105622 146.287656)">Comps — 16-22x FY2027E EPS,</text>
+    <text style="fill: #26282e; font: 8.5px 'Helvetica'" transform="translate(28.105622 155.451188)">re-marked (house clock)</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="260.081401" y="198.653641" transform="rotate(-0 260.081401 198.653641)">419</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: start" x="443.808287" y="198.653641" transform="rotate(-0 443.808287 198.653641)">706</text>
+   </g>
+   <g id="text_18">
+    <g id="patch_10">
+     <path d="M 26.575622 206.555063 
+L 128.825309 206.555063 
+L 128.825309 186.172063 
+L 26.575622 186.172063 
+z
+" style="fill: #ffffff; opacity: 0.88"/>
+    </g>
+    <text style="fill: #26282e; font: 8.5px 'Helvetica'" transform="translate(28.105622 193.9655)">Comps — same multiples,</text>
+    <text style="fill: #26282e; font: 8.5px 'Helvetica'" transform="translate(28.105622 203.253344)">reported EPS</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #b23b3b; font: 8.5px 'Helvetica'" transform="translate(313.602705 62.121231)">close 539.03</text>
+    <text style="fill: #b23b3b; font: 8.5px 'Helvetica'" transform="translate(323.531767 71.284762)">(Jul 30)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 8.5px 'Helvetica'; text-anchor: middle" x="235.508906" y="71.284762" transform="rotate(-0 235.508906 71.284762)">fair value 370</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(11.142422 32.395944)">bars span bear to bull per method; tick = probability-weighted value. Shaded methods carry the blend</text>
+    <text style="fill: #5e626b; font: 8.6px 'Helvetica'" transform="translate(11.142422 42.853813)">weight (FCFE 60%, re-marked comps 40%); reported-EPS comps shown unweighted for the spread.</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #15161a; font: 700 11px 'Helvetica'; text-anchor: start" x="11.142422" y="16.556563" transform="rotate(-0 11.142422 16.556563)">Three lenses, one conclusion below the price</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1a2ed143fd">
+   <rect x="11.142422" y="50.756563" width="424.08" height="171.864"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></p>
+<p class="exnote">Source: TON618 analysis; model.py in the build folder reproduces every figure from the Phase-0 snapshot. Data as of 2026-07-31.</p>
+<p><strong>The payoff shape, from $539.03:</strong></p>
+<table><thead><tr><th>Scenario</th><th class="num">Prob.</th><th class="num">Blended value</th><th class="num">Return</th></tr></thead><tbody>
+<tr><td>Bear</td><td class="num">25%</td><td class="num">$222</td><td class="num">−58.8%</td></tr>
+<tr><td>Base</td><td class="num">50%</td><td class="num">$364</td><td class="num">−32.5%</td></tr>
+<tr><td>Bull</td><td class="num">25%</td><td class="num">$532</td><td class="num">−1.3%</td></tr>
+<tr><td><strong>Expected</strong></td><td class="num">100%</td><td class="num"><strong>$370</strong></td><td class="num"><strong>−31.3%</strong></td></tr>
+</tbody></table>
+<p>We believe the shape matters as much as the centre: <strong>the case where we are wrong still pays approximately nothing.</strong> Six years of 13%+ compound growth, record margins, capex falling to 16% of revenue and a 22&times; multiple on re-marked earnings — and the stock roughly round-trips to today's price. The bear case is a −59% de-rating.</p>
+<p><strong>The reverse question.</strong> Work backwards from $539.03 through the base engine, one variable at a time, and the price requires: a <strong>22.8% six-year revenue CAGR</strong> sustained to 2032 (base: 10.8% — a pace Meta has touched in single years but has not sustained over six since its revenue base was a fraction of today's $251bn), <em>or</em> terminal capex of <strong>3.4% of revenue</strong> (below even pre-AI Meta's ~15%), <em>or</em> a <strong>7.8% cost of equity</strong> (a 2.3% equity risk premium), <em>or</em> <strong>7.0% perpetual growth</strong>. None is individually defensible — which tells us the market price is not resting on any one heroic input but on a blend of Street conventions (SBC added back, softer discount rates) plus genuine optimism on AI monetisation. Unlike our Alphabet note, where three convention changes reproduced the market price almost exactly, Meta's price needs the optimism too.</p>
+<p><strong>Sensitivity, honestly displayed.</strong> Terminal capex intensity is worth $161/share across 16%→28% on the FCFE leg ($370→$209 at the blend level of that leg); each 100bp of cost of equity is worth ~$50; terminal growth 2.5%→4.0% spans ~$52. The single most valuable disclosure Meta could make for this model is a 2027 capex number — precisely the disclosure management declined to give.</p>
+<h2><span class="n">§5</span> The case against this ledger</h2>
+<p class="lede"><em>Likelihood and magnitude scored 1–5 over 12 months; score is the product.</em></p>
+<table><thead><tr><th>Risk to our fair-value view / to the stock</th><th class="num">L</th><th class="num">M</th><th class="num">Score</th><th class="num">Quantification</th></tr></thead><tbody>
+<tr><td>Terminal capital intensity never normalises — the "temporary" build becomes permanent</td><td class="num">4</td><td class="num">5</td><td class="num">20</td><td class="num">$161/sh across the modelled range on the FCFE leg; management gave no 2027 frame</td></tr>
+<tr><td>Depreciation wave compresses margins faster than modelled</td><td class="num">5</td><td class="num">3</td><td class="num">15</td><td class="num">Direction near-certain (Q2 D&amp;A +46%); FY26–28 deferral $38bn (model estimate)</td></tr>
+<tr><td>AI-compensation and compute cost war persists</td><td class="num">4</td><td class="num">3</td><td class="num">12</td><td class="num">SBC +52% H1 to 11.7% of revenue; costs +55% vs revenue +28%</td></tr>
+<tr><td>Ad growth decelerates into the spend (bear path)</td><td class="num">2</td><td class="num">5</td><td class="num">10</td><td class="num">Bear FCFE $137; ads are 97.6% of revenue — one engine pays for everything</td></tr>
+<tr><td>Legal / regulatory: youth trials, EU</td><td class="num">4</td><td class="num">2</td><td class="num">8</td><td class="num">$2.4bn charged in Q2 alone; company flags possible "material loss" on US youth trials</td></tr>
+<tr><td>Upside risk to a short view: AI monetises visibly (agents, compute resale at premium, ad share gains)</td><td class="num">3</td><td class="num">4</td><td class="num">12</td><td class="num">Bull blend $532; compute "offers at a significant premium" per the call</td></tr>
+</tbody></table>
+<p><strong>Market risk:</strong> 30-day realised volatility is 53.6% annualised (beta 1.35); a one-day 5% move is routine around prints — position sizing must assume it. <strong>Governance:</strong> the dual-class structure gives Class B (13.5% of shares, ten votes each) roughly 61% of the vote; the founder controls the spend, and the capex programme is not practically subject to shareholder discipline. That cuts both ways and we score it inside the capital-intensity risk.</p>
+<p><strong>The steelmanned bull case, at full strength.</strong> First, <em>the engine is accelerating, not decaying</em>: +28% revenue at this scale, on volume and price simultaneously, is the strongest ad print in Big Tech; ex-charges operating income still grew 9%, and the ~8,000-role May restructuring takes its compensation cost out of the run-rate from Q4. Second, <em>the capex may be underwritten</em>: management says outside parties are offering to pay "a significant premium" over Meta's cost for its compute — if true at scale, the marginal data centre is NPV-positive even before Meta's own use, and our terminal-capex fear is misplaced. Third, <em>the clock may be right</em>: if utilisation, not obsolescence, governs economic life — and capacity is this scarce — 5.5 years is defensible and the re-mark overstates the distortion; we disclosed exactly this uncertainty in §3. Fourth, the multiple already de-rated: 17.8&times; our FY2026E reported EPS is cheaper than Microsoft (25&times;), Alphabet on clean earnings (32&times;), and the S&amp;P (~23&times;). If 2027 capex is guided flat and margins inflect, the bull blend of $532 becomes the base — we concede the thesis in that world and say so now.</p>
+<p><strong>What would change our mind, with dates.</strong></p>
+<table><thead><tr><th>Catalyst</th><th class="num">When</th><th class="num">What we watch</th></tr></thead><tbody>
+<tr><td>Q3-2026 Form 10-Q</td><td class="num">~late Oct 2026</td><td class="num">The next useful-life note and the servers-depreciation split — the running check on §3 (the Q2 10-Q, filed 30 Jul, held 5.5 years)</td></tr>
+<tr><td>Q3-2026 print</td><td class="num">Late Oct 2026</td><td class="num">Margin ex-charges; any first frame on 2027 capex; D&amp;A run-rate vs our ~$27.5bn FY26E</td></tr>
+<tr><td>FY2026 results + FY2027 capex guide</td><td class="num">Late Jan 2027</td><td class="num">The single biggest input to fair value. A guide implying capex/revenue on a stated glide path below ~40% moves us to HOLD</td></tr>
+<tr><td>US youth-safety trials</td><td class="num">Through 2026</td><td class="num">Company's own "material loss" language; a second $2bn+ charge year would mark the legal line as structural</td></tr>
+</tbody></table>
+<p><strong>Levels, against the $370 fair value:</strong> above $585 (the pre-print close) the gap to fair value is at its widest; at the $539 close the valuation argument is fully against the price; near $390 the valuation argument is exhausted — neutral; at <strong>$278</strong> (a 25% margin of safety to fair value) long interest begins if the operating KPIs are intact. We would concede outright on a 2027 capex guide at or below ~$140bn <em>with</em> a stated glide path, or two consecutive quarters of 45%+ ex-charge operating margin while ad growth holds above 20%: in that world the bull engine is the right one and the stock is roughly fairly priced. The Fund holds no position in META, and this note does not recommend initiating a short; a conviction this dependent on the timing of a capex cycle has no reliable clock, and at 53.6% realised volatility, carry is expensive in both directions.</p>
+<h2><span class="n">§6</span> Where this note sits in the series</h2>
+<p>This is the Meta satellite of <a href="../depreciation-question/">The Depreciation Question</a> (July 17) and its Q2 scoreboard <a href="../depreciation-scoreboard/">The First Invoice</a> (July 30). In that framework Meta is <strong>the extender at the limit</strong>: the longest server clock of the four hyperscalers (5.5 years), the steepest disclosed shift of capex into server-class assets (27% &rarr; 58% &rarr; 43%), and — as of this quarter — a dose near 2&times;, compounding fastest toward the Oracle end of the curve, where the July note found fiscal-2026 earnings 26% overstated. The scoreboard's Q2 verdict (depreciation accelerating four-for-four, doses rising everywhere, every clock held — confirmed by all three late-filed 10-Qs, Meta's included) is the out-of-sample evidence this valuation stands on. The siblings each carry one face of the same invoice: <a href="../msft-valuation/">Microsoft</a> held its clock while the bill arrived fastest; <a href="../googl-valuation/">Alphabet</a> is the benchmark the group is measured against; <a href="../amzn-valuation/">Amazon</a> is the only company that shortened a clock, and pays for the honesty in cash; <a href="../aapl-valuation/">Apple</a> is the control the framework is tested against. The series re-scores itself every earnings season.</p>
+<h2><span class="n">§7</span> Sources &amp; Method</h2>
+<p>Every filed figure is drawn from Meta's SEC filings via EDGAR or Meta's investor-relations site, pulled and verified on <strong>July 31, 2026</strong>; market data from verified end-of-day sources on the same date. Model figures come from the July v3 vintage model, published 17 July 2026 and unchanged since. The full Phase-0 capture, with per-feed timestamps, content hashes and failure log, is archived in the snapshot manifest (<code>ton618-tech-valuation/data/META/2026-07-31-052859</code>).</p>
+<p><strong>Filings and issuer documents relied upon.</strong> Q2-2026 Form 8-K Exhibit 99.1, filed 29 Jul 2026 (0001628280-26-050596) — Q2/H1 income statement, balance sheet, cash flows, segments, operational metrics, all FY2026 guidance figures and guidance language. FY2025 Form 10-K, filed 29 Jan 2026 (0001628280-26-003942) — FY2023–25 statements; the useful-life policy table ("servers and network assets: five to 5.5 years"); the change-in-estimate disclosure (January 2025 assessment, effective 1 Jan 2025; FY2025 impact $2.92bn depreciation / $2.59bn net income / $1.00 per diluted share, quoted verbatim in §3); PP&amp;E components including $50.5bn construction-in-progress; capital-return detail; cover-page share counts (2,187.2M Class A, 342.4M Class B at 23 Jan 2026). FY2024 Form 10-K, filed 30 Jan 2025 (0001326801-25-000017) — the prior "four to five years" policy table and the pre-announcement of the 5.5-year change ("approximately $2.9 billion"). Q1-2026 Form 8-K Exhibit 99.1, filed 29 Apr 2026 (0001628280-26-028364) — the prior FY2026 guidance ranges (capex $125–145bn "increased from our prior range of $115–135bn"; expenses $162–169bn) and Q1 capex. Q3-2025 Form 10-Q, filed 30 Oct 2025 (0001628280-25-047240) — Q3-25 revenue ($51,242M) for the quarterly build; Q4-25 derived as FY minus nine months. Q2-2026 Form 10-Q, filed 30 Jul 2026 (0001628280-26-050705) — the useful-life confirmation (no change in estimate; 5.5 years holds) and the servers-and-network depreciation split ($4.62bn Q2 / $9.01bn H1). Meta's own posted Q2-2026 earnings-call transcript (investor.atmeta.com) — the 2027-capex, ex-charges-operating-income, compute-premium and capital-structure quotations; this is an issuer document, not a third-party transcript.</p>
+<p><strong>Market data and rates.</strong> Prices are adjusted daily closes from Massive Market Data: anchor close $539.03 (30 Jul 2026, first session after the print, −7.95%); pre-print close $585.61 (29 Jul); 52-week intraday range $520.26–$796.25 (251 sessions to 30 Jul); year-to-date −18.3% from the $660.09 year-end close. Market capitalisation ~$1.37tn on ~2,545M shares outstanding (cover-page count plus H1 issuance; the 10-Q updates this). Beta 1.35 computed from two years of daily closes against SPY; 30-day realised volatility 53.6% annualised, same series. Risk-free rate 4.67%, ten-year constant-maturity Treasury (FRED DGS10, 29 Jul 2026). Peer closes (30 Jul): MSFT $451.10, GOOGL $333.66, AMZN $235.50, AAPL $333.43. Consensus expectations for the quarter (~$7.2 EPS, ~$60.2bn revenue) and sell-off attribution are press-sourced (CNBC, Yahoo Finance, 24/7 Wall St; 29–30 Jul) and are used only as context, never as inputs.</p>
+<p><strong>Formulas and conventions.</strong> Dose = capex (including finance-lease principal, as Meta guides) ÷ net income, same window; the FY2025 dose (1.15&times;) uses cash purchases only, matching the July note's basis, and the difference is ~4%. Q2 normalised net income = reported + $3.58bn charges &times; (1 − 0.16); a portion of the legal charge may be non-deductible, which would raise the normalised figure slightly. FY2026E revenue = H1 actual + Q3 guide midpoint + Q4 at +19%; operating income = revenue − expense-guide midpoint; the resulting EPS (~$30.3) includes the Q1 one-time tax benefit (~$3.31/share, derived from the H1 tax line) and is shown normalised (~$28.0) alongside. FCFE = EBIT&times;(1−17%) + D&amp;A − capex − after-tax net interest + net borrowing, discounted at Ke 10.75% (CAPM: 4.67% + 1.35 &times; 4.5%), mid-year convention from a 31 Jul 2026 valuation date, terminal Gordon growth 3.5% (bear 3.0%). SBC is never added back and the 2,566M diluted count is held flat. The re-mark deltas ($10.2/$13.6/$14.8bn pre-tax, 2026–28) are the July v3 model's Meta rows: 43% server share, straight-line, model capex $130bn — the floor of the current guide, making the deltas conservative. Re-marked EPS deducts the year's delta &times; (1 − 17%) ÷ 2,566M.</p>
+<p><strong>Limitations, stated.</strong> (1) The Meta re-mark's pre-2025 blended life (4.65 years) is a <strong>fitted parameter</strong> within Meta's disclosed range; the Meta leg is not independently validated (§3) — the model's independent validation rests on other companies' disclosed life-change benefits. (2) The Q2-2026 10-Q (0001628280-26-050705, filed July 30) was incorporated before release: no change in estimate is disclosed, closing the 5.5-year confirmation; its servers-and-network depreciation split ($4.62bn Q2 / $9.01bn H1) is cited in §3. (3) The 4.5% equity risk premium is an analyst assumption with high leverage on the output; the sensitivity table prices the disagreement. (4) FY2026E net income depends on the expense-guide midpoint; the guide is $165–169bn wide, worth roughly ±$1.6bn of net income. (5) Q4-2025 revenue is derived (FY minus nine months), not separately filed. Each chart carries its source beneath it.</p>
+<h2><span class="n">§8</span> Disclosures</h2>
+<p><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (§202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses. This report discusses Meta Platforms (META), Microsoft (MSFT), Alphabet (GOOGL), Amazon (AMZN), Apple (AAPL), Oracle (ORCL) and NVIDIA (NVDA); the Fund holds no position, long or short, in any of them, and has no economic interest in the price of any security named here. The Fund receives no compensation from any party in connection with its research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. The AI used is developed by Anthropic. All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <strong>not</strong> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <strong>not</strong> issued, reviewed, endorsed, certified, or approved by — nor affiliated with — CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome — please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>.</p>
+
+</main></body></html>
