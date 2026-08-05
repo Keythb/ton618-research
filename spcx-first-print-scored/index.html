@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TON618 &#8212; The First Print, Scored (SPCX)</title>
+<style>
+:root { --ink:#111111; --gold:#8a6d2a; --golds:#C9A24B; --red:#8c2f2f;
+        --mut:#6f6f6f; --hair:#d9d4c7; --paper:#fff; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--paper); color:var(--ink);
+       font:16px/1.62 Georgia,'Times New Roman',serif; }
+.page { max-width:880px; margin:0 auto; padding:56px 36px 72px; }
+.kicker { font-family:'Helvetica Neue',Arial,sans-serif; font-size:11.5px;
+          letter-spacing:.22em; text-transform:uppercase; color:var(--mut); }
+.kicker b { color:var(--gold); font-weight:600; }
+h1 { font-size:46px; line-height:1.1; font-weight:400; margin:18px 0 12px;
+     letter-spacing:-.015em; }
+.dek { font-size:19px; line-height:1.5; color:#3d3d3d; max-width:46em; }
+.byline { font-family:'Helvetica Neue',Arial,sans-serif; font-size:12.5px;
+          color:var(--mut); margin:16px 0 0; }
+hr.hair { border:0; border-top:1px solid var(--hair); margin:30px 0; }
+.marker { display:flex; align-items:center; gap:9px;
+          font-family:'Helvetica Neue',Arial,sans-serif; font-size:11.5px;
+          letter-spacing:.2em; text-transform:uppercase; margin:46px 0 10px; }
+.marker .ic { width:21px; height:21px; }
+h2 { font-size:28px; font-weight:400; line-height:1.24; margin:0 0 14px; }
+p { margin:0 0 15px; max-width:46em; }
+.fig { margin:28px 0 8px; }
+.fig svg { width:100%; height:auto; display:block; }
+.figcap { font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px;
+          color:var(--mut); margin:8px 0 0; max-width:52em; }
+.band { background:#101010; color:#eee; margin:46px -36px; padding:34px 36px;
+        break-inside:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.band .cols { display:flex; gap:34px; flex-wrap:wrap; max-width:880px; margin:0 auto; }
+.band .col { flex:1 1 200px; }
+.band .n { font-family:Georgia,serif; font-size:42px; line-height:1; color:var(--golds); }
+.band .l { font-family:'Helvetica Neue',Arial,sans-serif; font-size:12.5px;
+           line-height:1.45; color:#c9c9c9; margin-top:9px; }
+table { border-collapse:collapse; width:100%; margin:22px 0 8px;
+        font-family:'Helvetica Neue',Arial,sans-serif; font-size:13.5px; }
+th { text-align:left; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+     color:var(--mut); font-weight:600; padding:0 14px 8px 0;
+     border-bottom:1px solid var(--ink); }
+td { padding:10px 14px 10px 0; border-bottom:1px solid var(--hair); vertical-align:top; }
+td.r, th.r { text-align:right; padding-right:0; }
+tr.hot td { background:#faf6ea; font-weight:600; }
+.scorecard { margin:26px 0 10px; }
+.scorecard .row { display:flex; gap:20px; padding:20px 0;
+                  border-top:1px solid var(--hair); break-inside:avoid; }
+.scorecard .row:last-child { border-bottom:1px solid var(--hair); }
+.vmark { flex:0 0 96px; text-align:center; }
+.vmark .ic { width:26px; height:26px; }
+.vlab { display:block; font-family:'Helvetica Neue',Arial,sans-serif; font-size:10px;
+        letter-spacing:.16em; font-weight:700; margin-top:5px; }
+.row.ok .vmark { color:#2f6b3f; }
+.row.no .vmark { color:var(--red); }
+.vbody h4 { font-family:'Helvetica Neue',Arial,sans-serif; font-size:14.5px;
+            font-weight:600; margin-bottom:5px; }
+.vbody p { font-size:14.5px; margin:0; }
+.pull { border-left:2px solid var(--gold); padding:4px 0 4px 20px; margin:28px 0;
+        font-size:20px; line-height:1.5; color:#2c2c2c; max-width:42em;
+        break-inside:avoid; }
+.sources { margin-top:44px; }
+.sources h2 { font-size:20px; margin-bottom:12px; }
+.sources p { font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px;
+             line-height:1.62; color:#555; max-width:58em; margin-bottom:11px; }
+.t618-caption { font-family:'Helvetica Neue',Arial,sans-serif; font-size:11px;
+                line-height:1.6; color:#7a7a7a; margin:0 0 10px; max-width:none; }
+.t618-caption a { color:#7a7a7a; }
+@media print {
+  .page { padding:24px 0 40px; }
+  .band { margin:36px 0; }
+  h1 { font-size:37px; }
+  .fig, .scorecard .row, table, .pull { break-inside:avoid; }
+}
+</style></head><body>
+<div class="page">
+
+<div class="kicker"><b>TON618 CAPITAL</b> &nbsp;&#183;&nbsp; EQUITY RESEARCH &#8212; POST-PRINT NOTE &nbsp;&#183;&nbsp; NASDAQ: SPCX</div>
+<h1>The First Print, Scored</h1>
+<p class="dek">We published five gauges the night before SpaceX&#8217;s first-ever earnings report so the
+scoring could not be revised after the fact. Three cleared, two missed &#8212; and the guide we were told
+did not exist turns out to be the most aggressive number in the quarter: <b>$100 billion of annualized
+revenue by December</b>, against $23 billion today. Our fair value rises 18% to <b>$78.51</b>. The
+recommendation does not change. And tomorrow morning, <b>911.5 million shares</b> become free to trade
+into a float of 646 million.</p>
+<p class="byline">5 August 2026, 10:28 ET &#183; SPCX $115.59 (-7.8% on the day) &#183;
+prior note: <i>The First Print: What $111 Still Has to Believe</i>, 3 August 2026 &#183;
+Q2-2026 results and 10-Q filed 4 August 2026</p>
+
+<hr class="hair">
+
+<p><b>The verdict first.</b> SpaceX&#8217;s first quarter as a public company was, on the operating
+numbers, better than we expected: revenue $7.81B (+92%), adjusted
+EBITDA $3.5B, and an AI segment that went from a rounding error to $2.56B of quarterly
+revenue with positive segment EBITDA. We are raising our probability-weighted fair value from
+<b>$66.50 to $78.51</b>, an increase of 18%. We are also
+<b>maintaining AVOID</b>: at $115.59 the expected return to that revised fair value is
+<b>-32%</b>, and the enterprise value still capitalizes $88B of
+steady-state annual free cash flow against a business burning $64B a year.
+Raising a target and staying negative is not a hedge &#8212; it is what the evidence supports.</p>
+
+<p>Note the tape, because it is doing the argument for us. The stock closed at $125.33 the day of
+the print, spiked to $130.99 after hours, and now trades at $115.59 &#8212; <b>+0.9% versus
+the $114.53 close of the session before the release</b>. Twenty-four hours of digestion have
+round-tripped the entire earnings move.</p>
+
+<div class="marker" style="color:#8a6d2a"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8 9h5M8 13h8M8 17h6"/></svg><span>The scorecard</span></div>
+<h2>Five gauges, pre-registered 3 August. Three cleared, two missed.</h2>
+
+<p>We published these thresholds before the evidence existed, which is the only way a scorecard means
+anything. One of the misses is worse than we expected. One of the &#8220;clears&#8221; is a correction against
+ourselves.</p>
+
+<div class="scorecard"><div class="row ok"><div class="vmark"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="vlab">CLEARED</span></div><div class="vbody"><h4>1 &#183; Starlink ARPU stops falling</h4><p>ARPU held at <b>$66</b> &#8212; flat sequentially, the first hold in the disclosed series &#8212; while subscribers reached <b>12.0M</b> on a record <b>1.7M</b> net adds. We pre-registered &#8220;ARPU stabilizing in the $60s&#8221; with &#8220;a subscriber print near ~12M.&#8221; Both arrived.</p></div></div><div class="row no"><div class="vmark"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="vlab">MISSED</span></div><div class="vbody"><h4>2 &#183; Launch segment EBITDA back above zero</h4><p>Space adjusted EBITDA <b>&#8722;$205M</b>, a second consecutive negative quarter, though the loss narrowed from &#8722;$351M. Segment R&amp;D of $1,076M still exceeds segment revenue of $962M. Starship Flight 13 &#8220;went incredibly well&#8221; per Musk &#8212; the engineering is progressing; the economics have not arrived.</p></div></div><div class="row ok"><div class="vmark"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="vlab">CLEARED</span></div><div class="vbody"><h4>3 &#183; xAI becomes a revenue line, not a KPI</h4><p>AI revenue <b>$2,561M</b>, up 213% sequentially, with segment adjusted EBITDA swinging to <b>+$1,146M</b> from &#8722;$609M. Backed by <b>$14.1B</b> of contracted Cloud Services Agreements and 1.4GW of nameplate compute. This is the gauge that cleared most emphatically, and it drives our upgrade.</p></div></div><div class="row no"><div class="vmark"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="vlab">MISSED</span></div><div class="vbody"><h4>4 &#183; A capex peak, dated</h4><p>Capex <b>$18,369M</b> in the quarter ($15,828M of it AI). Not only was no peak given &#8212; CFO Bret Johnsen guided the other way: &#8220;the next two quarters are very similar to the current quarter from a CapEx level perspective.&#8221; That is roughly $36B more before year-end. The gauge did not merely fail; it inverted.</p></div></div><div class="row ok"><div class="vmark"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="vlab">CLEARED</span></div><div class="vbody"><h4>5 &#183; The first-ever guide</h4><p>Given &#8212; on the call, not in the release. Management guided to a <b>$100B annualized revenue run-rate by December 2026</b>, with Musk saying &#8220;the $100 billion ARR in December is not a question mark,&#8221; and pulled the $1 trillion revenue target from 2031 to 2030. No quarterly guidance. We scored this NOT GIVEN off the release alone; the call corrected us.</p></div></div></div>
+
+<p>On gauge 5, the correction matters and we will state it plainly: we scored it NOT GIVEN in a draft
+built from the earnings release alone, because the release contains no guidance. The guidance was
+delivered verbally on the call. That is a lesson about the difference between a filing and a
+disclosure event, and we held this note a day to catch it.</p>
+
+<div class="marker" style="color:#8a6d2a"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 0 1 16 0"/><path d="M12 17l4.4-5.4"/><path d="M4.6 13.6l1.7.9"/><path d="M12 9v-2"/><path d="M19.4 13.6l-1.7.9"/></svg><span>The number that dominates</span></div>
+<h2>$100 billion by December &#8212; against $23 billion today</h2>
+
+<p>This is the most consequential thing said all quarter, and it did not appear in a single filed
+document. Management guided to a <b>$100B annualized revenue run-rate by December 2026</b>. Trailing
+twelve-month revenue is <b>$23.0B</b>. Annualizing the quarter just reported gives
+<b>$31.3B</b>. Reaching $100B ARR by December therefore requires roughly
+<b>3.2&#215; the current run-rate inside two quarters</b>. CFO Bret Johnsen framed it as a
+trajectory &#8212; &#8220;we believe this puts us on a trajectory&#8230; to reach $100 billion of ARR&#8230; by
+the end of this year&#8221; &#8212; and Musk went further: <i>&#8220;the $100 billion ARR in December is not a
+question mark. That&#8217;s what we would achieve if we basically did nothing.&#8221;</i> Presented, in other
+words, not as the stretch case but as the floor.</p>
+
+<div class="fig"><svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif" role="img" aria-label="Annualized quarterly revenue run-rate versus the 100 billion dollar December 2026 target management guided to on the call"><line x1="74" y1="244.0" x2="850" y2="244.0" stroke="#e9e5da" stroke-width="1"/><text x="65" y="247.5" text-anchor="end" font-size="11" fill="#8b8b8b">$0B</text><line x1="74" y1="195.4" x2="850" y2="195.4" stroke="#e9e5da" stroke-width="1"/><text x="65" y="198.9" text-anchor="end" font-size="11" fill="#8b8b8b">$25B</text><line x1="74" y1="146.9" x2="850" y2="146.9" stroke="#e9e5da" stroke-width="1"/><text x="65" y="150.4" text-anchor="end" font-size="11" fill="#8b8b8b">$50B</text><line x1="74" y1="98.3" x2="850" y2="98.3" stroke="#e9e5da" stroke-width="1"/><text x="65" y="101.8" text-anchor="end" font-size="11" fill="#8b8b8b">$75B</text><line x1="74" y1="49.7" x2="850" y2="49.7" stroke="#e9e5da" stroke-width="1"/><text x="65" y="53.2" text-anchor="end" font-size="11" fill="#8b8b8b">$100B</text><rect x="121.1" y="212.4" width="72.1" height="31.6" fill="#111111"/><text x="157.1" y="205.4" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="600">$16.3B</text><text x="157.1" y="262.0" text-anchor="middle" font-size="11" fill="#8b8b8b">Q1-25</text><rect x="259.7" y="212.4" width="72.1" height="31.6" fill="#111111"/><text x="295.7" y="205.4" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="600">$16.3B</text><text x="295.7" y="262.0" text-anchor="middle" font-size="11" fill="#8b8b8b">Q2-25</text><rect x="398.3" y="207.5" width="72.1" height="36.5" fill="#111111"/><text x="434.3" y="200.5" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="600">$18.8B</text><text x="434.3" y="262.0" text-anchor="middle" font-size="11" fill="#8b8b8b">Q1-26</text><rect x="536.8" y="183.3" width="72.1" height="60.7" fill="#111111"/><text x="572.9" y="176.3" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="600">$31.3B</text><text x="572.9" y="262.0" text-anchor="middle" font-size="11" fill="#8b8b8b">Q2-26</text><line x1="74" y1="49.7" x2="858" y2="49.7" stroke="#8a6d2a" stroke-width="1.6" stroke-dasharray="7 5"/><text x="864" y="45.7" font-size="12.5" fill="#8a6d2a" font-weight="700">$100B ARR</text><text x="864" y="60.7" font-size="11" fill="#8a6d2a">guided for December 2026</text><line x1="642.9" y1="183.2" x2="642.9" y2="49.7" stroke="#8c2f2f" stroke-width="1.3"/><path d="M638.9 56.7 l4 -7 4 7" fill="none" stroke="#8c2f2f" stroke-width="1.3"/><text x="652.9" y="116.5" font-size="12" fill="#8c2f2f" font-weight="600">3.2&#215; in</text><text x="652.9" y="130.5" font-size="12" fill="#8c2f2f" font-weight="600">two quarters</text><text x="74" y="26" font-size="12" fill="#111111" font-weight="600">Revenue run-rate, quarter annualized</text></svg></div>
+<p class="figcap">Each bar annualizes that quarter&#8217;s reported revenue. The gold line is the December
+2026 target management stated on the call.</p>
+
+<p><i>We believe</i> the honest treatment of this number is neither to adopt it nor to dismiss it. It is
+not impossible: the AI segment tripled sequentially, the $14.1B of Cloud Services Agreements the company
+reported entering in the quarter contributed $1.6B of its revenue and leave a large contracted balance
+still to convert, and
+nameplate compute went from 400MW a year ago to
+1.4GW today. It is also a target from a management team that, in the same call, set a
+tentative 20GW power-and-cooling goal for end-2027 and then immediately walked it back: <i>&#8220;I
+don&#8217;t think we&#8217;re going to achieve 20 GW&#8230; we&#8217;d still probably have&#8230; something
+close to 15 GW.&#8221;</i> A company willing to tell you which of its own goals
+it will miss has earned some credit; a 3.2&#215; revenue step in six months has not yet earned any.</p>
+
+<div class="pull">If December ARR genuinely prints near $100 billion, our bull case is too low and this
+note will say so in January. Nothing in the quarter just reported requires us to assume it yet.</div>
+
+<div class="marker" style="color:#8a6d2a"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15"/><path d="M9 19h6"/><path d="M5 7h14"/><path d="M5 7l-2.4 5a2.6 2.6 0 0 0 4.8 0Z"/><path d="M19 7l-2.4 5a2.6 2.6 0 0 0 4.8 0Z"/></svg><span>The revised model</span></div>
+<h2>Every segment moved. The conclusion did not.</h2>
+
+<table>
+<tr><th>Segment, $B</th><th class="r">Bear</th><th class="r">Base</th><th class="r">Bull</th><th>What changed</th></tr>
+<tr><td><b>Connectivity</b></td><td class="r">$190</td><td class="r">$370</td><td class="r">$700</td><td>Raised. ARPU stabilized at $66 on record net adds; 66% revenue growth.</td></tr><tr><td><b>Space</b></td><td class="r">$65</td><td class="r">$170</td><td class="r">$470</td><td>Trimmed. A second negative-EBITDA quarter; Starship still pre-economics.</td></tr><tr><td><b>AI</b></td><td class="r">$110</td><td class="r">$330</td><td class="r">$620</td><td>Raised hardest. $2.56B quarterly revenue and a positive EBITDA swing, from a standing start.</td></tr>
+<tr><td>Net cash</td><td class="r">$60.6</td><td class="r">$60.6</td>
+<td class="r">$60.6</td><td>Cut from the $79.5B we carried in June &#8212; the first real balance sheet.</td></tr>
+<tr><td><b>Per share</b> &#183; 13.176B shares</td>
+<td class="r"><b>$32.30</b></td><td class="r"><b>$70.63</b></td>
+<td class="r"><b>$140.46</b></td>
+<td><b>Probability-weighted (25/50/25): $78.51</b>, up 18% from $66.50.</td></tr>
+</table>
+
+<p>The net-cash correction is worth isolating. In June we modelled $79.5B of net cash from the
+prospectus, with total debt flagged as an open estimate. The actual figure, now that a balance sheet
+exists, is <b>$60.6B</b> &#8212; $18.9B lower, costing <b>$1.43 per share</b> on the
+13.176B shares now outstanding. It is the single largest downward revision in the model and it
+came from replacing our estimate with a filing.</p>
+
+<div class="band"><div class="cols">
+<div class="col"><div class="n">$88B</div><div class="l">Steady-state annual free cash
+flow the current enterprise value capitalizes at a 10% discount rate and 4% terminal growth</div></div>
+<div class="col"><div class="n">&#8722;$64B</div><div class="l">Actual free cash flow,
+the reported quarter annualized &#8212; a gap of roughly $152B a year</div></div>
+<div class="col"><div class="n">82%</div><div class="l">Share of our <i>revised, raised</i>
+bull-case sum-of-the-parts the price still requires</div></div>
+</div></div>
+
+<p>That last figure is the discipline of the whole exercise. We raised the bull case to $1,790B
+&#8212; and the market still asks for 82% of it. At $63&#215; trailing revenue,
+the multiple compressed from the IPO&#8217;s 90&#215; mostly because revenue grew, not because the price fell.</p>
+
+<div class="marker" style="color:#8a6d2a"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M6 20V9M18 20V9"/><path d="M6 9h12"/><path d="M12 3v9"/><path d="M9 6l3-3 3 3"/></svg><span>Tomorrow morning</span></div>
+<h2>911.5 million shares unlock tomorrow &#8212; into a float of 646 million</h2>
+
+<p>This is the most immediate fact about SPCX and it has nothing to do with the quarter. SpaceX listed
+with an exceptionally thin float: <b>646 million shares</b>, 4.9% of the
+13.18 billion outstanding &#8212; a touch above the 638.9 million Class A shares sold in the
+IPO once the underwriters' option was exercised in full. The lock-up on the remaining stock is not a single cliff but a
+ladder, and its first and largest early rung is tomorrow.</p>
+
+<p>The prospectus is explicit: for shares subject to the 180-day lock-up, an automatic early release
+occurs <i>&#8220;on or after the second full trading day on Nasdaq immediately following the public release of
+our quarterly financial results&#8230; for the quarter ended June 30, 2026&#8230; up to 20% of the shares may be
+Transferred.&#8221;</i> The release was Tuesday 4 August. The first full trading day was today. <b>The second
+is Thursday 6 August.</b> The prospectus puts that first tranche at
+<b>911.5 million shares</b> &#8212; the 20% step, net of stock held by affiliates, out of a
+180-day lock-up pool of roughly <b>4.69 billion shares</b>.</p>
+
+<div class="fig"><svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue,Arial,sans-serif" role="img" aria-label="SPCX tradable float steps from 646 million shares today to 1.56 billion tomorrow, then further lock-up tranches through December 8 2026"><line x1="74" y1="352.0" x2="966" y2="352.0" stroke="#e9e5da" stroke-width="1"/><text x="65" y="355.5" text-anchor="end" font-size="11" fill="#8b8b8b">0</text><line x1="74" y1="300.5" x2="966" y2="300.5" stroke="#e9e5da" stroke-width="1"/><text x="65" y="304.0" text-anchor="end" font-size="11" fill="#8b8b8b">1B</text><line x1="74" y1="249.0" x2="966" y2="249.0" stroke="#e9e5da" stroke-width="1"/><text x="65" y="252.5" text-anchor="end" font-size="11" fill="#8b8b8b">2B</text><line x1="74" y1="197.6" x2="966" y2="197.6" stroke="#e9e5da" stroke-width="1"/><text x="65" y="201.1" text-anchor="end" font-size="11" fill="#8b8b8b">3B</text><line x1="74" y1="146.1" x2="966" y2="146.1" stroke="#e9e5da" stroke-width="1"/><text x="65" y="149.6" text-anchor="end" font-size="11" fill="#8b8b8b">4B</text><line x1="74" y1="94.6" x2="966" y2="94.6" stroke="#e9e5da" stroke-width="1"/><text x="65" y="98.1" text-anchor="end" font-size="11" fill="#8b8b8b">5B</text><rect x="92.8" y="318.7" width="61.4" height="33.3" fill="#111111"/><text x="123.6" y="310.7" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="700">646M</text><text x="123.6" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">Today</text><text x="123.6" y="383.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">8/5</text><rect x="191.9" y="271.8" width="61.4" height="80.2" fill="#8a6d2a" fill-opacity="0.90"/><text x="222.7" y="263.8" text-anchor="middle" font-size="11.5" fill="#8a6d2a" font-weight="700">1.56B</text><text x="222.7" y="370.0" text-anchor="middle" font-size="11.5" fill="#8a6d2a" font-weight="700">TOMORROW</text><text x="222.7" y="383.0" text-anchor="middle" font-size="11.5" fill="#8a6d2a" font-weight="700">8/6</text><rect x="291.1" y="255.4" width="61.4" height="96.6" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="321.8" y="247.4" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">1.88B</text><text x="321.8" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">8/20</text><rect x="390.2" y="235.9" width="61.4" height="116.1" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="420.9" y="227.9" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">2.25B</text><text x="420.9" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">9/9&#8211;10</text><rect x="489.3" y="219.0" width="61.4" height="133.0" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="520.0" y="211.0" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">2.58B</text><text x="520.0" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">9/24</text><rect x="588.4" y="202.1" width="61.4" height="149.9" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="619.1" y="194.1" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">2.91B</text><text x="619.1" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">10/9</text><rect x="687.5" y="185.2" width="61.4" height="166.8" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="718.2" y="177.2" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">3.24B</text><text x="718.2" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">10/24</text><rect x="786.6" y="118.3" width="61.4" height="233.7" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="817.3" y="110.3" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">4.54B</text><text x="817.3" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">Q3 print</text><text x="817.3" y="383.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">~early Nov</text><rect x="885.7" y="77.2" width="61.4" height="274.8" fill="#ffffff" stroke="#bdb6a4" stroke-width="1" stroke-dasharray="3 3"/><text x="916.4" y="69.2" text-anchor="middle" font-size="11.5" fill="#111111" font-weight="400">5.34B</text><text x="916.4" y="370.0" text-anchor="middle" font-size="10.5" fill="#8b8b8b" font-weight="400">12/8</text><path d="M123.6 304.7 V221.8 H222.7 V239.8" fill="none" stroke="#8a6d2a" stroke-width="1.3"/><path d="M218.5 238.8 H226.9 L222.7 245.8 Z" fill="#8a6d2a"/><text x="173.1" y="212.8" text-anchor="middle" font-size="13.5" fill="#8a6d2a" font-weight="700">+141% &#183; 2.41&#215;</text><text x="966" y="24" text-anchor="end" font-size="11" fill="#9a9a9a">Dashed = scheduled tranches still to come. The conditional 455.8M tranche never triggered.</text><text x="74" y="24" font-size="12" fill="#111111" font-weight="600">Shares free to trade</text></svg></div>
+<p class="figcap">Shares free to trade, cumulative, on the 424B4 release ladder. Tranches after tomorrow
+assume no further conditional releases and exclude the founder and extended-lock-up pools.</p>
+
+<p><b>The detail most calendars will get wrong.</b> A second tranche of 455.8 million shares &#8212; a
+further 10% &#8212; was available on the same date, but only <i>&#8220;if the reported closing price&#8230; is at
+least 30% greater than the public offering price&#8230; for at least five of the ten consecutive trading days
+ending on, and including&#8221;</i> the release date. Thirty percent above the $135 IPO price is
+<b>$175.50</b>. Across those ten sessions the stock&#8217;s best close was
+<b>$125.33</b> &#8212; -28.6% below the trigger, and still below the
+IPO price itself. <b>Zero of ten days qualified.</b> Tomorrow is 20%, not 30%. The failed condition is
+its own verdict on the listing: the lock-up was drafted with a reward for a stock trading 30% above
+issue, and that reward was never in reach.</p>
+
+<table>
+<tr><th>Release date</th><th class="r">Tranche</th><th class="r">Shares</th><th class="r">Cumulative float</th></tr>
+
+<tr class="hot"><td><b>Thu 6 Aug 2026</b> &#8212; second full trading day after the release</td>
+<td class="r"><b>20%</b></td><td class="r"><b>911.5M</b></td><td class="r"><b>1.56B</b></td></tr>
+<tr><td><i>Conditional tranche &#8212; price test failed, see below</i></td>
+<td class="r">10%</td><td class="r">&#8212;</td><td class="r">&#8212;</td></tr>
+<tr><td>20 Aug 2026 (70th day)</td><td class="r">+7%</td><td class="r">319.0M</td><td class="r">1.88B</td></tr>
+<tr><td>9 Sep 2026 (90th day)</td><td class="r">+7%</td><td class="r">319.0M</td><td class="r">2.20B</td></tr>
+<tr><td>10 Sep 2026 (91st day) &#8212; affiliate shares released earlier</td><td class="r">&#8212;</td>
+<td class="r">59.1M</td><td class="r">2.25B</td></tr>
+<tr><td>24 Sep 2026 (105th day)</td><td class="r">+7%</td><td class="r">328.4M</td><td class="r">2.58B</td></tr>
+<tr><td>9 Oct 2026 (120th day)</td><td class="r">+7%</td><td class="r">328.4M</td><td class="r">2.91B</td></tr>
+<tr><td>24 Oct 2026 (135th day)</td><td class="r">+7%</td><td class="r">328.4M</td><td class="r">3.24B</td></tr>
+<tr><td>Second trading day after Q3 results</td><td class="r">+28%</td><td class="r">1.3B</td><td class="r">4.54B</td></tr>
+<tr><td>8 Dec 2026 (180th day) &#8212; remainder</td><td class="r">+17%</td><td class="r">797.6M</td><td class="r">5.34B</td></tr>
+
+</table>
+
+<p><b>And the counterweight, stated as plainly as the risk.</b> The founder&#8217;s shares carry a 366-day
+lock-up with <i>no early release provisions whatsoever</i>, running to 12 June 2027. A further group of
+holders sits under an extended lock-up into 2027. Together those two pools are approximately
+<b>7.8 billion shares &#8212; 59% of the company</b> on the current
+share count (the prospectus states the same pool as &#8220;approximately 60%&#8221; post-offering and
+&#8220;greater than 63%&#8221; pre-offering &#8212; the difference is the denominator, not the pool) &#8212; and
+none of it can be sold this year. The overhang is real, mechanical, and bounded. What arrives tomorrow is
+$105B of newly saleable stock, roughly <b>12.3 days of average
+volume</b>, into a market that has already fallen 8% today.</p>
+
+<p>We are not forecasting the reaction, and we note the obvious confound: today&#8217;s decline may be the
+print, the unlock being front-run, or both, and the two cannot be cleanly separated. The point is that
+a supply event of this size is knowable in advance from a document filed in June, and it lands
+tomorrow morning.</p>
+
+<div class="marker" style="color:#8a6d2a"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M12 12m-3.2 0a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0"/><path d="M12 8.8V7M12 17v-1.8M15.2 12H17M7 12h1.8"/></svg><span>Who is funding the build</span></div>
+<h2>A third of the debt is owed to a director&#8217;s firm</h2>
+
+<p>The 10-Q answers a question the release left open, and the answer is mixed. We had flagged the risk
+that the new AI revenue might be affiliated. The filing&#8217;s related-party note itemises only asset purchases
+from Tesla and the Valor financing described below, then states that other related-party transactions were
+<b>immaterial</b>. It does not address segment revenue in terms. <i>We read</i> that as implying the
+$2.56B of AI revenue is substantially arm&#8217;s-length &#8212; an inference, not a
+statement by the company, and one a later filing could complicate. On that reading it supports the upgrade,
+and we say so.</p>
+
+<p>The financing is a different matter. Of $39.4B in total debt and finance leases,
+<b>$13.3B is owed to Valor Equity Partners</b> &#8212; whose founder, CEO and Chief Investment Officer,
+Antonio Gracias, <b>serves on SpaceX&#8217;s board</b>. The arrangement is an equipment lease for AI
+infrastructure hardware which the company accounts for as a <b>failed sale-leaseback</b>: economically a
+secured borrowing, not a lease. It has grown from $4.5B at year-end to $13.3B at 30 June &#8212;
+<b>+196% in six months</b> &#8212; and cost $327M of interest in the quarter alone, against zero a year ago.
+Separately, SpaceX bought <b>$295M of Tesla Megapacks</b> in the quarter for datacenter power, a real
+disclosed commercial link between the two companies that neither the release nor the call discussed.</p>
+
+<p>None of this is improper, and all of it is disclosed. But a third of the debt funding the largest
+capital program in the company&#8217;s history sits with an entity connected to its own board, and that
+belongs in any assessment of capital quality.</p>
+
+<div class="marker" style="color:#8a6d2a"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The standing call</span></div>
+<h2>Higher fair value. Same recommendation.</h2>
+
+<p><b>AVOID maintained. Probability-weighted fair value $78.51</b> (bear $32.30 /
+base $70.63 / bull $140.46 at 25/50/25), up 18% from
+$66.50. Expected return from $115.59 is <b>-32%</b>. The Fund holds no position.</p>
+
+<p>What would move us to a constructive view, pre-registered as before: a capex peak actually dated by
+management; a third consecutive quarter of AI revenue growth at anything near this rate, with the
+Cloud Services backlog converting; Space segment EBITDA back above zero; and December ARR arriving
+within reach of the $100B claim. Meet those and the bull case is the base case. What we will not do is
+mark our view to a target given verbally on a call, three quarters before it can be tested.</p>
+
+<p>The near-term calendar is now unusually legible: <b>tomorrow&#8217;s unlock</b>, then further 7% tranches
+on 20 August, 9 September, 24 September, 9 October and 24 October, then <b>28% &#8212; up to 1.3 billion
+shares &#8212; two days after the Q3 print</b>, then the balance on 8 December. For a stock whose float is
+currently 4.9% of shares outstanding, that schedule is likely to matter more over the next four months
+than anything in the income statement.</p>
+
+<hr class="hair">
+
+<section class="sources">
+<h2>Sources &amp; Method</h2>
+
+<p><b>Company filings.</b> Q2-2026 results: Form 8-K and Exhibit 99.1, SEC accession
+<b>0001628280-26-052515</b>, filed 4 August 2026 (all Q2 revenue, segment, adjusted-EBITDA, capex and
+cash-flow figures; period ended 30 June 2026). Quarterly report: Form 10-Q, accession
+<b>0001628280-26-052535</b>, filed 4 August 2026 (balance sheet, share counts from the cover page, Note 18
+Segments, and the Related Party Transactions note supplying the Valor and Tesla Megapack figures).
+Lock-up terms: Form 424B4 final prospectus, accession <b>0001628280-26-042639</b>, filed 12 June 2026 &#8212;
+&#8220;Shares Eligible for Future Sale&#8221; and the Underwriting lock-up provisions, from which the release ladder,
+the 20% early-release clause, the 30%-of-offering-price condition, the 366-day founder lock-up and the
+extended lock-up pool are taken verbatim. June valuation inputs: SpaceX Form S-1/A, accession
+<b>0001628280-26-040364</b>, filed 3 June 2026. All filings retrieved from SEC EDGAR on 5 August 2026.</p>
+
+<p><b>Earnings call.</b> Q2-2026 earnings call, 4 August 2026, 16:30 ET. Quotations attributed to CFO Bret
+Johnsen (capital-expenditure phasing, the ARR trajectory) and CEO Elon Musk (the $100B ARR remarks, the
+20GW/15GW capacity comments, the $1 trillion revenue date, Starship Flight 13) are taken from published
+transcripts of that call retrieved 5 August 2026, and were <b>cross-checked against two independent
+transcript publishers</b> (Investing.com and MarketBeat) before use, because two of the five gauge verdicts
+in this note turn on them. None of these statements appears in any filed document: readers who verify only
+against the 8-K will not find them. The call is a secondary source relative to the filings; every figure
+here that carries a valuation consequence is sourced to a filing, and call-sourced statements are
+identified as such in the text.</p>
+
+<p><b>Market data.</b> SPCX $115.59 and TSLA $324.64 at 14:28 UTC (10:28 ET) on 5 August 2026;
+official closes of $125.33 (4 August) and $114.53 (3 August); the after-hours high of $130.99 and low of
+$114.33 on 4 August; and the ten official closes of 22 July&#8211;4 August used to test the lock-up price
+condition &#8212; all from the brokerage consolidated market-data feed, pulled 5 August 2026. Float of 646.0
+million shares and 30-day average volume of 74.4 million shares from the same feed, same date. Note that
+the feed&#8217;s shares-outstanding field (14.02 billion) differs from every filed count; <b>we use
+13.176 billion</b> (7,607M Class A + 5,569M Class B) for every per-share calculation. That is the issued and
+outstanding count on the <b>30 June 2026 balance sheet</b>, chosen to match the balance-sheet date of the
+net-cash figure it is paired with &#8212; not the 10-Q cover page, which reports 13.182 billion as of 28 July
+2026. The 0.04% difference is immaterial to every figure here.</p>
+
+<p><b>Formulas and conventions.</b> Enterprise value = filed share count &#215; market price &#8722; net cash,
+where net cash = cash and equivalents $93,522M + short-term investments $6,487M &#8722; debt and finance leases
+current $2,525M &#8722; non-current $36,839M = $60,645M. Implied steady-state free cash flow = EV &#215;
+(WACC &#8722; g) with WACC 10% and g 4%, the same constants used in the June initiation. Annualized free cash
+flow multiplies the reported quarter (operating cash flow $2,419M less capital expenditure $18,369M =
+&#8722;$15,950M) by four; it is a run-rate illustration, not a forecast. Quarterly figures are derived by
+differencing six-month from three-month disclosures where the company reports on a year-to-date basis.
+Trailing-twelve-month revenue = FY2025 $18,674M &#8722; H1-2025 $8,138M + H1-2026 $12,508M = $23,044M.
+Sum-of-the-parts values are <b>our estimates</b>, not company disclosures, and the scenario probabilities
+(25/50/25) are unchanged judgment carried from the June initiation. Cumulative-float figures in the
+lock-up table assume every scheduled tranche releases in full, no further conditional releases, and no
+sales by founder or extended-lock-up holders; they are ceilings on supply, not predictions of selling.</p>
+
+<p><b>Prior TON618 research relied upon.</b> <i>The First Print: What $111 Still Has to Believe</i>
+(3 August 2026), which pre-registered the five gauges scored here and supplies the June comparison
+figures; and <i>SpaceX (SPCX) Tech-Equity Valuation &#8212; Initiating Coverage</i> (12 June 2026), which
+supplies the original sum-of-the-parts, the $66.4966 probability-weighted fair value, and the $79.5B
+net-cash estimate corrected in this note.</p>
+
+<p><b>Limitations.</b> The $100B December ARR figure is a management target stated on a call, not a
+filed projection, and is treated in this note as a claim to be tested rather than an input. The
+&#8220;consensus&#8221; framing of pre-print expectations is deliberately omitted: we could not verify a
+primary-source estimate. Today&#8217;s price decline cannot be cleanly attributed between the earnings
+reaction and anticipation of tomorrow&#8217;s unlock, and we do not attempt to separate them.</p>
+</section>
+
+<hr class="hair">
+
+<p class="t618-caption"><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an
+offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment
+advice or a recommendation regarding any instrument.</p>
+
+<p class="t618-caption"><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular
+circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any
+client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion
+from the definition of "investment adviser" under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S.
+181 (1985)).</p>
+
+<p class="t618-caption"><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or
+broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material
+conflicts are disclosed where they exist. <em>Ownership:</em> the Fund holds no position in SPCX or TSLA as of the report date, and neither is a
+Fund holding or a BTC-correlated instrument. <em>Compensation:</em> the Fund received no compensation from any party in connection with this
+report and charges nothing for it.</p>
+
+<p class="t618-caption"><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. All methodology and data
+integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, Keyth Beck; errors may nonetheless occur,
+and readers should verify independently.</p>
+
+<p class="t618-caption"><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only).
+CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned by CFA Institute. That reference describes the analytical
+framework applied; it does not imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is not issued,
+reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+
+<p class="t618-caption"><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities
+are volatile and may result in total loss of capital. Corrections and feedback are welcome &mdash; please direct them to CIO Keyth Beck at
+<a href="mailto:keyth@ton618capital.com">keyth@ton618capital.com</a>. <strong>Version</strong> 1.0 &middot; analyst: TON618 Equity Research.</p>
+
+</div></body></html>
