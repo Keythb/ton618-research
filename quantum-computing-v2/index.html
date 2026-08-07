@@ -1,0 +1,2322 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Tripwires: A Six-Week Re-Score — TON618 Capital</title>
+<meta name="description" content="Six weeks after our quantum assessment, we re-score its three
+pre-registered tripwires: the logical-qubit frontier moved, the quantum stocks fell through the
+field's best news cycle, and Bitcoin's fix got funded but not activated. Four new tripwires
+close the note.">
+<style>
+:root{--gold:#8a6d2a;--ink:#111111;--mut:#6B665C;--paper:#FFFFFF;
+--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+font:16px/1.62 var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+main{max-width:830px;margin:0 auto;padding:0 24px 64px}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid #d8cfb8}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.22;margin:0}
+p{margin:0 0 1.05em}
+.small{font-size:12.5px;color:var(--mut)}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;
+padding:26px 0 10px;border-bottom:1px solid var(--gold)}
+.masthead .wm{font:700 15px var(--serif);color:var(--gold);letter-spacing:.04em}
+.masthead .rt{font:11px var(--sans);color:var(--mut);letter-spacing:.28em}
+/* hero */
+.hero{padding:44px 0 8px}
+.hero .emblem{color:var(--gold);max-width:640px;margin:6px 0 26px}
+.hero .kick{font:11.5px var(--sans);color:var(--mut);letter-spacing:.3em;margin:0 0 14px}
+.hero h1{font-size:44px;letter-spacing:-.01em}
+.hero .dek{font:18px/1.55 var(--serif);color:var(--ink);margin:18px 0 8px;max-width:700px}
+.hero .cite{font:12.5px var(--sans);color:var(--mut);margin-top:14px}
+/* stat tiles */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:30px 0 8px;
+border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.stats .t{padding:16px 14px 14px;border-right:1px solid #e4ddcb}
+.stats .t:last-child{border-right:none}
+.stats .n{font:700 30px/1 var(--serif);color:var(--gold)}
+.stats .l{font:11.5px/1.45 var(--sans);color:var(--mut);margin-top:7px}
+/* section markers */
+.mk{display:flex;align-items:center;gap:10px;margin:52px 0 8px;color:var(--gold)}
+.mk .kick{font:11px var(--sans);color:var(--mut);letter-spacing:.26em;white-space:nowrap}
+.mk .wire{flex:1;height:1px;background:var(--gold);opacity:.55}
+h2{font-size:26px;margin:4px 0 16px}
+h3{font-size:17px;margin:22px 0 8px}
+.lede:first-letter{font-family:var(--serif);font-size:52px;line-height:.9;
+color:var(--gold);float:left;padding:4px 8px 0 0}
+/* docket */
+.docket{width:100%;border-collapse:collapse;margin:18px 0 8px;font-size:14px}
+.docket td{padding:13px 10px;border-bottom:1px solid #e4ddcb;vertical-align:top}
+.docket tr:first-child td{border-top:1.5px solid var(--gold)}
+.docket .no{font:700 21px var(--serif);color:#cfc8b4;width:44px}
+.docket .claim{font-family:var(--serif);font-size:15.5px;width:46%}
+.docket .why{color:var(--mut);font-size:12.5px;line-height:1.5}
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+font:700 11px var(--sans);letter-spacing:.12em}
+.chip svg{width:20px;height:20px}
+.chip-warm{color:var(--gold)} .chip-armed{color:var(--mut)} .chip-trip{color:#B0413E}
+/* the one black band */
+.band{background:#0B0B0C;color:#C9A24B;margin:44px -24px;padding:40px 24px 36px;
+text-align:center;break-inside:avoid}
+.band .z{font:700 120px/1 var(--serif)}
+.band .z sup{font-size:56px;vertical-align:38px}
+.band .c{font:14px/1.6 var(--sans);color:#E6D2A2;max-width:560px;margin:14px auto 0}
+/* detonation log (science run) */
+.log{border-left:1px solid var(--gold);margin:20px 0 8px;padding-left:0}
+.log .e{position:relative;padding:2px 0 18px 28px}
+.log .e::before{content:"";position:absolute;left:-5px;top:9px;width:9px;height:9px;
+border:1.5px solid var(--gold);border-radius:50%;background:var(--paper)}
+.log .d{font:700 11.5px var(--sans);color:var(--gold);letter-spacing:.14em}
+.log .t{font:700 15.5px var(--serif);margin:2px 0 3px}
+.log .b{font-size:13.5px;color:var(--mut);line-height:1.55}
+/* tables */
+table.data{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0}
+table.data th{font-family:var(--serif);text-align:left;border-bottom:1.5px solid var(--gold);
+padding:7px 8px;font-size:13px}
+table.data td{border-bottom:1px solid #e4ddcb;padding:7px 8px}
+table.data td:nth-child(n+3),table.data th:nth-child(n+3){text-align:right;
+font-variant-numeric:tabular-nums}
+.chart{margin:22px 0 26px;break-inside:avoid}
+.chart .cap{font:11.5px var(--sans);color:var(--mut);margin-top:6px}
+/* street quadrants */
+.street{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1.5px solid var(--gold);margin:18px 0}
+.street .q{padding:16px 18px 12px;border-bottom:1px solid #e4ddcb}
+.street .q:nth-child(odd){border-right:1px solid #e4ddcb}
+.street .h{font:700 11.5px var(--sans);letter-spacing:.22em;color:var(--gold);margin-bottom:8px}
+.street p{font-size:13.5px;line-height:1.55;margin-bottom:.6em}
+/* steelman */
+.def{counter-reset:d;margin:6px 0}
+.def .a{position:relative;padding:0 0 6px 46px;margin-bottom:14px}
+.def .a::before{counter-increment:d;content:counter(d);position:absolute;left:0;top:-2px;
+font:700 26px var(--serif);color:#cfc8b4}
+.def .a h3{margin-top:0}
+/* rearm docket */
+.rearm td .clock{font:italic 11.5px var(--sans);color:var(--mut)}
+/* appendix + disclosure */
+.sources,.disc{font-size:12.5px;color:var(--mut);line-height:1.6}
+.sources h2,.disc h3{color:var(--ink)}
+.sources b,.disc b{color:var(--ink)}
+.disc{border-top:1px solid var(--gold);margin-top:40px;padding-top:18px}
+.pullq{font:italic 17px/1.6 var(--serif);border-left:2px solid var(--gold);
+padding:2px 0 2px 18px;margin:20px 0;color:var(--ink)}
+@media print{
+ .chart,.stats,.docket tr,.band,.log .e,.street .q,.def .a{break-inside:avoid}
+ .hero{padding-top:20px}
+ h2{break-after:avoid}
+}
+@media (max-width:640px){.stats{grid-template-columns:1fr 1fr}.street{grid-template-columns:1fr}
+.hero h1{font-size:32px}.band .z{font-size:84px}.band .z sup{font-size:40px;vertical-align:26px}}
+</style>
+</head><body><main>
+
+<div class="masthead"><span class="wm">TON618 CAPITAL</span><span class="rt">RESEARCH</span></div>
+
+<div class="hero">
+  <div class="kick">QUANTUM &times; CRYPTO &middot; UPDATE ONE &middot; RE-SCORED AUGUST 6, 2026</div>
+  <h1>The Tripwires:<br>A Six-Week Re-Score</h1>
+  <div class="emblem"><svg viewBox="0 0 640 96" width="100%" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square" aria-hidden="true"><path d="M0 48h216M264 48h172M484 48h156"/><circle cx="240" cy="48" r="22"/><circle cx="460" cy="48" r="22"/><circle cx="460" cy="48" r="9" fill="currentColor" stroke="none"/><circle cx="640" cy="48" r="0.1"/><circle cx="88" cy="48" r="22"/><path d="M74 34l-8-8M102 34l8-8M74 62l-8 8M102 62l8 8" opacity="0"/><path d="M240 22v-8M240 74v8M460 22v-8M460 74v8M88 22v-8M88 74v8" opacity="0.45"/></svg></div>
+  <p class="dek">In June we closed <a href="https://keythb.github.io/ton618-research/quantum-computing/">our first quantum assessment</a> with three
+  pre-registered tripwires — the observations that would change our mind about the timeline.
+  Six weeks later the period splits three ways: <b>the lab sped up, the tape gave up, and the
+  chain hasn&rsquo;t decided.</b> This note re-scores our own scoreboard, line by line, and then re-arms it.</p>
+  <p class="cite">August 6, 2026 &middot; IONQ $39.72 &middot; QBTS $19.41 &middot; RGTI $16.53 &middot; QUBT $8.78 (Aug 6 closes)
+  &middot; BTC &asymp;$64,650 &middot; Follow-up to <a href="https://keythb.github.io/ton618-research/quantum-computing/">How Close Is Quantum Computing to Being Useful?</a> (v1.0, Jun 28, 2026)</p>
+</div>
+
+<div class="stats">
+  <div class="t"><div class="n">1 of 3</div><div class="l">v1.0 tripwires now partially triggered — the logical-qubit count</div></div>
+  <div class="t"><div class="n">70</div><div class="l">logical qubits in IBM&rsquo;s Jul 30 advantage claim, vs. 48 at the June frontier; ~1,200 breaks Bitcoin&rsquo;s curve</div></div>
+  <div class="t"><div class="n">&minus;17%</div><div class="l">the pure-play quantum basket since Jun 24 — through the field&rsquo;s best-ever news cycle</div></div>
+  <div class="t"><div class="n">$15M</div><div class="l">pledged for Bitcoin&rsquo;s quantum defense, against ~$446B of exposed coins</div></div>
+</div>
+
+<p class="lede" style="margin-top:26px">Answer first: <b>the timeline is accelerating — modestly,
+measurably, and on exactly the axes we said to watch — and the equity market is not signaling
+imminence; if anything it is signaling a hangover.</b> Those two sentences point in opposite
+directions, and the distance between them is this note&rsquo;s subject: the lab and the tape have
+decoupled, and only one of them is evidence about Q-Day.</p>
+
+<p>Six weeks ago we wrote that quantum computing had produced zero economically useful results,
+that the error-correction threshold crossing of 2024&ndash;25 was real and foundational, and that the
+honest pacing ran on three clocks — narrow scientific value now, commercial value in the 2030s,
+code-breaking at roughly one-in-three odds within ten years. We closed with three tripwires that
+would change our mind. This note goes back and scores them.</p>
+
+<p>The re-score: <b>one tripwire is partially triggered.</b> On July 30, IBM and University of
+Chicago researchers claimed a verified quantum advantage on a computation using 70 logical qubits —
+a step from &ldquo;a few dozen&rdquo; toward the &ldquo;hundreds&rdquo; we flagged as the threshold
+of concern, and the strongest of three quantum-advantage claims IBM coordinated that day. The claim
+is fresh, the classical-computing community has not yet had its usual turn at bat, and the history
+of this field is that supremacy claims get caught. But our v1.0 marquee stat — &ldquo;zero
+economically useful results&rdquo; — now carries an asterisk for the first time, and intellectual
+honesty requires us to print that.</p>
+
+<p>Meanwhile, the market answered the question &ldquo;are quantum stocks signaling an imminent
+breakthrough?&rdquo; with an emphatic no. Since v1.0&rsquo;s pricing date the four pure-plays fell
+between 9.5% (QUBT) and 26% (IonQ); from their early-June highs, 29&ndash;43%. D-Wave announced a
+genuine <i>Nature</i> hardware result on August 5 and its stock fell 9% the following session. Even
+Arqit, the post-quantum-security name we flagged as the &ldquo;defensive side&rdquo; of the trade,
+fell 25%. The pure-play basket is worth roughly $30 billion today against trailing revenue still in
+the low hundreds of millions — revenue that is, to be fair, growing fast: IonQ alone printed $80
+million in Q2, so the sales multiple is compressing from both directions. The de-rating tells you
+the December&ndash;January speculative episode is unwinding; it tells you nothing about Q-Day.</p>
+
+<p>On Bitcoin, the story of the summer is that the fix moved from &ldquo;monitorable&rdquo; to
+<b>funded and specified — but not activated.</b> BIP-360 was merged into the official BIPs
+repository in February and redesigned into a cleaner construction (Pay-to-Merkle-Root). On July 23,
+nine institutions — BlackRock, Coinbase, Strategy, Fidelity Digital Assets, Galaxy, Block,
+Blockstream, Anchorage, and ARK Invest — pledged $15 million over three years to fund the
+open-source work, explicitly disclaiming any governance role. Coinbase&rsquo;s independent Quantum
+Advisory Council put the canonical exposure at roughly 6.9 million BTC with exposed public keys,
+1.7 million of them Satoshi-era. A functioning post-quantum testnet exists. What does not exist is
+a single activated consensus change — and the freeze-the-vulnerable-coins debate (BIP-361) is where
+the real fight will happen. <b>The binding constraint on Bitcoin&rsquo;s quantum defense has
+migrated from physics to governance.</b></p>
+
+<p>Our posture: we nudge the code-breaking odds modestly upward — from roughly one-in-three within
+ten years toward something closer to 35&ndash;40% — and we are explicit below about why we are not
+jumping further. The three-clocks framework survives intact. The cryptography clock ticks slightly
+faster. And because a re-score is only worth publishing if it re-arms, the note ends the way v1.0
+did: four new tripwires, written down before the evidence arrives.</p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/></svg></span><span class="kick">SECTION 01 · THE DOCKET</span><span class="wire"></span></div><h2>The re-score, line by line</h2>
+<p>Pre-registration only means something if the scoring is mechanical — no reinterpreting the
+language after the fact. v1.0 &sect;7 said, verbatim: <i>&ldquo;What would change our mind: a
+sustained jump in logical-qubit counts (from dozens toward hundreds with low error), a
+fault-tolerant machine shipping ahead of the 2029 vendor targets, or a credible public
+demonstration of Shor&rsquo;s algorithm breaking a non-trivial key.&rdquo;</i> Score each.</p>
+
+<table class="docket">
+<tr><td class="no">01</td>
+<td class="claim">A sustained jump in logical-qubit counts, from dozens toward hundreds</td>
+<td><span class="chip chip-warm"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/></svg><b>PARTIALLY TRIGGERED</b></span></td>
+<td class="why">Frontier moved 48 &rarr; 70 (claimed) on Jul 30. One paper, one week old,
+classical-review cycle not yet run. Warm — not conclusive.</td></tr>
+<tr><td class="no">02</td>
+<td class="claim">A fault-tolerant machine shipping ahead of the 2029 vendor targets</td>
+<td><span class="chip chip-armed"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg><b>NOT TRIGGERED</b></span></td>
+<td class="why">No machine early. But the 2029 roadmaps are holding, not slipping — and slippage
+was our base case.</td></tr>
+<tr><td class="no">03</td>
+<td class="claim">A credible Shor demonstration against a non-trivial key</td>
+<td><span class="chip chip-armed"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg><b>NOT TRIGGERED</b></span></td>
+<td class="why">State of the art remains a 15-bit key (Apr 2026). Bitcoin&rsquo;s keys: 256 bits.
+The distance is exponential, not linear.</td></tr>
+</table>
+
+<h3>Why &ldquo;partially&rdquo; and not &ldquo;triggered&rdquo;</h3>
+<p>The IBM / University of Chicago paper is the strong one of the three July 30 claims: an explicit
+quantum-advantage argument backed by complexity-theoretic hardness, a computation completed in
+about 15 minutes that the authors argue would take prohibitive runtimes classically — executed on
+70 logical qubits with a new error-correction method (arXiv:2607.25941). The Algorithmiq and Qedma
+results make more empirical claims — &ldquo;the classical methods we tested became unreliable in
+this regime&rdquo; — a weaker standard, and the fact-checking literature has already split the
+three claims along exactly this line.</p>
+<p>But the claim is one week old at this writing; the pattern since 2019 is that classical
+simulation teams take weeks-to-months to respond, and they have caught every previous claim at
+least in part; and 70 is still &ldquo;dozens,&rdquo; not &ldquo;hundreds.&rdquo; The tripwire said
+<i>sustained</i>. One paper is not sustained. But 48 &rarr; 70 at the frontier, inside a quarter,
+with an advantage claim attached, is precisely the shape of movement we said to watch.</p>
+<p>For calibration: Google&rsquo;s March 2026 resource estimate puts the break of ECC-256 —
+Bitcoin&rsquo;s curve — at fewer than ~1,200 logical qubits. The frontier just moved from 48 to a
+claimed 70. The distance is a factor of ~17, down from ~25 in June. That is what &ldquo;partially
+triggered&rdquo; means in numbers.</p>
+<p>On tripwire 2, the subtler change is worth recording: the 2029-vintage roadmaps are so far
+<i>holding rather than slipping</i>. IBM&rsquo;s intermediate module (Kookaburra) remains scheduled
+for 2026 on the path to Starling in 2029; PsiQuantum, the most aggressive roadmap in the field,
+signed a $100 million CHIPS Act letter of intent in May. Government money arriving on schedule is
+not proof of technical schedule, but it is the opposite of a funding stall — and our v1.0 prior
+leaned on the slippage history. On tripwire 3, nothing: 15 bits is a universe away from 256,
+exactly as it was in June.</p>
+
+<div class="band">
+  <div class="z">0<sup>*</sup></div>
+  <div class="c">Economically useful results a quantum computer has produced that a classical
+  computer cannot — v1.0&rsquo;s marquee stat, now carrying its first serious asterisk. The
+  asterisk is IBM&rsquo;s July 30 claim. It resolves when the classical-simulation community takes
+  its turn — and we will score it publicly either way.</div>
+</div>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><path d="M8.5 8.5l-2 -2M15.5 8.5l2 -2M8.5 15.5l-2 2M15.5 15.5l2 2"/></svg></span><span class="kick">SECTION 02 · THE LAB</span><span class="wire"></span></div><h2>Six weeks of science: the densest run since Willow</h2>
+<p>Between v1.0&rsquo;s publication and this note — 39 days — the field produced four
+<i>Nature</i>-tier results and one coordinated advantage announcement. For pacing purposes the
+cadence is the datum; no single result decides anything, but the clustering is unlike any six-week
+window since December 2024.</p>
+
+<div class="log">
+<div class="e"><div class="d">JUL 15</div><div class="t">Quantinuum: first universal topological gate set</div>
+<div class="b">Non-Abelian anyons on the H2 processor — a 54-qubit entangled state realizing S3
+symmetry, in <i>Nature</i>. Topological encodings are the &ldquo;protected by geometry&rdquo; route
+to error resistance; a universal gate set is the checkbox that matters.</div></div>
+<div class="e"><div class="d">JUL 29</div><div class="t">HRL Laboratories: an autonomous silicon QPU at 4&nbsp;kelvin</div>
+<div class="b">18 silicon spin qubits run by a custom cryogenic CMOS control chip, in <i>Nature</i>.
+Small qubit count; large implication — control electronics living at cryogenic temperature next to
+the qubits is one of the two or three engineering walls between hundreds of qubits and millions.
+A concentration disclosure a careful reader deserves: IBM signed a definitive agreement to acquire
+HRL on July 23, six days before this paper — meaning IBM has a hand in four of the five headline
+results of the window. The cadence is real; its independence is thinner than the mastheads suggest.</div></div>
+<div class="e"><div class="d">JUL 30</div><div class="t">IBM &times; 3: &ldquo;the quantum advantage era&rdquo;</div>
+<div class="b">Three coordinated claims with Algorithmiq, Qedma, and the University of Chicago —
+the docket&rsquo;s tripwire 1, discussed above.</div></div>
+<div class="e"><div class="d">AUG 5</div><div class="t">D-Wave: a gate-model credential in <i>Nature</i></div>
+<div class="b">A fast (~500&nbsp;ns), high-fidelity (~99.9%) two-qubit entangling gate on a
+superconducting dual-rail architecture with native hardware-level error detection — with
+simulations (D-Wave&rsquo;s own, labeled as such) suggesting ~10&times; logical-error reduction per
+error-correction increment.</div></div>
+</div>
+
+<p>Read against v1.0&rsquo;s framework: none of this produces commercial value today, and all of it
+is exactly the kind of below-the-threshold plumbing — gates, control, encodings, verification —
+that a field crosses on the way from &ldquo;threshold crossed&rdquo; to &ldquo;machine
+exists.&rdquo; In June we wrote that the foundation was finally real. The update is that people are
+now building on the foundation, quickly, in public, in the peer-reviewed literature rather than the
+press-release channel. That is what acceleration looks like from the outside.</p>
+<p>And while all of this was printing, the stocks that supposedly price this future were doing
+precisely the opposite.</p>
+
+<div class="chart"><svg style="width:100%;height:auto" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-06T19:08:54.726554</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 900 504 
+L 900 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 67.5 453.6 
+L 846 453.6 
+L 846 141.12 
+L 67.5 141.12 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 67.5 259.084233 
+L 846 259.084233 
+L 846 188.976187 
+L 67.5 188.976187 
+z
+" clip-path="url(#p811b7effe7)" style="fill: #ece7da; opacity: 0.55; stroke: #ece7da; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="67.5" y="464.973594" transform="rotate(-0 67.5 464.973594)">Jan '24</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="190.172727" y="464.973594" transform="rotate(-0 190.172727 464.973594)">Jul '24</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="314.193506" y="464.973594" transform="rotate(-0 314.193506 464.973594)">Jan '25</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="436.192208" y="464.973594" transform="rotate(-0 436.192208 464.973594)">Jul '25</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="560.212987" y="464.973594" transform="rotate(-0 560.212987 464.973594)">Jan '26</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="682.211688" y="464.973594" transform="rotate(-0 682.211688 464.973594)">Jul '26</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="806.232468" y="464.973594" transform="rotate(-0 806.232468 464.973594)">Jan '27</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="393.516861" transform="rotate(-0 64 393.516861)">10</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="293.214923" transform="rotate(-0 64 293.214923)">100</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10"/>
+     <g id="text_10">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="192.912984" transform="rotate(-0 64 192.912984)">1,000</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <defs>
+       <path id="m79bdaab52b" d="M 0 0 
+L -2 0 
+" style="stroke: #7a7468; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="442.025816" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="429.494219" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="419.773957" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="411.831924" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="405.117031" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="399.300327" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="394.169629" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="359.386172" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="341.723878" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="329.19228" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="319.472018" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="311.529985" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="304.815093" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="298.998388" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="293.867691" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="259.084233" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="241.421939" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="228.890341" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="219.170079" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="211.228047" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="204.513154" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="198.696449" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="193.565752" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="158.782295" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#m79bdaab52b" x="67.5" y="141.12" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="fill: #7a7468; font: 9.5px 'Arial'; text-anchor: middle" x="30.476484" y="297.36" transform="rotate(-90 30.476484 297.36)">logical qubits (log scale)</text>
+    </g>
+   </g>
+   <g id="line2d_36">
+    <path d="M 128.836364 429.494219 
+L 231.962338 381.638032 
+L 519.097403 321.250248 
+L 701.758442 304.815093 
+" clip-path="url(#p811b7effe7)" style="fill: none; stroke: #c9a24b; stroke-opacity: 0.65; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_37">
+    <path d="M 67.5 181.034154 
+L 846 181.034154 
+" clip-path="url(#p811b7effe7)" style="fill: none; stroke-dasharray: 7,4.2; stroke-dashoffset: 0; stroke: #b0413e; stroke-width: 1.4"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 67.5 453.6 
+L 846 453.6 
+" style="fill: none; stroke: #cfc8b8; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="fill: #111113; font: 700 13px 'Georgia'; text-anchor: middle" x="128.836364" y="415.494219" transform="rotate(-0 128.836364 415.494219)">4</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #111113; font: 700 13px 'Georgia'; text-anchor: middle" x="231.962338" y="367.638032" transform="rotate(-0 231.962338 367.638032)">12</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(211.061635 404.722173)">Microsoft +</text>
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(208.811127 414.016723)">Quantinuum</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #111113; font: 700 13px 'Georgia'; text-anchor: middle" x="519.097403" y="307.250248" transform="rotate(-0 519.097403 307.250248)">48</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(495.946192 344.334388)">Quantinuum</text>
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(507.287715 353.628939)">Helios</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #111113; font: 700 13px 'Georgia'; text-anchor: middle" x="701.758442" y="290.815093" transform="rotate(-0 701.758442 290.815093)">70</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(669.516879 328.002827)">IBM + U Chicago</text>
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(657.592973 337.526479)">(claimed, under review)</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #b0413e; font: 700 10.5px 'Arial'; text-anchor: end" x="846" y="176.882388" transform="rotate(-0 846 176.882388)">BREAKS BITCOIN'S CURVE  ~1,200 (est.)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #7a7468; font: italic 9.5px 'Arial'; text-anchor: start" x="88.394805" y="225.740011" transform="rotate(-0 88.394805 225.740011)">broadly useful machines: hundreds</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 774.553247 295.925243 
+Q 774.553247 240.405325 774.553247 186.450654 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 772.353247 190.850654 
+L 774.553247 186.450654 
+L 776.753247 190.850654 
+z
+" style="fill: #8a6d2b; stroke: #8a6d2b; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="text_21">
+    <text style="fill: #8a6d2b; font: 700 12.5px 'Georgia'" transform="translate(788.033766 237.293618)">×17</text>
+    <text style="fill: #8a6d2b; font: 700 12.5px 'Georgia'" transform="translate(788.033766 252.28854)">to go</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(788.033766 278.734097)">was ×25</text>
+    <text style="fill: #7a7468; font: 8.5px 'Arial'" transform="translate(788.033766 288.332855)">in June</text>
+   </g>
+   <g id="line2d_38">
+    <defs>
+     <path id="mf9ffea61ca" d="M 0 4.5 
+C 1.193414 4.5 2.338109 4.025852 3.181981 3.181981 
+C 4.025852 2.338109 4.5 1.193414 4.5 0 
+C 4.5 -1.193414 4.025852 -2.338109 3.181981 -3.181981 
+C 2.338109 -4.025852 1.193414 -4.5 0 -4.5 
+C -1.193414 -4.5 -2.338109 -4.025852 -3.181981 -3.181981 
+C -4.025852 -2.338109 -4.5 -1.193414 -4.5 0 
+C -4.5 1.193414 -4.025852 2.338109 -3.181981 3.181981 
+C -2.338109 4.025852 -1.193414 4.5 0 4.5 
+z
+" style="stroke: #c9a24b"/>
+    </defs>
+    <g clip-path="url(#p811b7effe7)">
+     <use xlink:href="#mf9ffea61ca" x="128.836364" y="429.494219" style="fill: #c9a24b; stroke: #c9a24b"/>
+    </g>
+   </g>
+   <g id="line2d_39">
+    <g clip-path="url(#p811b7effe7)">
+     <use xlink:href="#mf9ffea61ca" x="231.962338" y="381.638032" style="fill: #c9a24b; stroke: #c9a24b"/>
+    </g>
+   </g>
+   <g id="line2d_40">
+    <g clip-path="url(#p811b7effe7)">
+     <use xlink:href="#mf9ffea61ca" x="519.097403" y="321.250248" style="fill: #c9a24b; stroke: #c9a24b"/>
+    </g>
+   </g>
+   <g id="line2d_41">
+    <defs>
+     <path id="m7612378b94" d="M 0 5.5 
+C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
+C 4.920485 2.857689 5.5 1.458617 5.5 0 
+C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
+C 2.857689 -4.920485 1.458617 -5.5 0 -5.5 
+C -1.458617 -5.5 -2.857689 -4.920485 -3.889087 -3.889087 
+C -4.920485 -2.857689 -5.5 -1.458617 -5.5 0 
+C -5.5 1.458617 -4.920485 2.857689 -3.889087 3.889087 
+C -2.857689 4.920485 -1.458617 5.5 0 5.5 
+z
+" style="stroke: #c9a24b; stroke-width: 2.2"/>
+    </defs>
+    <g clip-path="url(#p811b7effe7)">
+     <use xlink:href="#m7612378b94" x="701.758442" y="304.815093" style="fill: #ffffff; stroke: #c9a24b; stroke-width: 2.2"/>
+    </g>
+   </g>
+  </g>
+  <g id="text_23">
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'" transform="translate(40.5 62.620781)">Bitcoin's real countdown metric: logical qubits.</text>
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'" transform="translate(40.5 85.27582)">70 claimed. ~1,200 needed.</text>
+  </g>
+  <g id="text_24">
+   <text style="fill: #7a7468; font: 11px 'Arial'" transform="translate(40.5 118.887656)">Error-corrected (logical) qubits demonstrated at the frontier, vs. the estimated requirement to break</text>
+   <text style="fill: #7a7468; font: 11px 'Arial'" transform="translate(40.5 131.832164)">Bitcoin's elliptic-curve cryptography — the qubit-count headlines you read are physical qubits, which do not count</text>
+  </g>
+  <g id="text_25">
+   <text style="fill: #7a7468; font: 8px 'Arial'; text-anchor: start" x="40.5" y="494.928" transform="rotate(-0 40.5 494.928)">Frontier demonstrations of fully error-corrected logical qubits; IBM figure as claimed Jul 30, 2026, pending classical-simulation review. Requirement estimate per 2026 research; sourcing in the note appendix.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p811b7effe7">
+   <rect x="67.5" y="141.12" width="778.5" height="312.48"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></span><span class="kick">SECTION 03 · THE TAPE</span><span class="wire"></span></div><h2>The stocks: not a breakthrough signal — a hangover</h2>
+<p>If a breakthrough were truly close, the market should smell it first — that is the
+efficient-markets intuition, and it deserves a test rather than an assumption. Here is the test:
+<b>the quantum stocks are not signaling an imminent breakthrough; they are signaling the unwind of
+a speculative episode, and they de-rated straight through every result in the log above.</b></p>
+
+<div class="chart"><svg style="width:100%;height:auto" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-06T19:08:54.698234</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 900 504 
+L 900 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.5 453.6 
+L 783 453.6 
+L 783 151.2 
+L 40.5 151.2 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 524.25 453.6 
+L 524.25 151.2 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #cfc8b8; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 606.068182 453.6 
+L 606.068182 151.2 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #cfc8b8; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 677.659091 453.6 
+L 677.659091 151.2 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #cfc8b8; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 739.022727 453.6 
+L 739.022727 151.2 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #cfc8b8; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_5"/>
+     <g id="text_1">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="74.25" y="464.973594" transform="rotate(-0 74.25 464.973594)">Jun 01</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_6"/>
+     <g id="text_2">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="217.431818" y="464.973594" transform="rotate(-0 217.431818 464.973594)">Jun 15</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_7"/>
+     <g id="text_3">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="360.613636" y="464.973594" transform="rotate(-0 360.613636 464.973594)">Jun 29</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="503.795455" y="464.973594" transform="rotate(-0 503.795455 464.973594)">Jul 13</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9"/>
+     <g id="text_5">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="646.977273" y="464.973594" transform="rotate(-0 646.977273 464.973594)">Jul 27</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_10"/>
+     <g id="text_6">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="37" y="427.296797" transform="rotate(-0 37 427.296797)">60</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="37" y="351.696797" transform="rotate(-0 37 351.696797)">80</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="37" y="276.096797" transform="rotate(-0 37 276.096797)">100</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="37" y="200.496797" transform="rotate(-0 37 200.496797)">120</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_14">
+    <path d="M 74.25 161.580896 
+L 84.477273 146.630149 
+L 94.704545 168.985746 
+L 104.931818 187.11 
+L 115.159091 249.733881 
+L 145.840909 207.279403 
+L 156.068182 250.368582 
+L 166.295455 250.791716 
+L 176.522727 241.200672 
+L 186.75 242.187985 
+L 217.431818 218.70403 
+L 227.659091 254.811493 
+L 237.886364 264.47306 
+L 248.113636 251.355896 
+L 289.022727 238.873433 
+L 299.25 242.187985 
+L 309.477273 272.16 
+L 319.704545 293.598806 
+L 329.931818 302.414104 
+L 360.613636 270.185373 
+L 370.840909 274.557761 
+L 381.068182 287.674925 
+L 391.295455 303.75403 
+L 432.204545 305.51709 
+L 442.431818 330.270448 
+L 452.659091 332.245075 
+L 462.886364 334.431269 
+L 473.113636 347.901045 
+L 503.795455 375.968955 
+L 514.022727 373.077537 
+L 524.25 385.630522 
+L 534.477273 402.626418 
+L 544.704545 404.883134 
+L 575.386364 408.691343 
+L 585.613636 399.735 
+L 595.840909 405.588358 
+L 606.068182 409.890224 
+L 616.295455 418.564478 
+L 646.977273 396.843582 
+L 657.204545 411.230149 
+L 667.431818 424.558881 
+L 677.659091 397.901418 
+L 687.886364 393.176418 
+L 718.568182 376.180522 
+L 728.795455 355.940597 
+L 739.022727 368.564104 
+L 749.25 370.045075 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #7a7466; stroke-opacity: 0.9; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 74.25 170.175666 
+L 84.477273 158.167833 
+L 94.704545 196.987676 
+L 104.931818 195.507258 
+L 115.159091 257.849295 
+L 145.840909 225.280104 
+L 156.068182 263.277493 
+L 166.295455 267.718747 
+L 176.522727 258.342768 
+L 186.75 265.744856 
+L 217.431818 218.206997 
+L 227.659091 256.368877 
+L 237.886364 273.146945 
+L 248.113636 244.032063 
+L 289.022727 247.650862 
+L 299.25 238.439373 
+L 309.477273 272.16 
+L 319.704545 289.760522 
+L 329.931818 275.778799 
+L 360.613636 258.178277 
+L 370.840909 255.546423 
+L 381.068182 263.606475 
+L 391.295455 279.562089 
+L 432.204545 279.068616 
+L 442.431818 303.742245 
+L 452.659091 310.650862 
+L 462.886364 302.097337 
+L 473.113636 319.697859 
+L 503.795455 343.220052 
+L 514.022727 338.449817 
+L 524.25 349.635196 
+L 534.477273 371.841462 
+L 544.704545 374.966789 
+L 575.386364 375.131279 
+L 585.613636 357.366266 
+L 595.840909 364.768355 
+L 606.068182 368.880627 
+L 616.295455 383.520313 
+L 646.977273 329.238329 
+L 657.204545 360.080366 
+L 667.431818 384.013786 
+L 677.659091 354.405431 
+L 687.886364 352.760522 
+L 718.568182 321.507258 
+L 728.795455 291.076449 
+L 739.022727 298.314047 
+L 749.25 330.965483 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #8d8778; stroke-opacity: 0.9; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 74.25 154.095484 
+L 84.477273 129.901935 
+L 94.704545 183.805161 
+L 104.931818 182.547097 
+L 115.159091 249.901935 
+L 145.840909 228.901935 
+L 156.068182 269.063226 
+L 166.295455 273.805161 
+L 176.522727 250.869677 
+L 186.75 244.095484 
+L 217.431818 210.805161 
+L 227.659091 250.676129 
+L 237.886364 258.32129 
+L 248.113636 236.740645 
+L 289.022727 236.353548 
+L 299.25 238.289032 
+L 309.477273 272.16 
+L 319.704545 293.837419 
+L 329.931818 294.805161 
+L 360.613636 273.901935 
+L 370.840909 276.224516 
+L 381.068182 288.611613 
+L 391.295455 302.934194 
+L 432.204545 302.547097 
+L 442.431818 329.837419 
+L 452.659091 322.676129 
+L 462.886364 321.32129 
+L 473.113636 330.030968 
+L 503.795455 352.869677 
+L 514.022727 338.353548 
+L 524.25 354.99871 
+L 534.477273 377.256774 
+L 544.704545 377.063226 
+L 575.386364 374.353548 
+L 585.613636 354.418065 
+L 595.840909 355.385806 
+L 606.068182 362.740645 
+L 616.295455 376.289032 
+L 646.977273 347.450323 
+L 657.204545 369.127742 
+L 667.431818 394.289032 
+L 677.659091 362.547097 
+L 687.886364 360.805161 
+L 718.568182 340.095484 
+L 728.795455 312.418065 
+L 739.022727 325.385806 
+L 749.25 330.224516 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #5e5a50; stroke-opacity: 0.9; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 74.25 167.333196 
+L 84.477273 172.788866 
+L 94.704545 213.706392 
+L 104.931818 214.096082 
+L 115.159091 262.222887 
+L 145.840909 242.933196 
+L 156.068182 279.758969 
+L 166.295455 278.784742 
+L 176.522727 263.976495 
+L 186.75 263.197113 
+L 217.431818 217.603299 
+L 227.659091 255.79299 
+L 237.886364 269.432165 
+L 248.113636 230.852784 
+L 289.022727 239.425979 
+L 299.25 241.374433 
+L 309.477273 272.16 
+L 319.704545 295.931134 
+L 329.931818 292.423918 
+L 360.613636 263.586804 
+L 370.840909 272.16 
+L 381.068182 282.681649 
+L 391.295455 297.489897 
+L 432.204545 285.019794 
+L 442.431818 311.518763 
+L 452.659091 309.180619 
+L 462.886364 293.59299 
+L 473.113636 312.687835 
+L 503.795455 338.407423 
+L 514.022727 325.93732 
+L 524.25 336.84866 
+L 534.477273 352.436289 
+L 544.704545 346.201237 
+L 575.386364 341.524948 
+L 585.613636 329.834227 
+L 595.840909 341.914639 
+L 606.068182 343.863093 
+L 616.295455 360.619794 
+L 646.977273 339.966186 
+L 657.204545 349.318763 
+L 667.431818 365.685773 
+L 677.659091 337.628041 
+L 687.886364 334.510515 
+L 718.568182 309.570309 
+L 728.795455 290.475464 
+L 739.022727 304.114639 
+L 749.25 308.206392 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #4c4942; stroke-opacity: 0.9; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 40.5 272.16 
+L 783 272.16 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke-dasharray: 3.2,2.4; stroke-dashoffset: 0; stroke: #cfc8b8; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.5 453.6 
+L 783 453.6 
+" style="fill: none; stroke: #cfc8b8; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #111113; font: 10px 'Arial'; text-anchor: start" x="759.477273" y="391.777672" transform="rotate(-0 759.477273 391.777672)">IONQ  -26%</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #111113; font: 10px 'Arial'; text-anchor: start" x="759.477273" y="332.809672" transform="rotate(-0 759.477273 332.809672)">RGTI  -15%</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #111113; font: 10px 'Arial'; text-anchor: start" x="759.477273" y="352.465672" transform="rotate(-0 759.477273 352.465672)">QBTS  -16%</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #111113; font: 10px 'Arial'; text-anchor: start" x="759.477273" y="310.791548" transform="rotate(-0 759.477273 310.791548)">QUBT  -10%</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #8a6d2b; font: 700 11px 'Arial'; text-anchor: start" x="759.477273" y="372.387922" transform="rotate(-0 759.477273 372.387922)">BASKET  -16.6%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(500.776859 154.000125)">Quantinuum:</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(488.922094 162.966633)">topological gate set</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(509.214531 172.154156)">(Nature)</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(566.41926 231.227648)">$15M Bitcoin Security</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(567.55701 240.29025)">Consortium launches</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(643.25881 154.094617)">IBM claims verified</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(640.277982 163.061125)">quantum advantage,</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(648.258247 172.154156)">70 logical qubits</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(681.254673 416.306719)">D-Wave gate</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(680.476955 425.36932)">breakthrough</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(698.724517 434.556844)">(Nature)</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #7a7468; font: 8.5px 'Arial'; text-anchor: start" x="74.25" y="267.624" transform="rotate(-0 74.25 267.624)">Jun 24 = 100</text>
+   </g>
+   <g id="line2d_19">
+    <path d="M 74.25 163.29631 
+L 84.477273 151.872196 
+L 94.704545 190.871244 
+L 104.931818 194.815109 
+L 115.159091 254.926999 
+L 145.840909 226.09866 
+L 156.068182 265.617068 
+L 166.295455 267.775092 
+L 176.522727 253.597403 
+L 186.75 253.80636 
+L 217.431818 216.329872 
+L 227.659091 254.412372 
+L 237.886364 266.343365 
+L 248.113636 240.745347 
+L 289.022727 240.575956 
+L 299.25 240.072706 
+L 309.477273 272.16 
+L 319.704545 293.28197 
+L 329.931818 291.355496 
+L 360.613636 266.463097 
+L 370.840909 269.622175 
+L 381.068182 280.643666 
+L 391.295455 295.935052 
+L 432.204545 293.038149 
+L 442.431818 318.842219 
+L 452.659091 318.688171 
+L 462.886364 312.860721 
+L 473.113636 327.579427 
+L 503.795455 352.616527 
+L 514.022727 343.954556 
+L 524.25 356.778272 
+L 534.477273 376.040236 
+L 544.704545 375.778596 
+L 575.386364 374.92528 
+L 585.613636 360.338389 
+L 595.840909 366.91429 
+L 606.068182 371.343647 
+L 616.295455 384.748404 
+L 646.977273 353.374605 
+L 657.204545 372.439255 
+L 667.431818 392.136868 
+L 677.659091 363.120497 
+L 687.886364 360.313154 
+L 718.568182 336.838394 
+L 728.795455 312.477644 
+L 739.022727 324.094649 
+L 749.25 334.860366 
+" clip-path="url(#pfbbf73e9b3)" style="fill: none; stroke: #c9a24b; stroke-width: 2.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 524.25 181.44 
+" style="fill: none; stroke: #7a7468; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m3876e59106" d="M -0 3.535534 
+L 3.535534 0 
+L 0 -3.535534 
+L -3.535534 -0 
+z
+" style="stroke: #7a7468; stroke-linejoin: miter"/>
+    </defs>
+    <g>
+     <use xlink:href="#m3876e59106" x="524.25" y="181.44" style="fill: #7a7468; stroke: #7a7468; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 606.068182 249.48 
+" style="fill: none; stroke: #7a7468; stroke-width: 1.5; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m3876e59106" x="606.068182" y="249.48" style="fill: #7a7468; stroke: #7a7468; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_22">
+    <path d="M 677.659091 181.44 
+" style="fill: none; stroke: #7a7468; stroke-width: 1.5; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m3876e59106" x="677.659091" y="181.44" style="fill: #7a7468; stroke: #7a7468; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 739.022727 423.36 
+" style="fill: none; stroke: #7a7468; stroke-width: 1.5; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m3876e59106" x="739.022727" y="423.36" style="fill: #7a7468; stroke: #7a7468; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_24">
+     <path d="M 49.05 432.3355 
+L 58.55 432.3355 
+L 68.05 432.3355 
+" style="fill: none; stroke: #c9a24b; stroke-width: 2.6; stroke-linecap: square"/>
+    </g>
+    <g id="text_20">
+     <text style="fill: #111113; font: 9.5px 'Arial'; text-anchor: start" x="75.65" y="435.6605" transform="rotate(-0 75.65 435.6605)">Equal-weight basket (IONQ, QBTS, RGTI, QUBT)</text>
+    </g>
+    <g id="line2d_25">
+     <path d="M 49.05 445.884875 
+L 58.55 445.884875 
+L 68.05 445.884875 
+" style="fill: none; stroke: #7a7466; stroke-width: 1.3; stroke-linecap: square"/>
+    </g>
+    <g id="text_21">
+     <text style="fill: #111113; font: 9.5px 'Arial'; text-anchor: start" x="75.65" y="449.209875" transform="rotate(-0 75.65 449.209875)">Individual names</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_22">
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'" transform="translate(40.5 62.629922)">The best six weeks of quantum news ever printed.</text>
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'" transform="translate(40.5 85.296387)">The stocks sold off anyway.</text>
+  </g>
+  <g id="text_23">
+   <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: start" x="40.5" y="118.78625" transform="rotate(-0 40.5 118.78625)">Listed pure-play quantum computing companies, indexed to 100 on Jun 24, 2026 · through Aug 6 close</text>
+  </g>
+  <g id="text_24">
+   <text style="fill: #7a7468; font: 8px 'Arial'; text-anchor: start" x="40.5" y="494.928" transform="rotate(-0 40.5 494.928)">Indexed daily closes. Diamonds mark peer-reviewed results and industry events; details and sourcing in the note appendix.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfbbf73e9b3">
+   <rect x="40.5" y="151.2" width="742.5" height="302.4"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+
+<table class="data">
+<tr><th>Ticker</th><th>Company</th><th>Jun 24</th><th>Aug 6</th><th>Change</th><th>Mkt cap</th></tr>
+<tr><td>IONQ</td><td>IonQ</td><td>$53.60</td><td>$39.72</td><td><b>&minus;25.9%</b></td><td>$14.8B</td></tr>
+<tr><td>QBTS</td><td>D-Wave Quantum</td><td>$22.98</td><td>$19.41</td><td><b>&minus;15.6%</b></td><td>$7.2B</td></tr>
+<tr><td>RGTI</td><td>Rigetti Computing</td><td>$19.53</td><td>$16.53</td><td><b>&minus;15.4%</b></td><td>$5.5B</td></tr>
+<tr><td>QUBT</td><td>Quantum Computing Inc.</td><td>$9.70</td><td>$8.78</td><td><b>&minus;9.5%</b></td><td>$2.0B</td></tr>
+<tr><td>&mdash;</td><td>Equal-weight basket</td><td>100</td><td>&asymp;83.4</td><td><b>&minus;16.6%</b></td><td>~$29.5B</td></tr>
+<tr><td>ARQQ</td><td>Arqit (post-quantum security)</td><td>$28.64</td><td>$21.47</td><td><b>&minus;25.0%</b></td><td>&mdash;</td></tr>
+</table>
+
+<p>From the early-June highs the drawdowns are deeper still: IonQ &minus;43% from its June 1 close,
+Rigetti &minus;36%, D-Wave &minus;33%, QUBT &minus;29%. And the single most instructive tape print
+of the window: <b>D-Wave announced a genuine <i>Nature</i> hardware breakthrough on August 5 and
+fell roughly 9% the following session</b> — a sell-the-news reaction in which coverage framed
+IBM&rsquo;s and Google&rsquo;s gate-model progress as a competitive <i>threat</i> to D-Wave rather
+than a rising tide. When a <i>Nature</i> paper is a down-9% event, the marginal buyer is not doing
+physics.</p>
+
+<h3>Three observations for the permanent record</h3>
+<p><b>The de-rating and the news flow are causally disconnected.</b> The slide began in early June,
+weeks before the July results, and did not pause for any of them. This is the December&ndash;January
+speculative episode unwinding on its own financial-market clock — rate expectations, risk appetite,
+supply of new shares — not a verdict on the science.</p>
+<p><b>Even the defensive side fell.</b> v1.0 suggested the durable trade might be the
+post-quantum-security vendors, whose revenue is driven by government migration deadlines
+(2030&ndash;2035) far more certain than Q-Day. Arqit fell 25% anyway. Deadline-driven revenue is a
+fundamentals argument, and this tape was not trading fundamentals in either direction.</p>
+<p><b>Therefore: do not read equity prices as a Q-Day sensor — in either direction.</b> The same
+people citing the 2025 melt-up as evidence the breakthrough was near would now have to cite this
+drawdown as evidence it receded. Neither inference was ever valid. The sensor that works is the
+docket&rsquo;s: logical-qubit counts in the peer-reviewed literature.</p>
+
+<p>Valuation postscript: the multiple is compressing from both directions — prices down ~17% while
+revenue accelerates (IonQ&rsquo;s Q2 print: $80.0M, +287% year over year, nearly half of
+v1.0&rsquo;s combined four-company trailing figure in a single company-quarter; the other three
+report through August). The basket remains priced off a 2035 outcome — cheaper than June, not
+cheap — and the honest multiple is now severalfold lower than the 268&times; sales we printed in
+June. The v1.0 barbell framing — platform incumbents and suppliers as the core, pure-plays as
+deliberately-sized lottery tickets, the post-quantum migration trade as the sleeper — survives
+unchanged.</p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/></svg></span><span class="kick">SECTION 04 · THE CLOCK</span><span class="wire"></span></div><h2>Is the timeline accelerating? Three lines of evidence, one answer</h2>
+<p>Strip the tape out, then. What remains is the evidence that binds: the published resource
+estimates, the demonstrated hardware, and the behavior of the people whose job is to be right about
+this. Three lines, then the synthesis.</p>
+
+<p><b>Line 1 — the resource estimates keep falling.</b> In 2019 the canonical estimate for breaking
+RSA-2048 was ~20 million physical qubits; Gidney&rsquo;s May 2025 revision cut it to under 1
+million — 20&times; from algorithms alone. The new datum is Bitcoin-specific: Google&rsquo;s March
+2026 work puts an attack on ECC-256 at fewer than ~1,200 logical qubits and under 500,000 physical
+qubits, with runtimes measured in minutes on a future fault-tolerant machine. For reference, the
+2022 academic estimate (Webber et al.) for breaking a Bitcoin key inside a day was ~13 million
+physical qubits. The target is walking toward the hardware at roughly an order of magnitude every
+three to four years, with no hardware improvement required.</p>
+
+<div class="chart"><svg style="width:100%;height:auto" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-06T19:08:54.775960</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 900 504 
+L 900 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 67.5 453.6 
+L 846 453.6 
+L 846 141.12 
+L 67.5 141.12 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="96.333333" y="464.973594" transform="rotate(-0 96.333333 464.973594)">2019</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="240.5" y="464.973594" transform="rotate(-0 240.5 464.973594)">2021</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="384.666667" y="464.973594" transform="rotate(-0 384.666667 464.973594)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="528.833333" y="464.973594" transform="rotate(-0 528.833333 464.973594)">2025</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="673" y="464.973594" transform="rotate(-0 673 464.973594)">2027</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: middle" x="817.166667" y="464.973594" transform="rotate(-0 817.166667 464.973594)">2029</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="426.714645" transform="rotate(-0 64 426.714645)">1,000</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="367.76761" transform="rotate(-0 64 367.76761)">10,000</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="308.820576" transform="rotate(-0 64 308.820576)">100k</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10"/>
+     <g id="text_10">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="249.873541" transform="rotate(-0 64 249.873541)">1M</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11"/>
+     <g id="text_11">
+      <text style="fill: #7a7468; font: 11px 'Arial'; text-anchor: end" x="64" y="190.926506" transform="rotate(-0 64 190.926506)">10M</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <defs>
+       <path id="m410c16d764" d="M 0 0 
+L -2 0 
+" style="stroke: #7a7468; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="453.6" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="446.235232" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="440.522674" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="435.855174" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="431.90886" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="428.490406" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="425.475117" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="405.033023" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="394.652965" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="387.288197" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="381.575639" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="376.908139" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="372.961825" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="369.543371" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="366.528082" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="346.085988" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="335.70593" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="328.341162" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="322.628604" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="317.961105" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="314.01479" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="310.596337" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="307.581047" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="287.138953" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="276.758895" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="269.394127" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="263.681569" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="259.01407" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="255.067755" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="251.649302" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="248.634012" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="228.191918" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="217.811861" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="210.447092" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="204.734535" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="200.067035" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="196.12072" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_43">
+     <g id="line2d_49">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="192.702267" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_44">
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="189.686977" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_45">
+     <g id="line2d_51">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="169.244883" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_46">
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="158.864826" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_47">
+     <g id="line2d_53">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="151.500058" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_48">
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="145.7875" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_49">
+     <g id="line2d_55">
+      <g>
+       <use xlink:href="#m410c16d764" x="67.5" y="141.12" style="fill: #7a7468; stroke: #7a7468; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="fill: #7a7468; font: 9.5px 'Arial'; text-anchor: middle" x="24.359453" y="297.36" transform="rotate(-90 24.359453 297.36)">physical qubits required (log scale)</text>
+    </g>
+   </g>
+   <g id="line2d_56">
+    <path d="M 67.5 419.853745 
+L 846 419.853745 
+" clip-path="url(#p15c05b8fc4)" style="fill: none; stroke-dasharray: 4.8,3.6; stroke-dashoffset: 0; stroke: #cfc8b8; stroke-width: 1.2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 67.5 453.6 
+L 846 453.6 
+" style="fill: none; stroke: #cfc8b8; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_57">
+    <path d="M 96.333333 169.244883 
+L 557.666667 245.936744 
+" clip-path="url(#p15c05b8fc4)" style="fill: none; stroke: #7a7468; stroke-width: 2; stroke-linecap: square"/>
+    <defs>
+     <path id="m60e91c7086" d="M 0 4 
+C 1.060812 4 2.078319 3.578535 2.828427 2.828427 
+C 3.578535 2.078319 4 1.060812 4 0 
+C 4 -1.060812 3.578535 -2.078319 2.828427 -2.828427 
+C 2.078319 -3.578535 1.060812 -4 0 -4 
+C -1.060812 -4 -2.078319 -3.578535 -2.828427 -2.828427 
+C -3.578535 -2.078319 -4 -1.060812 -4 0 
+C -4 1.060812 -3.578535 2.078319 -2.828427 2.828427 
+C -2.078319 3.578535 -1.060812 4 0 4 
+z
+" style="stroke: #7a7468"/>
+    </defs>
+    <g clip-path="url(#p15c05b8fc4)">
+     <use xlink:href="#m60e91c7086" x="96.333333" y="169.244883" style="fill: #7a7468; stroke: #7a7468"/>
+     <use xlink:href="#m60e91c7086" x="557.666667" y="245.936744" style="fill: #7a7468; stroke: #7a7468"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="fill: #111113; font: 700 12px 'Georgia'; text-anchor: middle" x="96.333333" y="157.244883" transform="rotate(-0 96.333333 157.244883)">20M</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #111113; font: 700 12px 'Georgia'; text-anchor: middle" x="557.666667" y="233.936744" transform="rotate(-0 557.666667 233.936744)">&lt;1M</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #8a6d2b; font: 700 12.5px 'Georgia'; text-anchor: middle" x="312.583333" y="168.273086" transform="rotate(-0 312.583333 168.273086)">13M</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #8a6d2b; font: 700 12.5px 'Georgia'; text-anchor: middle" x="615.333333" y="251.681569" transform="rotate(-0 615.333333 251.681569)">&lt;500k</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(103.541667 196.486899)">RSA-2048</text>
+    <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(103.541667 207.365438)">(the internet, banks)</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #c9a24b; font: 700 10px 'Arial'" transform="translate(438.729167 195.460649)">ECC-256</text>
+    <text style="fill: #c9a24b; font: 700 10px 'Arial'" transform="translate(438.729167 206.89768)">(Bitcoin's curve)</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #7a7468; font: italic 9px 'Arial'; text-anchor: end" x="654.979167" y="415.095059" transform="rotate(-0 654.979167 415.095059)">largest gate-based chip built to date (~1,100 physical qubits)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #8a6d2b; font: 700 11.5px 'Georgia'; text-anchor: middle" x="618.9375" y="336.783256" transform="rotate(-0 618.9375 336.783256)">10–26k?</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(562.426047 370.652662)">contested same-week estimate</text>
+    <text style="fill: #7a7468; font: 8.2px 'Arial'" transform="translate(570.634375 379.744092)">(neutral-atom architecture)</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 723.458333 268.955954 
+Q 723.458333 339.676614 723.458333 408.832027 
+" style="fill: none; stroke: #b0413e; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 725.658333 404.432027 
+L 723.458333 408.832027 
+L 721.258333 404.432027 
+z
+" style="fill: #b0413e; stroke: #b0413e; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="text_22">
+    <text style="fill: #b0413e; font: 700 9.5px 'Arial'" transform="translate(732.108333 324.390834)">the remaining gap:</text>
+    <text style="fill: #b0413e; font: 700 9.5px 'Arial'" transform="translate(732.108333 336.072271)">~450× on Google's estimate</text>
+    <text style="fill: #b0413e; font: 700 9.5px 'Arial'" transform="translate(732.108333 347.591615)">~10–25× on the most</text>
+    <text style="fill: #b0413e; font: 700 9.5px 'Arial'" transform="translate(732.108333 359.148365)">aggressive (contested)</text>
+   </g>
+   <g id="line2d_58">
+    <path d="M 312.583333 180.273086 
+L 615.333333 263.681569 
+" clip-path="url(#p15c05b8fc4)" style="fill: none; stroke: #c9a24b; stroke-width: 2.4; stroke-linecap: square"/>
+    <defs>
+     <path id="mdc80186ff8" d="M 0 4.5 
+C 1.193414 4.5 2.338109 4.025852 3.181981 3.181981 
+C 4.025852 2.338109 4.5 1.193414 4.5 0 
+C 4.5 -1.193414 4.025852 -2.338109 3.181981 -3.181981 
+C 2.338109 -4.025852 1.193414 -4.5 0 -4.5 
+C -1.193414 -4.5 -2.338109 -4.025852 -3.181981 -3.181981 
+C -4.025852 -2.338109 -4.5 -1.193414 -4.5 0 
+C -4.5 1.193414 -4.025852 2.338109 -3.181981 3.181981 
+C -2.338109 4.025852 -1.193414 4.5 0 4.5 
+z
+" style="stroke: #c9a24b"/>
+    </defs>
+    <g clip-path="url(#p15c05b8fc4)">
+     <use xlink:href="#mdc80186ff8" x="312.583333" y="180.273086" style="fill: #c9a24b; stroke: #c9a24b"/>
+     <use xlink:href="#mdc80186ff8" x="615.333333" y="263.681569" style="fill: #c9a24b; stroke: #c9a24b"/>
+    </g>
+   </g>
+   <g id="line2d_59">
+    <defs>
+     <path id="md45dc4208d" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #c9a24b; stroke-width: 2"/>
+    </defs>
+    <g clip-path="url(#p15c05b8fc4)">
+     <use xlink:href="#md45dc4208d" x="618.9375" y="348.783256" style="fill: #ffffff; stroke: #c9a24b; stroke-width: 2"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_60">
+     <path d="M 680.964219 153.260703 
+L 690.464219 153.260703 
+L 699.964219 153.260703 
+" style="fill: none; stroke: #c9a24b; stroke-width: 2.4; stroke-linecap: square"/>
+     <defs>
+      <path id="m05cbcdeec4" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #c9a24b"/>
+     </defs>
+     <g>
+      <use xlink:href="#m05cbcdeec4" x="690.464219" y="153.260703" style="fill: #c9a24b; stroke: #c9a24b"/>
+     </g>
+    </g>
+    <g id="text_23">
+     <text style="fill: #111113; font: 9.5px 'Arial'; text-anchor: start" x="707.564219" y="156.585703" transform="rotate(-0 707.564219 156.585703)">Break ECC-256 (Bitcoin)</text>
+    </g>
+    <g id="line2d_61">
+     <path d="M 680.964219 166.925859 
+L 690.464219 166.925859 
+L 699.964219 166.925859 
+" style="fill: none; stroke: #7a7468; stroke-width: 2; stroke-linecap: square"/>
+     <defs>
+      <path id="m5a98d520ca" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #7a7468"/>
+     </defs>
+     <g>
+      <use xlink:href="#m5a98d520ca" x="690.464219" y="166.925859" style="fill: #7a7468; stroke: #7a7468"/>
+     </g>
+    </g>
+    <g id="text_24">
+     <text style="fill: #111113; font: 9.5px 'Arial'; text-anchor: start" x="707.564219" y="170.250859" transform="rotate(-0 707.564219 170.250859)">Break RSA-2048 (internet PKI)</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_25">
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'" transform="translate(40.5 62.620781)">The machine doesn't exist. The bar to build it</text>
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'" transform="translate(40.5 85.287246)">keeps falling anyway.</text>
+  </g>
+  <g id="text_26">
+   <text style="fill: #7a7468; font: 11px 'Arial'" transform="translate(40.5 118.753594)">Estimated physical qubits required to break each cryptosystem — revisions driven purely by better algorithms,</text>
+   <text style="fill: #7a7468; font: 11px 'Arial'" transform="translate(40.5 131.698102)">no hardware improvement assumed · log scale</text>
+  </g>
+  <g id="text_27">
+   <text style="fill: #7a7468; font: 8px 'Arial'; text-anchor: start" x="40.5" y="494.928" transform="rotate(-0 40.5 494.928)">Published resource estimates, 2019–2026; requirement points are estimate revisions, not measurements. Sourcing in the note appendix.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p15c05b8fc4">
+   <rect x="67.5" y="141.12" width="778.5" height="312.48"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+
+<p>An honest complication, flagged before a reader flags it for us: Google&rsquo;s number is not
+even the aggressive end of the same-vintage literature. A Caltech/Oratomic estimate published the
+same week (March 2026, neutral-atom architecture, different and contested assumptions) puts an
+ECC-256 break at 10,000&ndash;26,000 physical qubits — twenty to fifty times below Google&rsquo;s
+figure. We treat Google&rsquo;s as the working estimate because its assumptions sit closer to the
+architectures actually being scaled today, but the spread is the point: the live range of expert
+estimates now runs from ~10,000 to ~500,000 physical qubits, and even its conservative end keeps
+falling. The direction of travel is not in dispute; only the speed is.</p>
+
+<p><b>Line 2 — the builders moved their language, then moved their claims.</b> IBM&rsquo;s CEO
+predicted the first real-world quantum advantage would land in 2026 (April, on the record); IBM
+then claimed it (July 30). The same CEO, in the same July 30 CNBC appearance, put crypto-relevant
+capability at three to four years — the most aggressive timeline any major-vendor executive has
+attached to the cryptography milestone. Nobel laureate John Martinis — who built Google&rsquo;s
+early superconducting program — spent the spring arguing Bitcoin will be among the <i>first</i>
+real-world targets, because a derived private key monetizes instantly and irreversibly. Discount
+executive timelines as marketing, as we always do; but note that in June the marketing said
+&ldquo;advantage soon,&rdquo; and by August the papers said &ldquo;advantage claimed.&rdquo; The
+gap between talk and print shrank, and that gap is itself a pacing indicator.</p>
+
+<p><b>Line 3 — the deadline-setters are not waiting.</b> Google&rsquo;s internal post-quantum
+migration targets 2029. NIST&rsquo;s horizon remains 2035. Coinbase&rsquo;s CEO works to 2029. The
+U.S. government PQC deadlines from v1.0 stand. Nobody with fiduciary exposure to being wrong has
+relaxed a deadline in six months; several have tightened operational work against them.</p>
+
+<p><b>The synthesis.</b> v1.0 put a code-breaking machine at roughly one-in-three within ten years,
+up from one-in-five a year earlier. On the evidence above we mark that to <b>~35&ndash;40% within
+ten years</b> — a nudge, not a jump, and the reasons for restraint are load-bearing: (a) 70 logical
+qubits is a claim one week old from one group, not a sustained frontier; (b) every previous
+advantage claim has been at least partially matched classically, and the response cycle has not
+run; (c) the remaining engineering wall — from tens of logical qubits to the ~1,200 that threaten
+ECC-256, with the required gate depth and magic-state throughput — is precisely the part of the
+problem that has never been demonstrated at any scale; and (d) vendor roadmaps holding for six
+months is weak evidence against a slippage base rate built over fifteen years. The three-clocks
+framework from v1.0 is unchanged: narrow scientific value is arriving on schedule (arguably early),
+commercial value remains a 2030s story, and the cryptography clock — the only one Bitcoin cares
+about — now ticks slightly faster than it did in June.</p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h4M18 12h4"/><rect x="6.5" y="9" width="6" height="6" rx="3"/><rect x="11.5" y="9" width="6" height="6" rx="3"/></svg></span><span class="kick">SECTION 05 · THE CHAIN</span><span class="wire"></span></div><h2>What Bitcoin is actually doing about it: funded, specified, not activated</h2>
+<p>v1.0 treated Bitcoin&rsquo;s quantum exposure as a monitorable tail risk and listed the
+BIP-360/361 process as the live signal. Six weeks — and one busy summer — later, here is the
+tangible ledger. It is more substantial than we expected, and it has a hole in the middle.</p>
+
+<div class="chart"><svg style="width:100%;height:auto" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-06T19:08:54.842152</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 446.4 
+L 900 446.4 
+L 900 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 45.797015 219.910737 
+L 45.797015 215.934704 
+" clip-path="url(#p90a010f86e)" style="fill: none; stroke: #c9a24b; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 324.501493 219.910737 
+L 324.501493 215.934704 
+" clip-path="url(#p90a010f86e)" style="fill: none; stroke: #c9a24b; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 45.797015 308.178656 
+L 112.620896 308.178656 
+L 112.620896 274.779984 
+L 45.797015 274.779984 
+z
+" clip-path="url(#p90a010f86e)" style="fill: #b0413e"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 115.065672 308.178656 
+L 324.501493 308.178656 
+L 324.501493 274.779984 
+L 115.065672 274.779984 
+z
+" clip-path="url(#p90a010f86e)" style="fill: #c9a24b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 326.946269 308.178656 
+L 860.314925 308.178656 
+L 860.314925 274.779984 
+L 326.946269 274.779984 
+z
+" clip-path="url(#p90a010f86e)" style="fill: #ece7da"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #111113; font: 9px 'Arial'" transform="translate(58.95544 231.485186)">1.7M BTC</text>
+    <text style="fill: #111113; font: 9px 'Arial'" transform="translate(43.440986 241.970678)">Satoshi-era P2PK</text>
+    <text style="fill: #111113; font: 9px 'Arial'" transform="translate(37.928486 252.604248)">(cannot be defended</text>
+    <text style="fill: #111113; font: 9px 'Arial'" transform="translate(36.44419 263.343287)">without moving them)</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #8a6d2b; font: 9px 'Arial'" transform="translate(199.530066 324.163165)">5.2M BTC</text>
+    <text style="fill: #8a6d2b; font: 9px 'Arial'" transform="translate(185.014754 334.648657)">reused / revealed</text>
+    <text style="fill: #8a6d2b; font: 9px 'Arial'" transform="translate(199.023113 345.134149)">addresses</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(569.610441 282.390492)">13.2M BTC</text>
+    <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(539.232706 293.798507)">behind hashed addresses</text>
+    <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(548.223566 305.368617)">(not directly exposed)</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 322.498474 215.934704 
+Q 185.146278 215.934704 47.794082 215.934704 
+" style="fill: none; stroke: #c9a24b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="fill: #c9a24b; font: 700 13px 'Georgia'; text-anchor: middle" x="185.149254" y="207.187433" transform="rotate(-0 185.149254 207.187433)">6.9M BTC exposed  ·  ~34% of supply  ·  ≈ $446B</text>
+   </g>
+  </g>
+  <g id="text_5">
+   <text style="fill: #111113; font: 700 19.5px 'Georgia'; text-anchor: start" x="40.5" y="59.380781" transform="rotate(-0 40.5 59.380781)">One coin in three sits on an exposed public key.</text>
+  </g>
+  <g id="text_6">
+   <text style="fill: #7a7468; font: 11px 'Arial'" transform="translate(40.5 80.324456)">Bitcoin circulating supply by quantum exposure — an exposed public key is what a future quantum machine attacks;</text>
+   <text style="fill: #7a7468; font: 11px 'Arial'" transform="translate(40.5 93.268964)">a hashed, never-reused address is not directly exposed</text>
+  </g>
+  <g id="text_7">
+   <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(40.5 402.490328)">The fix exists on paper — BIP-360 was merged into Bitcoin's official proposal repository in February; a $15M industry consortium is funding the work.</text>
+   <text style="fill: #7a7468; font: 9.5px 'Arial'" transform="translate(40.5 414.863336)">What does not exist: a single activated protocol change. The binding constraint has migrated from physics to governance.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p90a010f86e">
+   <rect x="40.5" y="178.56" width="819" height="196.416"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+
+<p><b>The specification is real.</b> BIP-360 — Bitcoin&rsquo;s first formal post-quantum proposal —
+was merged into the official BIPs repository on February 11, 2026. Along the way it was redesigned
+from the original Pay-to-Quantum-Resistant-Hash (P2QRH, June 2024) into Pay-to-Merkle-Root (P2MR):
+the output commits directly to a script-tree Merkle root with no internal key at all, removing the
+key-path exposure entirely and giving future post-quantum signature schemes a clean structural base
+to plug into. Merge into the repo signals documentation standards met and formal discussion open —
+not endorsement, not activation. But a real, reviewed, evolving specification now exists where two
+years ago there was a mailing-list thread.</p>
+
+<p><b>The money is real, and correctly humble.</b> The July 23 Bitcoin Security Consortium — nine
+institutions, $15 million over three years, members directing funds independently, the consortium
+taking no role in governance or protocol decisions. Read both halves. The signatory list is the
+institutional Bitcoin complex essentially in full — the ETF issuer, the largest corporate holder,
+the largest exchange, the custody banks. And $15 million against a ~$446 billion exposed-coin
+problem is a signal, not a solution: roughly what one of these firms spends on a Super Bowl ad,
+aimed at a problem they all describe as existential-if-mishandled. The correct reading is that the
+consortium exists to fund engineers without touching governance — because governance is the part
+nobody can buy.</p>
+
+<p><b>The engineering is real.</b> Coinbase has dedicated engineering headcount to BIP-360 and the
+broader migration path, and stood up an independent Quantum Advisory Council whose report is now
+the canonical exposure census: approximately 6.9 million BTC in UTXOs with exposed public keys,
+including about 1.7 million BTC in Satoshi-era pay-to-public-key outputs — coins that cannot be
+defended by any protocol change short of freezing or moving them, because their public keys have
+been on-chain for fifteen years. BTQ Technologies&rsquo; Bitcoin Quantum testnet (v0.3.0, March
+2026) provides the first functional validation of the P2MR design running end-to-end. A phased
+migration proposal (new-output support &rarr; deprecation of vulnerable spends &rarr; the freeze
+question) is under active discussion on bitcoindev.</p>
+
+<p><b>The hole in the middle: activation.</b> Zero consensus changes have activated. None is
+scheduled. And the hard question — BIP-361&rsquo;s territory, what to do about coins that will
+never migrate, including Satoshi&rsquo;s — is not an engineering question at all. Freeze them and
+you have retroactively confiscated property to defend a principle; leave them and you have accepted
+that roughly a third of the supply becomes a bug bounty the day a machine exists, with the
+fire-sale and confidence dynamics that implies. Ethereum, with a living founder, a research culture
+organized around hard forks, and a coordinated migration already underway, does not face this shape
+of problem. This was Citi&rsquo;s May argument for why Bitcoin&rsquo;s quantum exposure exceeds
+Ethereum&rsquo;s despite identical curve cryptography — the binding constraint is governance, not
+physics — and everything that happened this summer is consistent with it. <b>The money and the
+code arrived. The decision has not.</b></p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></span><span class="kick">SECTION 06 · THE STREET</span><span class="wire"></span></div><h2>The Street picks a side</h2>
+<p>While the engineers built, the Street argued. v1.0 noted only that BlackRock had added a quantum
+risk factor to the IBIT filing; the intervening months produced a full-blown allocator debate, and
+it sorts almost perfectly by book.</p>
+
+<div class="street">
+<div class="q"><div class="h">ACTED</div>
+<p><b>Christopher Wood</b> (Jefferies, global head of equity strategy) removed his entire 10%
+bitcoin model-portfolio allocation in January, splitting it into physical gold and gold miners —
+calling quantum an existential threat to the store-of-value thesis and citing a 4&ndash;10M BTC
+exposure range. The single most significant datum in this section: an early institutional bull
+(allocated since 2020) who reversed on this specific risk.</p></div>
+<div class="q"><div class="h">WARNED</div>
+<p><b>Citi</b> (Alex Saunders, May): bitcoin more exposed than Ethereum on governance grounds;
+~6.7&ndash;7M BTC exposed. <b>Chamath Palihapitiya</b>: bitcoin as the &ldquo;honeypot&rdquo; — the
+first target of non-state actors because a broken key monetizes instantly. <b>John Martinis</b>
+(Nobel laureate): an early target, on the record repeatedly this spring.</p></div>
+<div class="q"><div class="h">BOUNDED</div>
+<p><b>Bernstein</b> (Gautam Chhugani, April): &ldquo;neither existential nor novel&rdquo; — a
+manageable 3&ndash;5-year upgrade cycle; mining safe; the 1.7M Satoshi-era coins the real exposure.
+<b>Benchmark</b> (Mark Palmer, January): &ldquo;real but distant.&rdquo; <b>ARK Invest</b> (March):
+long-term risk, not imminent. <b>BlackRock</b>: risk factor filed, but research framing quantum as
+one of the last &ldquo;walls of worry,&rdquo; with successful migration a potential
+<i>strengthening</i> event.</p></div>
+<div class="q"><div class="h">DISMISSED</div>
+<p><b>Mike Novogratz</b> (Galaxy): the network adapts; the real risk is developer discord over the
+fix — the governance argument wearing an optimist&rsquo;s coat. <b>Michael Saylor</b> (Strategy): a
+decade-plus away; warns against premature protocol changes. Note that Strategy signed the
+consortium anyway — watch what they fund, not what they say.</p></div>
+</div>
+
+<p>The pattern to flag: with the single exception of Wood, the urgency of every participant&rsquo;s
+assessment predicts their positioning almost perfectly. The longs find it manageable; the unexposed
+find it existential; the gold-adjacent find it terminal. Wood is the exception that proves the
+diagnostic value of the exercise — he changed his book to match his assessment rather than his
+assessment to match his book. That is what makes his January move the one worth studying, whatever
+one thinks of its conclusion.</p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h4M18 12h4"/><rect x="6.5" y="9" width="6" height="6" rx="3"/><rect x="11.5" y="9" width="6" height="6" rx="3"/></svg></span><span class="kick">SECTION 07 · THE DEFENSE</span><span class="wire"></span></div><h2>The steelman: Bitcoin's case, at full strength</h2>
+<p>The section above ends on an uncomfortable observation: nearly everyone&rsquo;s quantum verdict
+predicts their book. We are a Bitcoin-benchmarked manager writing about a Bitcoin risk, which means
+the same critique aims at us — from both directions. The only defense is to argue the strongest
+version of the case we did <i>not</i> lead with, and let the tripwires adjudicate. Here is
+Bitcoin&rsquo;s defense with nothing held back.</p>
+
+<div class="def">
+<div class="a"><h3>Most of the exposure can defend itself today, with no fork at all.</h3>
+<p>The 6.9M BTC figure is a stock, not a fate. Roughly 5.2M of it sits in reused or otherwise
+revealed addresses whose owners can move to a fresh, hashed address this afternoon — an ordinary
+transaction, no protocol change, no governance fight, no consortium. The exposure number is
+therefore partially self-liquidating as the threat becomes salient. What cannot be defended this
+way is the ~1.7M BTC in Satoshi-era outputs — the coins with no living owner. The steelman shrinks
+the problem from &ldquo;a third of the supply&rdquo; to &ldquo;the dead coins&rdquo;; it does not
+dissolve it.</p></div>
+<div class="a"><h3>Hashed addresses stay safe until the moment they spend.</h3>
+<p>A never-reused modern address exposes its public key only in the seconds-to-minutes between
+broadcast and confirmation. Attacking that window requires a machine that runs Shor in minutes — a
+far taller order than the years-long at-rest attack on already-exposed keys. The practical
+consequence is underappreciated: Bitcoin&rsquo;s migration can succeed even if it starts
+<i>late</i>, because the majority of supply is not racing the first cryptographically relevant
+machine; it is racing the much stronger machine that comes years after.</p></div>
+<div class="a"><h3>Governance latency is not governance inability — and slowness cuts both ways.</h3>
+<p>The network that supposedly cannot upgrade shipped P2SH, SegWit (2017), and Taproot (2021): a
+consensus change roughly every four years, which is precisely the cadence Bernstein&rsquo;s
+3&ndash;5-year window requires. Ossification is not a bug the quantum threat exposes; it is the
+security model that makes a $2 trillion bearer asset possible at all — and it protects the
+migration itself. A chain that could be rushed into a cryptography swap by a news cycle could also
+be rushed into a bad one. The governance-constraint critique is real, but it describes the
+<i>freeze decision</i>, not the upgrade: adding a post-quantum output type is additive and
+uncontroversial; only the fate of the dead coins is a fight.</p></div>
+<div class="a"><h3>On Q-Day, everything breaks — and Bitcoin is among the few things that can be rebuilt in place.</h3>
+<p>A cryptographically relevant quantum computer does not selectively attack secp256k1. It breaks
+TLS, code-signing, interbank messaging, custody infrastructure, and every archived signature on
+earth. Bitcoin can hard-fork its cryptography; a land registry, a signed treaty, or a decade of
+recorded bank traffic cannot retroactively re-sign itself. BlackRock&rsquo;s framing is the
+institutional version of this point: quantum is one of the last &ldquo;walls of worry,&rdquo; and a
+completed migration would remove it — the asset that crossed the post-quantum bridge first, in
+public, gains a property nothing else in the legacy system can demonstrate.</p></div>
+<div class="a"><h3>The threat is unusually observable — Bitcoin must beat the machine, not the headline.</h3>
+<p>The countdown metric (logical qubits in the peer-reviewed literature) is public, vendor roadmaps
+are marketing documents published years ahead, and the national-security world&rsquo;s own
+migration deadlines (2029&ndash;2035) bracket the consensus timeline. Very few tail risks announce
+themselves this loudly. The window in which acting is possible is wide open and well-lit.</p></div>
+<div class="a"><h3>Attacker economics are, at minimum, contested.</h3>
+<p>Stealing a million coins collapses the value of the loot as it moves; a rational state actor
+with the first machine has quieter and richer targets than crashing a transparent ledger. We flag
+the honest counter in the same breath: the honeypot argument says irreversibility and instant
+monetization make Bitcoin uniquely attractive to <i>non-state</i> actors who don&rsquo;t care about
+preserving the system — and a public quantum theft anywhere collapses confidence everywhere,
+whatever the attacker&rsquo;s P&amp;L. This argument reduces the probability of the worst path; it
+does not retire it.</p></div>
+</div>
+
+<p class="pullq">Taken together, the defense bounds the blast radius — from &ldquo;a third of
+supply&rdquo; to the dead coins, and from &ldquo;race the first machine&rdquo; to &ldquo;race the
+stronger machine&rdquo; — and it establishes that the upgrade is well inside Bitcoin&rsquo;s
+demonstrated governance capacity. What it cannot do is answer the freeze question, because that
+question is not technical, and no amount of engineering funding buys the answer. Our assessment
+stands, both halves: the risk is manageable on the evidence, and the remaining constraint is
+governance. The tripwires below are how we avoid arguing either side of that on vibes.</p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></span><span class="kick">SECTION 08 · THE FUND</span><span class="wire"></span></div><h2>Investment relevance: the monitoring changed, not the position</h2>
+<p>For the fund, six weeks of evidence changed the monitoring, not the position. <b>The barbell
+survives the drawdown:</b> platform incumbents and their suppliers remain the core way to own the
+theme; the pure-plays remain lottery tickets that just got ~17% cheaper and no more certain; the
+post-quantum migration vendors remain the fundamentals trade, now also cheaper, with their
+deadline-driven revenue thesis untouched by a tape that was not trading fundamentals. <b>The
+asymmetry still cuts the right way:</b> a credible acceleration damages every RSA/ECC-dependent
+incumbent — the entire banking, government, and internet stack — at least as much as it damages a
+Bitcoin network that now has a specification, a testnet, and a funded engineering pipeline. What
+Bitcoin uniquely owns is the governance risk, and that is the correct thing for a
+Bitcoin-benchmarked manager to monitor. The live monitoring list: the logical-qubit frontier
+(currently 48 sustained / 70 claimed; alarm at ~200 sustained), the classical response to the
+IBM/Chicago claim, BIP-360 reference-implementation progress and any activation signaling from Core
+maintainers (currently none), the BIP-361 freeze debate, the share of supply still exposed
+(currently ~6.9M BTC; falling exposure is the system working), the Q-Day Prize key size (currently
+15 bits), and consortium funding actually deployed versus pledged (currently $0 visibly deployed;
+the first grants are the tell). The next re-score publishes when either the classical-response
+verdict is in, or a tripwire triggers, whichever is first. This note states no price target and no
+expected return on any asset; the quantum question enters the fund&rsquo;s process as a monitored
+tail risk and a tripwire list, nothing more.</p>
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 3v4h-4"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/></svg></span><span class="kick">SECTION 09 · RE-ARMED</span><span class="wire"></span></div><h2>The new tripwires — set August 2026</h2>
+<p>v1.0 closed with three tripwires and this note exists because we went back and scored them. Same
+discipline, re-armed. Four this time — three on the physics, and one on Bitcoin itself, because the
+conclusion of Section 05 (the binding constraint is governance) obliges us to watch a governance
+metric and not only a laboratory one. Each is written to be scoreable by a stranger.</p>
+
+<table class="docket rearm">
+<tr><td class="no">T1</td>
+<td class="claim">The refutation clock</td>
+<td><span class="chip chip-armed"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg><b>ARMED</b></span><br><span class="clock">resolves by Jul 2027</span></td>
+<td class="why">The IBM/Chicago claim (70 logical qubits) either survives twelve months of
+classical-simulation attack or it does not. Survives materially intact &rarr; the scoreboard&rsquo;s
+zero finally flips, and the next update is a jump, not a nudge. Substantially matched classically
+&rarr; the asterisk is deleted, the zero is restored, and we print that with equal prominence.</td></tr>
+<tr><td class="no">T2</td>
+<td class="claim">A sustained logical-qubit frontier of ~200+</td>
+<td><span class="chip chip-armed"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg><b>ARMED</b></span></td>
+<td class="why">Not one paper: at least two independent groups demonstrating on the order of 200 or
+more logical qubits with error rates consistent with deep circuits — the &ldquo;dozens toward
+hundreds&rdquo; language of v1.0 with the numbers filled in, set roughly at the geometric midpoint
+between today&rsquo;s ~70 (claimed) and the ~1,200 estimated to threaten ECC-256.</td></tr>
+<tr><td class="no">T3</td>
+<td class="claim">A Shor demonstration that scales</td>
+<td><span class="chip chip-armed"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg><b>ARMED</b></span></td>
+<td class="why">A public break of an elliptic-curve key of 64 bits or more. Today&rsquo;s 15-bit
+prize-winners are toy instances a laptop can simulate; a 64-bit break is the approximate threshold
+at which the remaining distance to 256 bits becomes an engineering roadmap rather than
+undemonstrated physics. The specific number is our choice, and we state it now so we cannot move it
+later.</td></tr>
+<tr><td class="no">T4</td>
+<td class="claim">Bitcoin&rsquo;s activation signal — two-sided</td>
+<td><span class="chip chip-armed"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg><b>ARMED</b></span></td>
+<td class="why">Positive trigger: any post-quantum output type reaches a concrete activation
+mechanism — a proposed activation path with maintainer support and ecosystem signaling — or the
+measured exposed-supply series (start: ~6.9M BTC) begins falling at a rate consistent with
+deliberate migration. Negative trigger: an activation attempt is made and visibly <i>fails</i> —
+the first real evidence that the governance constraint binds in practice, not just in argument.
+Either direction re-scores Section 05; silence scores as silence.</td></tr>
+</table>
+
+<p>The standing commitment is unchanged from v1.0: write it down before the evidence arrives. The
+lab will keep doing what it does; the tape will keep doing what it does; the chain will decide, or
+it won&rsquo;t. When any of them crosses a line above, the next update will say so the way this one
+did — as a score, not a story.</p>
+
+<section class="sources">
+<div class="mk"><span class="mic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M2 12h6M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></span><span class="kick">APPENDIX</span><span class="wire"></span></div>
+<h2>Sources &amp; Method</h2>
+
+<p><b>Market data.</b> Equity closes and daily aggregates from the Massive market-data REST API
+(<i>/v2/aggs/ticker/&lt;T&gt;/range/1/day/2026-06-01/2026-08-05</i> plus the Aug 6 daily bar via
+<i>/v2/aggs/ticker/&lt;T&gt;/prev</i>), tickers IONQ, RGTI, QBTS, QUBT, ARQQ; observation vintage
+June 1 &ndash; August 6, 2026 (regular-session closes); pulled August 6, 2026. Basket = unweighted
+mean of the four pure-play closes, each indexed to 100 at the June 24, 2026 close (the pricing date
+of the v1.0 note, chosen for comparability; the chart baseline is labeled by date only). Market
+caps = August 6 close &times; shares outstanding from the same vendor&rsquo;s reference endpoint
+(<i>/v3/reference/tickers/&lt;T&gt;</i>), pulled August 6: IONQ 373.3M, RGTI 332.4M, QBTS 370.4M
+(share-class), QUBT 225.5M shares. Every close, percentage change, market cap, and the basket
+figure were independently reproduced against a second market-data source (Schwab market-data API)
+on August 6 before publication. Note on comparability with v1.0: v1.0&rsquo;s ~$52B combined cap
+was computed on June-24 share counts; today&rsquo;s ~$29.5B reflects both lower prices and
+subsequent share issuance — dilution is part of the story, and the two figures are not a pure price
+comparison.</p>
+
+<p><b>Bitcoin figures.</b> Exposed-supply census (≈6.9M BTC in exposed-pubkey UTXOs, ≈1.7M BTC in
+Satoshi-era P2PK) from the Coinbase Quantum Advisory Council report (2026). Circulating supply
+≈20.05M BTC (CoinMetrics, early Aug 2026); 6.9/20.05 ≈ 34%. Exposed-coin market value ≈$446B =
+6.9M &times; BTC ≈$64,650 (composite close-of-day quotes, August 6, 2026; approximate midpoint).
+These are estimates built on the Council&rsquo;s UTXO classification; classification methods vary
+across vendors and the ~25&ndash;35%-of-supply conclusion survives that variance.</p>
+
+<p><b>Science claims, by primary source.</b> IBM/University of Chicago verified-advantage claim:
+arXiv:2607.25941 (70 logical qubits, 2,415 logical two-qubit operations, 468 logical T-gates,
+~15-minute runtime), announced July 30, 2026, with the Algorithmiq and Qedma companion claims
+(IBM newsroom, same day); the three claims&rsquo; differing evidentiary weight follows the
+published fact-check literature. Quantinuum universal topological gate set: <i>Nature</i>,
+DOI 10.1038/s41586-026-10709-y, published July 15, 2026 (press coverage July 17). HRL Laboratories
+silicon QPU: <i>Nature</i>, July 30, 2026 issue (HRL release July 29); IBM&rsquo;s definitive
+agreement to acquire HRL was announced July 23, 2026 (IBM newsroom). D-Wave dual-rail gate result:
+D-Wave release / <i>Nature</i>, August 5, 2026; the ~10&times; logical-error projection is
+D-Wave&rsquo;s own simulation and is labeled as such. Resource estimates: Gidney &amp; Eker&aring;
+2019 (arXiv:1905.09749, ~20M physical qubits for RSA-2048); Gidney 2025 (arXiv:2505.15917, &lt;1M);
+Webber et al. 2022 (<i>AVS Quantum Science</i>, ~13M physical qubits for a 24-hour ECC-256 break);
+Google Quantum AI, March 31, 2026 (arXiv:2603.28846, &lt;1,200 logical / &lt;500k physical qubits,
+minutes-scale); Caltech/Oratomic March 2026 neutral-atom estimate (10,000&ndash;26,000 physical
+qubits; contested assumptions, flagged as such in the text). Logical-qubit frontier series:
+Microsoft+Quantinuum 4 (Apr 2024) and 12 (Sep 2024, Azure Quantum blog); Quantinuum Helios 48
+(Nov 2025 release); IBM/Chicago 70 claimed (Jul 2026, above). Largest gate-based chip: IBM Condor,
+1,121 physical qubits (2023) — still the gate-based record as of August 2026. Q-Day Prize state of
+the art: 15-bit ECC key (Project Eleven, April 2026); no larger public break found in coverage
+through August 6, 2026.</p>
+
+<p><b>Bitcoin workstream.</b> BIP-360 merge into the bitcoin/bips repository: February 11, 2026
+(PR #1670); P2QRH&rarr;P2MR redesign per BIP-360 v0.11.0 (February 2026). Bitcoin Security
+Consortium: July 23, 2026 announcement (nine members; $15M over three years; no governance role) —
+CoinDesk and member releases. BTQ Technologies Bitcoin Quantum testnet v0.3.0: March 19, 2026
+release. BIP-361 / phased-migration discussion: bitcoindev mailing list, 2026.</p>
+
+<p><b>Allocator record.</b> Wood/Jefferies reallocation: January 16, 2026 (Bloomberg, The Block,
+CoinDesk). Citi digital-assets note (Alex Saunders): May 18, 2026. Bernstein (Gautam Chhugani):
+April 8, 2026. Benchmark (Mark Palmer): January 29, 2026. ARK Invest: March 12, 2026. Novogratz:
+February 3, 2026 (CoinDesk). Martinis: April 7, 2026 (CoinDesk). Krishna 2026-advantage prediction:
+April 30, 2026 (The Quantum Insider); the 3&ndash;4-year crypto-capability quote is from his
+July 30, 2026 CNBC appearance. IonQ Q2 2026 revenue $80.05M (+287% YoY): company report, August
+2026; the other three pure-plays report through August, so no combined trailing multiple is
+restated here. Sell-side notes are paywalled; their figures are as reported in the cited coverage
+and are approximate.</p>
+
+<p><b>Judgments, labeled as such.</b> The ~35&ndash;40%-in-ten-years code-breaking odds, the
+tripwire thresholds (200 sustained logical qubits; a 64-bit key), the &ldquo;partially
+triggered&rdquo; score, and all forward-looking characterizations are TON618 Capital opinion, not
+data. The 64-bit and 200-qubit thresholds are our own pre-registered choices, stated so they cannot
+be moved later.</p>
+
+<p><b>Prior TON618 notes relied upon.</b> <a href="https://keythb.github.io/ton618-research/quantum-computing/">How Close Is Quantum Computing
+to Being Useful?</a> (v1.0, June 28, 2026) — the assessment this note re-scores; its §7 tripwire
+language is quoted verbatim in Section 01. An adversarial claim-by-claim verification pass was run
+on this note on August 6, 2026 before publication; the corrections it produced are incorporated.</p>
+</section>
+
+<div class="disc">
+<h3>Disclosures</h3>
+<p><b>As-of date.</b> All hardware milestones, resource estimates, and prices are as of August 6,
+2026 and will drift. Quantum hardware and the related equities move quickly; this is a point-in-time
+re-score of a June 28, 2026 baseline.</p>
+<p><b>1 &middot; Information only.</b> TON618 Capital. This note is for information purposes only.
+Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest,
+or digital asset, and nothing here is personalized investment advice or a recommendation regarding
+any instrument.</p>
+<p><b>2 &middot; Publisher&rsquo;s exclusion.</b> All research is published solely as general,
+impersonal information of regular circulation. It is not tailored to the objectives or
+circumstances of any individual and is not issued in connection with compensation from any client.
+The Fund has no clients and distributes all research free of charge. On that basis it publishes in
+reliance on the publisher&rsquo;s exclusion from the definition of &ldquo;investment
+adviser&rdquo; under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v.
+SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><b>3 &middot; Registration &amp; conflicts.</b> TON618 Capital is not registered as an
+investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or
+transact in the securities or digital assets it discusses; it holds long digital-asset exposure,
+and a slower or faster quantum timeline could affect the value of that exposure — which is
+precisely why the note pre-registers its tripwires rather than asking to be trusted. The Fund holds
+no position in IONQ, RGTI, QBTS, QUBT, or ARQQ as of publication. The Fund receives no compensation
+from any party in connection with its research.</p>
+<p><b>4 &middot; Use of AI.</b> Artificial intelligence is used in the creation of this research.
+All methodology and data integrity are reviewed and approved before publication by TON618
+Capital&rsquo;s Chief Investment Officer, Keyth Beck; errors may nonetheless occur, and readers
+should verify independently.</p>
+<p><b>5 &middot; CFA.</b> This note was prepared to align with CFA Institute analytical standards
+(methodology only). CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned
+by CFA Institute. That reference describes the analytical framework applied; it does not imply the
+note was prepared, reviewed, or authored by a CFA charterholder, and the note is not issued,
+reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+<p><b>6 &middot; Risk &amp; feedback.</b> Past performance is not indicative of future results.
+Digital assets and early-stage technology equities are highly volatile and may result in total loss
+of capital. Corrections and feedback are welcome &mdash; please direct them to CIO Keyth Beck at
+<a href="mailto:keyth@ton618capital.com">keyth@ton618capital.com</a>.</p>
+</div>
+
+</main></body></html>
