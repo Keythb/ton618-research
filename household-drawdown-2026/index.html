@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Price Nobody Charged &mdash; TON618 Capital</title>
+<meta name="description" content="Twenty-one consumer companies just told us which American
+households have money left. The split between those that could raise prices and those that
+could not is a reading of the household balance sheet, and it is invisible to the two
+measures the Federal Reserve is required to watch.">
+<style>
+:root { --gold:#8a6d2a; --ink:#111111; --mut:#6B665C; --black:#0B0B0C; --red:#8c2f2f;
+  --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  --sans:'Helvetica Neue',Helvetica,Arial,sans-serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:#fff; color:var(--ink);
+  font:17.5px/1.64 var(--serif); -webkit-font-smoothing:antialiased; }
+main { max-width:830px; margin:0 auto; padding:0 28px 90px; }
+.motif { color:var(--gold); }
+h1,h2,h3 { font-weight:600; letter-spacing:-.01em; }
+
+.hero { padding:58px 0 36px; border-bottom:1px solid rgba(17,17,17,.14); }
+.wordmark { font:600 12.5px/1 var(--sans); letter-spacing:.24em;
+  text-transform:uppercase; color:var(--gold); }
+.emblem { display:block; width:min(470px,88%); margin:32px auto 30px; }
+.emk { font:600 10.5px var(--sans); letter-spacing:.17em; text-transform:uppercase;
+  fill:var(--mut); stroke:none; }
+h1 { font-size:clamp(33px,5.3vw,53px); line-height:1.05; margin:0 0 18px; }
+.kicker { font:400 18.5px/1.5 var(--serif); color:var(--mut); margin:0 0 26px; max-width:58ch; }
+.cite { font:12.5px/1.6 var(--sans); color:var(--mut); }
+
+section.stage { padding:46px 0 2px; }
+.marker { display:flex; align-items:center; gap:9px; margin:0 0 13px;
+  font:600 11.5px/1 var(--sans); letter-spacing:.19em; text-transform:uppercase;
+  break-after:avoid; page-break-after:avoid; }
+.ic { width:19px; height:19px; flex:0 0 19px; }
+h2 { font-size:clamp(23px,2.9vw,32px); line-height:1.14; margin:0 0 18px; max-width:25ch; }
+h3 { font-size:19px; margin:32px 0 12px; }
+p { margin:0 0 19px; max-width:70ch; }
+.lede { font-size:19.5px; }
+blockquote { margin:24px 0; padding:2px 0 2px 22px; border-left:2px solid var(--gold);
+  font-style:italic; color:#2a2620; max-width:64ch; }
+.gloss { font:14.5px/1.6 var(--sans); color:var(--mut);
+  border-left:1px solid rgba(17,17,17,.18); padding-left:16px; margin:22px 0; max-width:64ch; }
+
+.fig { margin:38px 0 34px; }
+.chart { width:100%; height:auto; }
+.figq { font:600 20px/1.36 var(--serif); color:var(--ink); margin:0 0 16px; max-width:56ch; }
+figcaption { font:12.5px/1.62 var(--sans); color:var(--mut); margin-top:13px; max-width:72ch; }
+.cl { font:11.5px var(--sans); fill:var(--mut); stroke:none; }
+.ck { font:11.5px var(--sans); stroke:none; }
+.ckh { font:600 11px var(--sans); letter-spacing:.16em; stroke:none; }
+.cn { font:600 13.5px var(--sans); fill:var(--ink); stroke:none; }
+.cm { font:12px var(--sans); fill:var(--mut); stroke:none; }
+
+.band { background:var(--black); color:#C9A24B; margin:54px -28px; padding:52px 28px; }
+.bandin { max-width:830px; margin:0 auto; }
+.bandq { font:600 clamp(26px,3.5vw,39px)/1.2 var(--serif); margin:0 0 20px; max-width:26ch; }
+.bandp { color:#EDE7D9; font-size:17.5px; max-width:62ch; margin:0; font-family:var(--serif); }
+
+.trip { margin:22px 0 8px; padding:0; list-style:none; }
+.trip li { padding:14px 0 14px 30px; border-top:1px solid rgba(17,17,17,.12);
+  position:relative; max-width:70ch; }
+.trip li:before { content:""; position:absolute; left:0; top:21px; width:16px;
+  height:1px; background:var(--gold); }
+.series { font:14.5px/1.62 var(--sans); color:var(--mut);
+  border-left:1px solid var(--gold); padding-left:16px; margin:32px 0 0; max-width:62ch; }
+.series a { color:var(--gold); text-decoration:none;
+  border-bottom:1px solid rgba(138,109,42,.4); }
+
+.close { margin-top:48px; padding-top:26px; border-top:1px solid var(--gold); }
+.t618-caption { font:11.5px/1.6 var(--sans); color:var(--mut); margin:0 0 11px; max-width:none; }
+.method { font:13px/1.68 var(--sans); color:var(--mut); }
+.method p { max-width:78ch; }
+.method code { font:12px ui-monospace,Menlo,monospace; color:var(--ink); }
+
+@media screen and (max-width:720px) { .band { margin:40px -18px; padding:40px 18px; } }
+@media print {
+  body { font-size:11.5pt; line-height:1.6; }
+  main { max-width:none; padding:0; }
+  p, li, figcaption, .gloss, blockquote { max-width:63ch; }
+  .band, .fig, .trip li, .emblem, blockquote, .gloss, .series { break-inside:avoid; }
+  h2, h3, .marker, .figq { break-after:avoid; page-break-after:avoid; }
+  /* A marker+heading pair was landing at 80% of a page with one orphaned line
+     under it. orphans/widows force at least three lines to travel with the
+     heading, so the whole opening group moves to the next page instead. */
+  p, li { orphans:3; widows:3; }
+  .sechead { break-inside:avoid; page-break-inside:avoid; }
+  .band { margin:24pt 0; padding:24pt 20pt; }
+  section.stage { padding-top:24px; }
+}
+</style></head>
+<body><main>
+<header class="hero">
+  <div class="wordmark">TON618 Capital &middot; Macro Research</div>
+  
+<svg class="emblem motif" viewBox="0 0 470 212" fill="none" stroke="currentColor"
+     stroke-linecap="round"
+     aria-label="Companies that priced ahead, held the price, or financed the price">
+  <path d="M166 24v170" stroke-width="0.9" opacity=".4"/>
+  <path d="M312 24v170" stroke-width="0.9" opacity=".4"/>
+  <path d="M40 134v36" stroke-width="1.7"/><circle cx="40" cy="130" r="3.1" fill="currentColor" stroke="none"/><path d="M70 125v45" stroke-width="1.7"/><circle cx="70" cy="121" r="3.1" fill="currentColor" stroke="none"/><path d="M100 116v54" stroke-width="1.7"/><circle cx="100" cy="112" r="3.1" fill="currentColor" stroke="none"/><path d="M130 107v63" stroke-width="1.7"/><circle cx="130" cy="103" r="3.1" fill="currentColor" stroke="none"/><path d="M188 148v36" stroke-width="1.1" opacity=".55"/><circle cx="188" cy="144" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M216 148v36" stroke-width="1.1" opacity=".55"/><circle cx="216" cy="144" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M244 148v36" stroke-width="1.1" opacity=".55"/><circle cx="244" cy="144" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M272 148v36" stroke-width="1.1" opacity=".55"/><circle cx="272" cy="144" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M330 148v36" stroke-width="1.1" opacity=".55"/><path d="M330 144v-16" stroke-width="1.1" opacity=".55" stroke-dasharray="3 4"/><circle cx="330" cy="124" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M358 148v36" stroke-width="1.1" opacity=".55"/><path d="M358 144v-23" stroke-width="1.1" opacity=".55" stroke-dasharray="3 4"/><circle cx="358" cy="117" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M386 148v36" stroke-width="1.1" opacity=".55"/><path d="M386 144v-30" stroke-width="1.1" opacity=".55" stroke-dasharray="3 4"/><circle cx="386" cy="110" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/><path d="M414 148v36" stroke-width="1.1" opacity=".55"/><path d="M414 144v-37" stroke-width="1.1" opacity=".55" stroke-dasharray="3 4"/><circle cx="414" cy="103" r="3.1" fill="none" stroke-width="1.1" opacity=".7"/>
+  <path d="M26 186h124M182 186h114M324 186h122" stroke-width="0.7" opacity=".3"/>
+  <text x="88" y="206" text-anchor="middle" class="emk">priced ahead</text>
+  <text x="239" y="206" text-anchor="middle" class="emk">held</text>
+  <text x="385" y="206" text-anchor="middle" class="emk">financed</text>
+</svg>
+  <h1>The Price Nobody Charged</h1>
+  <p class="kicker">Twenty-one consumer companies just told us who has money left.
+  Not one of them had to ask.</p>
+  <p class="cite">As of 7 August 2026. Company figures from the complete Form 8-K and 10-Q/10-K
+  filings of all 21 issuers, 5&ndash;7 August 2026, read in full. Price, income and employment
+  data from the Bureau of Labor Statistics, the Bureau of Economic Analysis and the Federal
+  Reserve via FRED.</p>
+</header>
+<section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M4 8h5M4 14h5"/><path d="M15 8h5M15 14h5"/></svg><span>What happened</span></div>
+<h2>More work. More customers. No more money.</h2>
+<p class="lede">Twenty-one companies that sell to American consumers reported inside
+forty-eight hours this week. Almost all of them sold more than a year ago &mdash; more
+restaurant meals, more theme-park visits, more nights booked, more deliveries. Shopify
+processed $115.6bn of merchandise, up 31.6%. Uber ran 18% more trips. Attendance at
+Disney&rsquo;s domestic parks rose 3%, and its Experiences revenue rose 10%.</p></div>
+<p>By the usual reading, that settles it. The American consumer is fine. The Treasury
+Secretary read it that way in the same week: the day before the first of these companies
+reported, Scott Bessent told CNBC he was &ldquo;sick of hearing about this K-shaped
+economy&rdquo; &mdash; the shorthand for an economy where richer households pull ahead on
+one arm of the K while poorer households slide down the other &mdash; and declared,
+&ldquo;I can say here definitively, the K-shaped economy is over,&rdquo; pointing to wages
+at the bottom finally catching up.</p>
+<p>On pay, he has a point, and our own data agrees with it: the poorest fifth of American
+households gained 12.9% in real purchasing power between 2019 and 2024 while the richest
+fifth lost ground. That is the strongest version of his argument, and this note does not
+dispute it. What this note shows is where the K went when it left the paycheque &mdash;
+because twenty-one companies that never have to ask a customer&rsquo;s income just
+spent forty-eight hours pricing as if the divide were alive and well.</p>
+<p>Start with what those sales earned. <strong>Texas Roadhouse grew comparable sales
+&mdash; the industry&rsquo;s like-for-like measure, counting only established locations
+&mdash; by 6%, set a record for average weekly sales &mdash; and its earnings per share
+fell.</strong> Its
+own filing is precise about where the money went: restaurant-level profit dollars actually
+<em>rose</em>, and the decline came from overhead and depreciation growing faster than the
+restaurants&rsquo; own earnings. The kitchens made more money; the company made less per
+share. Keep that shape in mind &mdash; it recurs.</p>
+<p>It is not alone. Papa John&rsquo;s adjusted earnings were flat on 8.8% less revenue, and
+its bottom-line profit fell. Planet Fitness grew revenue 7% for $5m more of adjusted
+earnings. Six Flags reported the identical adjusted profit as a year ago, to the million
+&mdash; though on a like-for-like basis, stripping out parks it has since closed, that
+measure rose 7%. Shake Shack grew revenue 17.2% and its operating profit went <em>down</em>,
+from $22.4m to $20.7m.</p>
+
+<figure class="fig">
+<p class="figq">Did the extra volume turn into profit?</p>
+<svg viewBox="0 0 700 353" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Volume growth versus profit growth, operators and platforms">
+  <text x="30" y="40" class="ckh" fill="#8c2f2f">THE OPERATORS</text><text x="30" y="64" class="cn">Texas Roadhouse</text><text x="212" y="64" class="cm">comps +6%, record weekly sales</text><path d="M394 60h18" stroke="#8c2f2f" stroke-width="1.1"/><path d="M406 56l6 4-6 4" stroke="#8c2f2f" stroke-width="1.1"/><text x="424" y="64" class="cm">diluted EPS decreased</text><text x="30" y="89" class="cn">Shake Shack</text><text x="212" y="89" class="cm">revenue +17.2%</text><path d="M394 85h18" stroke="#8c2f2f" stroke-width="1.1"/><path d="M406 81l6 4-6 4" stroke="#8c2f2f" stroke-width="1.1"/><text x="424" y="89" class="cm">operating income $20.7m vs $22.4m</text><text x="30" y="114" class="cn">Papa John's</text><text x="212" y="114" class="cm">revenue -8.8%</text><path d="M394 110h18" stroke="#8c2f2f" stroke-width="1.1"/><path d="M406 106l6 4-6 4" stroke="#8c2f2f" stroke-width="1.1"/><text x="424" y="114" class="cm">adj EBITDA flat at $53m</text><text x="30" y="139" class="cn">Six Flags</text><text x="212" y="139" class="cm">revenue down</text><path d="M394 135h18" stroke="#8c2f2f" stroke-width="1.1"/><path d="M406 131l6 4-6 4" stroke="#8c2f2f" stroke-width="1.1"/><text x="424" y="139" class="cm">adj EBITDA $243m in both periods</text><text x="30" y="164" class="cn">Planet Fitness</text><text x="212" y="164" class="cm">revenue +7%</text><path d="M394 160h18" stroke="#8c2f2f" stroke-width="1.1"/><path d="M406 156l6 4-6 4" stroke="#8c2f2f" stroke-width="1.1"/><text x="424" y="164" class="cm">adj EBITDA +$5m</text><path d="M30 199h640" stroke-width=".5" opacity=".22"/><text x="30" y="215" class="ckh" fill="#8a6d2a">THE PLATFORMS</text><text x="30" y="239" class="cn">Shopify</text><text x="212" y="239" class="cm">revenue +34%</text><path d="M394 235h18" stroke="#8a6d2a" stroke-width="1.1"/><path d="M406 231l6 4-6 4" stroke="#8a6d2a" stroke-width="1.1"/><text x="424" y="239" class="cm">operating income +68%</text><text x="30" y="264" class="cn">Expedia</text><text x="212" y="264" class="cm">revenue +14%</text><path d="M394 260h18" stroke="#8a6d2a" stroke-width="1.1"/><path d="M406 256l6 4-6 4" stroke="#8a6d2a" stroke-width="1.1"/><text x="424" y="264" class="cm">operating income +65%</text><text x="30" y="289" class="cn">Uber</text><text x="212" y="289" class="cm">bookings +22%</text><path d="M394 285h18" stroke="#8a6d2a" stroke-width="1.1"/><path d="M406 281l6 4-6 4" stroke="#8a6d2a" stroke-width="1.1"/><text x="424" y="289" class="cm">operating income +30%</text><text x="30" y="314" class="cn">DoorDash</text><text x="212" y="314" class="cm">marketplace GOV +36%</text><path d="M394 310h18" stroke="#8a6d2a" stroke-width="1.1"/><path d="M406 306l6 4-6 4" stroke="#8a6d2a" stroke-width="1.1"/><text x="424" y="314" class="cm">adj EBITDA +40%, GAAP net income -30%</text>
+</svg>
+<figcaption>Businesses that physically serve the customer grew sales without growing
+profit. Businesses that intermediate the same transactions converted growth into profit
+at two to three times the rate.</figcaption>
+</figure>
+<p class="gloss">Profit figures above are operating income as reported under standard
+accounting rules, so the two columns compare like with like. DoorDash is the exception: it
+reports no comparable operating line, so its adjusted earnings measure is shown &mdash;
+alongside the fact that its bottom-line profit <em>fell</em> 30% in the same quarter.</p>
+<p>This note is about where that money went, what it reveals about American households
+that no survey captured, and why almost none of it appears in the numbers the Federal
+Reserve is required to watch.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11l-3-3M3 7l3 3"/><path d="M21 17H10l3-3M21 17l-3 3"/></svg><span>Ruling out the easy answer</span></div>
+<h2>These businesses are not being run badly.</h2>
+<p>The obvious explanation for flat profits is that these are poorly managed companies.
+The data says the opposite.</p></div>
+
+<figure class="fig">
+<p class="figq">Are these businesses simply being run badly?</p>
+<svg viewBox="0 0 700 204" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Labour productivity, rebased to 2019">
+  <path d="M62 123.8h504" stroke-width=".8" opacity=".4"/>
+  <text x="54" y="127.8" text-anchor="end" class="cl">2019</text>
+  <path d="M62.0 196.9 L85.7 190.5 L109.4 186.9 L133.1 189.5 L156.9 188.1 L180.6 182.4 L204.3 180.8 L228.0 176.5 L251.8 170.1 L275.5 166.3 L299.2 160.1 L322.9 150.8 L346.7 143.9 L370.4 136.3 L394.1 123.8 L417.8 102.9 L441.6 87.6 L465.3 91.7 L489.0 89.8 L512.7 74.1 L536.4 65.8" stroke="#8a6d2a" stroke-width="1.6"/><path d="M62.0 167.9 L67.8 168.2 L73.8 167.0 L79.7 166.7 L85.7 165.5 L91.6 165.8 L97.5 166.0 L103.4 164.8 L109.4 164.1 L115.3 163.7 L121.2 161.8 L127.1 160.3 L133.1 161.5 L139.0 159.1 L144.9 158.7 L150.9 159.9 L156.9 157.5 L162.7 152.7 L168.6 149.4 L174.6 146.5 L180.6 146.3 L186.4 145.6 L192.4 144.4 L198.3 143.7 L204.3 145.1 L210.1 145.1 L216.1 145.6 L222.0 144.4 L228.0 143.5 L233.9 142.3 L239.8 143.0 L245.8 143.7 L251.8 142.5 L257.6 143.2 L263.5 141.6 L269.5 139.4 L275.5 141.3 L281.3 139.9 L287.2 138.0 L293.2 138.7 L299.2 137.5 L305.0 136.3 L310.9 135.9 L316.9 137.0 L322.9 136.1 L328.8 136.1 L334.7 135.4 L340.7 133.7 L346.7 133.5 L352.5 133.2 L358.4 131.4 L364.4 129.7 L370.4 129.0 L376.2 129.0 L382.1 128.3 L388.1 128.7 L394.1 126.8 L399.9 125.2 L405.8 122.6 L411.8 120.4 L417.8 121.4 L423.7 109.7 L429.6 105.7 L435.6 107.8 L441.6 105.9 L447.4 105.5 L453.3 106.9 L459.3 105.5 L465.3 108.8 L471.1 110.7 L477.0 110.5 L483.0 109.0 L489.0 108.5 L494.8 105.9 L500.7 102.9 L506.7 100.2 L512.7 100.2 L518.6 97.6 L524.5 95.2 L530.5 94.3 L536.4 95.0 L542.3 92.2 L548.2 88.8 L554.2 87.6 L560.2 87.2 L566.0 86.2" stroke="#6B665C" stroke-width="1.1" stroke-dasharray="4 3"/><path d="M62.0 128.5 L85.7 125.4 L109.4 126.8 L133.1 129.7 L156.9 130.4 L180.6 127.3 L204.3 128.7 L228.0 133.5 L251.8 136.3 L275.5 135.1 L299.2 133.2 L322.9 131.8 L346.7 131.4 L370.4 128.3 L394.1 123.8 L417.8 118.0 L441.6 93.1 L465.3 92.2 L489.0 90.3 L512.7 86.2" stroke="#111111" stroke-width="1.6"/><text x="575" y="69.8" class="ck" fill="#8a6d2a">Retail trade</text><text x="575" y="90.2" class="ck" fill="#111111">Restaurants</text><text x="575" y="105.2" class="ck" fill="#6B665C">Whole economy</text><path d="M62 176v5" stroke-width=".8" opacity=".45"/><text x="62" y="195" text-anchor="middle" class="cl">2005</text><path d="M181 176v5" stroke-width=".8" opacity=".45"/><text x="181" y="195" text-anchor="middle" class="cl">2010</text><path d="M299 176v5" stroke-width=".8" opacity=".45"/><text x="299" y="195" text-anchor="middle" class="cl">2015</text><path d="M418 176v5" stroke-width=".8" opacity=".45"/><text x="418" y="195" text-anchor="middle" class="cl">2020</text><path d="M536 176v5" stroke-width=".8" opacity=".45"/><text x="536" y="195" text-anchor="middle" class="cl">2025</text>
+</svg>
+<figcaption>Output per hour worked, with 2019 set to 100. Both industries are getting
+more from every hour they pay for than at any point on record. The flat profits are not
+an efficiency problem.</figcaption>
+</figure>
+<p><strong>Output per hour worked</strong> &mdash; how much a business gets from an hour of
+labour it pays for &mdash; is at record levels in both industries. Retail trade is up 24.4%
+since 2019 and 69.5% since 2007. Restaurants are up 15.8%, matching the whole US economy.
+These businesses are extracting more from every hour than at any point on record, serving
+more customers, and earning the same or less.</p>
+<p>And the statistics have this quarter&rsquo;s corroboration in the filings themselves.
+Airbnb&rsquo;s customer-support cost per booking fell roughly <strong>16%</strong> in a
+year, driven in part by an AI assistant that now resolves nearly half of the support
+issues it starts without a human agent. Peloton &mdash; the group&rsquo;s post-pandemic
+casualty &mdash; beat its own plan to deliver more than <strong>$100m</strong> of
+run-rate cost savings and posted the first full year of net profit in its history. Texas
+Roadhouse&rsquo;s labour costs fell as a share of sales, which it credits to a higher
+average guest check and labour productivity together outrunning wage inflation of
+roughly 4%. These are not businesses that forgot how to operate.</p>
+<p class="gloss">Output per hour is published annually by the Bureau of Labor Statistics.
+The latest readings are 2024 for restaurants and 2025 for retail, so this describes the
+structural setup rather than this quarter &mdash; the company figures above are the
+current-quarter evidence that it is still improving.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M4 15l16-9"/><path d="M4 13l16 2"/></svg><span>Where the money went</span></div>
+<h2>There is no economy-wide cushion.</h2>
+<p>The obvious next question is whether business in general is quietly eating inflation to
+spare its customers. It would be a tidy story. It is also wrong, and the number that
+disproves it should be stated before anything else.</p></div>
+
+<figure class="fig">
+<p class="figq">So is corporate America absorbing inflation? No.</p>
+<svg viewBox="0 0 700 220" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Corporate profits as a share of GDP">
+  <path d="M62 171.8h542" stroke-width=".5" opacity=".16"/><text x="54" y="175.8" text-anchor="end" class="cl">6%</text><path d="M62 135.3h542" stroke-width=".5" opacity=".16"/><text x="54" y="139.3" text-anchor="end" class="cl">8%</text><path d="M62 98.9h542" stroke-width=".5" opacity=".16"/><text x="54" y="102.9" text-anchor="end" class="cl">10%</text><path d="M62 62.4h542" stroke-width=".5" opacity=".16"/><text x="54" y="66.4" text-anchor="end" class="cl">12%</text>
+  <path d="M62 105.8h542" stroke="#6B665C" stroke-width=".9"
+        stroke-dasharray="5 4"/>
+  <text x="612" y="109.8" class="ck" fill="#6B665C">9.62% median</text>
+  <path d="M62.0 196.4 L65.7 194.0 L69.5 193.5 L73.3 193.6 L77.0 190.7 L80.8 190.5 L84.5 190.0 L88.3 189.1 L92.1 186.7 L95.8 184.2 L99.6 190.0 L103.4 189.5 L107.2 190.5 L110.9 187.6 L114.6 185.3 L118.4 181.8 L122.2 175.2 L125.9 173.6 L129.7 169.4 L133.5 168.0 L137.3 165.4 L141.0 160.7 L144.7 160.3 L148.5 159.9 L152.3 156.7 L156.1 158.5 L159.8 160.7 L163.6 159.6 L167.4 158.1 L171.1 156.1 L174.9 153.2 L178.7 153.9 L182.4 170.3 L186.2 171.8 L189.9 174.1 L193.7 179.2 L197.5 174.1 L201.2 172.3 L205.0 174.0 L208.7 172.3 L212.5 178.2 L216.3 181.6 L220.0 183.3 L223.8 188.0 L227.6 183.1 L231.3 181.1 L235.1 189.6 L238.9 193.5 L242.7 186.7 L246.4 178.3 L250.1 170.0 L253.9 158.8 L257.7 160.5 L261.4 161.6 L265.2 157.4 L269.0 151.0 L272.8 135.2 L276.5 131.1 L280.3 126.8 L284.1 129.0 L287.8 100.3 L291.6 98.9 L295.3 95.4 L299.1 88.7 L302.9 89.0 L306.6 86.0 L310.3 84.7 L314.1 92.7 L317.9 103.6 L321.6 96.2 L325.4 104.7 L329.2 103.6 L333.0 116.9 L336.7 115.8 L340.5 124.0 L344.3 184.7 L348.1 139.0 L351.8 129.1 L355.5 106.7 L359.3 94.7 L363.1 87.2 L366.8 91.2 L370.6 83.0 L374.4 85.0 L378.2 101.4 L381.9 96.0 L385.6 95.6 L389.4 88.9 L393.2 61.5 L397.0 71.9 L400.7 71.4 L404.5 76.1 L408.3 80.7 L412.0 82.5 L415.7 80.8 L419.5 78.3 L423.3 85.2 L427.0 77.9 L430.8 75.2 L434.6 79.9 L438.4 91.8 L442.1 91.8 L445.8 98.5 L449.6 108.5 L453.4 103.4 L457.2 99.4 L460.9 102.0 L464.7 97.2 L468.5 87.8 L472.2 91.8 L476.0 90.3 L479.8 111.5 L483.6 103.1 L487.3 98.3 L491.0 104.7 L494.8 105.4 L498.6 104.5 L502.3 105.8 L506.1 106.0 L509.9 104.9 L513.6 113.3 L517.4 111.5 L521.1 66.5 L524.9 80.7 L528.7 65.5 L532.4 49.0 L536.2 55.3 L540.0 64.4 L543.8 69.9 L547.5 58.6 L551.2 69.9 L555.0 84.3 L558.8 70.3 L562.5 70.8 L566.3 67.5 L570.1 66.1 L573.9 65.7 L577.6 64.3 L581.4 68.5 L585.2 55.7 L589.0 78.8 L592.7 80.5 L596.4 70.6 L600.2 61.2 L604.0 55.2" stroke="#111111" stroke-width="1.5"/>
+  <circle cx="604" cy="55.2" r="3.6" fill="#8a6d2a" stroke="none"/>
+  <text x="594" y="46.2" text-anchor="end" class="ck" fill="#8a6d2a">12.4% &mdash; 99th percentile</text>
+  <path d="M62 190v5" stroke-width=".8" opacity=".45"/><text x="62" y="209" text-anchor="middle" class="cl">1990</text><path d="M137 190v5" stroke-width=".8" opacity=".45"/><text x="137" y="209" text-anchor="middle" class="cl">1995</text><path d="M213 190v5" stroke-width=".8" opacity=".45"/><text x="213" y="209" text-anchor="middle" class="cl">2000</text><path d="M288 190v5" stroke-width=".8" opacity=".45"/><text x="288" y="209" text-anchor="middle" class="cl">2005</text><path d="M363 190v5" stroke-width=".8" opacity=".45"/><text x="363" y="209" text-anchor="middle" class="cl">2010</text><path d="M438 190v5" stroke-width=".8" opacity=".45"/><text x="438" y="209" text-anchor="middle" class="cl">2015</text><path d="M514 190v5" stroke-width=".8" opacity=".45"/><text x="514" y="209" text-anchor="middle" class="cl">2020</text><path d="M589 190v5" stroke-width=".8" opacity=".45"/><text x="589" y="209" text-anchor="middle" class="cl">2025</text>
+</svg>
+<figcaption>Corporate profits as a share of the whole US economy. If businesses generally
+were sacrificing profit to shield customers from inflation, this line would be falling. It
+is near the highest level in thirty-six years and rose over the past year.</figcaption>
+</figure>
+<p>Corporate profits are running at <strong>12.4% of the entire US economy</strong> &mdash;
+the <strong>99th percentile</strong> of the past thirty-six years, up from 11.1% a year
+ago, against a long-run median of 9.6%. If companies as a whole were sacrificing profit to
+shield customers, this line would be falling. It is close to a record.</p>
+<p>So there is no economy-wide cushion. What there is, is a split &mdash; and it runs
+through the middle of the group that reported this week.</p>
+<h3>Follow the cost lines, not the indices</h3>
+<p>The clean way to find out what is squeezing these companies is to read their own cost
+lines &mdash; each quarterly filing breaks the quarter&rsquo;s spending into food, labour,
+rent and the rest. We read all twenty-one. Two patterns hold across the restaurants:</p>
+<ul class="trip">
+<li><strong>Food is the runaway cost.</strong> Texas Roadhouse&rsquo;s food and beverage
+bill rose <strong>15.7%</strong> against revenue growth of 11.2%. The Burger King
+restaurants Restaurant Brands runs itself &mdash; its Carrols acquisition &mdash; paid
+<strong>14.9%</strong> more for food and packaging. Shake Shack names the
+single culprit &mdash; <strong>&ldquo;record-high beef costs&rdquo;</strong>, in what it
+calls &ldquo;one of the most challenging cost environments we have faced in many
+years.&rdquo;</li>
+<li><strong>Labour is the cost they have learned to control.</strong> Texas
+Roadhouse&rsquo;s labour bill grew 9.9% &mdash; slower than its sales &mdash; with wage
+inflation guided at 3&ndash;4% and the rest productivity. Wages at those same
+company-run Burger Kings rose barely 1%. Disney&rsquo;s parks grew revenue 10% on 3% more
+operating labour. Six Flags&rsquo; full-time wage bill <em>fell</em> 11%.</li>
+</ul>
+<p>Shake Shack also wrote something unusual into a legal filing:</p>
+<blockquote>&ldquo;a healthy result given record-high beef costs and the deliberate choice
+to protect our value positioning rather than fully offset inflation through
+pricing.&rdquo;</blockquote>
+<p>Read that carefully &mdash; <em>fully</em> offset. Shake Shack did raise prices, about
+4% blended across its channels. Its costs rose faster, and it chose to eat the difference
+rather than charge it. That is what absorption actually looks like in this group: not zero
+price increases, but price increases deliberately held below cost inflation, with the gap
+taken out of margin. Meanwhile Shopify converted 34% revenue growth into 68%
+operating-profit growth, and Expedia turned 14% into 65%.</p>
+<p><strong>Record profits in aggregate; compressing margins at some of the businesses
+serving ordinary customers.</strong> Both are true at once, and the second is invisible
+inside the first. Which raises the question the rest of this note is about: if absorption is
+happening at some companies and not others, what decides which?</p>
+<p class="gloss"><strong>Why the squeeze is not universal, and why we are not quoting price
+indices.</strong> The pressure is name-specific: Papa John&rsquo;s reports commodity
+<em>deflation</em> in its supply chain, Restaurant Brands passes commodity costs
+through to franchisees by design, and Roku&rsquo;s input problem is not food at all but
+&ldquo;tightening memory chip supply, a trend affecting the entire electronics
+industry.&rdquo; A national producer-price index cannot see any of that
+&mdash; and a gap between two indices cannot demonstrate absorption while aggregate profits
+sit at a record. Every cost figure above comes from the companies&rsquo; own filings.
+Beyond the restaurants, the fastest-growing costs in this group are marketing and customer
+acquisition &mdash; DraftKings&rsquo; revenue decline is promotional spend on its new
+Predictions product, Marriott Vacations&rsquo; margin fell on higher marketing and sales
+costs, and Warner Bros. Discovery&rsquo;s on HBO Max launch marketing. The squeeze even echoes
+second-hand: Yelp&rsquo;s advertising revenue from its restaurant, retail and other
+services categories fell 10%,
+which it attributes to &ldquo;the challenging operating environment for local businesses
+in these categories&rdquo; &mdash; the squeezed operators cutting their own marketing.
+The margin story is food at the burger counter and customer acquisition everywhere
+else.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20V9M18 20V15"/><path d="M3 20h18"/><path d="M6 9l-2.5 2.5M6 9l2.5 2.5"/></svg><span>The sort</span></div>
+<h2>Everyone&rsquo;s customer showed up. They paid in three different ways.</h2>
+<p>Not every company absorbed it. And when we read all twenty-one quarterly filings in
+full, the split was not the two-way sort we expected. It was three-way.</p></div>
+
+<figure class="fig">
+<p class="figq">Who passed the cost on, who ate it &mdash; and who lent the customer the difference?</p>
+<svg viewBox="0 0 700 498" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Three-way sort: companies that priced ahead of cost, held the price, or financed the price">
+  <text x="30" y="30" class="ckh" fill="#8a6d2a">PRICED AHEAD OF COST</text><circle cx="38" cy="48" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="52" class="cn">Disney</text><text x="255" y="52" class="cm">parks per-capita +4%, streaming rates +3%</text><circle cx="38" cy="72" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="76" class="cn">Expedia</text><text x="255" y="76" class="cm">average daily rate +5%</text><circle cx="38" cy="96" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="100" class="cn">Texas Roadhouse</text><text x="255" y="100" class="cm">menu actions; check up, traffic +3%</text><circle cx="38" cy="120" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="124" class="cn">Etsy</text><text x="255" y="124" class="cm">commission charged to sellers up</text><circle cx="38" cy="144" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="148" class="cn">Papa John's supply arm</text><text x="255" y="148" class="cm">commissary price up - volumes fell</text><text x="30" y="186" class="ckh" fill="#6B665C">HELD THE PRICE</text><circle cx="38" cy="204" r="3.2" fill="none" stroke="#6B665C" stroke-width="1"/><text x="52" y="208" class="cn">Six Flags</text><text x="255" y="208" class="cm">admission pricing flat; per-capita -1% on mix</text><circle cx="38" cy="228" r="3.2" fill="none" stroke="#6B665C" stroke-width="1"/><text x="52" y="232" class="cn">Burger King US</text><text x="255" y="232" class="cm">value positioning; comps +8.5%</text><circle cx="38" cy="252" r="3.2" fill="none" stroke="#6B665C" stroke-width="1"/><text x="52" y="256" class="cn">Shake Shack</text><text x="255" y="256" class="cm">+4.0% blended - below its own cost inflation</text><circle cx="38" cy="276" r="3.2" fill="none" stroke="#6B665C" stroke-width="1"/><text x="52" y="280" class="cn">Planet Fitness</text><text x="255" y="280" class="cm">legacy members held; new-member card $15 since 2024</text><circle cx="38" cy="300" r="3.2" fill="none" stroke="#6B665C" stroke-width="1"/><text x="52" y="304" class="cn">DraftKings</text><text x="255" y="304" class="cm">revenue per user -13% on promotions</text><circle cx="38" cy="324" r="3.2" fill="none" stroke="#6B665C" stroke-width="1"/><text x="52" y="328" class="cn">Uber</text><text x="255" y="328" class="cm">fare discipline plus consumer discounts</text><text x="30" y="366" class="ckh" fill="#8a6d2a">FINANCED THE PRICE</text><circle cx="38" cy="384" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="388" class="cn">Airbnb</text><text x="255" y="388" class="cm">Reserve Now, Pay Later expanding; installments in MX/BR</text><circle cx="38" cy="408" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="412" class="cn">Marriott Vacations</text><text x="255" y="412" class="cm">price per guest +23%; $2.6bn loan book, growing</text><circle cx="38" cy="432" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="436" class="cn">Six Flags</text><text x="255" y="436" class="cm">season passes sold on 3-12 month installments</text><circle cx="38" cy="456" r="3.2" fill="#8a6d2a" stroke="none"/><text x="52" y="460" class="cn">Peloton</text><text x="255" y="460" class="cm">names consumer-financing availability as a business risk</text>
+</svg>
+<figcaption>From the companies&rsquo; own quarterly filings, all twenty-one read in
+full. The third category is the one a two-way sort hides: the price went up
+<em>and</em> the payment got easier. Six Flags and Airbnb appear twice for
+exactly that reason.</figcaption>
+</figure>
+<p>Read those lists by customer rather than by company. <strong>The first group priced
+ahead of its costs and lost nothing</strong> &mdash; Disney parks, Expedia&rsquo;s hotel
+nights, a steakhouse dinner where both the traffic and the cheque went up. Discretionary
+purchases by households with room. Penn&rsquo;s casinos put it plainly: its growth came
+from &ldquo;mid- and high-worth customer segments.&rdquo;</p>
+<p><strong>The second group held its price and paid for it out of margin</strong> &mdash;
+fast food in a &ldquo;highly promotional marketplace&rdquo; (Papa John&rsquo;s words),
+Burger King leaning into value, Uber holding fares down with consumer discounts because
+its rivals do. Purchases by households living closer to their paycheque, in categories
+where a cheaper rival is a street away.</p>
+<p><strong>The third group did something subtler: it raised the price and financed the
+difference.</strong> Airbnb&rsquo;s average rate rose &mdash; and it now lets guests
+<em>reserve now, pay later</em>, is expanding that across countries, offers interest-free
+installments in Mexico and Brazil, and credits them for booking strength. Marriott
+Vacations&rsquo; price per guest rose 23% &mdash; on top of a $2.6bn loan book it runs for
+its own customers, growing, with its loss reserve up 13% and its financing profit already
+falling. Six Flags holds its gate price &mdash; and sells season passes on three-to-twelve
+month installment plans, with an allowance in its accounts for &ldquo;estimated defaults on
+installment purchase plans.&rdquo; The price did not fall. The payment got easier.</p>
+<p>Economists call the underlying idea <strong>price elasticity</strong>: how much volume
+you lose when you raise the price. It reflects several things &mdash; substitutes,
+contracts, competition. But one of its inputs is simply whether the customer can afford
+the increase, and across a group this varied that is the factor the pattern keeps
+returning to. A household with savings absorbs a price rise without changing what it buys.
+A household with nothing spare walks &mdash; or takes the installment plan.</p>
+<p>So when twenty-one companies independently work out what their own customers will
+tolerate and price accordingly, they are collectively taking a reading of American
+household finances &mdash; taken at the till rather than by questionnaire, from firms that
+watch every transaction and never have to ask anyone&rsquo;s income to set a price.</p>
+<p>The honest objection to that inference is that pricing power has other parents.
+Fast food is more crowded than a theme park; a burger has a substitute across the street
+and a beachfront house does not, and part of the sort surely reflects that. Two things
+argue the customer&rsquo;s balance sheet is still doing real work. The third category
+cuts against the structural story: those firms <em>had</em> pricing power and used it
+&mdash; they just had to lend the customer the difference to make it stick, which is a
+statement about the customer, not the competition. And the split the pricing implies is
+exactly the split the household data measures directly in the next section, from sources
+that know nothing about any company&rsquo;s market structure.</p>
+<p><strong>The evidence that cuts against this reading, stated rather than buried.</strong>
+The strongest print in the group was Restaurant Brands &mdash; Burger King US comparable
+sales up 8.5% &mdash; selling to precisely the customer this argument says is constrained;
+whatever is happening, it is not that people have stopped showing up. Etsy reports US
+growth &ldquo;across all household income levels.&rdquo; Six Flags says guests are trading
+<em>up</em> to higher-tier passes, not down. DoorDash reports growth in its US restaurant
+category accelerating. None of that fits a story of a consumer in collapse &mdash; and
+this note is not telling one. The claim is narrower: the customers are present, spending,
+and increasingly particular about price &mdash; and the companies serving the thinnest
+wallets are the ones paying for that in margin or lending against it.</p>
+<p>Planet Fitness runs the whole progression in one company. Its standard membership,
+$10 for a quarter of a century, went to $15 for new members in 2024 &mdash; existing
+members were left untouched. This quarter&rsquo;s rate increase landed on its franchisees,
+not its members, and the company says it has &ldquo;initiated and expanded tests around
+pricing.&rdquo; A price position defended that carefully is not a settled one &mdash;
+which is rather the point.</p>
+<p class="gloss">The categories above come from reading all twenty-one companies&rsquo;
+quarterly filings &mdash; the 10-Q or 10-K itself, not the press-release summary &mdash;
+so no company is classified on silence. Where a company&rsquo;s evidence points two ways,
+it appears twice, labelled.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v14a5 5 0 0 1-10 0z"/><path d="M7 13h10"/></svg><span>The second instrument</span></div>
+<h2>The households say the same thing, measured a completely different way.</h2>
+<p>Everything above is the supply side &mdash; twenty-one companies inferring their
+customers&rsquo; finances from what those customers would tolerate. That is one instrument,
+and it has obvious limits: one quarter, and a company that says nothing about price may
+still have raised it.</p></div>
+<p>So test it against a second instrument that shares none of those weaknesses. The
+national accounts and the government&rsquo;s household spending survey measure the same
+households directly, from tax and survey data, with no company involved.</p>
+
+<figure class="fig">
+<p class="figq">Where did the money come from &mdash; and how much is left?</p>
+<svg viewBox="0 0 700 244" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="US personal saving rate, 1995 to 2026">
+  <path d="M62 214.0h542" stroke-width=".5" opacity=".16"/><text x="54" y="218.0" text-anchor="end" class="cl">0%</text><path d="M62 158.7h542" stroke-width=".5" opacity=".16"/><text x="54" y="162.7" text-anchor="end" class="cl">10%</text><path d="M62 103.4h542" stroke-width=".5" opacity=".16"/><text x="54" y="107.4" text-anchor="end" class="cl">20%</text><path d="M62 48.1h542" stroke-width=".5" opacity=".16"/><text x="54" y="52.1" text-anchor="end" class="cl">30%</text>
+  <path d="M62 173.6h542" stroke="#6B665C" stroke-width=".9" stroke-dasharray="5 4"/>
+  <text x="612" y="177.6" class="ck" fill="#6B665C">7.3% normal</text>
+  <path d="M62 206.3h542" stroke="#8c2f2f" stroke-width=".9" stroke-dasharray="3 3"/>
+  <text x="612" y="210.3" class="ck" fill="#8c2f2f">1.4% record low</text>
+  <path d="M62.0 173.6 L63.5 171.4 L64.8 173.1 L66.3 176.4 L67.7 175.3 L69.1 178.1 L70.5 175.8 L72.0 177.5 L73.5 177.5 L74.9 175.3 L76.4 178.6 L77.8 180.8 L79.2 178.1 L80.7 177.5 L82.1 178.6 L83.5 183.6 L85.0 178.1 L86.4 175.8 L87.8 178.1 L89.3 178.6 L90.8 178.6 L92.2 180.3 L93.6 179.7 L95.1 180.3 L96.5 181.4 L98.0 180.8 L99.3 180.3 L100.8 179.7 L102.2 178.1 L103.7 179.2 L105.1 181.9 L106.5 182.5 L108.0 181.4 L109.4 181.4 L110.9 180.3 L112.3 180.3 L113.8 175.3 L115.2 175.3 L116.6 174.7 L118.0 175.8 L119.4 177.5 L120.9 178.1 L122.3 177.5 L123.8 178.1 L125.3 180.3 L126.7 181.4 L128.1 180.8 L129.5 183.6 L131.0 180.3 L132.5 180.8 L133.8 183.0 L135.3 188.0 L136.7 189.7 L138.1 190.2 L139.6 189.7 L141.0 190.2 L142.5 193.5 L143.9 191.9 L145.4 191.3 L146.8 193.5 L148.3 189.1 L149.7 191.9 L151.1 193.0 L152.6 190.2 L154.0 190.2 L155.4 190.2 L156.9 188.0 L158.3 187.5 L159.8 191.3 L161.2 190.2 L162.7 190.2 L164.1 191.3 L165.5 189.1 L167.0 188.6 L168.3 186.9 L169.8 187.5 L171.2 190.2 L172.7 190.8 L174.1 184.1 L175.6 178.1 L177.0 175.8 L178.4 198.0 L179.9 195.2 L181.3 193.5 L182.8 183.0 L184.2 184.1 L185.6 183.6 L187.0 184.1 L188.5 180.3 L189.9 180.3 L191.3 184.7 L192.8 185.2 L194.3 181.9 L195.7 183.0 L197.1 183.0 L198.6 184.7 L200.0 184.7 L201.5 185.2 L202.8 186.9 L204.3 186.4 L205.7 184.7 L207.2 185.8 L208.6 181.4 L210.0 182.5 L211.5 186.9 L212.9 186.4 L214.4 186.4 L215.8 186.4 L217.3 188.6 L218.7 188.6 L220.1 189.1 L221.6 186.9 L223.0 187.5 L224.4 184.1 L225.9 188.0 L227.3 188.0 L228.8 191.3 L230.2 192.4 L231.7 195.2 L233.1 179.7 L234.6 199.1 L236.0 201.3 L237.3 200.2 L238.8 202.4 L240.2 199.6 L241.7 202.9 L243.1 206.3 L244.6 202.9 L246.0 202.9 L247.5 201.3 L248.9 199.6 L250.3 200.2 L251.8 197.4 L253.3 196.3 L254.6 195.8 L256.1 196.9 L257.5 198.0 L258.9 198.0 L260.3 201.3 L261.8 200.2 L263.3 200.7 L264.7 200.7 L266.2 199.1 L267.6 199.6 L269.0 200.7 L270.5 198.5 L271.8 197.4 L273.3 197.4 L274.7 198.5 L276.2 199.1 L277.6 199.6 L279.1 201.8 L280.5 201.3 L281.9 201.8 L283.4 203.5 L284.8 200.7 L286.3 199.6 L287.7 197.4 L289.1 198.0 L290.6 200.7 L292.0 176.4 L293.5 188.6 L294.9 194.1 L296.3 196.9 L297.8 192.4 L299.2 186.9 L300.7 180.8 L302.1 181.9 L303.6 181.4 L305.0 184.1 L306.4 181.9 L307.8 178.1 L309.2 170.9 L310.7 180.3 L312.1 184.1 L313.6 189.7 L315.0 183.6 L316.5 185.8 L317.9 183.6 L319.3 184.1 L320.8 183.0 L322.3 184.7 L323.6 184.7 L325.1 180.8 L326.5 178.6 L327.9 179.7 L329.4 180.3 L330.8 179.7 L332.3 180.3 L333.7 181.4 L335.2 181.9 L336.6 179.7 L338.1 177.5 L339.5 175.8 L340.8 179.2 L342.3 179.2 L343.7 179.2 L345.2 178.1 L346.6 177.0 L348.1 177.0 L349.5 178.6 L351.0 179.2 L352.4 178.6 L353.8 174.2 L355.3 173.1 L356.8 173.6 L358.1 172.0 L359.6 170.3 L361.0 170.3 L362.5 170.3 L363.9 175.3 L365.4 177.0 L366.8 174.2 L368.2 170.9 L369.7 165.9 L371.1 153.7 L372.6 186.9 L374.0 188.0 L375.4 187.5 L376.8 185.8 L378.3 184.7 L379.7 184.1 L381.1 185.2 L382.6 185.2 L384.1 184.7 L385.5 188.0 L386.9 189.1 L388.4 189.1 L389.8 185.2 L391.3 184.7 L392.6 185.2 L394.1 184.1 L395.5 183.0 L397.0 183.0 L398.4 183.6 L399.8 184.7 L401.3 183.6 L402.7 184.1 L404.2 183.0 L405.6 180.8 L407.1 179.2 L408.5 178.6 L409.9 181.4 L411.3 181.4 L412.7 181.9 L414.2 182.5 L415.6 183.0 L417.1 183.0 L418.5 181.9 L420.0 181.9 L421.4 183.0 L422.8 181.9 L424.3 180.3 L425.8 183.0 L427.1 181.4 L428.6 183.6 L430.0 184.7 L431.5 186.9 L432.9 185.8 L434.4 185.8 L435.8 185.8 L437.3 184.7 L438.7 184.1 L440.1 186.4 L441.6 184.7 L443.1 183.0 L444.4 183.0 L445.8 182.5 L447.3 179.2 L448.7 180.8 L450.1 180.8 L451.6 180.3 L453.1 181.4 L454.5 180.8 L456.0 183.0 L457.4 186.4 L458.8 182.5 L460.3 181.9 L461.6 181.4 L463.1 180.8 L464.5 180.8 L466.0 179.2 L467.4 178.1 L468.9 177.5 L470.3 176.4 L471.7 177.0 L473.2 178.1 L474.6 167.6 L476.1 167.6 L477.5 167.0 L478.9 170.3 L480.3 172.0 L481.8 173.6 L483.2 174.7 L484.6 176.4 L486.1 175.8 L487.6 175.3 L489.0 174.7 L490.4 175.8 L491.9 179.7 L493.3 176.4 L494.8 172.5 L496.2 145.4 L497.6 38.2 L499.0 89.0 L500.5 112.8 L501.9 115.0 L503.4 137.1 L504.8 140.5 L506.3 143.2 L507.7 147.6 L509.1 148.8 L510.6 106.2 L512.1 142.1 L513.4 69.1 L514.9 145.4 L516.3 158.7 L517.7 165.3 L519.2 161.5 L520.6 165.9 L522.1 172.0 L523.5 175.3 L525.0 177.5 L526.4 177.5 L527.9 190.8 L529.3 191.3 L530.6 196.3 L532.1 199.6 L533.5 199.6 L535.0 201.8 L536.4 195.8 L537.9 196.3 L539.3 195.2 L540.7 195.2 L542.2 193.0 L543.6 190.8 L545.1 186.9 L546.6 183.6 L547.9 180.8 L549.3 181.9 L550.8 180.3 L552.2 181.9 L553.6 183.6 L555.1 183.0 L556.6 184.7 L558.0 184.1 L559.5 183.0 L560.9 183.0 L562.3 178.6 L563.8 180.3 L565.2 181.4 L566.6 181.9 L568.1 181.9 L569.5 182.5 L570.9 184.7 L572.4 185.2 L573.9 187.5 L575.3 186.4 L576.7 186.9 L578.2 190.2 L579.6 185.8 L581.1 185.2 L582.4 185.8 L583.9 183.6 L585.3 186.9 L586.8 188.6 L588.2 189.1 L589.6 189.7 L591.1 190.2 L592.5 192.4 L594.0 193.0 L595.4 194.1 L596.9 189.7 L598.3 193.0 L599.7 194.6 L601.1 197.4 L602.5 198.5 L604.0 199.1" stroke="#111111" stroke-width="1.4"/>
+  <text x="506" y="42" class="ck" fill="#111111">31.8% &mdash; the buffer, built</text>
+  <circle cx="604" cy="199.1" r="3.6" fill="#8a6d2a" stroke="none"/>
+  <text x="594" y="203.1" text-anchor="end" class="ck" fill="#8a6d2a">2.7% today</text>
+  <path d="M62 214v5" stroke-width=".8" opacity=".45"/><text x="62" y="233" text-anchor="middle" class="cl">1995</text><path d="M148 214v5" stroke-width=".8" opacity=".45"/><text x="148" y="233" text-anchor="middle" class="cl">2000</text><path d="M235 214v5" stroke-width=".8" opacity=".45"/><text x="235" y="233" text-anchor="middle" class="cl">2005</text><path d="M321 214v5" stroke-width=".8" opacity=".45"/><text x="321" y="233" text-anchor="middle" class="cl">2010</text><path d="M407 214v5" stroke-width=".8" opacity=".45"/><text x="407" y="233" text-anchor="middle" class="cl">2015</text><path d="M493 214v5" stroke-width=".8" opacity=".45"/><text x="493" y="233" text-anchor="middle" class="cl">2020</text><path d="M580 214v5" stroke-width=".8" opacity=".45"/><text x="580" y="233" text-anchor="middle" class="cl">2025</text>
+</svg>
+<figcaption>The share of after-tax income American households do not spend. The pandemic
+built an unprecedented buffer; it has been spent, and the rate now sits at roughly a
+third of its pre-2020 normal. Half of the past year&rsquo;s growth in consumption came
+from this line falling rather than from incomes rising.</figcaption>
+</figure>
+<p>Americans are spending more. Over the year to April, consumption grew
+<strong>$1,185bn</strong> &mdash; but income growth explains only $802bn of it. Roughly half
+the increase, <strong>$591bn</strong>, came from households simply saving less.</p>
+<p>And they did <em>not</em> borrow to do it.</p>
+
+<figure class="fig">
+<p class="figq">Have households reached for the credit card yet?</p>
+<svg viewBox="0 0 700 220" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Revolving consumer credit, annual growth">
+  <path d="M62 171.8h542" stroke-width=".5" opacity=".16"/><text x="54" y="175.8" text-anchor="end" class="cl">-10%</text><path d="M62 126.2h542" stroke-width=".5" opacity=".16"/><text x="54" y="130.2" text-anchor="end" class="cl">+0%</text><path d="M62 80.7h542" stroke-width=".5" opacity=".16"/><text x="54" y="84.7" text-anchor="end" class="cl">+10%</text><path d="M62 35.1h542" stroke-width=".5" opacity=".16"/><text x="54" y="39.1" text-anchor="end" class="cl">+20%</text>
+  <path d="M62 98.9h542" stroke="#8c2f2f" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="612" y="102.9" class="ck" fill="#8c2f2f">6% &mdash; the tripwire</text>
+  <path d="M62 126.2h542" stroke-width="1"/>
+  <path d="M62.0 123.4 L65.2 121.3 L68.2 122.3 L71.4 124.0 L74.5 122.1 L77.7 124.8 L80.8 125.7 L84.1 123.4 L87.3 124.4 L90.4 123.4 L93.6 124.2 L96.7 126.3 L99.9 123.9 L103.1 122.1 L106.0 122.5 L109.2 121.0 L112.3 119.8 L115.5 119.8 L118.6 118.9 L121.9 120.3 L125.1 119.9 L128.2 118.9 L131.4 122.7 L134.5 118.5 L137.7 117.5 L140.9 117.5 L143.8 115.9 L147.0 111.6 L150.1 111.9 L153.3 111.4 L156.4 108.4 L159.7 108.2 L162.9 108.1 L166.0 108.8 L169.2 110.3 L172.3 108.5 L175.5 115.6 L178.7 116.7 L181.6 114.7 L184.8 114.0 L187.9 114.9 L191.1 112.2 L194.2 112.2 L197.4 111.6 L200.7 109.0 L203.8 109.9 L207.0 107.8 L210.1 120.7 L213.3 114.7 L216.5 114.7 L219.5 110.8 L222.7 111.9 L225.8 113.1 L229.0 111.4 L232.1 111.5 L235.3 110.9 L238.6 111.6 L241.7 112.7 L244.9 108.5 L248.0 94.7 L251.2 96.0 L254.4 95.1 L257.3 99.5 L260.5 101.0 L263.6 99.6 L266.8 101.8 L269.9 103.4 L273.1 103.5 L276.4 103.0 L279.5 98.9 L282.7 98.3 L285.8 99.3 L289.0 98.2 L292.2 100.1 L295.1 101.0 L298.3 104.3 L301.4 104.4 L304.6 107.6 L307.7 104.3 L310.9 103.4 L314.2 105.4 L317.3 106.1 L320.5 108.0 L323.6 109.6 L326.8 109.2 L330.0 109.2 L332.9 111.0 L336.1 106.3 L339.2 105.9 L342.4 105.8 L345.5 105.6 L348.7 108.0 L352.0 108.9 L355.1 110.1 L358.3 115.4 L361.4 109.7 L364.6 119.7 L367.8 118.3 L370.8 126.6 L374.0 153.8 L377.1 165.6 L380.3 167.9 L383.4 173.1 L386.6 177.8 L389.9 176.6 L393.0 179.1 L396.2 178.7 L399.3 183.5 L402.5 179.0 L405.7 179.3 L408.6 173.5 L411.8 150.2 L414.9 135.5 L418.1 120.6 L421.2 117.2 L424.4 110.7 L427.6 106.8 L430.8 101.3 L434.0 91.3 L437.1 88.5 L440.3 82.4 L443.5 78.8 L446.4 66.2 L449.6 59.7 L452.7 59.8 L455.9 64.0 L459.0 62.2 L462.2 57.1 L465.4 58.3 L468.6 57.2 L471.8 56.3 L474.9 56.1 L478.1 57.8 L481.3 61.4 L484.2 65.6 L487.4 67.2 L490.5 68.0 L493.7 74.4 L496.8 75.5 L500.0 75.7 L503.2 77.9 L506.3 81.4 L509.6 80.9 L512.7 85.6 L515.9 85.0 L519.1 82.8 L522.1 88.9 L525.3 92.8 L528.4 93.2 L531.6 95.8 L534.7 96.6 L537.9 101.7 L541.1 103.2 L544.2 101.3 L547.5 112.1 L550.6 126.9 L553.8 128.5 L557.0 131.5 L559.9 135.9 L563.1 134.4 L566.2 137.0 L569.4 136.2 L572.5 135.5 L575.7 137.1 L578.9 136.3 L582.0 138.0 L585.3 134.9 L588.4 116.6 L591.6 117.7 L594.8 118.2 L597.7 110.3 L600.9 108.5 L604.0 110.6" stroke="#111111" stroke-width="1.4"/>
+  <circle cx="604" cy="110.6" r="3.6" fill="#8a6d2a" stroke="none"/>
+  <text x="594" y="114.6" text-anchor="end" class="ck" fill="#8a6d2a">3.4% today</text>
+  <path d="M138 190v5" stroke-width=".8" opacity=".45"/><text x="138" y="209" text-anchor="middle" class="cl">2014</text><path d="M251 190v5" stroke-width=".8" opacity=".45"/><text x="251" y="209" text-anchor="middle" class="cl">2017</text><path d="M365 190v5" stroke-width=".8" opacity=".45"/><text x="365" y="209" text-anchor="middle" class="cl">2020</text><path d="M478 190v5" stroke-width=".8" opacity=".45"/><text x="478" y="209" text-anchor="middle" class="cl">2023</text><path d="M592 190v5" stroke-width=".8" opacity=".45"/><text x="592" y="209" text-anchor="middle" class="cl">2026</text>
+</svg>
+<figcaption>Annual growth in revolving consumer credit &mdash; essentially credit-card
+balances. Not yet. The pivot from savings to borrowing has not happened, which is the
+single most testable claim in this note.</figcaption>
+</figure>
+<p>Total consumer credit grew $106bn over the year to May, about <strong>9%</strong> of the
+spending increase. Households funded this from savings rather than credit by roughly five to
+one. That is what a drawdown looks like, and it is not what a borrowing binge looks like.</p>
+<p>And it is not because the credit was refused. The New York Fed&rsquo;s survey of credit
+access &mdash; it asks households directly whether they applied for credit and what happened
+&mdash; found in June that <strong>applications were at their highest since October 2021</strong>,
+while only 16.1% of applicants were turned down, against 23.1% a year earlier. The door is
+open; households have mostly chosen the savings account instead. But applications at a
+four-and-a-half-year high is worth pausing on: it may be the front edge of the pivot this
+note argues matters most, which is why our prediction for Tuesday&rsquo;s debt report is
+stated in advance, in the closing section.</p>
+<p class="gloss">The income and saving figures are from the Bureau of Economic Analysis. The
+split is an accounting identity rather than an estimate &mdash; consumption is approximately
+income multiplied by the share people spend. The two components exceed measured consumption
+growth by $208bn because the saving rate is defined against all household outlays, not
+consumption alone.</p>
+<h3>And the survey finds the same split the pricing found</h3>
+<p>The <strong>Consumer Expenditure Survey</strong> &mdash; the government&rsquo;s
+household-by-household spending survey, and the same data that sets the weights inside the
+inflation rate &mdash; breaks spending down by income. Between 2019 and 2024, after
+inflation:</p>
+<ul class="trip">
+<li><strong>Incomes converged.</strong> The poorest fifth gained 12.9% in purchasing power.
+The richest fifth lost 1.4%.</li>
+<li><strong>Restaurant spending fell in every single income group</strong> &mdash; 20.7% at
+the bottom, 13.9% at the top.</li>
+<li><strong>But what households added to savings each year diverged sharply.</strong> The
+poorest fifth added 57.8% less than before. The richest fifth added 30.9% more.</li>
+</ul>
+<p>Wages caught up. The ability to put anything aside did not. That is why a gym
+defends its price for its existing members while a timeshare presentation charges 23%
+more. And it is the answer to the Treasury Secretary&rsquo;s declaration: the K did not
+close. It moved &mdash; off the paycheque, where his wage figures genuinely have improved,
+and onto the balance sheet, where no wage statistic can follow it.</p>
+<p>The bottom fifth&rsquo;s shift was not a borrowing story either. Its annual saving fell by
+$2,676 while its annual borrowing rose by $430 &mdash; <strong>86% of the change came from
+saving less, 14% from borrowing more.</strong> The same shape the national accounts show for
+2026, from an unrelated survey, two years earlier. The bottom of the distribution reached
+the drawdown first.</p>
+<p class="gloss">This survey is annual and its most recent reading is 2024, so it describes
+the shape of things rather than this quarter. It is also a survey &mdash; people misremember
+&mdash; and its savings figures are among its least reliable numbers, which is why the
+agreement with the national accounts matters more than either reading alone.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11l-3-3M3 7l3 3"/><path d="M21 17H10l3-3M21 17l-3 3"/></svg><span>One household, four roles</span></div>
+<h2>The customer and the workforce are the same people.</h2>
+<p>Two instruments agreeing is useful. What makes them one story rather than two is that
+they are measuring the same person &mdash; who appears four times in this data.</p></div>
+
+<figure class="fig">
+<p class="figq">The same household appears four times in this data.</p>
+<svg viewBox="0 0 700 320" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="One household in four roles: worker, consumer, saver, borrower">
+  <path d="M44 34h278" stroke="#6B665C" stroke-width="1.2"/><text x="44" y="25" class="ckh" fill="#6B665C">WORKER</text><text x="322" y="25" text-anchor="end" class="cm">what they earn</text><text x="44" y="68" class="fourv" fill="#6B665C">+0.1%</text><text x="46" y="88" class="cm">real earned income</text><path d="M378 34h278" stroke="#111111" stroke-width="1.2"/><text x="378" y="25" class="ckh" fill="#111111">CONSUMER</text><text x="656" y="25" text-anchor="end" class="cm">what they spend</text><text x="378" y="68" class="fourv" fill="#111111">+2.5%</text><text x="380" y="88" class="cm">real spending</text><path d="M44 186h278" stroke="#8a6d2a" stroke-width="1.2"/><text x="44" y="177" class="ckh" fill="#8a6d2a">SAVER</text><text x="322" y="177" text-anchor="end" class="cm">what they hold</text><text x="44" y="220" class="fourv" fill="#8a6d2a">2.7%</text><text x="46" y="240" class="cm">saving rate</text><text x="46" y="256" class="cm" opacity=".8">was 7.3% before 2020</text><path d="M378 186h278" stroke="#6B665C" stroke-width="1.2"/><text x="378" y="177" class="ckh" fill="#6B665C">BORROWER</text><text x="656" y="177" text-anchor="end" class="cm">what they owe</text><text x="378" y="220" class="fourv" fill="#6B665C">+3.4%</text><text x="380" y="240" class="cm">revolving credit</text><text x="380" y="256" class="cm" opacity=".8">debt service at the 26th percentile</text><path d="M304 226 C340 210 348 152 372 112" stroke="#8a6d2a" stroke-width="1.6" fill="none"/><path d="M372 112l-10.5 2.5 5 6z" fill="#8a6d2a" stroke="none"/><text x="350" y="140" text-anchor="middle" class="ckh" fill="#8a6d2a">FUNDS THE GAP</text>
+</svg>
+<figcaption>Spending is rising while earnings are flat. The difference is being funded from
+the saving rate, not from the credit card &mdash; which is why the borrowing statistics look
+calm and why that calm is not evidence of health.</figcaption>
+</figure>
+<p>They are a <strong>worker</strong>. The businesses in this note employ 32.4 million
+Americans between them &mdash; leisure and hospitality plus retail trade, roughly
+<strong>one job in five</strong>. Services overall account for <strong>86% of all US
+employment</strong>. When people say the American economy is a service economy, this is the
+arithmetic behind it.</p>
+<p>They are a <strong>customer</strong> of those same businesses. They are a
+<strong>saver</strong>, spending down the buffer built in 2020. And they are a
+<strong>borrower</strong>, with a credit line they have not yet touched.</p>
+<p>Watch what that means in one company&rsquo;s filing. Texas Roadhouse reported labour
+inflation of 3.9%. That is its wage bill &mdash; and it is also its customer&rsquo;s pay rise,
+the same dollar counted twice. It also reported ingredient-cost inflation of 7% that it
+declined to fully pass on. That is margin it gave up, and it is also a price its customer was never
+charged. Again, the same dollar.</p>
+<p><strong>The operator is absorbing cost on behalf of a customer who is, statistically, its
+own workforce.</strong> The wage it pays and the price it does not charge are two sides of a
+single transaction with the same household.</p>
+<h3>Why this should matter to the Federal Reserve</h3>
+<p>Because the absorption has to stop somewhere, and where it stops is employment &mdash;
+the one variable the Fed is obliged to act on. A business that has eaten 12% input inflation
+for a year does not raise prices on a customer who cannot pay; it cuts hours, then staff.
+The two sectors doing the absorbing employ one American worker in five. That is why leisure
+and hospitality losing 43,000 jobs in June and 40,000 in July is not a footnote.</p>
+<h3>Why this should matter to investors</h3>
+<p>Because it changes what the earnings are worth. Revenue growth funded by a
+customer&rsquo;s savings drawdown is not the same asset as revenue growth funded by rising
+income &mdash; the first has an end date and the second does not, and they look identical on
+an income statement. And the split between the operators and the platforms tells you who
+keeps the value when volume rises: the businesses handling the physical transaction absorbed
+the cost, and the businesses intermediating it converted the same growth into profit at two
+to three times the rate.</p></section>
+<section class="band">
+  <div class="bandin">
+    <p class="bandq">Two instruments. Unrelated methods. The same answer.</p>
+    <p class="bandp">Twenty-one companies inferred their customers&rsquo; finances from what
+    those customers would pay. The national accounts and a household survey measured the
+    same finances directly. Neither reading is conclusive alone &mdash; but they fail in
+    completely different ways, and they agree. The pressure is real, and it is being stored
+    in company margins on one side and household savings on the other. Neither store appears
+    in employment or in prices until it is exhausted &mdash; and those are the only two
+    things the Federal Reserve is obliged to act on.</p>
+  </div>
+</section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z"/><path d="M4 4l16 16"/></svg><span>Why the Fed sees it last</span></div>
+<h2>A price that was never charged cannot appear in the inflation rate.</h2>
+<p>The Federal Reserve is required by law to watch two things: <strong>maximum
+employment</strong> and <strong>stable prices</strong>. Not household savings. Not corporate
+margins. Not who can absorb a price increase.</p></div>
+<p>What the two preceding sections describe is <strong>two separate cushions, suppressing
+two different signals</strong>. Some companies absorbed cost in margin, so the inflation
+rate never recorded the pressure that entered the system. Households absorbed the price
+rises that did happen by drawing on savings rather than buying less, so demand never
+weakened and the disinflationary signal that falling demand would produce never appeared
+either.</p>
+<p><strong>Both of the things a central bank is required to look at are being held up at
+once, by two different buffers, for two different reasons.</strong> Prices look contained
+because some companies ate the cost. Demand looks healthy because households spent their
+savings. Neither reading is false, and neither is durable. Four mechanics make it
+concrete.</p>
+<h3>The inflation rate is quietest where customers are weakest</h3>
+<p>The Consumer Price Index measures prices companies <em>did</em> charge. There is no line
+in it for the increases the absorbers declined to take. So the reading is softest exactly where
+the customer had least room &mdash; because that weakness is what stopped the price rise.
+Soft category inflation normally reads as &ldquo;no pressure here.&rdquo; It can equally
+mean &ldquo;this customer had none.&rdquo;</p>
+<h3>Some of the borrowing is moving where the statistics cannot follow</h3>
+<p>The consumer-credit figures quoted earlier count what banks and finance companies
+report. But look back at the third category of the sort: Airbnb&rsquo;s pay-later booking,
+Six Flags&rsquo; installment season passes, Marriott Vacations&rsquo; in-house loan book,
+the buy-now-pay-later plans spreading through online checkouts. Some of that is visible
+if you know where to look &mdash; Marriott Vacations&rsquo; loans are bundled into bonds
+and reported. But the fastest-spreading piece, the pay-in-four plan at the online checkout,
+is largely unreported to credit bureaus &mdash; an omission regulators themselves call
+<em>phantom debt</em> &mdash; and a season pass paid off over twelve months sits in a
+company&rsquo;s receivables, not in any household-credit statistic. Shopify, which processes checkouts for millions of
+merchants, grew its merchant lending 25% in six months. So a household can be spreading
+more and more of its spending across future paycheques while the official household-credit
+numbers stay calm &mdash; a third cushion, sitting between the other two, invisible for a
+different reason: not absorbed, just unrecorded.</p>
+<h3>The debt statistics look reassuring for a mechanical reason</h3>
+
+<figure class="fig">
+<p class="figq">And the number everyone quotes to say households are fine?</p>
+<svg viewBox="0 0 700 216" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Household debt service as a share of after-tax income">
+  <rect x="62" y="26" width="542" height="103.7" fill="#8a6d2a"
+        fill-opacity=".08" stroke="none"/>
+  <path d="M62 168.2h542" stroke-width=".5" opacity=".16"/><text x="54" y="172.2" text-anchor="end" class="cl">9%</text><path d="M62 132.7h542" stroke-width=".5" opacity=".16"/><text x="54" y="136.7" text-anchor="end" class="cl">11%</text><path d="M62 97.1h542" stroke-width=".5" opacity=".16"/><text x="54" y="101.1" text-anchor="end" class="cl">13%</text><path d="M62 61.6h542" stroke-width=".5" opacity=".16"/><text x="54" y="65.6" text-anchor="end" class="cl">15%</text>
+  <path d="M62.0 65.1 L68.4 64.6 L74.8 59.1 L81.3 61.0 L87.8 61.7 L94.2 60.8 L100.6 55.0 L107.1 52.5 L113.6 52.2 L119.9 50.3 L126.4 48.9 L132.9 46.5 L139.4 47.8 L145.8 55.7 L152.2 51.8 L158.7 48.7 L165.2 50.9 L171.6 57.1 L178.0 60.0 L184.5 63.4 L191.0 70.2 L197.4 78.1 L203.8 80.8 L210.3 86.8 L216.8 91.6 L223.2 96.1 L229.6 98.1 L236.1 101.6 L242.6 110.7 L249.1 114.3 L255.5 113.4 L262.0 119.3 L268.5 114.8 L274.8 118.5 L281.3 117.8 L287.8 115.2 L294.3 117.0 L300.6 121.6 L307.1 121.2 L313.6 121.4 L320.1 122.8 L326.4 124.0 L332.9 121.9 L339.4 119.5 L345.9 119.1 L352.3 119.0 L358.7 119.0 L365.2 117.3 L371.7 119.8 L378.1 119.2 L384.5 118.1 L391.0 118.1 L397.5 121.2 L403.9 122.0 L410.3 121.7 L416.8 120.8 L423.3 123.8 L429.7 121.5 L436.1 121.2 L442.6 119.7 L449.1 122.2 L455.5 155.1 L462.0 149.4 L468.5 143.5 L475.0 167.3 L481.3 153.3 L487.8 150.3 L494.3 146.4 L500.8 142.0 L507.1 138.3 L513.5 140.3 L520.1 137.3 L526.6 140.4 L532.9 140.2 L539.3 137.1 L545.8 131.0 L552.3 131.6 L558.8 132.3 L565.2 130.2 L571.7 130.5 L578.2 130.8 L584.6 130.5 L591.0 128.6 L597.5 126.9 L604.0 129.7" stroke="#111111" stroke-width="1.5"/>
+  <path d="M62 129.7h542" stroke="#8a6d2a" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="612" y="133.7" class="ck" fill="#8a6d2a">11.2% today</text>
+  <text x="72" y="48" class="ck" fill="#6B665C">three-quarters of its own history sits above this line</text>
+  <path d="M62 186v5" stroke-width=".8" opacity=".45"/><text x="62" y="205" text-anchor="middle" class="cl">2005</text><path d="M191 186v5" stroke-width=".8" opacity=".45"/><text x="191" y="205" text-anchor="middle" class="cl">2010</text><path d="M320 186v5" stroke-width=".8" opacity=".45"/><text x="320" y="205" text-anchor="middle" class="cl">2015</text><path d="M449 186v5" stroke-width=".8" opacity=".45"/><text x="449" y="205" text-anchor="middle" class="cl">2020</text><path d="M578 186v5" stroke-width=".8" opacity=".45"/><text x="578" y="205" text-anchor="middle" class="cl">2025</text>
+</svg>
+<figcaption>Debt payments as a share of after-tax income, all US households combined. It
+looks reassuring, and it is dollar-weighted &mdash; dominated by wealthier households
+holding cheap fixed-rate mortgages. It cannot see the households that are stretched.</figcaption>
+</figure>
+<p>Household debt payments currently take 11.2% of after-tax income. Debt has been a heavier
+burden than that in roughly three-quarters of the quarters since the measure began in 2005.
+But that figure adds every household together and weights by dollars &mdash; and it is
+dominated by wealthier households holding mortgages fixed at 2020&ndash;21 rates. A family
+carrying a maxed credit card at 20.9% barely moves it. The number cannot tell the difference
+between nobody being stressed and the stressed households being too small a share of the
+total to register.</p>
+<h3>The same is true of the interest figures</h3>
+<p>American households collectively earn about $2,020bn a year in interest and pay about
+$281bn in credit-card interest &mdash; better than seven dollars in for every dollar out.
+That looks like a sector doing well out of high rates. But the interest is earned by whoever
+owns the assets and paid by whoever carries the balance, and they are not the same
+households. The Federal Reserve&rsquo;s own distributional accounts put the top 1%&rsquo;s
+net worth at roughly thirteen times that of the entire bottom half. <strong>No household
+holds the average.</strong></p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M4 15l16-9"/><path d="M4 13l16 2"/></svg><span>How fast</span></div>
+<h2>Slower than the headlines will suggest.</h2>
+<p>If the cushions are finite, the question is how long they last. Two of the three can
+be put on a clock; the unrecorded one, by definition, cannot.</p></div>
+<p><strong>On the household side</strong>, the saving rate is 2.7% and has been falling at
+about 1.9 percentage points a year. At that pace it reaches its 1990&ndash;2026 low of 1.4%
+in roughly eight months. That is arithmetic on a recent trend, not a forecast &mdash; the rate
+rose 0.8 points in a single month within the past year.</p>
+<p><strong>On the company side</strong>, there is a measurable amount of room and it is
+larger than the household&rsquo;s &mdash; but it is being consumed faster than it was. The
+group&rsquo;s clearest absorber, Shake Shack, saw its operating margin fall from 6.28% to
+4.97% over the year, a compression of <strong>131 basis points</strong>. At that rate there are roughly
+<strong>under four years</strong> before the margin is gone.</p>
+<p>Two caveats before that figure travels. That company opened <strong>16 new
+locations</strong> in the quarter, and new restaurants run below mature margins, so part of
+the compression is the cost of expansion rather than the cost of inputs. And it is one
+company, one year, extrapolated in a straight line.</p>
+<p>It should be read as room before behaviour must change, not as a countdown to
+failure. No company rides its margin to zero; it cuts hours, closes locations, and
+eventually raises prices &mdash; and <em>how</em> it chooses among those is the transmission
+into employment. That transmission is not hypothetical: Papa John&rsquo;s, the weakest
+print in the group, has already approved the closure of seventeen more company-owned
+restaurants &mdash; most expected to close by the end of the year &mdash; and says its
+portfolio review will result in &ldquo;additional strategic restaurant
+closures.&rdquo;</p>
+<p>The squeeze depends on whether input costs stay where they are, and the operators have
+told us what they expect. Texas Roadhouse guides to commodity inflation of about 5% for
+2026 with roughly 60% of its remaining costs locked in &mdash; above its 3&ndash;4% wage
+guide, so the food-over-labour squeeze persists but does not accelerate. Shake Shack
+expects beef inflation &ldquo;to persist into the second half&rdquo; and calls the back
+half &ldquo;real headwinds.&rdquo; If those costs instead fall away, the squeeze resolves
+and nothing reaches the consumer or the labour market. That four-year figure shortens or
+lengthens with the operators&rsquo; own cost guides.</p>
+<p><strong>The channel to watch is employment</strong>, because it is the one the Fed is
+obliged to act on. It has just started to move.</p>
+
+<figure class="fig">
+<p class="figq">Has any of this reached the thing the Fed must act on?</p>
+<svg viewBox="0 0 700 214" class="chart motif" fill="none" stroke="currentColor"
+     aria-label="Leisure and hospitality employment, three-month average change">
+  <path d="M62 42.0h610" stroke-width=".5" opacity=".16"/>
+  <text x="54" y="46.0" text-anchor="end" class="cl">+50k</text>
+  <rect x="62.0" y="6.0" width="10.5" height="126.0" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="76.2" y="-16.9" width="10.5" height="148.9" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="90.4" y="9.1" width="10.5" height="122.9" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="104.6" y="51.0" width="10.5" height="81.0" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="118.7" y="70.8" width="10.5" height="61.2" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="132.9" y="45.6" width="10.5" height="86.4" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="147.1" y="54.6" width="10.5" height="77.4" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="161.3" y="61.3" width="10.5" height="70.7" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="175.5" y="102.7" width="10.5" height="29.3" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="189.7" y="88.3" width="10.5" height="43.7" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="203.9" y="106.3" width="10.5" height="25.7" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="218.0" y="95.5" width="10.5" height="36.5" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="232.2" y="115.8" width="10.5" height="16.2" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="246.4" y="101.9" width="10.5" height="30.1" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="260.6" y="86.5" width="10.5" height="45.5" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="274.8" y="104.5" width="10.5" height="27.5" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="289.0" y="132.0" width="10.5" height="7.7" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="303.2" y="132.0" width="10.5" height="21.6" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="317.3" y="132.0" width="10.5" height="6.7" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="331.5" y="123.0" width="10.5" height="9.0" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="345.7" y="112.7" width="10.5" height="19.3" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="359.9" y="103.2" width="10.5" height="28.8" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="374.1" y="85.7" width="10.5" height="46.3" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="388.3" y="80.3" width="10.5" height="51.7" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="402.5" y="112.2" width="10.5" height="19.8" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="416.7" y="132.0" width="10.5" height="16.2" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="430.8" y="132.0" width="10.5" height="23.4" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="445.0" y="129.7" width="10.5" height="2.3" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="459.2" y="106.3" width="10.5" height="25.7" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="473.4" y="123.5" width="10.5" height="8.5" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="487.6" y="124.8" width="10.5" height="7.2" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="501.8" y="113.5" width="10.5" height="18.5" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="516.0" y="90.1" width="10.5" height="41.9" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="530.1" y="72.1" width="10.5" height="59.9" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="544.3" y="92.4" width="10.5" height="39.6" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="558.5" y="99.6" width="10.5" height="32.4" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="572.7" y="121.2" width="10.5" height="10.8" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="586.9" y="132.0" width="10.5" height="0.5" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="601.1" y="121.2" width="10.5" height="10.8" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="615.3" y="128.4" width="10.5" height="3.6" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="629.4" y="84.7" width="10.5" height="47.3" fill="#8a6d2a" fill-opacity="0.5" stroke="none"/><rect x="643.6" y="132.0" width="10.5" height="4.9" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/><rect x="657.8" y="132.0" width="10.5" height="24.7" fill="#8c2f2f" fill-opacity="0.75" stroke="none"/>
+  <path d="M62 132.0h610" stroke-width="1.1"/>
+  <text x="54" y="136.0" text-anchor="end" class="cl">0</text>
+  <text x="62" y="205" text-anchor="middle" class="cl">2023</text><text x="232" y="205" text-anchor="middle" class="cl">2024</text><text x="402" y="205" text-anchor="middle" class="cl">2025</text><text x="573" y="205" text-anchor="middle" class="cl">2026</text>
+  <text x="668" y="36" text-anchor="end" class="ck" fill="#8c2f2f">two consecutive monthly falls</text>
+</svg>
+<figcaption>Monthly change in leisure and hospitality employment, averaged over three
+months. These are the businesses in this note, and the jobs belong to the customers they
+sell to.</figcaption>
+</figure>
+<p>Leisure and hospitality lost 43,000 jobs in June and 40,000 in July, with the three-month
+average swinging from +26,300 in May to <strong>&minus;13,700</strong> in July. It is the
+largest two-month decline in the sector since at least 2022 &mdash; but it is the
+<em>third</em> such pair in just over two years, after April&ndash;May 2024 and
+January&ndash;February 2025, and neither of those became a trend. Retail trade cut
+19,400 jobs in July. Headline payrolls fell 23,000. These are the sectors employing
+the customers they sell to. Two months is not a trend. It is the first reading of this the
+mandate can see at all.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v14a5 5 0 0 1-10 0z"/><path d="M7 13h10"/></svg><span>Is this a precursor?</span></div>
+<h2>Stress is accumulating. That is not the same as a crisis coming.</h2>
+<p>Two finite buffers are being drawn down at once &mdash; company margins and household
+savings &mdash; with a third, unrecorded layer of point-of-sale credit building beneath
+them, while the instruments that would normally flag it all read benign. That is
+accumulating stress by definition, and it is reasonable to ask whether it is the front end
+of something worse.</p></div>
+<p>The honest answer is that the historical record points both ways, and a reader deserves
+both readings rather than the one that suits us.</p>
+<p>The saving rate has been this low twice before in thirty-six years. In
+<strong>2005&ndash;07</strong> it fell to 1.4%, and what followed was the financial crisis.
+In <strong>2022</strong> it touched 2.2%, and nothing broke. Same indicator, opposite
+outcomes.</p>
+<p>What separates them is the balance sheet underneath, and today&rsquo;s looks more like
+2022 than 2005:</p>
+<ul class="trip">
+<li><strong>In July 2005, households were spending down savings <em>and</em> carrying record
+debt.</strong> Debt payments took <strong>15.1%</strong> of after-tax income. Today they take
+<strong>11.2%</strong> &mdash; four percentage points lower.</li>
+<li><strong>The debt was accumulating then; it is not now.</strong> Revolving credit grew
+3.7% in 2005 and 3.4% today &mdash; almost identical &mdash; but in 2005 that was happening
+on top of a debt burden already at 15.1% of income and still climbing, against a rising
+housing market. Today it sits on a burden of 11.2% that has been falling for years. The
+widely-cited explanation for the 2005 episode is home-equity extraction; this note does not
+test that claim and does not rest on it. The debt-service comparison alone is enough to show
+the two situations are not the same.</li>
+</ul>
+<p>So the configuration that turned 2005 into 2008 was low savings <em>plus</em> heavy
+borrowing. Today has the first without the second.</p>
+<p><strong>Which makes the pivot to credit the thing that matters, rather than the saving
+rate itself.</strong> If households empty the buffer and then start borrowing, the picture
+begins to rhyme with 2005. If input costs fall back and the margin squeeze resolves, it
+rhymes with 2022. Both remain open, and the tripwires below are written to tell them apart
+&mdash; not to predict which.</p>
+<p class="gloss">Two historical episodes is not a base rate. Nothing here estimates the
+probability of a crisis, and nothing here should be read as forecasting one. What the data
+supports is narrower and still worth acting on: pressure is building in two places that the
+standard warning system is structurally unable to see, so if it does develop through this
+channel, the numbers everyone watches will be the last to show it.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M4 15l16-9"/><path d="M4 13l16 2"/></svg><span>Where the chain ends</span></div>
+<h2>An absorbed cost is postponed, not avoided.</h2>
+<p>Follow the cushions past the consumer and the chain reaches the Treasury. Each link
+below depends on the one before it, and a chain of conditionals is a scenario rather than a
+forecast &mdash; but this is where a story about restaurant margins stops being a story
+about restaurants.</p></div>
+<ul class="trip">
+<li><strong>The inflation rate is accurate, and incomplete.</strong> Worth stating carefully.
+The Consumer Price Index is not wrong &mdash; consumers genuinely did not pay those prices,
+so they genuinely did not experience that inflation. What the index cannot show is cost that
+entered the system and stopped at the margin. It is right about what happened and silent
+about what is stored.</li>
+<li><strong>Stored pressure releases in jumps, not gradually.</strong> A business that has
+eaten 12% input inflation for a year does not pass through one percent at a time when it
+finally moves.</li>
+<li><strong>And the second cushion empties on its own schedule.</strong> When savings run
+out, households stop absorbing price rises by dipping into the buffer and start absorbing
+them by buying less. Cost pressure releasing into prices while demand simultaneously
+weakens is an awkward combination for a central bank, because the two mandates point in
+opposite directions at the same moment.</li>
+<li><strong>A late, sharp price move argues for more tightening than the market has
+priced in.</strong> Not because the Fed misread the number in front of it, but because
+that number was never measuring the pressure behind it.</li>
+<li><strong>And tightening lands on $39.9 trillion of federal debt.</strong> Gross interest on the debt ran about
+$1.2 trillion in the last fiscal year. A single percentage point across the stock is
+roughly $400bn annually once it has rolled &mdash; simple arithmetic on the stock, and the
+fiscal channel that <a href="../debt-endgame-2026/">The Debt Endgame</a> examined from the
+opposite direction.</li>
+</ul>
+<p>That is the trilogy closing on itself. The <a href="../debt-endgame-2026/">sovereign
+balance sheet</a> and the <a href="../private-credit-2026/">corporate credit stack</a> were
+examined separately. The household turns out to be the transmission line between them
+&mdash; the place where inflation is currently being absorbed on both sides of the
+transaction, and therefore the place where the timing of everything downstream is set.</p>
+<p class="gloss"><strong>The off-ramp, stated as plainly as the chain.</strong> Five
+conditional links multiply their uncertainty, and the first has a documented benign
+resolution: in 2022 a gap like this closed because input costs fell back, absorption ended,
+nothing was released, and the fiscal question never arose. Whether that exit opens
+this time is written in the operators&rsquo; own cost guides, quoted in the runway section
+above: the squeeze is guided to persist through 2026, but not to accelerate. Nothing here
+assigns a probability to either branch.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20V9M18 20V15"/><path d="M3 20h18"/><path d="M6 9l-2.5 2.5M6 9l2.5 2.5"/></svg><span>What the market is paying</span></div>
+<h2>The market has already picked a side. Check its work.</h2>
+<p>If the platform-versus-operator split is real, it should show up in what investors pay
+for a dollar of these earnings &mdash; and it does, emphatically. We spread all twenty-one
+names on the fund&rsquo;s standard comparison table: latest audited annual accounts from
+SEC filings, live market prices. The market pays roughly <strong>100 to 240 times</strong>
+last year&rsquo;s earnings for the platforms converting this quarter&rsquo;s volume into profit
+&mdash; Shopify near 100, DoorDash around 112, DraftKings far higher on barely positive
+earnings &mdash; and <strong>20 to 33 times</strong> for the operators handling the
+physical transaction: Disney around 22, Restaurant Brands 24, Texas Roadhouse 33.</p></div>
+<p>The prices are not the anomaly &mdash; they price exactly the conversion gap this note
+documents. The anomalies are the exceptions:</p>
+<ul class="trip">
+<li><strong>Shake Shack trades near 74&times; last year&rsquo;s earnings</strong> &mdash; a platform
+multiple on the group&rsquo;s clearest margin absorber, with a 3% net margin and beef
+inflation guided into the second half. It was also the group&rsquo;s worst earnings-day
+reaction. A premium price on a compressing margin is a bet the compression is temporary.</li>
+<li><strong>Lyft screens at 2&times; earnings &mdash; and is not cheap.</strong> Our
+accounting screens flag that its reported profit is mostly a one-time tax accounting gain,
+with 41 cents of operating cash behind each reported dollar. The bargain multiple is an
+artifact.</li>
+<li><strong>Papa John&rsquo;s is the opposite case</strong> &mdash; the weakest operator in
+the group, guidance cut to comparable sales of &minus;6 to &minus;8%, yet the same screens
+come back clean. Its problem is demand, not accounting. That is what honest distress looks
+like.</li>
+<li><strong>DraftKings carries goodwill and acquired intangibles &mdash; the accounting
+value assigned to past acquisitions &mdash; at roughly four times its book equity.</strong>
+Earnings are cash-backed, but any future write-down of that value lands directly on
+shareholders&rsquo; funds.</li>
+</ul>
+<p>The market&rsquo;s first verdict on the week ran the same direction as the sort:
+Airbnb up 17%, Uber up 10% and Shopify up 5% on their prints; Shake Shack down 4% and
+Expedia down 3% on theirs. For a reader who holds these through funds rather than singly: <strong>XLY</strong>,
+the S&amp;P consumer-discretionary sector fund, is the standard vehicle for this group
+&mdash; and is dominated by its largest members, so it behaves like the platforms, not the
+operators this note is about. The operator story lives in the equal-weighted retail fund
+<strong>XRT</strong> and in the single names.</p>
+<p class="gloss">Multiples are computed on the latest full fiscal year (2025 for most
+names) against early-August 2026 prices; a company can look expensive against last
+year&rsquo;s earnings and cheaper against this year&rsquo;s if profits are growing.
+Earnings-day moves are two-day windows around each release; twenty of the twenty-one were
+complete at writing, DraftKings&rsquo; window closing 10 August. The accounting screens are the fund&rsquo;s standard
+forensic battery &mdash; scores of the Beneish, Altman, Piotroski and Montier families
+plus cash-conversion checks &mdash; and a flag is a reason to look closer, not a verdict
+of wrongdoing.</p></section><section class="stage"><div class="sechead"><div class="marker motif"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M4 8h5M4 14h5"/><path d="M15 8h5M15 14h5"/></svg><span>What would change our mind</span></div>
+<h2>Stated in advance, and scored in public.</h2>
+<p>Ahead of Tuesday&rsquo;s Household Debt and Credit report, we expect credit-card and auto
+delinquency rates for households aged 18&ndash;39 to print <strong>roughly stable rather
+than sharply higher.</strong> If this spending is funded from savings rather than credit
+&mdash; as both the national accounts and the spending survey indicate &mdash; then
+borrowing distress should not yet be accelerating.</p></div>
+<p><strong>If those rates jump, the sequence in this note is wrong.</strong> It would mean
+households already made the move from savings to credit, and that we mis-timed the story
+rather than merely arrived early. We will say so in those words.</p>
+<ul class="trip">
+<li><strong>Input costs falling back toward menu prices.</strong> This is how the 2022
+episode resolved, and it ends the squeeze without anything else happening. The check is
+the operators&rsquo; own guides, not an index: Texas Roadhouse guiding commodity inflation
+below 5%, or Shake Shack&rsquo;s beef pressure breaking before year-end, would mean the
+squeeze is resolving.</li>
+<li><strong>Revolving credit growth passing 6%</strong> &mdash; currently 3.4%. That is the
+moment households switch from savings to the credit card, and the point at which a 20.9%
+interest rate starts to bite.</li>
+<li><strong>The saving rate holding above 2.5% for three consecutive months.</strong> The
+series is jumpy enough that one month proves nothing. Three would extend the runway
+materially.</li>
+<li><strong>A third consecutive monthly fall in leisure and hospitality employment.</strong>
+That moves the labour signal from noise to trend, and puts this inside the Fed&rsquo;s
+mandate for the first time.</li>
+</ul>
+<h3>What this is not</h3>
+<p>It is not a recession call. Almost every company in this group sold more than it did a
+year ago, and that evidence is strong. It is not a claim that households are drowning in
+debt &mdash; on the aggregate measures they are the opposite, which is the whole point,
+because those measures cannot see the households that are. And it is not a claim that anyone
+is behaving badly: companies absorbing costs rather than passing them on are responding to
+their own customers, and the split by customer type is what competition looks like when
+demand is elastic in one place and not in another.</p>
+<p>It is a claim about <strong>durability</strong>. A restaurant can absorb 12% input
+inflation for a while. A household can spend down its savings for a while. Both are real,
+both are rational, and both are finite &mdash; and the two official numbers that would tell
+you when they run out are the last two places it will show up.</p>
+<p class="series">This is the third of three balance sheets.
+<a href="../debt-endgame-2026/">The Debt Endgame</a> took the sovereign one;
+<a href="../private-credit-2026/">The Private Credit Reckoning</a> took the corporate one.
+The household is the last of the three and the least instrumented.</p></section>
+<section class="close">
+<h2 style="font-size:19px;margin-bottom:14px">Sources &amp; Method</h2>
+<div class="method">
+<p><strong>Company figures and corpus coverage.</strong> Every company claim in this note
+comes from primary SEC filings read in full: the Item 2.02 Form 8-K earnings release
+<em>and</em> the Form 10-Q quarterly report (Form 10-K for Peloton, whose fiscal year ends
+in June) for all 21 issuers, filed 5&ndash;7 August 2026 &mdash; roughly 5.5 million
+characters of filing text; accession numbers available on request. Commentary was extracted
+across eleven themes (customer, pricing, cost drivers, promotion, labour, volume, credit,
+productivity, competition, geography, outlook); coverage per theme was 20 or 21 of 21
+companies except geography (13 of 21, most filers not splitting results geographically).
+No company is classified on the absence of language in a press-release summary; the
+three-way pricing sort reflects each filing&rsquo;s own stated actions.</p>
+<p><strong>Quotations.</strong> Treasury Secretary Scott Bessent&rsquo;s remarks are from
+his CNBC <em>Squawk Box</em> appearance of 4 August 2026, as carried by multiple outlets;
+they are quoted for the public debate they frame, and this note&rsquo;s response rests on
+the data above, not on a characterisation of his argument.</p>
+<p><strong>Credit access.</strong> Application and rejection rates from the Federal Reserve
+Bank of New York&rsquo;s SCE Credit Access Survey, June 2026 wave (released July 2026,
+fielded every four months). The New York Fed&rsquo;s site rejects automated retrieval; the
+figures quoted were cross-checked across two independent press summaries of the
+release.</p>
+<p><strong>Comparison table and accounting screens.</strong> Valuation multiples computed
+from as-reported SEC XBRL company facts (latest fiscal year, 2025 for all names but
+Peloton&rsquo;s FY2026) against Schwab real-time market data, 7 August 2026. Accounting
+screens are the fund&rsquo;s standard forensic battery (Beneish M, Altman Z&rsquo;,
+Piotroski F, Montier C, Sloan accruals, cash-conversion and balance-sheet flag checks) run
+on the same as-reported data; the Altman Z&rsquo; distress reading systematically penalises
+lease-heavy restaurant balance sheets and deposit-carrying betting platforms, and is
+interpreted accordingly in the body. Earnings-day reactions are two-day windows (close
+before the filing date to close after); 20 of 21 windows were complete at writing, the
+exception being DraftKings, which reported on the final trading day of the week and whose
+window closes 10 August.</p>
+<p><strong>Productivity.</strong> Output per hour from the BLS industry productivity
+programme: <code>IPUTN722L000000000</code> (food services and drinking places, latest
+observation 2024), <code>IPUHN4445L000000000</code> (retail trade, 2025) and
+<code>OPHNFB</code> (nonfarm business, 2026Q2). Rebased to 2019 = 100.</p>
+<p><strong>Households.</strong> Saving rate <code>PSAVERT</code>, disposable income
+<code>DPI</code> and consumption <code>PCE</code> from the Bureau of Economic Analysis;
+consumer credit <code>REVOLSL</code>, <code>NONREVSL</code> and <code>TOTALSL</code> from
+Federal Reserve G.19; debt service <code>TDSP</code>, current through 2026Q1 only and
+beginning in 2005; household interest income <code>PII</code>, a seasonally adjusted annual
+rate rather than a trailing sum; net worth by percentile from the Federal Reserve
+Distributional Financial Accounts. The consumption decomposition is an accounting identity,
+not a regression: the income leg is the change in disposable income at the prior year&rsquo;s
+spending share, the saving leg is current disposable income multiplied by the change in the
+saving rate. The two legs exceed measured consumption growth by $208bn because the saving
+rate is defined against all personal outlays rather than consumption alone. The runway figure
+extrapolates the trailing twelve-month rate of decline from the June observation; it is not a
+forecast and the series is not monotonic.</p>
+<p><strong>Distribution.</strong> BLS Consumer Expenditure Survey by quintile of income
+before taxes, latest observation 2024. Real changes use each category&rsquo;s own consumer
+price index rather than a single headline deflator; a single deflator understates the real
+decline in restaurant spending, because food-away-from-home prices rose 29.7% over
+2019&ndash;2024 against 22.7% for all items. The survey is interview-based, under-reports
+total spending relative to the national accounts, and its asset and liability items are among
+its least reliable; the divergence in annual additions to assets is reported as suggestive
+rather than established.</p>
+<p><strong>Profit share.</strong> Corporate profits <code>CP</code> against gross domestic
+product <code>GDP</code>, both from the Bureau of Economic Analysis via FRED, quarterly;
+percentile computed against the ratio&rsquo;s own history from 1990.</p>
+<p><strong>Employment.</strong> BLS establishment survey: <code>USLAH</code> (leisure and
+hospitality), <code>USTRADE</code> (retail trade), <code>PAYEMS</code> (total nonfarm), July
+2026 vintage. Employment figures quoted in the body are raw month-over-month changes;
+three-month averages are labelled as such where used. Three-month averages are of the month-over-month change. Hourly-earnings
+comparisons use data as revised in the July release; figures published before that revision
+differ.</p>
+<p><strong>Scope.</strong> Twenty-one companies in a single quarter. All comparisons are
+descriptive. No significance testing is performed or implied.</p>
+</div>
+
+<p class="t618-caption"><strong>Information only.</strong> TON618 Capital. This report is for information purposes only. Nothing here is an
+offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment
+advice or a recommendation regarding any instrument.</p>
+
+<p class="t618-caption"><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular
+circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any
+client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion
+from the definition of "investment adviser" under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S.
+181 (1985)).</p>
+
+<p class="t618-caption"><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or
+broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material
+conflicts are disclosed where they exist. <em>Ownership:</em> the Fund holds no position in any company named in this report as of the report
+date, and none is a Fund holding or a BTC-correlated instrument. <em>Issuer digital-asset activity:</em> certain issuers discussed have
+participated in Bitcoin-linked commercial promotions (for example, Shake Shack participated in a 2022 Bitcoin cash-back payment promotion run
+by Cash App). The Fund had no involvement in and derives no benefit from any issuer's digital-asset activity, and no such activity influenced
+any issuer's treatment in this report &mdash; Shake Shack, for the avoidance of doubt, is discussed critically. <em>Compensation:</em> the Fund
+received no compensation from any party in connection with this report and charges nothing for it.</p>
+
+<p class="t618-caption"><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. All methodology and data
+integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, Keyth Beck; errors may nonetheless occur,
+and readers should verify independently.</p>
+
+<p class="t618-caption"><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only).
+CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned by CFA Institute. That reference describes the analytical
+framework applied; it does not imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is not issued,
+reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+
+<p class="t618-caption"><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities
+are volatile and may result in total loss of capital. Corrections and feedback are welcome &mdash; please direct them to CIO Keyth Beck at
+<a href="mailto:keyth@ton618capital.com">keyth@ton618capital.com</a>. <strong>Version</strong> 1.0 &middot; analyst: TON618 Equity Research.</p>
+
+</section>
+</main></body></html>
