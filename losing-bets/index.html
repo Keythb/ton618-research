@@ -1,0 +1,2972 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Losing Bets That Built the World — TON618 Capital</title>
+<meta name="description" content="A financial-history research note: five infrastructure waves in which the builders' capital was destroyed while the technology triumphed, the counter-ledger of builders who won, and the seat-by-seat map of the AI buildout — with the surplus migration measured live.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--rule:#C9A24B;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--teal:#2C6E6A;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:.01em;}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .n{color:var(--gold);font-size:.9rem;font-weight:700;font-family:var(--sans);vertical-align:.18em;margin-right:.5em;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+em.t{font-style:normal;color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+sup a{border:0;font-weight:600;color:var(--gold);font-size:.7em;}
+.verdict{display:flex;gap:24px;align-items:center;background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--rule);padding:18px 24px;margin:18px 0 6px;}
+.verdict .big{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.04;white-space:nowrap;text-align:center;}
+.verdict .big small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px;white-space:normal;max-width:160px;}
+.verdict .txt{font-size:.92rem;color:var(--body);}
+.verdict .txt b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;page-break-inside:avoid;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink);}
+tr.total td{font-weight:700;color:var(--ink);background:var(--soft);}
+.small{font-size:.78rem;color:var(--muted);}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.qa{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--gold);padding:4px 18px 10px;margin:1rem 0;}
+.qa h3{color:var(--ink);margin:.95rem 0 .15rem;font-size:.95rem;}
+.qa h3 span{color:var(--gold);font-weight:700;margin-right:.45em;}
+.qa p{font-size:.89rem;margin:.25rem 0 .5rem;}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.pro{color:var(--pos);font-weight:700;} .con{color:var(--neg);font-weight:700;} .neu{color:var(--antique);font-weight:700;}
+blockquote{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--gold);font-family:var(--serif);font-size:1.02rem;color:#33363d;font-style:italic;}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+.q2{margin:.7rem 0;padding:.4rem 0 .4rem 16px;border-left:3px solid var(--neg);}
+.exlabel{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:1.5rem 0 .15rem;}
+.exnote{font-size:.78rem;color:var(--muted);margin:.1rem 0 .5rem;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.35rem 0 .5rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.refs{font-size:.71rem;color:var(--muted);line-height:1.5;} .refs li{margin:.16rem 0;} .refs a{color:var(--antique);}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+.verdict .big{font-size:1.85rem;} h1{font-size:1.85rem;} h2{page-break-after:avoid;}
+h3{page-break-after:avoid;}
+table,.verdict,.callout,.chart,.kpis,blockquote{page-break-inside:avoid;}
+.qa h3{page-break-after:avoid;}
+.pbb{page-break-before:always;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.verdict{flex-direction:column;gap:12px;}}
+
+/* ---- LEDGER motif (report-designer pass) --------------------------------- */
+.hero-entry{margin:2.2rem 0 1.4rem;padding:1.6rem 0 1.2rem;
+  border-top:1px solid var(--line);}
+.he-kick{font:600 .68rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;
+  color:#6B665C;margin-bottom:1.1rem;}
+.he-row{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;}
+.he-num{font-family:var(--serif);font-size:clamp(64px,12vw,124px);line-height:.95;
+  color:#111;letter-spacing:-.01em;}
+.he-num small{font-size:.32em;color:#8a6d2a;letter-spacing:.02em;}
+.he-cap{font:.85rem/1.5 var(--sans);color:#6B665C;max-width:330px;}
+.he-rule{margin-top:1.15rem;border-bottom:4px double #8a6d2a;width:min(420px,80%);}
+.carry{display:flex;align-items:center;gap:12px;margin:1.7rem 0;padding:.65rem 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font:.78rem/1.5 var(--sans);color:#3a3d44;break-inside:avoid;}
+.carry .c-ic{color:#8a6d2a;flex:0 0 auto;display:inline-flex;}
+.carry .c-lab{font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  font-size:.66rem;color:#8a6d2a;flex:0 0 auto;}
+.bigband{background:#0B0B0C;color:#C9A24B;margin:2rem calc(50% - 50vw);
+  padding:2.4rem calc(50vw - 50%);break-inside:avoid;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.bigband .bb-num{font-family:var(--serif);font-size:clamp(44px,8vw,84px);line-height:1;}
+.bigband .bb-cap{font:.85rem/1.55 var(--sans);color:#9a8b62;max-width:560px;margin-top:.7rem;}
+h2 .fol{display:inline-flex;vertical-align:baseline;margin-right:10px;color:#8a6d2a;
+  position:relative;top:2px;}
+p.opener::first-letter{font-family:var(--serif);font-size:3.3em;line-height:.82;
+  float:left;padding:.06em .12em 0 0;color:#8a6d2a;}
+.chart svg{max-width:100%;height:auto;}
+.lede{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#3a3d44;margin:.35rem 0 .7rem;}
+table caption{font:.72rem/1.4 var(--sans);color:#6B665C;text-align:left;padding-bottom:6px;}
+/* act heads: the closing-rule echo — chapter openings carry the hero's double rule */
+h2.act{border-bottom:4px double #8a6d2a;padding-bottom:.5rem;}
+/* account-book table treatment: vertical column rules + double-rule close */
+.tally table{border-bottom:4px double #8a6d2a;}
+.tally th,.tally td{border-left:1px solid #EFEBE2;padding-left:12px;}
+.tally th:first-child,.tally td:first-child{border-left:none;padding-left:0;}
+/* the pull entry: a designed interruption at the story's peak */
+.pull{font-family:var(--serif);font-style:italic;font-size:1.42rem;line-height:1.5;
+  color:#111;margin:2rem 0;padding:1.25rem 0 1rem;position:relative;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);break-inside:avoid;}
+.pull .p-rule{display:block;width:64px;border-bottom:4px double #8a6d2a;margin-bottom:.9rem;}
+.pull .p-att{display:block;font:.68rem/1.5 var(--sans);font-style:normal;
+  letter-spacing:.08em;text-transform:uppercase;color:#6B665C;margin-top:.85rem;}
+@media print{
+  .hero-entry,.carry,.bigband,.pull,table tr{break-inside:avoid;}
+  h2.brk{break-before:page;}
+}
+</style><link rel="canonical" href="https://ton618capital.com/ton618-research/losing-bets/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Losing Bets That Built the World", "url": "https://ton618capital.com/ton618-research/losing-bets/", "author": {"@type": "Organization", "name": "TON618 Capital", "url": "https://ton618capital.com"}, "publisher": {"@type": "Organization", "name": "TON618 Capital", "url": "https://ton618capital.com"}, "datePublished": "2026-08-12", "description": "A financial-history research note: five infrastructure waves in which the builders' capital was destroyed while the technology triumphed, the counter-ledger of builders who won, and the seat-by-seat map of the AI buildout — with the surplus migration measured live."}</script>
+</head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Thematic Research Note<br>As of August 12, 2026<br>v1.2</span>
+</div>
+
+<div class="hero-entry">
+  <div class="he-kick">Closing entry &middot; five waves &middot; 1825&ndash;2026</div>
+  <div class="he-row">
+    <div class="he-num">25.7<small>&thinsp;years</small></div>
+    <div class="he-cap">the peak buyer&rsquo;s wait &mdash; Cisco, March 2000 to December 2025 &mdash; while the technology it financed conquered the world. In every wave in this ledger, the same entry closes the books.</div>
+  </div>
+  <div class="he-rule"></div>
+</div>
+
+<div class="kicker">Thematic Research &middot; AI Infrastructure &amp; Financial History</div>
+<h1>The Losing Bets That Built the World</h1>
+<p class="dek">Five Times Civilization Upgraded Itself at Its Investors' Expense — the Ledger, the Four Seats at the Table, and Where the AI Buildout's Surplus Is Already Going</p>
+<p class="byline">TON618 Capital Research &middot; As of August 12, 2026</p>
+<p class="small">Every historical figure in this note was verified against primary or period-academic sources — parliamentary records, the ICC's own receivership tables, audited annual reports, SEC filings, and the canonical academic series — and every modern figure against filings and dated disclosure; the Sources &amp; Method appendix names them all. Fact ("the record shows…") is separated from estimate ("we compute…") and from speculation (§8 is labeled as such). This note is the historical capstone of our five-note AI-infrastructure series — <a href="../ai-capex-payback-clock/">The AI Capex Payback Clock</a>, <a href="../depreciation-question/">The Depreciation Question</a> and <a href="../depreciation-scoreboard/">its scoreboard</a>, <a href="../neocloud-credit-2026/">The Neocloud Fuse</a>, and <a href="../power-wall/">The Power Wall</a> — and it supplies the base rates those notes' arithmetic implies. Distilled from an exhaustive working draft; independently claim-verified before release.</p>
+
+<h2><span class="n">§0</span> The Argument</h2>
+<div class="verdict"><div class="big">Two ledgers<small>Every wave writes both: capital destroyed on one page, civilization upgraded on the other. The same collapsing price makes both entries — and which page you are on is a choice of seat, not a forecast.</small></div><div class="txt"><b>The claim.</b> Nearly every transformative infrastructure buildout of the last two centuries was financed by capital that never earned back its cost. British railway investors lost roughly <b>£80 million of the £250 million</b> they put in — about the cost of the Crimean War. A quarter of American railroad mileage was in receivership by 1894. The holding companies atop the electrical grid wiped out over a million security holders. Two trillion dollars of telecom market value burned in two years. And in every case the technology triumphed anyway: the price of the service collapsed, and the surplus — many times the capital destroyed, recurring annually where the losses were paid once — migrated permanently to the people who <i>used</i> the cheap capacity. The AI buildout, now consuming a larger share of GDP than the dot-com peak on the government's own investment data, is the fifth verse of this song — with one feature no prior wave had: the price of the service is collapsing <i>during</i> the buildout, not after the bust. The question "is it a bubble?" is therefore the wrong one. Even when the answer was yes, the technology won. The investable question is <b>which seat at the table you occupy while it does</b> — and history keeps a precise ledger, including of the seats that won.</div></div>
+<div class="kpis">
+<div class="fig">7.3%<span class="label">Share of British GDP consumed by railway investment in the single year 1847 — twice that year's military budget</span></div>
+<div class="fig">192 roads<span class="label">US railroads in receivers' hands at June 30, 1894 — 40,819 miles, a quarter of the network (ICC's own table)</span></div>
+<div class="fig">~$2 trillion<span class="label">Telecom market value destroyed 2000–02, while consumption of telecom services grew straight through the bust</span></div>
+<div class="fig">4.97% &gt; 4.46%<span class="label">US IT-and-software investment share of GDP, 2026Q2 vs the 2000Q4 dot-com peak — the fifth wave has crossed the fourth's high-water mark</span></div>
+</div>
+<h2><span class="n">§1</span> The Pattern</h2>
+<p class="opener">There is a chart every generation of investors rediscovers and misreads: capital investment in the transformative technology of the day, as a share of the whole economy — a mountain range of waves: canals, railways, electrification, fiber, now data centers. It is usually presented as a map of opportunity. It is more honestly read as a map of grief. Nearly every peak marks a vintage of capital that never earned back its cost — and every one of those same technologies remade the economy for the better.</p>
+<p>The mechanism repeats with almost mechanical fidelity:</p>
+<ol>
+<li><strong>A technology works.</strong> Early returns are spectacular because capacity is scarce.</li>
+<li><strong>Capital floods in.</strong> Everyone builds at once; each plan is rational alone, the sum is not.</li>
+<li><strong>Capacity arrives in a lump.</strong> Infrastructure cannot be added in increments matched to demand.</li>
+<li><strong>The price of the service collapses</strong> — toward marginal cost or through it, because the capital is sunk and any revenue beats none.</li>
+<li><strong>The builders' securities are crushed.</strong> Receivership, reorganization, or decades under water.</li>
+<li><strong>The collapsed price becomes everyone else's input.</strong> Businesses impossible at the old price become inevitable at the new one. The surplus — usually a multiple of the capital destroyed — accrues to users, permanently.</li>
+<li><strong>Consolidators buy the assets for cents on the construction dollar</strong> — and <em>their</em> vintage earns fine returns, because the basis, not the technology, was always the problem.</li>
+</ol>
+<p>Step 4 is the hinge. The collapsing price is simultaneously the instrument of the builders' destruction and the engine of the technology's triumph — one event, two ledgers. That is why "bubble" and "revolution" are not competing descriptions of these episodes; they are the same episode described from different seats. (The academic lineage of this idea runs through Carlota Perez's installation-versus-deployment framework and William Janeway's "productive bubble"; the ledger below is our own, from primary sources.)</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 493.868827 295.082281" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-12T14:33:29.115575</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 295.082281 
+L 493.868827 295.082281 
+L 493.868827 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 42.319531 259.58275 
+L 466.399531 259.58275 
+L 466.399531 32.27875 
+L 42.319531 32.27875 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 49.417104 259.58275 
+L 49.417104 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m5367695f64" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5367695f64" x="49.417104" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="49.417104" y="273.038844" transform="rotate(-0 49.417104 273.038844)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 93.776937 259.58275 
+L 93.776937 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m5367695f64" x="93.776937" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="93.776937" y="273.038844" transform="rotate(-0 93.776937 273.038844)">5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 138.13677 259.58275 
+L 138.13677 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m5367695f64" x="138.13677" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="138.13677" y="273.038844" transform="rotate(-0 138.13677 273.038844)">10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 182.496602 259.58275 
+L 182.496602 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m5367695f64" x="182.496602" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="182.496602" y="273.038844" transform="rotate(-0 182.496602 273.038844)">15</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 226.856435 259.58275 
+L 226.856435 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m5367695f64" x="226.856435" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="226.856435" y="273.038844" transform="rotate(-0 226.856435 273.038844)">20</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 271.216268 259.58275 
+L 271.216268 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m5367695f64" x="271.216268" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="271.216268" y="273.038844" transform="rotate(-0 271.216268 273.038844)">25</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 315.5761 259.58275 
+L 315.5761 32.27875 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m5367695f64" x="315.5761" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="315.5761" y="273.038844" transform="rotate(-0 315.5761 273.038844)">30</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="fill: #5e626b; font: 8px 'Helvetica'; text-anchor: middle" x="254.359531" y="284.672281" transform="rotate(-0 254.359531 284.672281)">Years since the wave began</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <path d="M 42.319531 41.331741 
+L 466.399531 41.331741 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <defs>
+       <path id="ma02d8e06e4" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="41.331741" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="44.559788" transform="rotate(-0 35.319531 44.559788)">100</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_17">
+      <path d="M 42.319531 73.725367 
+L 466.399531 73.725367 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="73.725367" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="76.953413" transform="rotate(-0 35.319531 76.953413)">30</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_19">
+      <path d="M 42.319531 103.284203 
+L 466.399531 103.284203 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="103.284203" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="106.512249" transform="rotate(-0 35.319531 106.512249)">10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_21">
+      <path d="M 42.319531 135.677828 
+L 466.399531 135.677828 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="135.677828" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="138.905875" transform="rotate(-0 35.319531 138.905875)">3</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_23">
+      <path d="M 42.319531 165.236664 
+L 466.399531 165.236664 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="165.236664" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="168.464711" transform="rotate(-0 35.319531 168.464711)">1</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_25">
+      <path d="M 42.319531 197.630289 
+L 466.399531 197.630289 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="197.630289" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="200.858336" transform="rotate(-0 35.319531 200.858336)">0.3</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_27">
+      <path d="M 42.319531 227.189125 
+L 466.399531 227.189125 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#ma02d8e06e4" x="42.319531" y="227.189125" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="35.319531" y="230.417172" transform="rotate(-0 35.319531 230.417172)">0.1</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_29">
+      <defs>
+       <path id="m786fc31a6f" d="M 0 0 
+L -2 0 
+" style="stroke: #5e626b; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="259.58275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="251.842488" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="245.838674" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="240.933201" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="236.785683" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="233.192939" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="230.023914" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="208.539576" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="189.890027" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="183.886213" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="178.98074" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="174.833221" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="171.240478" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="168.071453" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="146.587115" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="127.937566" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="121.933752" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="117.028279" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="112.88076" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="109.288016" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_49">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="106.118992" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="84.634653" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_51">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="65.985104" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="59.981291" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_53">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="55.075817" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="50.928299" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_55">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="47.335555" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#m786fc31a6f" x="42.319531" y="44.166531" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="fill: #5e626b; font: 8px 'Helvetica'; text-anchor: middle" x="14.535" y="145.93075" transform="rotate(-90 14.535 145.93075)">Service price, indexed (start of wave = 100, log)</text>
+    </g>
+   </g>
+   <g id="line2d_57">
+    <path d="M 49.417104 41.331741 
+L 138.13677 56.88411 
+L 226.856435 63.05631 
+L 315.5761 65.650869 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #5e626b; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_58">
+    <path d="M 49.417104 41.331741 
+L 138.13677 56.836193 
+L 209.112502 62.224724 
+L 297.832167 67.937663 
+L 342.192 72.930069 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #2c6e6a; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_59">
+    <path d="M 49.417104 41.331741 
+L 58.289071 52.227579 
+L 138.13677 170.152901 
+L 200.240535 244.525945 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #8a6d2b; stroke-width: 1.7; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_60">
+    <path d="M 49.417104 41.331741 
+L 64.233289 152.423292 
+L 79.581791 185.723297 
+" clip-path="url(#pac87188e37)" style="fill: none; stroke: #b8902f; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 42.319531 259.58275 
+L 42.319531 32.27875 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 42.319531 259.58275 
+L 466.399531 259.58275 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_17">
+    <text style="fill: #5e626b; font: 700 7.4px 'Helvetica'; text-anchor: start" x="320.012084" y="67.529775" transform="rotate(-0 320.012084 67.529775)">Rail freight, rev/ton-mile  (1870–1900)</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #2c6e6a; font: 700 7.4px 'Helvetica'; text-anchor: start" x="346.627983" y="81.519418" transform="rotate(-0 346.627983 81.519418)">Electricity, residential ¢/kWh  (1902–1935)</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #8a6d2b; font: 700 7.4px 'Helvetica'; text-anchor: start" x="204.676519" y="246.62396" transform="rotate(-0 204.676519 246.62396)">IP transit, $/Mbps-month  (1998–2015)</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #b8902f; font: 700 7.4px 'Helvetica'; text-anchor: start" x="82.686979" y="187.773906" transform="rotate(-0 82.686979 187.773906)">Intelligence, $/M tokens at GPT-4 capability  (2023–2026)</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 99.029742 217.073986 
+Q 89.833985 202.250146 80.638228 187.426307 
+" style="fill: none; stroke: #b8902f; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 7.8px 'Helvetica'" transform="translate(60.063464 226.447862)">tokens: further in 3½ years</text>
+    <text style="fill: #15161a; font: 7.8px 'Helvetica'" transform="translate(60.063464 234.929387)">than ton-miles fell in thirty</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="42.319531" y="25.914238" transform="rotate(-0 42.319531 25.914238)">Each transformative service, indexed to its own starting price · verified endpoints, log scale</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="42.319531" y="16.27875" transform="rotate(-0 42.319531 16.27875)">The price of progress — four waves, one behavior</text>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m9991bb8130" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #5e626b"/>
+    </defs>
+    <g clip-path="url(#pac87188e37)">
+     <use xlink:href="#m9991bb8130" x="315.5761" y="65.650869" style="fill: #5e626b; stroke: #5e626b"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="mf9ff6bcfd1" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #2c6e6a"/>
+    </defs>
+    <g clip-path="url(#pac87188e37)">
+     <use xlink:href="#mf9ff6bcfd1" x="342.192" y="72.930069" style="fill: #2c6e6a; stroke: #2c6e6a"/>
+    </g>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="m8611a862a7" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #8a6d2b"/>
+    </defs>
+    <g clip-path="url(#pac87188e37)">
+     <use xlink:href="#m8611a862a7" x="200.240535" y="244.525945" style="fill: #8a6d2b; stroke: #8a6d2b"/>
+    </g>
+   </g>
+   <g id="PathCollection_4">
+    <defs>
+     <path id="m91f0256f58" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #b8902f"/>
+    </defs>
+    <g clip-path="url(#pac87188e37)">
+     <use xlink:href="#m91f0256f58" x="79.581791" y="185.723297" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pac87188e37">
+   <rect x="42.319531" y="32.27875" width="424.08" height="227.304"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<h2 class="act brk"><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12h7"/></svg></span><span class="n">§2</span> The Ledger</h2>
+<p class="lede"><em>Five waves. For each: the capital in, the builders' fate, the price of the service, and a named user who harvested the surplus.</em></p>
+<div class="tally">
+<table><caption>The ledger of losing bets — verified figures, sources in the appendix</caption>
+<thead><tr><th>Wave</th><th>Capital in</th><th>The builders' fate</th><th>The price of the service</th><th>A user who won</th></tr></thead>
+<tbody>
+<tr><td><b>UK railways</b> 1840s</td><td>£44m in 1847 alone = 7.3% of GDP; ~£250m by 1850 ≈ 45% of one year's GDP</td><td>Index −66.7% peak-to-trough; dividends 7.0%→2.4% of par; ~£80m lost; 221 listed companies → 60</td><td>Freight to ~1/20th of wagon rates by 1870; 1d-a-mile travel mandated 1844</td><td>The 288m passenger journeys of 1870 (28m in 1844); London's milk, by rail</td></tr>
+<tr><td><b>US railroads</b> 1870s–90s</td><td>Capitalization $10.1bn by 1890 ≈ 80% of GNP; 122 of 151 NYSE stocks</td><td>1873–75 defaults = 36% of the par of the entire US corporate bond market; 192 roads / 40,819 miles in receivership 1894; shareholders <i>assessed</i> $96m to keep any interest</td><td>Revenue per ton-mile 1.80¢ (1870) → 0.73¢ (1900)</td><td>Sears, Roebuck — named in the panic year 1893; $0.7m (1895) → $137m (1916), America's largest retailer</td></tr>
+<tr><td><b>Electrification</b> 1900s–30s</td><td>Generating capacity ×20 (1902–30); capital appetite second only to railroads</td><td>Insull pyramid: 1.1m security holders wiped out, ~$750m; Dow Utilities −92.7%, durable breakeven <b>1984 — 55 years</b></td><td>16.2¢/kWh (1902) → ~6¢ (1930); real cost −80% by 1920</td><td>Electrified manufacturing: TFP +~5%/yr through the 1920s once factories reorganized</td></tr>
+<tr><td><b>Radio (RCA)</b> 1929</td><td>The technology stock of its age</td><td>−98% by 1932; first-ever dividend 1937; peak not regained until the 1960s</td><td>Radio ad revenue +128% <i>through</i> the Depression (1929–32)</td><td>Three-quarters of American households, by 1937</td></tr>
+<tr><td><b>Telecom &amp; fiber</b> 1996–2002</td><td>&gt;$1 trillion (CSFB, to the FCC); ~€100bn more for European 3G licenses</td><td>~$2T of market value; WorldCom the largest bankruptcy in US history; HY telecom recovery 16.6¢ on the dollar; Cisco −86%, breakeven Dec 2025</td><td>IP transit $1,200/Mbps-month (1998) → $10 (2008) → $0.63 (2015)</td><td>Google (1998), Skype (2003), YouTube (2005), Netflix streaming (2007) — built on bandwidth priced off bankrupt builders' fiber</td></tr>
+</tbody></table>
+</div>
+<p>Four details from the record deserve more than a table cell, because each rhymes forward.</p>
+<p><strong>The ruin arrived through committed capital, twice.</strong> British railway shares were partially paid: the median mania company had collected just <strong>6% of its authorized capital</strong> at the 1845 peak — and called the rest, to <strong>92% by 1850</strong>, forcing investors to pay the balance of their commitments into a collapsing market. Half a century later, American reorganizations went further: shareholders of failed roads were <strong>assessed</strong> — Northern Pacific's plan demanded $15 a share in fresh cash from holders of stock quoted at $3.50, and Erie, Northern Pacific, and Reading holders got nothing back for it. The 19th century's lesson is that the losing bet is not the money already spent; it is the money <em>contractually still to come</em> — a lesson that reads directly onto $700bn of guided capex and take-or-pay contract backlogs today.</p>
+<p><strong>The losses concentrate where the leverage is, not where the assets are.</strong> The electrical grid never stopped working in 1932; the operating utilities mostly survived and kept serving power. What burned was the paper superstructure above them — holding companies pyramiding thin equity, in Samuel Insull's case <strong>less than $1 million of family capital controlling $2.5 billion of assets</strong> through two leverage layers, financed by securities sold to the public whose service depended on the dividends of the companies they bought. Insull was acquitted, three times: the structure was legal. Congress had to outlaw it (PUHCA, 1935). The topology — demand signals and financing arranged in a circle, with leverage interposed — is the same one our neocloud credit work documented in 2026's filings.</p>
+<p><strong>And the clearest single exhibit is RCA.</strong> Between September 1929 and May 1932 its shareholders lost 98%. Across exactly those years, radio conquered the American household, radio advertising <em>more than doubled through the worst economic collapse in the country's history</em>, and RCA remained the industry's dominant firm.</p>
+<div class="pull"><span class="p-rule"></span>Nothing about the technology failed. Nothing about the company failed. Only the price paid in 1929 failed.<span class="p-att">RCA, September 1929 &ndash; May 1932: &minus;98%. First dividend: 1937. Breakeven: the 1960s.</span></div>
+<p>The peak buyer waited eight years for a first 20-cent dividend and roughly three decades to break even — while holding the winner.</p>
+<p><strong>The same bet, at a lower dose, paid.</strong> A decade before the Mania, the 1830s British railway boom ran at roughly 2% of GDP a year — same technology, same country, same instrument — and was <em>profitable</em>: that cohort earned about 4.4% on equity. At 7.3% of GDP, ruin; at 2%, returns. The ledger is a dose-response curve: what decides the builders' fate is not the technology bet but the scale of the capacity race — a threshold question the fifth wave, now past the fourth's high-water mark on the same national-accounts measure, is actively testing. (The market-level verdict on the American century of overbuild is McQuarrie's: across the whole railroad era, US stocks did not outperform bonds — the equity holder of the age's transformative industry was never compensated for the risk.)</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 547.780031 255.030929" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-12T14:33:29.159559</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 255.030929 
+L 547.780031 255.030929 
+L 547.780031 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 115.060031 181.884719 
+L 539.140031 181.884719 
+L 539.140031 32.196719 
+L 115.060031 32.196719 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 115.060031 66.216719 
+L 285.354656 66.216719 
+L 285.354656 39.000719 
+L 115.060031 39.000719 
+z
+" clip-path="url(#p7a37ad9290)" style="fill: #b8902f; opacity: 0.92"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 115.060031 120.648719 
+L 320.473781 120.648719 
+L 320.473781 93.432719 
+L 115.060031 93.432719 
+z
+" clip-path="url(#p7a37ad9290)" style="fill: #8a6d2b; opacity: 0.92"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 115.060031 175.080719 
+L 479.503781 175.080719 
+L 479.503781 147.864719 
+L 115.060031 147.864719 
+z
+" clip-path="url(#p7a37ad9290)" style="fill: #8a6d2b; opacity: 0.92"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 115.060031 181.884719 
+L 115.060031 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mbb505fee53" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mbb505fee53" x="115.060031" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="115.060031" y="195.340812" transform="rotate(-0 115.060031 195.340812)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 181.322531 181.884719 
+L 181.322531 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mbb505fee53" x="181.322531" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="181.322531" y="195.340812" transform="rotate(-0 181.322531 195.340812)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 247.585031 181.884719 
+L 247.585031 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mbb505fee53" x="247.585031" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="247.585031" y="195.340812" transform="rotate(-0 247.585031 195.340812)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 313.847531 181.884719 
+L 313.847531 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mbb505fee53" x="313.847531" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="313.847531" y="195.340812" transform="rotate(-0 313.847531 195.340812)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 380.110031 181.884719 
+L 380.110031 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mbb505fee53" x="380.110031" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="380.110031" y="195.340812" transform="rotate(-0 380.110031 195.340812)">40</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 446.372531 181.884719 
+L 446.372531 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mbb505fee53" x="446.372531" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="446.372531" y="195.340812" transform="rotate(-0 446.372531 195.340812)">50</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 512.635031 181.884719 
+L 512.635031 32.196719 
+" clip-path="url(#p7a37ad9290)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mbb505fee53" x="512.635031" y="181.884719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="512.635031" y="195.340812" transform="rotate(-0 512.635031 195.340812)">60</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="fill: #5e626b; font: 8px 'Helvetica'; text-anchor: middle" x="327.100031" y="207.03675" transform="rotate(-0 327.100031 207.03675)">Years for a buyer at the peak to break even</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <defs>
+       <path id="md626c4279a" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#md626c4279a" x="115.060031" y="52.608719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: end" x="108.060031" y="55.777281" transform="rotate(-0 108.060031 55.777281)">Cisco  ·  Mar 2000 peak</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#md626c4279a" x="115.060031" y="107.040719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: end" x="108.060031" y="110.209281" transform="rotate(-0 108.060031 110.209281)">RCA  ·  Sep 1929 peak</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#md626c4279a" x="115.060031" y="161.472719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 8.6px 'Helvetica'; text-anchor: end" x="108.060031" y="164.557297" transform="rotate(-0 108.060031 164.557297)">Dow Utilities  ·  1929 peak</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 115.060031 181.884719 
+L 115.060031 32.196719 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 115.060031 181.884719 
+L 539.140031 181.884719 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="fill: #15161a; font: 700 9px 'Helvetica'; text-anchor: start" x="289.993031" y="54.845359" transform="rotate(-0 289.993031 54.845359)">25.7 yrs</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #ffffff; font: 7px 'Helvetica'; text-anchor: start" x="120.361031" y="54.389891" transform="rotate(-0 120.361031 54.389891)">broke even Dec 10, 2025</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #15161a; font: 700 9px 'Helvetica'; text-anchor: start" x="325.112156" y="109.277359" transform="rotate(-0 325.112156 109.277359)">31 yrs</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #ffffff; font: 7px 'Helvetica'; text-anchor: start" x="120.361031" y="108.812594" transform="rotate(-0 120.361031 108.812594)">first dividend 1937; peak regained in the 1960s</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 700 9px 'Helvetica'; text-anchor: start" x="484.142156" y="163.709359" transform="rotate(-0 484.142156 163.709359)">55 yrs</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #ffffff; font: 7px 'Helvetica'; text-anchor: start" x="120.361031" y="163.241312" transform="rotate(-0 120.361031 163.241312)">touched 1963, new low 1974, durably cleared 1984</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #b23b3b; font: italic 7.4px 'Helvetica'; text-anchor: end" x="534.899231" y="244.753679" transform="rotate(-0 534.899231 244.753679)">UK railway index (1845 peak): never durably regained in the nineteenth century</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="115.060031" y="28.005455" transform="rotate(-0 115.060031 28.005455)">Price breakeven for a buyer at each mania’s top · the technology won every time</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="115.060031" y="16.196719" transform="rotate(-0 115.060031 16.196719)">The recovery clock — what the peak buyer waited</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7a37ad9290">
+   <rect x="115.060031" y="32.196719" width="424.08" height="149.688"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p><strong>The users' side of the ledger, so the comparison is fair:</strong> the railway network's social savings ran to <strong>7–11% of British national income per year</strong> by 1865 (Hawke); the modern estimate for US railroads is <strong>3.2–3.4% of GNP annually</strong> (Donaldson &amp; Hornbeck) — against one-time capital losses. Telecom consumption <em>grew through the bust</em>, from $88bn to $151bn (constant dollars, 1995–2001), while $700bn of sector market value burned. The users' gain recurs and compounds; the builders' loss was paid once. That asymmetry is why civilization keeps making this trade — and why the people who finance it keep being surprised.</p>
+<div class="carry"><span class="c-ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 6v7a3 3 0 0 0 3 3h11"/><path d="M14.5 12.5 18 16l-3.5 3.5"/><circle cx="4" cy="4.5" r="1.6" fill="currentColor" stroke="none"/></svg></span><span class="c-lab">Balance carried forward</span><span>Builders: &minus;£80m of £250m &middot; 192 roads in receivership &middot; 1.1m holders wiped &middot; &minus;$2T &nbsp;&#9656;&nbsp; Users: +7&ndash;11% of national income, <em>every year</em></span></div>
+<h2><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12h7"/></svg></span><span class="n">§3</span> Shorter Verses</h2>
+<p>The pattern is not confined to the famous cases. <strong>Iridium</strong> spent over $5bn building its satellite constellation, filed one of the twenty largest bankruptcies in US history within nine months of launching service, and sold the working system for <strong>$25 million — half a cent on the construction dollar</strong>; the buyers ran it profitably for two decades. (Telecom wrote the same entry at scale: Cogent Communications assembled thirteen bankrupt fiber networks — roughly $14bn of invested capital — for about $60 million, all told.) <strong>Solar manufacturing</strong> delivered a 90% module-price collapse (2008–2012) that bankrupted nearly every Western maker of the panels — Solyndra, Q-Cells, Suntech, later SunEdison — while handing the world a 90% cheaper kilowatt-hour; the sector ETF launched at the 2008 peak drew down more than 95%. And <strong>US shale</strong> is the modern proof that this can happen <em>without a crash date</em>: roughly <strong>$300bn of cumulative negative free cash flow and 250+ producer bankruptcies</strong> across a decade in which US oil production more than doubled and cheap gas saved American consumers an estimated <strong>$203bn a year</strong>. A wave whose builders can keep raising capital produces the same end-state as a panic — it just never supplies the single morning the historians can name. That is the most relevant template for a buildout whose core financiers are the most profitable companies on earth.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 474.19375 236.017344" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-12T14:33:29.264320</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 236.017344 
+L 474.19375 236.017344 
+L 474.19375 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 41.47375 204.060719 
+L 465.55375 204.060719 
+L 465.55375 32.196719 
+L 41.47375 32.196719 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 60.750114 42665.8559 
+L 111.775782 42665.8559 
+L 111.775782 85.44975 
+L 60.750114 85.44975 
+z
+" clip-path="url(#p2c9ca1f0fb)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 202.488082 42665.8559 
+L 253.51375 42665.8559 
+L 253.51375 57.787398 
+L 202.488082 57.787398 
+z
+" clip-path="url(#p2c9ca1f0fb)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 344.226049 42665.8559 
+L 395.251718 42665.8559 
+L 395.251718 66.479749 
+L 344.226049 66.479749 
+z
+" clip-path="url(#p2c9ca1f0fb)" style="fill: #5e626b; opacity: 0.85"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 111.775782 42665.8559 
+L 162.801451 42665.8559 
+L 162.801451 183.067457 
+L 111.775782 183.067457 
+z
+" clip-path="url(#p2c9ca1f0fb)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 253.51375 42665.8559 
+L 304.539418 42665.8559 
+L 304.539418 140.643974 
+L 253.51375 140.643974 
+z
+" clip-path="url(#p2c9ca1f0fb)" style="fill: #b8902f"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 395.251718 42665.8559 
+L 446.277386 42665.8559 
+L 446.277386 166.937572 
+L 395.251718 166.937572 
+z
+" clip-path="url(#p2c9ca1f0fb)" style="fill: #b8902f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mcc289a7c89" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcc289a7c89" x="111.775782" y="204.060719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 7.8px 'Helvetica'" transform="translate(77.31197 216.656)">Iridium constellation</text>
+      <text style="fill: #5e626b; font: 7.8px 'Helvetica'" transform="translate(58.985016 225.49925)">&gt;$5bn build, sold $25m (2000)</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mcc289a7c89" x="253.51375" y="204.060719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 7.8px 'Helvetica'" transform="translate(225.769516 216.808344)">Global Crossing</text>
+      <text style="fill: #5e626b; font: 7.8px 'Helvetica'" transform="translate(182.841484 225.751531)">$22.4bn assets, $250m for 61.5% (2003)</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mcc289a7c89" x="395.251718" y="204.060719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 7.8px 'Helvetica'" transform="translate(357.75078 216.808344)">Cogent’s 13 networks</text>
+      <text style="fill: #5e626b; font: 7.8px 'Helvetica'" transform="translate(328.153437 225.751531)">~$14bn invested, $60m total (2001-04)</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 41.47375 199.949458 
+L 465.55375 199.949458 
+" clip-path="url(#p2c9ca1f0fb)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="m7e3c955882" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7e3c955882" x="41.47375" y="199.949458" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- $\mathdefault{10^{1}}$ -->
+      <g style="fill: #5e626b" transform="translate(20.61375 203.177505)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.32187500000000036">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.6140625">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 41.47375 157.525976 
+L 465.55375 157.525976 
+" clip-path="url(#p2c9ca1f0fb)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m7e3c955882" x="41.47375" y="157.525976" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- $\mathdefault{10^{2}}$ -->
+      <g style="fill: #5e626b" transform="translate(20.61375 160.754022)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.2890625000000009">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.5812500000000007">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 41.47375 115.102493 
+L 465.55375 115.102493 
+" clip-path="url(#p2c9ca1f0fb)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m7e3c955882" x="41.47375" y="115.102493" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- $\mathdefault{10^{3}}$ -->
+      <g style="fill: #5e626b" transform="translate(20.61375 118.330539)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.3000000000000007">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.5921875000000005">3</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 41.47375 72.67901 
+L 465.55375 72.67901 
+" clip-path="url(#p2c9ca1f0fb)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m7e3c955882" x="41.47375" y="72.67901" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- $\mathdefault{10^{4}}$ -->
+      <g style="fill: #5e626b" transform="translate(20.61375 75.907056)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.2890625000000009">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.5812500000000007">4</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <defs>
+       <path id="mf4afdcada2" d="M 0 0 
+L -2 0 
+" style="stroke: #5e626b; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="204.060719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="201.890651" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="187.178718" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="179.708313" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="174.407977" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="170.296716" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="166.937572" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="164.097456" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="161.637236" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="159.467168" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="144.755235" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="137.28483" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="131.984494" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="127.873233" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="124.514089" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="121.673973" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="119.213753" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="117.043685" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="102.331752" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="94.861347" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="89.561011" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="85.44975" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="82.090606" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="79.25049" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="76.79027" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="74.620202" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="59.908269" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="52.437864" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="47.137528" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="43.026268" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="39.667123" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="36.827007" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="34.366787" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#mf4afdcada2" x="41.47375" y="32.196719" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="fill: #5e626b; font: 8px 'Helvetica'; text-anchor: middle" x="14.84375" y="118.128719" transform="rotate(-90 14.84375 118.128719)">$ millions (log)</text>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 41.47375 204.060719 
+L 41.47375 32.196719 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 41.47375 204.060719 
+L 465.55375 204.060719 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #15161a; font: 700 8px 'Helvetica'" transform="translate(129.504241 165.853977)">0.5¢</text>
+    <text style="fill: #15161a; font: 700 8px 'Helvetica'" transform="translate(122.832991 174.407977)">on the $</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #15161a; font: 700 8px 'Helvetica'" transform="translate(271.242209 123.430494)">1.1¢</text>
+    <text style="fill: #15161a; font: 700 8px 'Helvetica'" transform="translate(264.570959 131.984494)">on the $</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #15161a; font: 700 8px 'Helvetica'" transform="translate(412.980177 149.724092)">0.4¢</text>
+    <text style="fill: #15161a; font: 700 8px 'Helvetica'" transform="translate(406.308927 158.278092)">on the $</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="41.47375" y="27.384527" transform="rotate(-0 41.47375 27.384527)">Construction-era capital vs the post-bust purchase price · the assets worked the whole time</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="41.47375" y="16.196719" transform="rotate(-0 41.47375 16.196719)">The basis reset — what the consolidators paid</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_11">
+     <path d="M 375.134687 44.964344 
+L 390.734687 44.964344 
+L 390.734687 39.504344 
+L 375.134687 39.504344 
+z
+" style="fill: #5e626b; opacity: 0.85"/>
+    </g>
+    <g id="text_14">
+     <text style="fill: #26282e; font: 7.8px 'Helvetica'; text-anchor: start" x="396.974687" y="44.964344" transform="rotate(-0 396.974687 44.964344)">Capital in / assets</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 375.134687 56.237781 
+L 390.734687 56.237781 
+L 390.734687 50.777781 
+L 375.134687 50.777781 
+z
+" style="fill: #b8902f"/>
+    </g>
+    <g id="text_15">
+     <text style="fill: #26282e; font: 7.8px 'Helvetica'; text-anchor: start" x="396.974687" y="56.237781" transform="rotate(-0 396.974687 56.237781)">Consolidator paid</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2c9ca1f0fb">
+   <rect x="41.47375" y="32.196719" width="424.08" height="171.864"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<div class="carry"><span class="c-ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 6v7a3 3 0 0 0 3 3h11"/><path d="M14.5 12.5 18 16l-3.5 3.5"/><circle cx="4" cy="4.5" r="1.6" fill="currentColor" stroke="none"/></svg></span><span class="c-lab">Carried forward</span><span>Add: Iridium at half a cent on the dollar &middot; solar &minus;95% for its builders, &minus;90% per kWh for its users &middot; shale &minus;$300bn of cash, +$203bn a year for consumers</span></div>
+<h2 class="act brk"><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12h7M12 8.5v7"/></svg></span><span class="n">§4</span> The Counter-Ledger</h2>
+<p class="lede"><em>The thesis is conditional, not universal — and the exceptions are as instructive as the rule. Some infrastructure financiers won enormously. Every one of them shares a structural feature the losing bets lacked.</em></p>
+<p>Two lessons sit on top of the table that follows. First, the discriminating variable across two centuries is consistent: <strong>open-field competitive capacity races transfer their surplus to users; corridors, regulated returns, licensed scarcity bought cheap, and multi-tenant landlord positions keep it.</strong> Second — the meta-finding — <strong>the winner seats are frequently occupied AT the bust, not before it.</strong> Anglo-American Telegraph bought the transatlantic corridor after the pioneers' capital burned. American Tower and Equinix nearly died in 2002 before their two decades of compounding; their bankrupt tower peers re-entered the winner column post-restructuring under new owners. Iridium's buyers paid half a cent on the dollar. The asset class wins once its capital structure has been reset — which is a statement about <em>when</em> the landlord trade exists, not just what it is.</p>
+<div class="tally">
+<table><caption>When the builders won — and the feature that put them in that column</caption>
+<thead><tr><th>Winner</th><th>The record</th><th>The feature</th></tr></thead>
+<tbody>
+<tr><td><b>Erie Canal</b> (1825)</td><td>$7.1m build; tolls repaid principal in ~10 years; $121m collected by 1882</td><td>State-financed monopoly corridor — the only water-level route</td></tr>
+<tr><td><b>Suez Canal Co.</b></td><td>IRR of 8–9% for shareholders and the British government over 1859–1956, vs 3–4% opportunity cost; Britain's £4.08m stake worth £19.2m by 1923 and paying ~£2.3m a year by the 1930s</td><td>Monopoly corridor — no parallel canal, tolls priced against the Cape route. (The host, Egypt, earned 2–5% against an 11% opportunity cost: corridors pay their owners, not their hosts)</td></tr>
+<tr><td><b>Pennsylvania RR</b></td><td>A dividend every year for roughly a century, until 1946 — through the same 1890s that put a quarter of US mileage in receivership; in 1892 only 44% of rail shares paid any dividend at all</td><td>Trunk corridor with real traffic — the wave killed the roads built parallel or ahead of demand, never the franchises</td></tr>
+<tr><td><b>Western Union</b></td><td>~90% share after 1866; kept 30–40 cents of every revenue dollar as profit for three decades <i>while message rates fell from $1.09 to 30¢</i></td><td>Post-consolidation monopoly — deflation ruins competitive builders, not monopolists</td></tr>
+<tr><td><b>AT&amp;T / Bell</b></td><td>Continuous dividends from 1881 to 2005, held flat through the Depression; the largest shareholder roster in the world</td><td>Regulated rate-of-return — the state guaranteed the coupon</td></tr>
+<tr><td><b>McCaw Cellular</b></td><td>Spectrum at ~$4.50 per person covered in the early 1980s; sold to AT&amp;T for $11.5bn in 1994</td><td>Licensed scarcity <i>bought below its rent value</i>. The control case is Europe's 3G auctions (~€100bn, 2000): the same scarcity bought at auction-clearing prices produced losing-bet outcomes — the corridor rent had been bid away to governments in advance</td></tr>
+<tr><td><b>American Tower / Equinix</b></td><td>AMT: from a $0.60 intraday low in October 2002 (near 11x levered, peers bankrupt) to a $303.72 all-time high in September 2021 — roughly 500x from the low. Equinix: a −99% drawdown into 2003, then several hundred–fold from the bottom to become the largest data-center REIT</td><td>Multi-tenant landlord — re-leasable assets with escalators, where the tenants' brutal competition is the landlord's demand. Note the entry point: <i>at the bust, not before it</i></td></tr>
+<tr><td><b>Cloud capex</b> 2014–24</td><td>AWS revenue $4.6bn → $107.6bn, operating margin 14% → 37%, through a decade of heavy building</td><td>Oligopoly discipline — three rational builders, capacity added against observed demand, multi-tenant utilization. The direct counter-case to this note, engaged in §6</td></tr>
+</tbody></table>
+</div>
+<div class="carry"><span class="c-ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M4 6v7a3 3 0 0 0 3 3h11"/><path d="M14.5 12.5 18 16l-3.5 3.5"/><circle cx="4" cy="4.5" r="1.6" fill="currentColor" stroke="none"/></svg></span><span class="c-lab">The counter-ledger balances</span><span>Corridors &middot; regulated coupons &middot; licenses bought below rent &middot; landlords, seated at the bust &mdash; four structural credits against the open field's debits</span></div>
+<h2><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><rect x="5" y="3" width="14" height="18"/><path d="M12 3v18M7.5 8h2.5M7.5 12h2.5M14 8h2.5M14 12h2.5"/><path d="M13.5 17.5h3.5M13.5 19h3.5"/></svg></span><span class="n">§5</span> The Four Seats</h2>
+<p>Across every wave the cast never changes; only the costumes do.</p>
+<table><caption>The seats, their payoffs, and their occupants across five waves</caption>
+<thead><tr><th>Seat</th><th>Payoff profile</th><th>Then</th><th>Now (2026)</th></tr></thead>
+<tbody>
+<tr><td><b>Builders</b></td><td>Negative in aggregate in every open-field wave — capacity arrives faster than demand can price it</td><td>Railway promoters, Insull, the CLECs</td><td>Hyperscalers (split seat — see §6), Oracle, neoclouds</td></tr>
+<tr><td><b>Suppliers</b></td><td>Paid in cash during the boom; peak-multiple shareholders still wait decades (Cisco, RCA)</td><td>Rail ironworks, GE, Western Electric, Cisco</td><td>NVIDIA, TSMC, ASML, the turbine and transformer makers</td></tr>
+<tr><td><b>Consolidators</b></td><td>Healthy returns on the same assets that ruined the builders — the basis is the difference</td><td>Morgan, the fiber estates' buyers, Iridium's buyers</td><td>Not yet on the field; watch for them (§9)</td></tr>
+<tr><td><b>Users</b></td><td>The surplus, permanently — largest for new business models constituted by the collapsed price</td><td>Sears on cheap freight; factories on cheap power; Google and Netflix on cheap bandwidth</td><td>Every buyer of intelligence at deflating prices; the not-yet-founded (§8)</td></tr>
+</tbody></table>
+<p>The supplier seat carries a caveat the record insists on: the supplier's revenue is a derivative of the <em>builders' access to capital</em>, not of end demand — it stops when the financing stops, which in every wave happened well before demand did. And our payback-clock work has already documented the cash actually moving between today's seats: aggregate hyperscaler free cash flow peaked in 2024 and rolled over in 2025 while the largest suppliers' free cash flow quadrupled. The capex is not disappearing; it is transferring — from the buyers' income statements to the supplier's, exactly as the seat mechanics predict.</p>
+<p>One more row belongs to the reader. Through the index, the seats are already assigned: as of August 6, 2026, the six names most tied to the buildout — NVIDIA, Microsoft, Alphabet, Amazon, Meta, Broadcom — are <strong>28.3% of the S&amp;P 500 by themselves</strong> (NVDA 8.0%, MSFT 5.6%, GOOGL 5.7%, AMZN 4.0%, AVGO 3.0%, META 2.0%), and the top ten holdings are roughly <strong>36–40% of the index — by one Wall Street tally, the most concentrated it has been since 1932</strong>. A passive investor is not watching this wave from the gallery: they hold the builder and supplier seats at the largest weights in the index's modern history. The ledger's question — <em>which seat are you in</em> — has a default answer, and it is the seat that, bought at the peak, has historically waited decades.</p>
+<h2 class="act brk"><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><rect x="5" y="3" width="14" height="18"/><path d="M12 3v18M7.5 8h2.5M7.5 12h2.5M14 8h2.5M14 12h2.5"/><path d="M13.5 17.5h3.5M13.5 19h3.5"/></svg></span><span class="n">§6</span> The Fifth Wave</h2>
+<div class="bigband"><div class="bb-num">4.97% &gt; 4.46%</div><div class="bb-cap">US private investment in information-processing equipment and software as a share of GDP: Q2 2026 against the Q4 2000 dot-com peak. The fifth wave has crossed the fourth&rsquo;s high-water mark &mdash; on the government&rsquo;s own investment accounts.</div></div>
+<p>The band above is our own computation from the BEA's national accounts — the same basis as the historical wave chart, so the comparison is clean. The sharper detail sits underneath the headline: the <strong>equipment-only</strong> line has risen from 1.67% to 2.46% of GDP in just nine quarters, and that near-doubling is where the AI inflection actually lives.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 472.27625 244.746781" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-12T14:33:29.320890</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 244.746781 
+L 472.27625 244.746781 
+L 472.27625 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 39.55625 220.77475 
+L 463.63625 220.77475 
+L 463.63625 32.27875 
+L 39.55625 32.27875 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 39.55625 220.77475 
+L 39.55625 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="ma922dddf2f" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma922dddf2f" x="39.55625" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="39.55625" y="234.230844" transform="rotate(-0 39.55625 234.230844)">1995</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 105.000694 220.77475 
+L 105.000694 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#ma922dddf2f" x="105.000694" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="105.000694" y="234.230844" transform="rotate(-0 105.000694 234.230844)">2000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 170.445139 220.77475 
+L 170.445139 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#ma922dddf2f" x="170.445139" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="170.445139" y="234.230844" transform="rotate(-0 170.445139 234.230844)">2005</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 235.889583 220.77475 
+L 235.889583 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#ma922dddf2f" x="235.889583" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="235.889583" y="234.230844" transform="rotate(-0 235.889583 234.230844)">2010</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 301.334028 220.77475 
+L 301.334028 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#ma922dddf2f" x="301.334028" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="301.334028" y="234.230844" transform="rotate(-0 301.334028 234.230844)">2015</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 366.778472 220.77475 
+L 366.778472 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#ma922dddf2f" x="366.778472" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="366.778472" y="234.230844" transform="rotate(-0 366.778472 234.230844)">2020</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 432.222917 220.77475 
+L 432.222917 32.27875 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#ma922dddf2f" x="432.222917" y="220.77475" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="432.222917" y="234.230844" transform="rotate(-0 432.222917 234.230844)">2025</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <path d="M 39.55625 204.14275 
+L 463.63625 204.14275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <defs>
+       <path id="m2bd08ca355" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="204.14275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="207.370797" transform="rotate(-0 32.55625 207.370797)">2.5</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_17">
+      <path d="M 39.55625 176.42275 
+L 463.63625 176.42275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="176.42275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="179.650797" transform="rotate(-0 32.55625 179.650797)">3.0</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_19">
+      <path d="M 39.55625 148.70275 
+L 463.63625 148.70275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="148.70275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="151.930797" transform="rotate(-0 32.55625 151.930797)">3.5</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_21">
+      <path d="M 39.55625 120.98275 
+L 463.63625 120.98275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="120.98275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="124.210797" transform="rotate(-0 32.55625 124.210797)">4.0</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_23">
+      <path d="M 39.55625 93.26275 
+L 463.63625 93.26275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="93.26275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="96.490797" transform="rotate(-0 32.55625 96.490797)">4.5</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_25">
+      <path d="M 39.55625 65.54275 
+L 463.63625 65.54275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="65.54275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="68.770797" transform="rotate(-0 32.55625 68.770797)">5.0</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_27">
+      <path d="M 39.55625 37.82275 
+L 463.63625 37.82275 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m2bd08ca355" x="39.55625" y="37.82275" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: end" x="32.55625" y="41.050797" transform="rotate(-0 32.55625 41.050797)">5.5</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="fill: #5e626b; font: 8px 'Helvetica'; text-anchor: middle" x="14.37875" y="126.52675" transform="rotate(-90 14.37875 126.52675)">% of GDP</text>
+    </g>
+   </g>
+   <g id="line2d_29">
+    <path d="M 39.55625 162.95083 
+L 42.828472 157.29595 
+L 46.100694 159.18091 
+L 49.372917 154.80115 
+L 52.645139 151.86283 
+L 55.917361 152.97163 
+L 59.189583 149.70067 
+L 62.461806 149.64523 
+L 65.734028 144.32299 
+L 69.00625 140.83027 
+L 72.278472 133.90027 
+L 75.550694 133.78939 
+L 78.822917 129.46507 
+L 82.095139 128.85523 
+L 85.367361 130.79563 
+L 88.639583 127.08115 
+L 91.911806 121.75891 
+L 95.184028 112.16779 
+L 98.45625 109.22947 
+L 101.728472 115.27243 
+L 105.000694 103.68547 
+L 108.272917 99.25027 
+L 111.545139 97.91971 
+L 114.817361 95.42491 
+L 118.089583 102.35491 
+L 121.361806 118.15531 
+L 124.634028 128.13451 
+L 127.90625 134.34379 
+L 131.178472 140.22043 
+L 134.450694 143.76859 
+L 137.722917 144.10123 
+L 140.995139 152.86075 
+L 144.267361 152.36179 
+L 147.539583 153.08251 
+L 150.811806 148.97995 
+L 154.084028 146.98411 
+L 157.35625 150.64315 
+L 160.628472 151.03123 
+L 163.900694 150.80947 
+L 167.172917 152.36179 
+L 170.445139 153.74779 
+L 173.717361 152.97163 
+L 176.989583 152.30635 
+L 180.261806 154.13587 
+L 183.534028 150.86491 
+L 186.80625 152.47267 
+L 190.078472 149.75611 
+L 193.350694 150.53227 
+L 196.622917 143.71315 
+L 199.895139 145.59811 
+L 203.167361 146.31883 
+L 206.439583 142.82611 
+L 209.711806 139.94323 
+L 212.984028 140.94115 
+L 216.25625 143.76859 
+L 219.528472 150.47683 
+L 222.800694 154.02499 
+L 226.072917 153.91411 
+L 229.345139 149.53435 
+L 232.617361 145.15459 
+L 235.889583 145.26547 
+L 239.161806 147.31675 
+L 242.434028 145.81987 
+L 245.70625 145.76443 
+L 248.978472 146.04163 
+L 252.250694 143.49139 
+L 255.522917 140.44219 
+L 258.795139 140.66395 
+L 262.067361 136.78315 
+L 265.339583 135.45259 
+L 268.611806 139.61059 
+L 271.884028 136.00699 
+L 275.15625 132.01531 
+L 278.428472 136.72771 
+L 281.700694 136.50595 
+L 284.972917 137.50387 
+L 288.245139 136.28419 
+L 291.517361 134.95363 
+L 294.789583 137.33755 
+L 298.061806 136.39507 
+L 301.334028 137.67019 
+L 304.60625 138.44635 
+L 307.878472 137.17123 
+L 311.150694 135.23083 
+L 314.422917 133.17955 
+L 317.695139 133.12411 
+L 320.967361 132.51427 
+L 324.239583 131.23915 
+L 327.511806 129.57595 
+L 330.784028 125.08531 
+L 334.05625 124.53091 
+L 337.328472 122.47963 
+L 340.600694 120.65011 
+L 343.872917 120.48379 
+L 347.145139 119.43043 
+L 350.417361 119.98483 
+L 353.689583 121.53715 
+L 356.961806 121.03819 
+L 360.234028 124.36459 
+L 363.50625 126.02779 
+L 366.778472 126.08323 
+L 370.050694 104.62795 
+L 373.322917 115.71595 
+L 376.595139 112.44499 
+L 379.867361 111.94603 
+L 383.139583 113.94187 
+L 386.411806 117.43459 
+L 389.684028 116.10403 
+L 392.95625 110.56003 
+L 396.228472 112.22323 
+L 399.500694 112.22323 
+L 402.772917 117.10195 
+L 406.045139 117.87811 
+L 409.317361 120.87187 
+L 412.589583 124.19827 
+L 415.861806 121.42627 
+L 419.134028 120.42835 
+L 422.40625 117.98899 
+L 425.678472 114.16363 
+L 428.950694 114.66259 
+L 432.222917 100.74715 
+L 435.495139 96.81091 
+L 438.767361 93.98347 
+L 442.039583 84.00427 
+L 445.311806 71.97379 
+L 448.584028 67.42771 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #b8902f; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_30">
+    <path d="M 39.55625 209.13235 
+L 42.828472 204.41995 
+L 46.100694 207.13651 
+L 49.372917 203.58835 
+L 52.645139 201.48163 
+L 55.917361 203.20027 
+L 59.189583 201.09355 
+L 62.461806 202.92307 
+L 65.734028 202.25779 
+L 69.00625 200.42827 
+L 72.278472 195.21691 
+L 75.550694 197.21275 
+L 78.822917 193.55371 
+L 82.095139 194.21899 
+L 85.367361 198.32155 
+L 88.639583 197.21275 
+L 91.911806 194.99515 
+L 95.184028 190.17187 
+L 98.45625 190.39363 
+L 101.728472 197.15731 
+L 105.000694 187.84339 
+L 108.272917 183.96259 
+L 111.545139 182.41027 
+L 114.817361 181.30147 
+L 118.089583 188.45323 
+L 121.361806 201.64795 
+L 124.634028 210.01939 
+L 127.90625 213.29035 
+L 131.178472 218.44627 
+L 134.450694 221.66179 
+L 137.722917 222.71515 
+L 140.995139 227.64931 
+L 144.267361 226.76227 
+L 147.539583 227.15035 
+L 150.811806 224.87731 
+L 154.084028 222.60427 
+L 157.35625 225.70891 
+L 160.628472 225.37627 
+L 163.900694 227.09491 
+L 167.172917 228.42547 
+L 170.445139 228.92443 
+L 173.717361 229.70059 
+L 176.989583 228.75811 
+L 180.261806 229.58971 
+L 183.534028 225.87523 
+L 186.80625 227.87107 
+L 190.078472 226.20787 
+L 193.350694 227.92651 
+L 196.622917 222.93691 
+L 199.895139 224.10115 
+L 203.167361 225.04363 
+L 206.439583 222.54883 
+L 209.711806 223.32499 
+L 212.984028 224.76643 
+L 216.25625 228.20371 
+L 219.528472 234.85651 
+L 222.800694 238.79275 
+L 226.072917 240.12331 
+L 229.345139 236.40883 
+L 232.617361 233.58139 
+L 235.889583 230.75395 
+L 239.161806 229.75603 
+L 242.434028 228.42547 
+L 245.70625 228.92443 
+L 248.978472 231.64099 
+L 252.250694 230.80939 
+L 255.522917 230.58763 
+L 258.795139 232.47259 
+L 262.067361 228.53635 
+L 265.339583 228.64723 
+L 268.611806 232.02907 
+L 271.884028 229.81147 
+L 275.15625 227.37211 
+L 278.428472 229.31251 
+L 281.700694 230.03323 
+L 284.972917 231.25291 
+L 288.245139 231.53011 
+L 291.517361 230.31043 
+L 294.789583 233.30419 
+L 298.061806 232.19539 
+L 301.334028 233.19331 
+L 304.60625 233.30419 
+L 307.878472 232.52803 
+L 311.150694 232.91611 
+L 314.422917 233.63683 
+L 317.695139 234.85651 
+L 320.967361 235.74355 
+L 324.239583 236.02075 
+L 327.511806 235.79899 
+L 330.784028 233.08243 
+L 334.05625 233.52595 
+L 337.328472 232.19539 
+L 340.600694 231.58555 
+L 343.872917 233.52595 
+L 347.145139 233.74771 
+L 350.417361 235.52179 
+L 353.689583 235.30003 
+L 356.961806 235.68811 
+L 360.234028 239.73523 
+L 363.50625 242.72899 
+L 366.125638 245.746781 
+M 366.997156 245.746781 
+L 370.050694 235.24459 
+L 373.322917 237.18499 
+L 376.595139 236.57515 
+L 379.867361 236.79691 
+L 383.139583 238.95907 
+L 386.411806 242.11915 
+L 389.684028 239.90155 
+L 392.95625 237.01867 
+L 396.228472 239.90155 
+L 399.500694 240.89947 
+L 402.75185 245.746781 
+M 429.202831 245.746781 
+L 432.222917 234.74563 
+L 435.495139 232.41715 
+L 438.767361 230.42131 
+L 442.039583 221.93899 
+L 445.311806 210.74011 
+L 448.584028 206.47123 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke: #5e626b; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_31">
+    <path d="M 39.55625 95.42491 
+L 463.63625 95.42491 
+" clip-path="url(#p0880a02d4f)" style="fill: none; stroke-dasharray: 3.2,2.4; stroke-dashoffset: 0; stroke: #8a6d2b; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 39.55625 220.77475 
+L 39.55625 32.27875 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 39.55625 220.77475 
+L 463.63625 220.77475 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 157.215761 69.640956 
+Q 136.871826 82.012816 116.527892 94.384676 
+" style="fill: none; stroke: #8a6d2b; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_16">
+    <text style="fill: #15161a; font: 8px 'Helvetica'; text-anchor: start" x="130.524028" y="64.93291" transform="rotate(-0 130.524028 64.93291)">dot-com peak  4.46%</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 396.458358 46.960241 
+Q 421.590604 56.828574 446.722851 66.696907 
+" style="fill: none; stroke: #b8902f; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_17">
+    <text style="fill: #15161a; font: 700 8.4px 'Helvetica'; text-anchor: start" x="350.417361" y="42.47971" transform="rotate(-0 350.417361 42.47971)">2026Q2  4.97%</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="39.55625" y="27.000862" transform="rotate(-0 39.55625 27.000862)">US private fixed investment in information-processing equipment and software, share of GDP, quarterly</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="39.55625" y="16.27875" transform="rotate(-0 39.55625 16.27875)">The fifth wave has crossed the fourth’s high-water mark</text>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="C0_0_462f175355" d="M 0 2.345208 
+C 0.621956 2.345208 1.218523 2.098102 1.658312 1.658312 
+C 2.098102 1.218523 2.345208 0.621956 2.345208 -0 
+C 2.345208 -0.621956 2.098102 -1.218523 1.658312 -1.658312 
+C 1.218523 -2.098102 0.621956 -2.345208 0 -2.345208 
+C -0.621956 -2.345208 -1.218523 -2.098102 -1.658312 -1.658312 
+C -2.098102 -1.218523 -2.345208 -0.621956 -2.345208 0 
+C -2.345208 0.621956 -2.098102 1.218523 -1.658312 1.658312 
+C -1.218523 2.098102 -0.621956 2.345208 0 2.345208 
+z
+"/>
+    </defs>
+    <g clip-path="url(#p0880a02d4f)">
+     <use xlink:href="#C0_0_462f175355" x="114.817361" y="95.42491" style="fill: #8a6d2b; stroke: #8a6d2b"/>
+    </g>
+    <g clip-path="url(#p0880a02d4f)">
+     <use xlink:href="#C0_0_462f175355" x="448.584028" y="67.42771" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="patch_7">
+     <path d="M 45.01625 216.87475 
+L 239.266719 216.87475 
+Q 240.826719 216.87475 240.826719 215.31475 
+L 240.826719 193.553969 
+Q 240.826719 191.993969 239.266719 191.993969 
+L 45.01625 191.993969 
+Q 43.45625 191.993969 43.45625 193.553969 
+L 43.45625 215.31475 
+Q 43.45625 216.87475 45.01625 216.87475 
+z
+" style="fill: #ffffff; opacity: 0.92"/>
+    </g>
+    <g id="line2d_32">
+     <path d="M 46.57625 198.131594 
+L 54.37625 198.131594 
+L 62.17625 198.131594 
+" style="fill: none; stroke: #b8902f; stroke-width: 2; stroke-linecap: square"/>
+    </g>
+    <g id="text_20">
+     <text style="fill: #26282e; font: 7.8px 'Helvetica'; text-anchor: start" x="68.41625" y="200.861594" transform="rotate(-0 68.41625 200.861594)">Info-processing equipment + software, % of GDP</text>
+    </g>
+    <g id="line2d_33">
+     <path d="M 46.57625 209.352625 
+L 54.37625 209.352625 
+L 62.17625 209.352625 
+" style="fill: none; stroke: #5e626b; stroke-width: 1.3; stroke-linecap: square"/>
+    </g>
+    <g id="text_21">
+     <text style="fill: #26282e; font: 7.8px 'Helvetica'; text-anchor: start" x="68.41625" y="212.082625" transform="rotate(-0 68.41625 212.082625)">Equipment only</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0880a02d4f">
+   <rect x="39.55625" y="32.27875" width="424.08" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p>The big four hyperscalers have guided to roughly <strong>$700bn of combined 2026 capex</strong>; total worldwide data-center capex is forecast to pass <strong>$1 trillion this year</strong>, on a path toward $1.7 trillion by 2030 (Dell'Oro). Our payback-clock note carries the arithmetic of what that must earn; this note supplies its base rates.</p>
+<p><strong>Where the historical pattern attaches cleanly:</strong></p>
+<ul>
+<li><strong>The financing periphery.</strong> The 1840s taught that ruin arrives through committed-but-uncalled capital; the 1920s taught that losses concentrate in the leverage, arranged in circles. Today's marginal AI dollar is migrating from hyperscaler free cash flow to debt, SPVs, vendor financing, and single-tenant lease structures — and the credit market has already priced the difference: the same neocloud borrows at Treasuries +200bp against its assets and +534bp against itself (<em>The Neocloud Fuse</em>). The wedge is the market quietly agreeing with the ledger.</li>
+<li><strong>The supplier's shareholders.</strong> NVIDIA's operating win is real and banked in cash — $193.7bn of data-center revenue in FY2026, collected during the boom, exactly as the seat prescribes. The historical warning attaches only to the peak-multiple shareholder: Cisco remained the dominant networking company continuously, and a dollar invested at its March 2000 top waited 25.7 years. The supplier's equity return is a valuation statement, not a technology statement.</li>
+<li><strong>The service price is collapsing on schedule — faster than any prior wave.</strong> §7.</li>
+<li><strong>Demand being real does not save the builders.</strong> In every wave the mania's demand forecasts were eventually <em>exceeded</em> — British railway revenue reached 6% of GDP by 1905, nearly double what the Mania's own arithmetic implied; the fiber glut was eventually absorbed and surpassed. The builders were right about demand and ruined anyway, because competition, not demand, sets the price of the service. "But AI demand is real" is true, and it is not the question.</li>
+<li><strong>The trigger, when it came, was monetary.</strong> Each bust in the ledger followed a financing-cost shock, not a demand shock — the commercial crisis of 1847, the panics of 1873 and 1893, 1929, 2000. The order book has never been the thing to watch; the cost of capital has.</li>
+</ul>
+<p><strong>Where the pattern honestly breaks — stated at full strength:</strong></p>
+<ul>
+<li><strong>The core builders are self-funding.</strong> The 1840s promoters, Insull, and the CLECs were leveraged pure-plays who died when capital markets closed. Microsoft, Alphabet, Amazon, and Meta are the most profitable companies in the history of capitalism. A bust in this wave bankrupts the periphery, not the core — which is precisely the shale template from §3: the same end-state, with no crash date. This note deliberately makes <strong>no timing claim</strong>; the ledger predicts the shape, not the schedule.</li>
+<li><strong>Cloud capex, 2010–2024, is the counter-case — run by these same companies.</strong> Three disciplined builders, capacity added against observed demand, multi-tenant utilization: the builders won, handsomely (§4). The rejoinder is that the 2023+ spend broke each of those features in turn — pre-emptive and lumpy rather than demand-matched; a majority-share short-life asset (roughly 60% of the data-center dollar now sits on a ~2–3-year silicon clock, the highest equipment share of any wave in this ledger); and a levered, single-tenant periphery attached to the core. Whether the fifth wave resolves as Cloud II or as Fiber II turns substantially on whether those three reversals persist.</li>
+<li><strong>The hyperscalers are split seats.</strong> Part builder (open-field GPU capacity), part landlord (proprietary demand, distribution, interconnection ecosystems), part user (internal AI returns in ads, search, productivity). Their outcomes will likely decompose by which fraction dominates their spend — which is why this note takes no single-name view of them.</li>
+<li><strong>And the glut signature is absent in the West — so far.</strong> Fiber's bust arrived with roughly 4% of capacity lit; this wave currently shows the opposite: North American data-center vacancy at a record-low <strong>1.4%</strong> at end-2025 (Northern Virginia: 0.5%), roughly three-quarters of under-construction space already preleased (CBRE's H1-2025 aggregate was 74.3%; H2 metro figures ran 72–89%), H100 rental rates up ~40% from their late-2025 low, and both Microsoft and Alphabet stating on their mid-2026 earnings calls that demand exceeds available capacity. Whatever the ledger says about the financing, Western capacity is not yet ahead of Western demand. The overbuild, if it comes, has not arrived — which is the fair reading of today's tape, and the baseline against which signpost §9 measures.</li>
+</ul>
+<p><strong>The subsidized hemisphere.</strong> The solar verse's mechanism — capacity built with capital that does not require returns — is already present in this wave, at scale, one hemisphere over. China is reported to be preparing roughly <strong>$295bn of state funding over five years</strong> for a nationwide AI data-center buildout (Bloomberg, June 2026), on top of the East-Data-West-Computing hub program and municipal compute vouchers that in Shanghai's case cover <strong>up to 80% of AI compute rental fees</strong>. The results already rhyme with solar: reporting through 2025 described hundreds of completed Chinese AI data centers standing substantially idle — one widely-cited estimate put <strong>80% of recently built capacity unused</strong> — with H100-class server rentals down ~58% from their peak (MIT Technology Review; Light Reading). And the deflationary export is already in the token market: <strong>Chinese open-weight models went from ~1% to 45%+ of OpenRouter traffic in eighteen months</strong>, a large part of why the floor price of intelligence falls as fast as it does. Mapped to the ledger: subsidized capital deepens the service-price collapse for everyone, accelerates the surplus transfer to users worldwide — and hosts the wave's first visible glut on its own books, exactly as solar's subsidized buildout did.</p>
+<h2><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M18 5H7l6 7-6 7h11"/><path d="M5 21.5h14"/></svg></span><span class="n">§7</span> The Live Measurement</h2>
+<p class="lede"><em>In every prior wave, the service-price collapse arrived after the glut. This wave's is happening during the buildout — which means the surplus migration can be watched in real time.</em></p>
+<p><strong>The price.</strong> At fixed capability, the cost of intelligence is falling roughly <strong>10x per year</strong> (a16z's constant-MMLU series; Epoch AI's benchmark-anchored estimates run 9x–900x/yr depending on threshold). GPT-4-class capability that cost $30 per million input tokens at launch in March 2023 is available for $0.14 forty months later — a ~200x compression. It is not uniform: budget and mid-tier prices fell another ~36% over the past year while BenchLM's frontier-basket index <em>rose</em> 36% — though that frontier reading is substantially a composition effect (the basket rotates into newer premium models) and we treat it as an attributed index reading, not a market fact. The second price series says the same thing in hardware: H100 rentals fell from over $12/hour (2023) to ~$1.70 (late 2025), rebounding to ~$3 in 2026's capacity crunch. Ton-miles, kilowatt-hours, megabits, tokens: the fifth curve is the steepest ever measured.</p>
+<div class="chart"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 545.178206 213.349219" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-12T14:33:29.446021</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 213.349219 
+L 545.178206 213.349219 
+L 545.178206 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 33.19 189.377188 
+L 256.669575 189.377188 
+L 256.669575 32.377188 
+L 33.19 32.377188 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 33.19 189.377188 
+L 33.19 32.377188 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m0c48b4de54" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0c48b4de54" x="33.19" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="33.19" y="202.833281" transform="rotate(-0 33.19 202.833281)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 92.468402 189.377188 
+L 92.468402 32.377188 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="92.468402" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="92.468402" y="202.833281" transform="rotate(-0 92.468402 202.833281)">24</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 151.746804 189.377188 
+L 151.746804 32.377188 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="151.746804" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="151.746804" y="202.833281" transform="rotate(-0 151.746804 202.833281)">25</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 211.025206 189.377188 
+L 211.025206 32.377188 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="211.025206" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="211.025206" y="202.833281" transform="rotate(-0 211.025206 202.833281)">26</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 33.19 174.858677 
+L 256.669575 174.858677 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <defs>
+       <path id="m908749c83e" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5e626b; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m908749c83e" x="33.19" y="174.858677" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- $\mathdefault{10^{-1}}$ -->
+      <g style="fill: #5e626b" transform="translate(8.64 178.086723)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.32187500000000036">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047 13.772148" y="-3.6140625">−1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 33.19 126.629227 
+L 256.669575 126.629227 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m908749c83e" x="33.19" y="126.629227" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- $\mathdefault{10^{0}}$ -->
+      <g style="fill: #5e626b" transform="translate(12.33 129.857274)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.3000000000000007">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.5921875000000005">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <path d="M 33.19 78.399778 
+L 256.669575 78.399778 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m908749c83e" x="33.19" y="78.399778" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- $\mathdefault{10^{1}}$ -->
+      <g style="fill: #5e626b" transform="translate(12.33 81.627825)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.32187500000000036">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.6140625">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_15">
+      <defs>
+       <path id="ma4c9c4eabe" d="M 0 0 
+L -2 0 
+" style="stroke: #5e626b; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="185.55832" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="182.329513" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="179.532593" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="177.065535" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="160.340166" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="151.847381" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="145.821655" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="141.147738" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="137.32887" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="134.100064" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="131.303144" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="128.836086" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="112.110716" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="103.617932" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="97.592206" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="92.918289" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="89.099421" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="85.870614" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="83.073695" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="80.606637" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="63.881267" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="55.388483" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="49.362756" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="44.68884" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="40.869972" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="37.641165" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="34.844245" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="33.19" y="32.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_44">
+    <path d="M 45.04568 55.388483 
+L 142.855044 142.002787 
+L 246.592247 167.811002 
+" clip-path="url(#pc7df2afb63)" style="fill: none; stroke: #b8902f; stroke-width: 2.2; stroke-linecap: square"/>
+    <defs>
+     <path id="m6caa54c119" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #b8902f"/>
+    </defs>
+    <g clip-path="url(#pc7df2afb63)">
+     <use xlink:href="#m6caa54c119" x="45.04568" y="55.388483" style="fill: #b8902f; stroke: #b8902f"/>
+     <use xlink:href="#m6caa54c119" x="142.855044" y="142.002787" style="fill: #b8902f; stroke: #b8902f"/>
+     <use xlink:href="#m6caa54c119" x="246.592247" y="167.811002" style="fill: #b8902f; stroke: #b8902f"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 33.19 189.377188 
+L 33.19 32.377188 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 33.19 189.377188 
+L 256.669575 189.377188 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_8">
+    <text style="fill: #15161a; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="45.04568" y="44.274058" transform="rotate(-0 45.04568 44.274058)">$30</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #15161a; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="142.855044" y="130.888362" transform="rotate(-0 142.855044 130.888362)">~$0.48</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #15161a; font: 700 8.4px 'Helvetica'; text-anchor: middle" x="246.592247" y="156.696577" transform="rotate(-0 246.592247 156.696577)">$0.14</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="33.19" y="27.981188" transform="rotate(-0 33.19 27.981188)">Cheapest GPT-4-class model, $ per million input tokens (log)</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="33.19" y="16.377188" transform="rotate(-0 33.19 16.377188)">Intelligence</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 313.058631 189.377188 
+L 536.538206 189.377188 
+L 536.538206 32.377188 
+L 313.058631 32.377188 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_45">
+      <path d="M 313.058631 189.377188 
+L 313.058631 32.377188 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="313.058631" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="313.058631" y="202.833281" transform="rotate(-0 313.058631 202.833281)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_47">
+      <path d="M 374.035323 189.377188 
+L 374.035323 32.377188 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="374.035323" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="374.035323" y="202.833281" transform="rotate(-0 374.035323 202.833281)">24</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_49">
+      <path d="M 435.012015 189.377188 
+L 435.012015 32.377188 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="435.012015" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="435.012015" y="202.833281" transform="rotate(-0 435.012015 202.833281)">25</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_51">
+      <path d="M 495.988706 189.377188 
+L 495.988706 32.377188 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m0c48b4de54" x="495.988706" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="fill: #5e626b; font: 9px 'Helvetica'; text-anchor: middle" x="495.988706" y="202.833281" transform="rotate(-0 495.988706 202.833281)">26</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_33">
+     <g id="line2d_53">
+      <path d="M 313.058631 189.377188 
+L 536.538206 189.377188 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m908749c83e" x="313.058631" y="189.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- $\mathdefault{10^{0}}$ -->
+      <g style="fill: #5e626b" transform="translate(292.198631 192.605234)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.3000000000000007">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.5921875000000005">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_55">
+      <path d="M 313.058631 68.703567 
+L 536.538206 68.703567 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #e2e4e8; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#m908749c83e" x="313.058631" y="68.703567" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <!-- $\mathdefault{10^{1}}$ -->
+      <g style="fill: #5e626b" transform="translate(292.198631 71.931614)">
+       <text>
+        <tspan style="font: 9px 'Helvetica'" x="0 5.005371" y="-0.32187500000000036">10</tspan>
+        <tspan style="font: 6.3px 'Helvetica'" x="10.093047" y="-3.6140625">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_57">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="153.050808" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_58">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="131.801238" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_59">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="116.724429" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_60">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="105.029946" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_61">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="95.474859" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_62">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="87.396147" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_63">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="80.398049" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_64">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="74.225289" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_43">
+     <g id="line2d_65">
+      <g>
+       <use xlink:href="#ma4c9c4eabe" x="313.058631" y="32.377188" style="fill: #5e626b; stroke: #5e626b; stroke-width: 0.6"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_66">
+    <path d="M 325.253969 59.148479 
+L 404.523669 100.034941 
+L 489.891037 161.568082 
+L 526.477052 131.801238 
+" clip-path="url(#pdec2ed555e)" style="fill: none; stroke: #8a6d2b; stroke-width: 2; stroke-linecap: square"/>
+    <defs>
+     <path id="m5590386f12" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #8a6d2b"/>
+    </defs>
+    <g clip-path="url(#pdec2ed555e)">
+     <use xlink:href="#m5590386f12" x="325.253969" y="59.148479" style="fill: #8a6d2b; stroke: #8a6d2b"/>
+     <use xlink:href="#m5590386f12" x="404.523669" y="100.034941" style="fill: #8a6d2b; stroke: #8a6d2b"/>
+     <use xlink:href="#m5590386f12" x="489.891037" y="161.568082" style="fill: #8a6d2b; stroke: #8a6d2b"/>
+     <use xlink:href="#m5590386f12" x="526.477052" y="131.801238" style="fill: #8a6d2b; stroke: #8a6d2b"/>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 313.058631 189.377188 
+L 313.058631 32.377188 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 313.058631 189.377188 
+L 536.538206 189.377188 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_19">
+    <text style="fill: #15161a; font: 700 8.2px 'Helvetica'; text-anchor: middle" x="325.253969" y="46.211064" transform="rotate(-0 325.253969 46.211064)">&gt;$12</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #15161a; font: 700 8.2px 'Helvetica'; text-anchor: middle" x="489.891037" y="148.630667" transform="rotate(-0 489.891037 148.630667)">$1.70</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #15161a; font: 700 8.2px 'Helvetica'; text-anchor: middle" x="526.477052" y="118.863823" transform="rotate(-0 526.477052 118.863823)">~$3</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 473.819709 88.633888 
+Q 499.375426 109.583911 524.931143 130.533935 
+" style="fill: none; stroke: #e2e4e8; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_22">
+    <text style="fill: #5e626b; font: 7.4px 'Helvetica'" transform="translate(428.914345 75.847114)">2026 rebound —</text>
+    <text style="fill: #5e626b; font: 7.4px 'Helvetica'" transform="translate(428.914345 83.780377)">the capacity crunch</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #5e626b; font: 7.6px 'Helvetica'; text-anchor: start" x="313.058631" y="27.981188" transform="rotate(-0 313.058631 27.981188)">H100 rental, $ per GPU-hour (log)</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #15161a; font: 700 10.5px 'Helvetica'; text-anchor: start" x="313.058631" y="16.377188" transform="rotate(-0 313.058631 16.377188)">Compute</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc7df2afb63">
+   <rect x="33.19" y="32.377188" width="223.479575" height="157"/>
+  </clipPath>
+  <clipPath id="pdec2ed555e">
+   <rect x="313.058631" y="32.377188" width="223.479575" height="157"/>
+  </clipPath>
+ </defs>
+</svg>
+</div>
+<p><strong>The volume.</strong> Google disclosed <strong>3.2 quadrillion tokens processed monthly</strong> at I/O 2026 — up ~6.7x in a year, ~330x in two. OpenRouter, the neutral routing layer, crossed 25 trillion tokens a week this spring, ~4–5x its year-ago rate. Independent aggregation puts disclosed global inference above 300 trillion tokens a day.</p>
+<p><strong>The revenue.</strong> Growing — fast — through the deflation. Anthropic's disclosed run-rate ladder: $1bn (Dec 2024) → $9bn (Dec 2025) → $47bn (May 2026). Microsoft's AI business: a <strong>$37bn</strong> annual run-rate, up 123% (the widely circulated "&gt;$40bn Azure AI" figure conflates the quarter's capex remark; $37bn, company-wide, is what was actually said). Google Cloud grew 82% in Q2 2026. OpenAI's reported trajectory is the outlier worth watching: press-reported figures show its ~$25bn run-rate roughly flat from February to April 2026 — leak-sourced and not company-confirmed, but the first data point in the wave that looks like a demand pause rather than a supply constraint.</p>
+<p><strong>The elasticity — the number that decides which movie this is — turns out to be two numbers.</strong> If demand for intelligence responds strongly to its falling price, the revenue pool grows through the deflation; if not, this is fiber. The record now contains both readings, and they measure different things. At the <strong>model level</strong>, on the one population where price and volume are cleanly matched — OpenRouter's own 100-trillion-token dataset — demand is <strong>deeply price-inelastic: a 10% price cut wins only a 0.5–0.7% usage response</strong> (OpenRouter/a16z, 2026). Buyers overwhelmingly do not shop intelligence on price — they buy capability (the study's own caveat: a real but minority cost-sensitive segment migrates to open ecosystems). That one estimate explains two things this note already observed: why frontier sellers can <em>raise</em> prices into the deflation (inelastic demand hands the capability leader pricing power — the frontier re-inflation noted above), and why the deflation exists at all — it is <em>supplied</em> by open-weight competition, not demanded by price-sensitive users. At the <strong>market level</strong>, total volume against the falling realized price yields our arc reading of ~1.4–1.5 (and the one published simulation, 1.42) — but that aggregate conflates price response with capability growth and adoption, and the model-level finding says the price-response share of it is small. The honest synthesis, and the sharper claim: <strong>the revenue pool is growing through the deflation, but not because of it.</strong> Volume is driven by capability and agentic adoption; the deflation is a competitive transfer to users that the sellers' pricing cannot stop — which is precisely what the ledger's mechanism predicts a service-price collapse to be.</p>
+<p><strong>But growing through the deflation is not the same as paying for the buildout.</strong> Identified AI revenue reaching income statements today — the labs, the clouds' AI lines, netted for the dollar that passes from customer to lab to cloud — is on the order of $100–150bn a year gross, against our payback-clock hurdle of ~$221bn of <em>operating profit</em> for the 2026 capex vintage alone, and against the ~$3 trillion of end-revenue implied by Sequoia's markup arithmetic on its broader ~$1.5T estimate of 2026 AI infrastructure spending (a wider scope than Dell'Oro's $1T data-center-capex figure — it reaches beyond the data center itself). Coverage remains in the single digits of what the spend ultimately requires.</p>
+<p><strong>So solve for the requirement.</strong> To clear the 2026 vintage's hurdle by 2030, netted AI revenue must reach roughly $440–740bn (at 50% and 30% incremental margins) from ~$80bn today — a compounding of 1.5x to 1.7x a year, for four consecutive years. On the realized price path we can actually observe (about −73% a year), revenue compounds at that rate only if the volume response runs at an arc of <strong>1.33 to 1.43</strong> against the price decline. The delivered arc is ~1.4–1.5, upper-bound-flavored by construction. Read those two ranges together and the finding states itself: <strong>the wave is delivering almost exactly the volume growth it requires, with nothing to spare.</strong> That is the requirement for the 2026 vintage alone, frozen; every subsequent vintage raises the bar. And the model-level inelasticity sharpens what the requirement <em>means</em>: since price cuts do not stimulate demand, the 1.5–1.7x revenue path cannot be bought — it must arrive as adoption, workload by workload, at whatever price capability commands, for years, while the price collapses at the fastest rate ever measured. The knife-edge, not a verdict, is the honest conclusion. The delivered volume curve and the unfunded hurdle are both true at once; the space between them is where this wave's version of 1894 or 2002 — or of 2010s cloud — will be decided.</p>
+<h2 class="act brk"><span class="fol"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12h7M12 8.5v7"/></svg></span><span class="n">§8</span> The Users' Century <em>(speculative, and labeled as such)</em></h2>
+<p>History says the surplus lands in three tiers: incumbents whose costs fall (real, but competed away); consumers (the largest tranche, uninvestable); and — where every wave's great equity returns actually lived — <strong>new business models constituted by the collapsed price</strong>. Sears was not a retailer that used railroads well; it was impossible at pre-rail freight rates and inevitable after them. Netflix streaming was not a DVD company that adopted broadband. The forward question is not "who uses AI well" but <em>what becomes buildable only at $0.10 per million tokens</em> — software written for markets of one; wage-heavy services whose cost structure inverts when the wage bill becomes a token bill; intelligence embedded in objects too cheap to have carried it. The record adds a discipline: every wave's Sears was founded in or just after the repricing, by outsiders, on the collapsed price. <strong>The fifth wave's biggest winners are probably not public yet, and possibly not yet founded.</strong></p>
+<p>For the infrastructure itself, the counter-ledger supplies a test we call the <strong>landlord test</strong>: the multi-tenant landlord is <em>paid by</em> technology churn — every generation forces tenants to re-equip on the same site — but only while the advance happens on the tenant's layer, not the landlord's. Progress that bypasses your asset (the interurbans against the automobile) or invades it (AI halls at 130kW a rack are stripping the data-center shell of the technology-neutrality that made colocation economics work) turns the landlord into a builder. Grade today's "AI infrastructure" assets accordingly, most durable first: <strong>grid interconnection rights → land and power contracts → technology-neutral shells → high-density purpose-built shells → the silicon itself.</strong> Prior busts endowed consolidators with durable assets — rights-of-way, dark fiber that lasted decades. Roughly 60% of this wave's dollar sits on a ~3-year depreciation clock; a glut in this wave may partially self-liquidate rather than transfer. <strong>If a Morganization comes, it will be executed in megawatts and interconnection queue positions, not in FLOPs</strong> — and the first distressed data-center sale will price this thesis in one transaction: the ratio of price paid to construction cost, shell versus silicon.</p>
+<p>Mapped to the counter-ledger's winner types, the historically-supported seats today: <strong>regulated utilities converting data-center load into rate base</strong> (electrification's second-act winners — paid whether or not AI pays); <strong>the fabrication corridor</strong> (TSMC, ASML — every builder's spend transits the same tolls, whoever wins); <strong>licensed scarcity in power</strong> (the five-year interconnection queue is this wave's spectrum — with McCaw's caveat that the license must be acquired below its rent value); <strong>landlords that pass the landlord test</strong>; the <strong>deliberate user</strong> (near-zero frontier capex, integrating intelligence at post-deflation prices into existing distribution — the factory that electrified, not the utility that powered it); and, eventually, <strong>the consolidators</strong>. This is a taxonomy of seats, not a recommendation of securities; the single-name work lives in our valuation notes.</p>
+<h2><span class="n">§9</span> Signposts</h2>
+<p>Falsifiable and observable, registered to our trigger monitor at publication:</p>
+<ul>
+<li><strong>The first distressed sale of a data center or GPU fleet</strong> — and its price-to-construction-cost ratio, shell versus silicon. The one transaction that adjudicates §8's residual hierarchy.</li>
+<li><strong>GPU rental prices and data-center vacancy.</strong> Sustained H100-class rates below ~$1.50/hr push median vintages past gross payback (payback-clock signpost, inherited); each new generation repeating the scarce→abundant→cheap arc on the ~24-month clock confirms the supplier-seat mechanics. North American vacancy — a record-low 1.4% at end-2025 — is the utilization baseline: a rising print is the first Western glut tell, and China's idle capacity is the leading indicator of what one looks like.</li>
+<li><strong>The debt share of aggregate AI capex.</strong> The historical rhyme attaches through leverage; the migration of the marginal dollar from free cash flow to debt/SPV/vendor structures is the wave's single best gauge of rhyme-strength.</li>
+<li><strong>The revenue coverage ratio.</strong> Identified AI revenue against the capex vintage hurdle, refreshed each cycle — with the delivered volume arc read against the required arc (§7). The delivered arc dropping below the requirement is the fiber signature; a rising coverage ratio is the cloud signature.</li>
+<li><strong>The first hyperscaler to guide capex flat.</strong> Paradoxically the <em>bullish</em> tell for payback — the plateau is the only family of futures in which the arithmetic closes (payback-clock §5) — and historically the sign the wave is cresting.</li>
+<li><strong>The Morganization event.</strong> A balance-sheet buyer — infrastructure fund, sovereign, utility — acquiring stranded AI capacity at a stated discount. In every prior wave, the consolidator's arrival marked the builders' bottom.</li>
+<li><strong>An OpenAI-cohort resolution.</strong> The financing circle's terminal counterparty achieving audited, public, self-funded status would weaken the 1920s rhyme materially; a walked commitment would confirm it.</li>
+</ul>
+<h2>The Closing Entry</h2>
+<p>Two hundred years of accounts, and the double rule beneath them is always drawn in the same place. The technology wins. The price of the service collapses. The users collect, forever; the builders' capital is consumed in the collecting; and a small set of corridors, coupons, licenses bought cheap, and landlords — plus whoever arrives at the reset — keeps what the open field gives away. The fifth wave's pages are still open: Western capacity is still scarce, the revenue line is still climbing at almost exactly the required slope, the financing is still migrating outward into leverage, and the subsidized hemisphere is already writing down its first idle halls. This note does not predict the closing total. It records what the ledger has always recorded — that the total will be enormous, that it will be positive, and that the entries for <em>who paid</em> and <em>who collected</em> will be made on different pages. The books are open. Choose your page.</p>
+<h2><span class="n">§10</span> What Is Observed, Computed, and Conjectured</h2>
+<p><strong>Observed (primary/period sources, independently verified):</strong> every historical figure in §§2–5 — the parliamentary, ICC, Census, Hansard, SEC, and annual-report numbers, the Campbell &amp; Turner index, the Cowles-era and NBER series, the counter-ledger records. Three independent claim-verification passes were run — on the exhaustive draft, on the distilled text, and on the final round of additions. Between them they corrected five figures in our own work before publication (an American Tower return multiple, the Dow Utilities recovery date, AT&amp;T's dividend start year, a date label on the AWS row, and a Northern Virginia vacancy figure), and confirmed the FRED, AWS, NVIDIA, Google, transit-price, ton-mile, Cisco, Suez, concentration, and China figures against primary sources exactly. We disclose our own corrections for the same reason we count everyone else's.</p>
+<p><strong>Computed (ours, method stated):</strong> the IT-investment share of GDP (BEA via FRED, series named in the appendix); the arc-elasticity first pass (§7, with its population-mismatch caveat stated in the text); the break-even elasticity requirement (§7 — inputs: the payback-clock hurdle, the ~$80bn netted revenue base, 30–50% margins, a 2030 horizon, and persistence of the observed realized-price path; each is stated and each is contestable); the tower/Equinix return multiples (methodology labeled where quoted).</p>
+<p><strong>Estimated by others (attributed):</strong> token-price indices (a16z, Epoch, BenchLM — the last with its composition caveat); the model-level price-elasticity estimate (OpenRouter/a16z 100-trillion-token study); data-center capex forecasts (Dell'Oro); vacancy and preleasing (CBRE); GPU rental indices (SemiAnalysis, AIMultiple); the $3T revenue requirement (Sequoia's markup framework); index-concentration tallies (SPY holdings as of Aug 6, 2026; Goldman Sachs and Apollo concentration notes); China buildout, subsidies, and idle-capacity figures (Bloomberg, state disclosures, MIT Technology Review and trade press — the "80% idle" figure is a single widely-cited estimate, so treated); OpenAI's reported plateau (press-sourced, not company-confirmed).</p>
+<p><strong>Conjectured (labeled):</strong> all of §8. The Sears-cohort claim is falsifiable in one direction only — time will either surface such companies or it won't — and we prefer stating that plainly to dressing speculation as measurement.</p>
+<p><strong>What this note does not do:</strong> name a date, forecast a crash, or recommend a security. The ledger's central lesson is precisely that the technology's triumph and the builders' returns are independent variables. We rank seats, not moments.</p>
+<h2><span class="n">§11</span> Sources &amp; Method</h2>
+<p>Historical: Campbell &amp; Turner (railway share index and investor studies; MPRA 21820, BHR 2012), Odlyzko (railway mania papers incl. the 1830s "This time is different" study, Univ. of Minnesota), Arnold &amp; McCartney (2004, 1830s cohort ROE), McQuarrie (<em>Financial Analysts Journal</em> 2024, 19th-century stocks-vs-bonds), Hansard (1846, 1876, 1923, 1934), Daggett <em>Railroad Reorganization</em> (1908), ICC <em>Statistics of Railways</em> (Statement No. 8, receiverships 1894–1917), Historical Statistics of the United States (Census, 1949/1960 eds. — ton-mile, electricity price, and capitalization series), Ulmer (NBER OP 43), Giesecke et al. (JFE 2011, bond defaults), O'Sullivan (<em>Enterprise &amp; Society</em> 2007, NYSE composition), Hansen &amp; Tourk (JEH 1978, Suez), Emmet &amp; Jeuck (Sears, 1950), Paul David (AER 1990), Devine (JEH 1983), Kendrick via CBO/Field (1920s TFP), RCA annual reports 1929/1932/1937 (parsed directly), EH.net (telegraph, radio, 1890s), Fogel (1964), Fishlow (1965), Donaldson &amp; Hornbeck (QJE 2016), Hawke (1970). Telecom: Richmond Fed <em>Economic Quarterly</em> (Fall 2003), CSFB and T. Rowe Price FCC en banc presentations (Oct 2002), Altman/NYU (HY defaults 2002), Hogendorn (fiber route-miles), Norton/DrPeering (IP transit series), TeleGeography, contemporaneous SEC filings and press for the bankruptcy and consolidation roster. Sidebar: Washington Post/SpaceNews/Baltimore Sun (Iridium), Our World in Data/IRENA/Bernreuter/DOE-IG (solar), Deloitte/Haynes &amp; Boone/EIA/CEA (shale). Counter-ledger: Hansard and Rothschild Archive (Suez), AT&amp;T IR, Time (1925) and PRR histories, FCC (1997 spectrum report), AMT investor materials and SEC filings (Pinnacle, SpectraSite), Amazon SEC filings (AWS), Synergy Research (attributed). Modern: SEC EDGAR/XBRL (capex, segments), FRED/BEA (series A679RC1Q027SBEA, Y034RC1Q027SBEA, GDP; NBER Macrohistory A0303B/F), company earnings materials (NVIDIA, Microsoft FY26 Q3 transcript, Alphabet, Meta, Oracle), Artificial Analysis/a16z/Epoch AI/BenchLM (token prices), OpenRouter and Google I/O disclosures (volumes), the OpenRouter/a16z "State of AI" 100-trillion-token study (arXiv 2601.10088 — the model-level elasticity), Anthropic company statements and dated press (run-rates), Dell'Oro, Sequoia Capital (Cahn), CBRE North America Data Center Trends H2 2025 (vacancy/preleasing), SemiAnalysis and AIMultiple GPU rental indices, Microsoft FY26 Q4 and Alphabet Q2 2026 earnings calls (capacity-constraint statements), Bloomberg (China state AI funding, June 2026), China National Data Bureau via state media (East-Data-West-Computing), MIT Technology Review and Light Reading (Chinese idle capacity), FPRI (compute vouchers), SPY holdings via stockanalysis.com (index weights, Aug 6, 2026), Goldman Sachs and Apollo (concentration). Companion house notes as cross-referenced in the text. Chart sourcing lives in this appendix by design; charts carry no source captions. The exhaustive working draft, with per-claim source citations and verification flags, is archived; corrections from the independent claim-verification pass (run August 12, 2026) are incorporated as described in §10.</p>
+<h2 class="brk"><span class="n">§12</span> Disclosures</h2>
+<p><strong>Information only.</strong> This material is published by TON618 Capital for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><strong>Publisher's exclusion.</strong> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher's exclusion from the definition of "investment adviser" under the Investment Advisers Act of 1940 (§202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><strong>Registration &amp; conflicts.</strong> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material conflicts are disclosed where they exist. This note discusses, among others, Microsoft, Alphabet, Amazon, Meta, NVIDIA, Oracle, CoreWeave, TSMC, ASML, Apple, American Tower, Crown Castle, Equinix, GE Vernova, Cisco, and Iridium; as of the date of this note the Fund holds <strong>no position, long or short, in any single security named herein</strong>. It maintains a strategic Bitcoin allocation, and to the extent this note bears on liquidity conditions and capital-cycle dynamics that inform that allocation, the reader should weigh that as a material interest. The Fund receives no compensation from any party in connection with its research.</p>
+<p><strong>Use of AI.</strong> Artificial intelligence is used in the creation of this research. <strong>A material conflict is disclosed here: this note analyzes the economics of AI infrastructure and the pricing of AI models, and the AI tooling used to produce it is made by one of the companies whose pricing and revenue it discusses.</strong> All methodology and data integrity are reviewed and approved before publication by TON618 Capital's Chief Investment Officer, <strong>Keyth Beck</strong>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><strong>CFA.</strong> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does not imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is not issued, reviewed, endorsed, certified, or approved by — nor affiliated with — CFA Institute.</p>
+<p><strong>Risk &amp; feedback.</strong> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome — please direct them to CIO <strong>Keyth Beck</strong> at <strong>keyth@ton618capital.com</strong>.</p>
+<p class="lede"><em>Version 1.2 · distilled 2026-08-12 from the archived exhaustive draft (v0.5) · independently claim-verified three times (exhaustive draft, distilled text, and the final additions) · designed and rendered 2026-08-12.</em></p>
+
+</main></body></html>
