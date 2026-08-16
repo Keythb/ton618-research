@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TON618 Capital — Four Questions, One Wedge: Reading a Bitcoin Treasury After 23 July</title>
+<meta name="description" content="Bitcoin-per-share, amplification, leverage and mNAV are four different questions — but every one of them reads off the same wedge of senior claims. A layer-by-layer guide on Strategy's current definitions, with the preferred carried through every layer.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+:root{--gold:#B8902F;--gold2:#C9A24B;--antique:#8A6D2B;--ink:#15161A;--body:#26282E;--muted:#5E626B;
+--line:#E2E4E8;--soft:#F4F5F7;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;--pos:#1F7A4D;--neg:#B23B3B;--black:#0B0B0C;}
+*{box-sizing:border-box;}
+html,body{background:#fff;}
+body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.62;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1;}
+main{max-width:830px;margin:0 auto;padding:40px 44px 56px;background:#fff;}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.wm{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);}
+.wm .six{color:var(--gold);} .wm .cap{font-weight:400;}
+.mast .meta{text-align:right;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+.kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--antique);margin:26px 0 6px;}
+h1{font-family:var(--serif);font-size:2.15rem;font-weight:600;line-height:1.1;color:var(--ink);margin:.1rem 0 .5rem;}
+.dek{font-family:var(--serif);font-size:1.16rem;font-style:italic;color:#3a3d44;margin:.2rem 0 0;}
+.byline{font-size:.74rem;color:var(--muted);margin:.7rem 0 0;text-transform:uppercase;letter-spacing:.08em;}
+h2{font-family:var(--serif);font-size:1.36rem;font-weight:600;color:var(--ink);margin:2.1rem 0 .5rem;padding-top:.45rem;border-top:1px solid var(--line);}
+h2 .ic{width:19px;height:19px;color:var(--antique);vertical-align:-3px;margin-right:.5em;}
+h2 .ln{display:inline-block;font-family:var(--sans);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--antique);margin-right:.7em;vertical-align:2px;}
+h3{font-family:var(--sans);font-size:.96rem;font-weight:700;color:var(--ink);margin:1.2rem 0 .2rem;}
+p{margin:.55rem 0;} strong{color:var(--ink);font-weight:600;}
+a{color:var(--antique);text-decoration:none;border-bottom:1px solid #D8D2C4;}
+.ic{display:inline-block;width:22px;height:22px;}
+/* ---- hero plate: the wedge */
+.plate{display:grid;grid-template-columns:230px 1fr;gap:26px;margin:26px 0 8px;align-items:start;}
+.plate .sound{border-right:1px solid var(--line);padding-right:24px;}
+.plate .sound .n{font-family:var(--serif);font-size:3.5rem;font-weight:600;color:var(--antique);line-height:1;}
+.plate .sound .u{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:.4rem;line-height:1.5;}
+.plate .verdict{font-size:.95rem;} .plate .verdict b{color:var(--ink);}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:1.5rem 0 .4rem;}
+.fig{font-family:var(--serif);font-size:1.7rem;color:var(--antique);line-height:1.05;border-top:2px solid var(--gold);padding-top:.5rem;}
+.fig .label{display:block;font-family:var(--sans);font-size:.68rem;font-weight:500;color:var(--muted);margin-top:.5em;line-height:1.4;}
+.lead:first-letter{font-family:var(--serif);font-size:3.3em;line-height:.82;float:left;color:var(--antique);padding:.06em .12em 0 0;}
+table{width:100%;border-collapse:collapse;margin:.9rem 0 .4rem;font-size:.85rem;}
+caption{caption-side:top;text-align:left;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{font-size:.67rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1.5px solid var(--ink);font-weight:700;}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+/* ---- black band */
+.band{background:var(--black);color:#C9A24B;margin:1.8rem -44px;padding:28px 44px 24px;}
+.band .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.4rem;}
+.band .n{font-family:var(--serif);font-size:3.1rem;line-height:1;font-weight:600;}
+.band .t{font-size:.84rem;color:#E8DFC9;margin-top:.45rem;line-height:1.45;}
+.band .t b{color:#C9A24B;}
+.band .cap{font-size:.72rem;color:#9A958A;margin-top:1rem;text-transform:uppercase;letter-spacing:.1em;}
+/* ---- formula ledger + preferred rail */
+.formulae{border:1px solid var(--line);border-left:3px solid var(--gold);padding:14px 18px;margin:1.1rem 0;}
+.formulae .row{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);}
+.formulae .row:last-child{border-bottom:none;}
+.formulae .nm{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--antique);}
+.formulae code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:var(--ink);background:var(--soft);padding:2px 6px;}
+.formulae .fn{font-size:.8rem;color:var(--muted);margin-top:3px;}
+.rail{display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:start;margin:.6rem 0 .4rem;}
+.rail .formulae{margin:0;} .rail .formulae .row{grid-template-columns:118px 1fr;}
+.rail .pref{border-left:3px solid var(--antique);background:#FBF7EE;padding:11px 14px;font-size:.82rem;line-height:1.5;}
+.rail .pref .h{font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--antique);margin-bottom:.3rem;}
+.rail .pref b{color:var(--ink);}
+.notlist{margin:.4rem 0 .2rem;padding:0;list-style:none;font-size:.85rem;}
+.notlist li{position:relative;padding-left:16px;margin:.25rem 0;}
+.notlist li::before{content:"\2715";position:absolute;left:0;color:var(--neg);font-weight:700;font-size:.75rem;top:2px;}
+.chart{background:#fff;border:1px solid var(--line);padding:.7rem .8rem;margin:.5rem 0 .9rem;}
+.chart svg{display:block;width:100%;height:auto;}
+.callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:13px 17px;margin:1.05rem 0;font-size:.89rem;}
+.callout b{color:var(--ink);}
+.small{font-size:.78rem;color:var(--muted);}
+ul,ol{margin:.5rem 0 .7rem;padding-left:1.25rem;} li{margin:.3rem 0;}
+.trip{display:grid;grid-template-columns:26px 1fr;gap:10px;margin:.6rem 0;align-items:start;}
+.trip .ic{color:var(--antique);margin-top:2px;}
+.sheet{border:1px solid var(--line);padding:10px;margin:.8rem 0;}
+.sheet img{display:block;width:100%;height:auto;}
+.sheet .cap{font-size:.78rem;color:var(--muted);margin-top:.5rem;}
+.disc{font-size:.74rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);margin-top:2.2rem;padding-top:1rem;}
+.disc h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--antique);margin:.9rem 0 .2rem;}
+.sources{font-size:.8rem;color:var(--body);} .sources p{margin:.45rem 0;}
+.pdf-link{font-size:.8rem;}
+@page{size:Letter;margin:0.7in 0.8in 0.85in 0.8in;}
+@media print{ html{font-size:13.5px;} main{padding:0;max-width:none;} body{font-size:11.7px;line-height:1.55;}
+h1{font-size:1.85rem;} h2,h3{page-break-after:avoid;}
+table,.callout,.chart,.kpis,.band,.plate,.trip,.formulae .row{page-break-inside:avoid;}
+.band{margin:1.8rem 0;} .sheet{display:none;} .sheet-print{display:block !important;}
+a{border-bottom:none;color:inherit;} .pdf-link{display:none;} }
+.sheet-print{display:none;}
+@media(max-width:680px){main{padding:24px 18px;}.kpis{grid-template-columns:1fr 1fr;}.plate{grid-template-columns:1fr;}
+.rail{grid-template-columns:1fr;}.band{margin:1.8rem -18px;padding:24px 18px;}.band .row{grid-template-columns:1fr;}
+.formulae .row{grid-template-columns:1fr;}}
+</style><link rel="canonical" href="https://ton618capital.com/ton618-research/btc-treasury-four-layers/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Four Questions, One Wedge", "url": "https://ton618capital.com/ton618-research/btc-treasury-four-layers/", "author": {"@type": "Organization", "name": "TON618 Capital", "url": "https://ton618capital.com"}, "publisher": {"@type": "Organization", "name": "TON618 Capital", "url": "https://ton618capital.com"}, "datePublished": "2026-08-15", "description": "Bitcoin-per-share, amplification, leverage and mNAV are four different questions — but every one of them reads off the same wedge of senior claims. A layer-by-layer guide on Strategy's current definitions, with the preferred carried through every layer."}</script>
+</head>
+<body><main>
+
+<div class="mast">
+  <span class="wm">TON<span class="six">618</span> <span class="cap">Capital</span></span>
+  <span class="meta">Bitcoin Treasury Analysis &middot; Framework<br>As of 15 Aug 2026<br>v1.0</span>
+</div>
+
+<div class="kicker">Bitcoin Treasuries &middot; Follow-up to <a href="../mstr-btc-credit-model/">The Solvency Map Is Not the Credit</a> &middot; Strategy Inc. (NASDAQ: MSTR)</div>
+<h1>Four Questions, One Wedge</h1>
+<p class="dek">Bitcoin per share, amplification, leverage and mNAV are four different questions, and a treasury company can score well on three while failing the fourth. But every one of them is read off the same bar and the same cut &mdash; the wedge of claims that rank ahead of the common. Move the preferred out of any one layer and the other three stop reconciling.</p>
+<p class="byline">TON618 Capital Research &middot; MSTR $93.04 &middot; BTC $62,975 &middot; closes 14 Aug 2026 &middot; <a onclick="new Image().src='https://hits.sh/ton618capital.com/btc-treasury-four-layers-pdf.svg'" class="pdf-link" href="TON618_Four-Questions-One-Wedge_Research_Note.pdf">Download PDF</a> &middot; <a href="four-layers-reference-sheet.png">Reference sheet (PNG)</a></p>
+
+<div class="plate">
+  <div class="sound">
+    <div class="n">$17.3B</div>
+    <div class="u">The wedge: converts + preferred notional, net of the USD Reserve. It is 33% of the bitcoin, and it appears in all four layers.</div>
+  </div>
+  <div class="verdict"><p><b>The frame, up front.</b> Since 23 Jul 2026 Strategy has defined its own headline metrics against bitcoin <em>net of senior claims</em>: mNAV is now share price over Net BPS, Amplification is BTC Reserve over Net Reserve, and both are stated to be non-comparable with anything printed before that date. Read on those definitions, the four layers of treasury analysis are not four independent lenses. They are one balance sheet with one cut in it, read four ways &mdash; and the preferred stack, $15.2B of the $22.0B of gross claims, is what makes the cut. This note lays out each layer on the current glossary, shows where the preferred sits in it, and works the example on Strategy's own numbers.</p></div>
+</div>
+
+<section class="kpis">
+  <div class="fig">1.49&times;<span class="label">Amplification &mdash; BTC Reserve over Net Reserve. Without the preferred: 1.04&times;.</span></div>
+  <div class="fig">3.9% &middot; 33%<span class="label">Company Net Leverage (converts only) vs the senior-claim ratio with the preferred in.</span></div>
+  <div class="fig">1.03&times;<span class="label">Market cap over Net Reserve &mdash; the same answer as the company's mNAV tile (1.04&times;). Premium &asymp; 0.</span></div>
+  <div class="fig">32 mo<span class="label">USD Reserve ($4.65B) against $1,736M a year of interest and dividends &mdash; almost all of it dividends.</span></div>
+</section>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="9" width="18" height="6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 9v6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 9l6 6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>One balance sheet, one cut</h2>
+<p class="lead">Every metric in this note starts from the same two quantities. The <strong>BTC Reserve</strong> is the coins times the price: 840,447 BTC at $62,975 is $52.9B. The <strong>Net Reserve</strong> is what remains after the claims that rank ahead of the common: subtract the notional of out-of-the-money convertible notes ($6.71B) and of the perpetual preferred ($15.24B across STRF, STRC, STRE, STRK and STRD), then add back the USD Reserve ($4.65B). At Friday's close every convert and STRK sits far out of the money &mdash; the lowest conversion price is near $150 against a $93.04 stock &mdash; so all of it is deducted, and the Net Reserve is $35.6B. The difference, $17.3B, is the wedge.</p>
+<div class="chart"><svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strategy BTC Reserve as one bar, cut into Net Reserve and net senior claims, with the four layers read off the same bar"><defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#5E626B" stroke-width="1.2"/></pattern></defs><text x="30" y="24" font-size="11" fill="#5E626B" letter-spacing="1.5" font-family="ui-sans-serif,system-ui">BTC RESERVE &#183; 840,447 BTC &#215; $62,975 = $52.9B</text><text x="730" y="24" font-size="11" fill="#5E626B" text-anchor="end" font-family="ui-sans-serif,system-ui">14 Aug 2026</text><rect x="30.0" y="66" width="471.2" height="54" fill="#B8902F" opacity="0.28"/><rect x="501.2" y="66" width="228.8" height="54" fill="#8A6D2B"/><rect x="30.0" y="66" width="700.0" height="54" fill="none" stroke="#15161A" stroke-width="1.4"/><line x1="501.2" y1="52" x2="501.2" y2="160" stroke="#15161A" stroke-width="1.6"/><text x="495.2" y="48" font-size="11.5" font-weight="700" fill="#15161A" text-anchor="end" font-family="ui-sans-serif,system-ui">the cut</text><text x="265.6" y="90" font-size="13.5" font-weight="700" fill="#15161A" text-anchor="middle" font-family="ui-sans-serif,system-ui">Net Reserve  $35.6B</text><text x="265.6" y="107" font-size="10.5" fill="#15161A" text-anchor="middle" font-family="ui-sans-serif,system-ui">what is left for the common</text><text x="615.6" y="90" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle" font-family="ui-sans-serif,system-ui">the wedge  $17.3B</text><text x="615.6" y="107" font-size="10.5" fill="#fff" text-anchor="middle" font-family="ui-sans-serif,system-ui">senior claims, net of USD Reserve</text><rect x="439.7" y="138" width="88.8" height="14" fill="#15161A"/><rect x="528.5" y="138" width="201.5" height="14" fill="#8A6D2B" opacity="0.75"/><rect x="439.7" y="138" width="61.5" height="14" fill="url(#hatch)"/><rect x="439.7" y="138" width="61.5" height="14" fill="none" stroke="#5E626B" stroke-width="1"/><text x="433.7" y="149" font-size="10.5" fill="#5E626B" text-anchor="end" font-family="ui-sans-serif,system-ui">USD Reserve $4.65B offsets &#8594;</text><text x="484.1" y="166" font-size="10.5" fill="#15161A" text-anchor="middle" font-family="ui-sans-serif,system-ui">converts $6.71B</text><text x="629.2" y="166" font-size="10.5" fill="#15161A" text-anchor="middle" font-family="ui-sans-serif,system-ui">preferred $15.24B</text><text x="433.7" y="166" font-size="10.5" fill="#5E626B" text-anchor="end" font-family="ui-sans-serif,system-ui">gross claims $21.95B, hatched part cancelled</text><text x="30" y="196" font-size="10.5" fill="#8A6D2B" font-weight="700" letter-spacing="1.2" font-family="ui-sans-serif,system-ui">LAYER 1 &#183; OWNERSHIP</text><path d="M30.0 204 v6 H730.0 v-6" stroke="#15161A" stroke-width="1.1" fill="none"/><text x="30" y="228" font-size="12" fill="#15161A" font-family="ui-sans-serif,system-ui">BPS = whole bar &#247; ADSO &#160;&#160;&#183;&#160;&#160; Net BPS = left piece &#247; FDSO</text><text x="30" y="252" font-size="10.5" fill="#8A6D2B" font-weight="700" letter-spacing="1.2" font-family="ui-sans-serif,system-ui">LAYER 2 &#183; AMPLIFICATION</text><path d="M30.0 260 v6 H730.0 v-6" stroke="#15161A" stroke-width="1.1" fill="none"/><text x="30" y="284" font-size="12" fill="#15161A" font-family="ui-sans-serif,system-ui">whole bar &#247; left piece = <tspan font-weight='700'>1.49&#215;</tspan> &#160;(without the preferred it would be 1.04&#215;)</text><text x="30" y="308" font-size="10.5" fill="#8A6D2B" font-weight="700" letter-spacing="1.2" font-family="ui-sans-serif,system-ui">LAYER 3 &#183; LEVERAGE</text><path d="M501.2 316 v6 H730.0 v-6" stroke="#15161A" stroke-width="1.1" fill="none"/><text x="30" y="340" font-size="12" fill="#15161A" font-family="ui-sans-serif,system-ui">wedge &#247; whole bar = <tspan font-weight='700'>33%</tspan> &#160;&#183;&#160; company Net Leverage counts converts only: 3.9%</text><text x="30" y="364" font-size="10.5" fill="#8A6D2B" font-weight="700" letter-spacing="1.2" font-family="ui-sans-serif,system-ui">LAYER 4 &#183; VALUATION</text><path d="M30.0 372 v6 H501.2 v-6" stroke="#15161A" stroke-width="1.1" fill="none"/><text x="30" y="396" font-size="12" fill="#15161A" font-family="ui-sans-serif,system-ui">market cap $36.6B &#247; left piece = <tspan font-weight='700'>1.03&#215;</tspan> &#160;&#183;&#160; company mNAV tile 1.04&#215;</text></svg></div>
+<p>The exhibit is the whole note. Layer 1 divides the bar by shares, gross and net. Layer 2 divides the whole bar by the left piece. Layer 3 divides the wedge by the whole bar and asks how long the coupons on it can be paid. Layer 4 divides what the market pays by the left piece. Four questions; one cut. The rest of the note walks each layer on the company's current definitions and marks, in each, where the preferred sits and what the metric is not.</p>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="12" cy="7" rx="7" ry="2.6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 7v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V7" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 11v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 15v2c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-2" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ln">Layer 1 &middot; Ownership</span>Per share, gross rises while net can fall</h2>
+<p>The question is how much bitcoin belongs to each share &mdash; and it has two answers. <strong>Bitcoin per share</strong> in the company's usage is gross bitcoin over Assumed Diluted Shares Outstanding, where ADSO adds every convertible note and every convertible preferred to the basic count regardless of whether conversion is in the money. It is a share-count discipline metric: it says whether common issuance bought more bitcoin than it added shares. <strong>Net BPS</strong>, adopted alongside the 23 Jul 2026 redefinitions, divides bitcoin <em>net of the wedge</em> by Fully Diluted Shares, which count only in-the-money instruments and deduct the notional of everything else. The company's own glossary states the reason: gross BPS "can increase as a result of transactions that also increase the Company's senior claims"; Net BPS rises "only to the extent a transaction increases the Company's bitcoin after accounting for such increase in senior claims."</p>
+<div class="rail">
+<div class="formulae">
+  <div class="row"><span class="nm">BPS (Sats) &mdash; gross</span><div><code>Total BTC &divide; ADSO</code><div class="fn">ADSO = basic + all converts + STRK + options, RSUs, PSUs, regardless of moneyness</div></div></div>
+  <div class="row"><span class="nm">Net BPS (Sats)</span><div><code>(BTC &minus; OTM converts &minus; pref notional ex ITM STRK + USD Reserve) &divide; FDSO</code><div class="fn">claims converted to BTC at the Coinbase price; FDSO counts only in-the-money converts and STRK</div></div></div>
+  <div class="row"><span class="nm">BTC Yield</span><div><code>% change in gross BPS over the period</code><div class="fn">quarter-to-date &minus;6.4% at the 15 Aug 2026 read: no bitcoin bought since 30 Jun, 5,553 sold, common issued into the USD Reserve</div></div></div>
+</div>
+<div class="pref"><div class="h">Where the preferred sits</div><b>Gross:</b> STRK is convertible and therefore inside ADSO; STRF, STRC, STRD and STRE are not. Bitcoin bought with non-convertible preferred lifts gross BPS with no share-count effect at all.<br><b>Net:</b> the entire preferred notional (ex any in-the-money STRK) comes off the bitcoin before it is divided. A preferred-funded purchase lifts Net BPS only if the bitcoin bought exceeds the notional issued.</div>
+</div>
+<ul class="notlist">
+<li>Not book value and not a liquidation entitlement; deferred tax, leases and contingencies are outside both metrics.</li>
+<li>Net BPS moves with the bitcoin price with no transaction at all: a lower price makes the same wedge a larger share of the coins.</li>
+<li>Claims are taken at notional, not liquidation preference; accrued and unpaid dividends are excluded.</li>
+</ul>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="5" width="16" height="4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="15" width="10" height="4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ln">Layer 2 &middot; Amplification</span>A coverage ratio that rises when bitcoin falls</h2>
+<p>Amplification is the layer most often described as capital-structure mechanics rather than risk &mdash; the share of the bitcoin that was bought with securities that did not add to the share count. That was the pre-23 Jul 2026 metric. The current definition is the BTC Reserve divided by the Net Reserve: the whole bar over the left piece. The company's glossary describes what a higher reading means without euphemism &mdash; "more of the Company's BTC Reserve would need to be liquidated to support repayment of indebtedness or redemption or repurchase of preferred stock" &mdash; and notes that a fall in the bitcoin price raises it. That is a leverage ratio on the common's claim, and it should be read as one.</p>
+<div class="rail">
+<div class="formulae">
+  <div class="row"><span class="nm">Amplification</span><div><code>BTC Reserve &divide; Net Reserve</code><div class="fn">Net Reserve = BTC Reserve &minus; OTM convert notional &minus; pref notional (ex ITM STRK) + USD Reserve; non-USD preferred (STRE) at Friday 12:30 NY FX</div></div></div>
+  <div class="row"><span class="nm">At 14 Aug 2026</span><div><code>$52.9B &divide; $35.6B = 1.49&times;</code><div class="fn">the dashboard tile printed 1.49&times; on 15 Aug 2026; the two agree to the rounding of the bitcoin price used</div></div></div>
+  <div class="row"><span class="nm">Without the preferred</span><div><code>$52.9B &divide; $50.9B = 1.04&times;</code><div class="fn">converts alone, net of the reserve, barely move the ratio</div></div></div>
+</div>
+<div class="pref"><div class="h">Where the preferred sits</div>It <b>is</b> the wedge. Of the $17.3B of net senior claims, $15.2B is preferred notional; the converts contribute $6.71B and the USD Reserve gives back $4.65B. Strip the preferred out and Amplification falls from 1.49&times; to 1.04&times;.</div>
+</div>
+<ul class="notlist">
+<li>Not the pre-23 Jul 2026 "share of bitcoin funded without adding to ADSO," and not comparable with any Amplification printed before that date &mdash; the company says so.</li>
+<li>Not a valuation: there is no market price in it.</li>
+<li>Assumes claims are met at notional and that bitcoin sold to meet them has no market impact.</li>
+</ul>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 4v16M6 20h12" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10l7-4 7 4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 10a2.5 2.5 0 0 0 5 0M16 10a2.5 2.5 0 0 0 5 0" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ln">Layer 3 &middot; Leverage</span>Two answers and a clock</h2>
+<p>The company's <strong>Net Leverage</strong> is debt less the USD Reserve, over the BTC Reserve &mdash; converts only. At Friday's close it is 3.9% (the tile printed 3.98%). It answers a convert holder's question, and answers it correctly: bitcoin would have to fall to about $2,456 before the notes were uncovered, which is the dashboard's own BTC Floor for the last-in-line 2032 convert. It does not answer the question a preferred holder, or a common holder, is asking. Put the $15.2B of preferred back into the numerator and the <strong>senior-claim ratio</strong> is 33% of the bitcoin, with the coverage point at $20,587 &mdash; again the dashboard's own number, its floor for STRD, the most junior series. The two figures are not in conflict. They are two different claims measured against the same bar.</p>
+<p>The clock is the second half of the layer. Interest and dividends run at $1,736M a year, and the converts carry coupons of 0% to 2.25%, so nearly all of that is preferred dividends. The USD Reserve exists to pay them: $4.65B covers about 32 months (the company's "USD Duration" tile reads 2.7 years; its "Duration," which adds the bitcoin to the numerator, reads 33.2 years). The reserve was built with common issuance and, since June, with bitcoin sales &mdash; which is why the ownership layer and the leverage layer have to be read together.</p>
+<div class="rail">
+<div class="formulae">
+  <div class="row"><span class="nm">Net Leverage (company)</span><div><code>(Debt &minus; USD Reserve) &divide; BTC Reserve</code><div class="fn">($6.71B &minus; $4.65B) &divide; $52.9B = 3.9% &nbsp;&middot;&nbsp; break-even BTC = $2,456 &nbsp;&middot;&nbsp; the 3.98% tile also counts ~$40M of other secured debt outside the convertible stack</div></div></div>
+  <div class="row"><span class="nm">Senior-claim ratio</span><div><code>(Debt + Pref notional &minus; USD Reserve) &divide; BTC Reserve</code><div class="fn">$17.3B &divide; $52.9B = 33% &nbsp;&middot;&nbsp; break-even BTC = $20,587 &nbsp;(= claims &divide; coins, independent of the price)</div></div></div>
+  <div class="row"><span class="nm">USD Reserve coverage</span><div><code>USD Reserve &divide; Annual Int + Div</code><div class="fn">$4,650M &divide; $1,736M = 2.7 years &asymp; 32 months</div></div></div>
+</div>
+<div class="pref"><div class="h">Where the preferred sits</div>Outside the company's Net Leverage entirely; inside the senior-claim ratio in full. And it is the coupon: with the notes at 0&ndash;2.25%, the preferred dividends are what the USD Reserve services and what bitcoin has been sold to pay.</div>
+</div>
+<ul class="notlist">
+<li>Net Leverage alone is not survivability &mdash; the instrument that carries the cash cost sits outside it.</li>
+<li>The USD Reserve is, by board policy, restricted to dividends and interest with a twelve-month minimum; repurchases are not funded from it. Netting it against convert principal is a presentation choice, not a description of what the cash may be used for.</li>
+<li>Neither ratio sees the convert puts and maturities &mdash; the 2028 notes are puttable 15 September 2027 &mdash; and the company's USD Duration figure assumes the reserve is not used for them.</li>
+<li>Notional is not liquidation preference; accrued dividends are excluded.</li>
+</ul>
+
+<div class="band">
+  <div class="row">
+    <div><div class="n">$2,456</div><div class="t">The bitcoin price at which the <b>converts</b> are uncovered, net of the reserve. The dashboard's floor for the 2032 notes.</div></div>
+    <div><div class="n">$20,587</div><div class="t">The price at which <b>converts and preferred</b> together are uncovered. The dashboard's floor for STRD. Eight times higher.</div></div>
+    <div><div class="n">32 mo</div><div class="t">How long the USD Reserve pays the <b>coupons</b> without new issuance or bitcoin sales.</div></div>
+  </div>
+  <div class="cap">Same balance sheet, 14 Aug 2026. All three are true at once &mdash; which is the case for keeping the layers.</div>
+</div>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 16a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16l4-6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16" r="1.4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ln">Layer 4 &middot; Valuation</span>mNAV divides by what is left</h2>
+<p>The company's current <strong>mNAV</strong> is the share price divided by Net BPS in dollars &mdash; equivalently, market capitalization on the fully diluted count over the Net Reserve. The preferred is in the denominator by subtraction. On Friday's close and Massive's reference market capitalization of $36.6B, market cap over Net Reserve is 1.03&times;; the dashboard tile read 1.04&times; on 15 Aug 2026. Add every senior claim back to the numerator instead and the whole-stack multiple, enterprise value over BTC Reserve, is 1.02&times;. The premium is approximately zero on either basis &mdash; the flywheel condition our June valuation described has been absent for weeks, and the accretion test the company now applies (mNAV above one before common is issued for bitcoin) is being met only at the margin.</p>
+<div class="rail">
+<div class="formulae">
+  <div class="row"><span class="nm">mNAV (company)</span><div><code>MSTR price &divide; Net BPS ($)</code><div class="fn">= market cap on FDSO &divide; Net Reserve; $36.6B &divide; $35.6B = 1.03&times; on the reference share count</div></div></div>
+  <div class="row"><span class="nm">EV &divide; BTC</span><div><code>(Market cap + Debt + Pref notional &minus; USD Reserve) &divide; BTC Reserve</code><div class="fn">($36.6B + $17.3B) &divide; $52.9B = 1.02&times;</div></div></div>
+</div>
+<div class="pref"><div class="h">Where the preferred sits</div>Subtracted in mNAV's denominator; added in EV's numerator. An "enterprise" multiple that adds net debt but not the preferred is understated by preferred over BTC Reserve &mdash; <b>0.29&times;</b> at Friday's prices: it would print 0.73&times; against the 1.02&times; that counts every claim, a discount to the bitcoin that does not exist.</div>
+</div>
+<ul class="notlist">
+<li>Not net asset value in the traditional sense, and the company says so; not a claim on what the common would receive in a liquidation.</li>
+<li>Not comparable with any mNAV printed before 23 Jul 2026.</li>
+<li>"Market cap" is ambiguous until the share basis is stated: basic, ADSO and FDSO give three different multiples.</li>
+<li>Not predictive of the share price. A treasury can trade at a premium and sit below its coverage point at the same time.</li>
+</ul>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="12" r="3.5" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="12" r="3.5" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 12h3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Read across: Net BPS is the join</h2>
+<p>The layers ask separate questions, but they are not independent, and the thing that connects them is the wedge. It is what turns BPS into Net BPS, what makes Amplification exceed one, what the senior-claim ratio measures, and what mNAV divides by. That is why the preferred cannot be assigned to one layer as "capital structure" and left out of the others: the arithmetic will not close. Amplification of 1.49&times; and Net Leverage of 3.9% describe the same balance sheet only if you know that 1.04&times; of the amplification is the converts and the rest is preferred &mdash; and that the preferred is what the coupons are on.</p>
+<p>The practical join is Net BPS. Gross BPS can rise while Net BPS falls whenever a raise adds senior claims faster than it adds bitcoin, and since 23 Jul 2026 the company scores its own transactions on the net figure. For a reader, the test of any treasury's quarter is the same: did Net BPS rise, and if it did, was it the price of bitcoin or the capital allocation that moved it? For Strategy, quarter-to-date, gross BPS has fallen 6.4% and the change has been capital allocation &mdash; no bitcoin bought, 5,553 coins sold, and $4.65B of common issuance and coin sales directed to a reserve whose purpose is the preferred dividend.</p>
+<h3>What moves the wedge next</h3>
+<div class="trip"><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 20v-6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 5.5a7 7 0 0 1 9 0M9.2 7.4a4.2 4.2 0 0 1 5.6 0" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>The Monday 8-K.</b> Each week's Item 8.01 gives ATM sales, bitcoin bought or sold and the use of proceeds, STRC repurchases and the USD Reserve balance &mdash; every input to every layer here. Common issued into the reserve lowers gross BPS and the wedge at once; bitcoin sold to pay dividends lowers the bar and leaves the wedge alone.</p></div>
+<div class="trip"><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 20v-6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 5.5a7 7 0 0 1 9 0M9.2 7.4a4.2 4.2 0 0 1 5.6 0" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>STRC against $100.</b> The $10.3B keystone of the preferred and its dividend engine. Where it trades is the market's price on the wedge.</p></div>
+<div class="trip"><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 20v-6" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 5.5a7 7 0 0 1 9 0M9.2 7.4a4.2 4.2 0 0 1 5.6 0" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>The bitcoin price itself.</b> Amplification, the senior-claim ratio and Net BPS all move with it and none of them needs a transaction to do so. The break-even prices do not move: $2,456 and $20,587 are claims divided by coins, and change only when the claims or the coins do.</p></div>
+
+<h2><svg class="ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="4" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9h16M4 14h16M9 4v16" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>The reference sheet</h2>
+<p>The four layers on one page, on the current glossary, with the preferred carried through each &mdash; what each measures, the core question, the calculation, where the preferred sits, what it tells you and what it is not, plus the worked example above. Open the image for the full-resolution version.</p>
+<div class="sheet"><a href="four-layers-reference-sheet.png"><img src="four-layers-reference-sheet.png" alt="The Four Layers of Bitcoin Treasury Analysis — reference sheet on Strategy's current definitions, with the preferred in every layer"></a><div class="cap">Reference sheet, 15 Aug 2026. Worked example on the 14 Aug 2026 closes and the 10 Aug 8-K balance sheet, as in the body; the Amplification and mNAV figures are the company's 15 Aug 2026 tiles.</div></div>
+<p class="sheet-print small">The one-page reference sheet accompanies this note online at ton618capital.com &rarr; Research &rarr; Four Questions, One Wedge (four-layers-reference-sheet.png).</p>
+
+<h2 class="sources-h">Sources &amp; Method</h2>
+<section class="sources">
+<p><b>Definitions.</b> All metric definitions &mdash; Bitcoin Per Share (in Sats), Assumed Diluted Shares Outstanding, Net BTC, Net Bitcoin Per Share (in Sats and in USD), Fully Diluted Shares Outstanding, BTC Reserve, USD Reserve, Net Reserve, Amplification, Net Leverage, Duration, Annual Int + Div, BTC Yield and mNAV, including the statement that mNAV and Amplification "referred to a different metric" before 23 Jul 2026 and are not comparable across that date &mdash; are quoted or paraphrased from the glossary published on the Strategy investor dashboard (strategy.com, "Notes" tab, 130 entries), read and archived in full on 15 Aug 2026. Quotations in the body are verbatim from that glossary. The USD Reserve's restriction to dividends and interest, its twelve-month minimum and the statement that repurchases will not be funded from it are per the Digital Credit Capital Framework disclosed in the Form 8-K of 29 Jun 2026; that the reserve is assumed not to fund convertible puts and maturities is per the glossary's USD Duration definition.</p>
+<p><b>Balance-sheet inputs.</b> Bitcoin held 840,447 and USD Reserve $4,650M: Form 8-K filed 10 Aug 2026 (Item 8.01), as of 9 Aug 2026. Convertible notional $6,714M (2028 $1,010M; 2029 $1,500M; 2030 A $800M; 2030 B $2,000M; 2031 $604M; 2032 $800M) and preferred notional $15,238M (STRF $1,284M; STRC $10,254M; STRE $896M; STRK $1,402M; STRD $1,402M): the per-instrument claim stack published on the strategy.com credit dashboard as read 12 Aug 2026 (archived with <a href="../mstr-btc-credit-model/">The Solvency Map Is Not the Credit</a>), consistent with the aggregate principal in the Form 10-Q for the quarter ended 30 Jun 2026 (filed 3 Aug 2026), less STRC repurchases since. STRE is euro-denominated and is carried at the dashboard's dollar figure. Annual Int + Div $1,736M, Amplification 1.49&times;, Net Leverage 3.98%, mNAV 1.04&times;, Duration 33.2 years, USD Duration 2.7 years and BTC Yield &minus;6.4% quarter-to-date: header tiles on strategy.com read 15 Aug 2026, computed by the company at its own bitcoin price at that time (about $63,400). Bitcoin sold since 30 Jun (5,553; no purchases): strategy.com Ledger tab and the weekly Forms 8-K of 6, 13, 20, 27 Jul and 3, 10 Aug 2026, read 15 Aug 2026. Convert coupon range 0%&ndash;2.25% and the lowest conversion price (~$150, 2030 A notes) and the 15 Sep 2027 put on the 2028 notes: indenture terms as summarized in the 10-Q. STRK converts at ten shares of STRK per share of class A common (offering documents).</p>
+<p><b>Market prices.</b> MSTR $93.04 and X:BTCUSD $62,975.19: daily closes for 14 Aug 2026 (Massive.com, US equities and crypto daily aggregates; pulled 15 Aug 2026). MSTR market capitalization $36.6B: Massive.com reference data, pulled 15 Aug 2026 (weighted shares outstanding 393.8M at the 14 Aug 2026 close). Because that share basis differs from the company's FDSO (and from the 384.2M basic shares on the 10-Q cover as of 24 Jul 2026), market cap over Net Reserve (1.03&times;) and EV &divide; BTC (1.02&times;) are our constructions on Massive's share basis and are quoted beside, not in place of, the company's mNAV tile.</p>
+<p><b>Formulas and constructions (ours, labeled).</b> BTC Reserve = coins &times; the 14 Aug 2026 close = $52.93B. Net senior claims = converts + preferred notional &minus; USD Reserve = $17.30B, treating every convert and STRK as out of the money at $93.04. Net Reserve = $35.63B. Amplification = $52.93B &divide; $35.63B = 1.486&times;; ex-preferred = $52.93B &divide; $50.86B = 1.041&times;. Net Leverage = ($6.71B &minus; $4.65B) &divide; $52.93B = 3.90%. Senior-claim ratio = $17.30B &divide; $52.93B = 32.7%. Break-even bitcoin prices = claims net of reserve &divide; coins: $2,456 (converts) and $20,587 (converts + preferred); these equal, by construction, the dashboard's published BTC Floor for the 2032 convert ($2,456) and for STRD ($20,587) as read 12 Aug. USD Reserve coverage = $4,650M &divide; $1,736M = 2.68 years. Duration check = ($52.93B + $4.65B) &divide; $1.74B = 33.2 years against the tile's 33.2. EV &divide; BTC = ($36.64B + $17.30B) &divide; $52.93B = 1.019&times;. Preferred over BTC Reserve = 0.288&times;. The senior-claim ratio, EV &divide; BTC, the ex-preferred Amplification and the break-even prices are TON618 constructions from company inputs, not company metrics. The reference sheet uses the same inputs and constructions.</p>
+<p><b>Assumptions, labeled.</b> Every convertible note and STRK is treated as out of the money and deducted at notional; the "coupons are almost all preferred dividends" statement follows from the 0%&ndash;2.25% coupon range on $6,714M of notes against $1,736M of Annual Int + Div and is an inference, not a company disclosure of the split. Notional is used for every claim, per the company's own definitions; liquidation preferences and accrued dividends may differ.</p>
+<p><b>Prior TON618 notes relied upon.</b> <a href="../mstr-btc-credit-model/">The Solvency Map Is Not the Credit &mdash; Strategy's BTC Credit model, evaluated, 12 Aug 2026</a>; <a href="../mstr-q2-2026/">MSTR Q2 2026: The Drain, Made Visible &mdash; addendum, 31 Jul 2026</a>; <a href="../mstr-valuation/">Strategy (MSTR): What Are You Really Buying? &mdash; full valuation, 28 Jun 2026</a>.</p>
+</section>
+
+<div class="disc">
+<h3>Disclosures</h3>
+<p><b>Methodology &amp; data.</b> This note is an analytical framework applied to Strategy Inc.'s published metrics and filings as dated. Company-defined metrics are reproduced on the company's stated definitions; the senior-claim ratio, EV &divide; BTC, ex-preferred Amplification and break-even prices are TON618 constructions from those inputs and are labeled as such. Figures are point-in-time and will change with the bitcoin price and with each weekly filing. Read with our 12 Aug 2026 credit-model evaluation, Q2 2026 addendum and 28 Jun 2026 valuation.</p>
+<p><b>1 &middot; Information only.</b> TON618 Capital. This report is for information purposes only. Nothing here is an offer to sell or a solicitation of an offer to buy any security, fund interest, or digital asset, and nothing here is personalized investment advice or a recommendation regarding any instrument.</p>
+<p><b>2 &middot; Publisher&rsquo;s exclusion.</b> All research is published solely as general, impersonal information of regular circulation. It is not tailored to the objectives or circumstances of any individual and is not issued in connection with compensation from any client. The Fund has no clients and distributes all research free of charge. On that basis it publishes in reliance on the publisher&rsquo;s exclusion from the definition of &ldquo;investment adviser&rdquo; under the Investment Advisers Act of 1940 (&sect;202(a)(11)(D); cf. <em>Lowe v. SEC</em>, 472 U.S. 181 (1985)).</p>
+<p><b>3 &middot; Registration &amp; conflicts.</b> TON618 Capital is not registered as an investment adviser or broker-dealer in any capacity. The Fund is a Bitcoin fund and may hold or transact in the securities or digital assets it discusses; material conflicts are disclosed where they exist. The Fund receives no compensation from any party in connection with its research. As of this report, the Fund is <b>long bitcoin</b> and holds <b>no position in MSTR common stock, MSTR derivatives, or MSTR preferred or convertible securities</b>, long or short.</p>
+<p><b>4 &middot; Use of AI.</b> Artificial intelligence is used in the creation of this research. All methodology and data integrity are reviewed and approved before publication by TON618 Capital&rsquo;s Chief Investment Officer, <b>Keyth Beck</b>; errors may nonetheless occur, and readers should verify independently.</p>
+<p><b>5 &middot; CFA.</b> This report was prepared to align with CFA Institute analytical standards (methodology only). CFA&reg; and Chartered Financial Analyst&reg; are registered trademarks owned by CFA Institute. That reference describes the analytical framework applied; it does <b>not</b> imply the report was prepared, reviewed, or authored by a CFA charterholder, and the report is <b>not</b> issued, reviewed, endorsed, certified, or approved by &mdash; nor affiliated with &mdash; CFA Institute.</p>
+<p><b>6 &middot; Risk &amp; feedback.</b> Past performance is not indicative of future results. Digital assets and equities are volatile and may result in total loss of capital. Corrections and feedback are welcome &mdash; please direct them to CIO <b>Keyth Beck</b> at <a href="mailto:keyth@ton618capital.com">keyth@ton618capital.com</a>.</p>
+<p class="small">&copy; 2026 TON618 Capital. Strategy&trade;, MicroStrategy&reg;, and tickers MSTR, STRF, STRC, STRE, STRK, STRD are marks of Strategy Inc., used for identification only. &ldquo;BTC Reserve,&rdquo; &ldquo;Net Reserve,&rdquo; &ldquo;Amplification,&rdquo; &ldquo;Net Leverage,&rdquo; &ldquo;Duration,&rdquo; &ldquo;BPS,&rdquo; &ldquo;Net BPS,&rdquo; &ldquo;BTC Yield&rdquo; and &ldquo;mNAV&rdquo; are Strategy&rsquo;s labels for its own illustrative metrics.</p>
+</div>
+
+</main></body></html>
