@@ -4,7 +4,15 @@
 <meta name="description" content="Strategy's case now rests on distribution — wrapping bitcoin in paper that mandated capital can buy. We tested it against the SEC's 13(f) list, 13F and N-PORT filings, and management's own 17 August disclosures: the flagship is 70% retail, the visible preferred is 0.3% held by insurers or pensions, the coupon has reset up eight times and never down, and the issuer is rated B−.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+/* static font instances: Chromium's PDF writer emits Type3 glyph fonts for variable web fonts, leaving no copyable text layer */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:normal;font-weight:400;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:normal;font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:normal;font-weight:600;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:italic;font-weight:400;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-400-italic.woff2') format('woff2');}
 :root{--gold:#8a6d2a;--gold2:#C9A24B;--ink:#15161A;--body:#26282E;--muted:#5E626B;--line:#E2E4E8;--soft:#F4F5F7;--serif:"EB Garamond",Georgia,serif;--sans:"Inter","Helvetica Neue",Arial,sans-serif;}
 *{box-sizing:border-box} html,body{background:#fff}
 body{color:var(--body);font-family:var(--sans);font-size:14.5px;line-height:1.64;margin:0;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"lnum" 1}
