@@ -1,5 +1,13 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Alphabet &mdash; The Convention Price &mdash; TON618 Capital</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><style>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+/* static font instances: Chromium's PDF writer emits Type3 glyph fonts for variable web fonts, leaving no copyable text layer */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/files/inter-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:normal;font-weight:400;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:normal;font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:normal;font-weight:600;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'EB Garamond';font-style:italic;font-weight:400;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.13/files/eb-garamond-latin-400-italic.woff2') format('woff2');}
 
 :root {
   --t618-obsidian: #0B0B0C; --t618-onyx: #16161A; --t618-graphite: #26262B; --t618-ash: #3A3A40;
@@ -14,7 +22,7 @@
 body.t618 {
   background: var(--t618-ivory); color: var(--t618-ink);
   font-family: var(--t618-sans); font-size: 16px; line-height: 1.5;
-  -webkit-font-smoothing: antialiased; font-feature-settings: "tnum" 1, "lnum" 1;
+  -webkit-font-smoothing: antialiased;
   margin: 0; padding: var(--t618-gutter);
 }
 main { max-width: 880px; margin: 0 auto; }
