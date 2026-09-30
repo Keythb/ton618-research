@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2026 00:56:54 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 03:26:28 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>The Safer It Falls</title>
+      <link>https://ton618capital.com/ton618-research/mstr-credit-model-inversion/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/mstr-credit-model-inversion/</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Strategy's credit calculator says its junior preferred is safer than the senior one ahead of it, and every preferred gets safer as its price falls. One design choice explains both, and a holder can check it on the page. Follows The Solvency Map Is Not the Credit.</description>
+      <category>Digital Credit</category>
+      <enclosure url="https://ton618capital.com/ton618-research/mstr-credit-model-inversion/TON618_MSTR-Credit-Model-Inversion_Research_Note.pdf" type="application/pdf" length="161369" />
+    </item>
     <item>
       <title>Micron (MU) — Are We Past the Peak?</title>
       <link>https://ton618capital.com/ton618-research/mu-q4-fy26/</link>
