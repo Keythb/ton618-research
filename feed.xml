@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2026 03:26:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:20:10 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Micron (MU) — The Peak Moved Out. The Bill Moved Up.</title>
+      <link>https://ton618capital.com/ton618-research/mu-q4-fy26-scored/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/mu-q4-fy26-scored/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Micron (MU) beat, guided 7% above the Street, and signed ten more take-or-pay contracts. It also committed more than $50 billion of capital spending at a record margin. The scorecard we froze before the print, graded, and a fair value that turns on one undisclosed number.</description>
+      <category>Post-Event Note</category>
+      <enclosure url="https://ton618capital.com/ton618-research/mu-q4-fy26-scored/TON618_MU_Post-Event_Note.pdf" type="application/pdf" length="488955" />
+    </item>
     <item>
       <title>The Safer It Falls</title>
       <link>https://ton618capital.com/ton618-research/mstr-credit-model-inversion/</link>
@@ -15,7 +24,7 @@
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
       <description>Strategy's credit calculator says its junior preferred is safer than the senior one ahead of it, and every preferred gets safer as its price falls. One design choice explains both, and a holder can check it on the page. Follows The Solvency Map Is Not the Credit.</description>
       <category>Digital Credit</category>
-      <enclosure url="https://ton618capital.com/ton618-research/mstr-credit-model-inversion/TON618_MSTR-Credit-Model-Inversion_Research_Note.pdf" type="application/pdf" length="161369" />
+      <enclosure url="https://ton618capital.com/ton618-research/mstr-credit-model-inversion/TON618_MSTR-Credit-Model-Inversion_Research_Note.pdf" type="application/pdf" length="161264" />
     </item>
     <item>
       <title>Micron (MU) — Are We Past the Peak?</title>
@@ -150,7 +159,7 @@
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       <description>The market has already declared the winners of an unfinished arms race — survivor multiples at one end, condemned discounts at the other, and an empty middle. Fifteen names, one sort, and the question that decides the sector's next decade: is the sort right?</description>
       <category>Thematic</category>
-      <enclosure url="https://ton618capital.com/ton618-research/cybersecurity-thematic/TON618_Cybersecurity-Survivor-Premium_Research_Note.pdf" type="application/pdf" length="478491" />
+      <enclosure url="https://ton618capital.com/ton618-research/cybersecurity-thematic/TON618_Cybersecurity-Survivor-Premium_Research_Note.pdf" type="application/pdf" length="481071" />
     </item>
     <item>
       <title>NVIDIA's $108 Billion Footnote</title>
