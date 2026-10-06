@@ -6,7 +6,7 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Oct 2026 01:15:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 12:06:18 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
     <item>
       <title>NIKE (NKE) — The Margin Turned. The Year Got Worse.</title>
@@ -662,6 +662,14 @@
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       <description>Sizing Bitcoin as the monetary/settlement layer of the AI economy, 2026–2030 — agentic machine-to-machine payments, Bitcoin-native rails (L402, Lightning), AI-driven BTC demand, and the miner-to-AI-compute convergence.</description>
       <category>Thematic Research</category>
+    </item>
+    <item>
+      <title>The Debt Moves Only If the Risk Does: Amazon's $8 Billion Chip Leaseback</title>
+      <link>https://ton618capital.com/ton618-research/amzn-leaseback/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/amzn-leaseback/</guid>
+      <description>Amazon is reported to be selling $8bn of Nvidia chips and renting them back. For buildings the rules let a company move its debt and keep the risk; for chips they do not. We work out how short the lease must be, how much risk must really leave, and who carries it.</description>
+      <category>Thematic</category>
+      <enclosure url="https://ton618capital.com/ton618-research/amzn-leaseback/TON618_Amazon-Chip-Leaseback_Research_Note.pdf" type="application/pdf" length="357526" />
     </item>
   </channel>
 </rss>
