@@ -6,7 +6,7 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 12:12:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 14:15:22 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
     <item>
       <title>The Debt Moves Only If the Risk Does: Amazon's $8 Billion Chip Leaseback</title>
@@ -671,6 +671,14 @@
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       <description>Sizing Bitcoin as the monetary/settlement layer of the AI economy, 2026–2030 — agentic machine-to-machine payments, Bitcoin-native rails (L402, Lightning), AI-driven BTC demand, and the miner-to-AI-compute convergence.</description>
       <category>Thematic Research</category>
+    </item>
+    <item>
+      <title>The Signature and the Lane: What a US–Iran Deal Buys in Ships, and in Barrels</title>
+      <link>https://ton618capital.com/ton618-research/hormuz-deal-vs-ships/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/hormuz-deal-vs-ships/</guid>
+      <description>Two markets price the same strait: one pays on a US–Iran signature, the other only when ships are back to normal. In June a signature bought half a lane for three weeks. What the gap between the two ladders says a deal is worth, in ships and in barrels.</description>
+      <category>Thematic</category>
+      <enclosure url="https://ton618capital.com/ton618-research/hormuz-deal-vs-ships/TON618_The-Signature-and-the-Lane_Research_Note.pdf" type="application/pdf" length="459297" />
     </item>
   </channel>
 </rss>
