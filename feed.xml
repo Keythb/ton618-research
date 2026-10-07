@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 14:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 14:32:55 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Who Is Raising the Price of Gasoline: the Strait or the Strikes?</title>
+      <link>https://ton618capital.com/ton618-research/gasoline-strait-or-strikes/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/gasoline-strait-or-strikes/</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+      <description>The White House says gasoline is no longer about Hormuz but about refineries. We split the gallon into crude, margin, taxes and the retailer's cut, date the margin against two calendars, and bracket Russia's share. Smaller than the claim, larger than zero, and it depends on which crude you count from.</description>
+      <category>Energy Thematic</category>
+      <enclosure url="https://ton618capital.com/ton618-research/gasoline-strait-or-strikes/TON618_Strait-or-Strikes_Research_Note.pdf" type="application/pdf" length="280039" />
+    </item>
     <item>
       <title>The Signature and the Lane: What a US–Iran Deal Buys in Ships, and in Barrels</title>
       <link>https://ton618capital.com/ton618-research/hormuz-deal-vs-ships/</link>
@@ -680,14 +689,6 @@
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       <description>Sizing Bitcoin as the monetary/settlement layer of the AI economy, 2026–2030 — agentic machine-to-machine payments, Bitcoin-native rails (L402, Lightning), AI-driven BTC demand, and the miner-to-AI-compute convergence.</description>
       <category>Thematic Research</category>
-    </item>
-    <item>
-      <title>Who Is Raising the Price of Gasoline: the Strait or the Strikes?</title>
-      <link>https://ton618capital.com/ton618-research/gasoline-strait-or-strikes/</link>
-      <guid isPermaLink="true">https://ton618capital.com/ton618-research/gasoline-strait-or-strikes/</guid>
-      <description>The White House says gasoline is no longer about Hormuz but about refineries. We split the gallon into crude, margin, taxes and the retailer's cut, date the margin against two calendars, and bracket Russia's share. Smaller than the claim, larger than zero, and it depends on which crude you count from.</description>
-      <category>Thematic</category>
-      <enclosure url="https://ton618capital.com/ton618-research/gasoline-strait-or-strikes/TON618_Strait-or-Strikes_Research_Note.pdf" type="application/pdf" length="280039" />
     </item>
   </channel>
 </rss>
