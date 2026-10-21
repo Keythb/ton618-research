@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 00:48:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 06:35:53 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Is J.P. Morgan Asset Management Right About Bitcoin?</title>
+      <link>https://ton618capital.com/ton618-research/jpm-ltcma-2027-btc/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/jpm-ltcma-2027-btc/</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <description>J.P. Morgan just gave Bitcoin the highest liquid-asset return forecast in its 2027 assumptions, and a zero in the tables that set allocations. We run the test JPM's own numbers imply, find the forecast that would justify the zero, and ask what Bitcoin's unstable correlations might mean.</description>
+      <category>Thematic</category>
+      <enclosure url="https://ton618capital.com/ton618-research/jpm-ltcma-2027-btc/TON618_Is-JPM-Right-About-Bitcoin_Research_Note.pdf" type="application/pdf" length="366005" />
+    </item>
     <item>
       <title>SpaceX (SPCX) — The Quarter That Doubled the Bill</title>
       <link>https://ton618capital.com/ton618-research/spcx-q3-update/</link>
@@ -15,7 +24,7 @@
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <description>SpaceX tripled its compute revenue in one quarter, then doubled the capital it will spend in the next. Where the fleet's cash catches its capital, what the share price requires of a 13-gigawatt plan, and the 1.6 billion shares that trade free this week.</description>
       <category>Equity Valuation</category>
-      <enclosure url="https://ton618capital.com/ton618-research/spcx-q3-update/TON618_SPCX_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="346216" />
+      <enclosure url="https://ton618capital.com/ton618-research/spcx-q3-update/TON618_SPCX_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="346217" />
     </item>
     <item>
       <title>US Banking After the Print</title>
