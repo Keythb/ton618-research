@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2026 21:27:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 05:14:35 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Anthropic (ANT) — What the S-1 Says a Dollar of Claude Is Worth</title>
+      <link>https://ton618capital.com/ton618-research/anthropic-ipo-valuation/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/anthropic-ipo-valuation/</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Anthropic is cheap to serve and expensive to build: an 85% serving margin against $657 billion of compute already promised. Inside: what the S-1 leaves blank, who holds the vote, when insiders can sell, and what each price being discussed would require.</description>
+      <category>Equity Valuation</category>
+      <enclosure url="https://ton618capital.com/ton618-research/anthropic-ipo-valuation/TON618_ANT_Equity-Valuation.pdf" type="application/pdf" length="445020" />
+    </item>
     <item>
       <title>Meta (META) — The 2027 Bill Is Already Signed</title>
       <link>https://ton618capital.com/ton618-research/meta-q3-update/</link>
