@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2026 02:33:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 03:27:19 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Microsoft (MSFT) — The Life Change the 10-Q Leaves Out</title>
+      <link>https://ton618capital.com/ton618-research/msft-q3-update/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/msft-q3-update/</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <description>In July, Microsoft said it was stretching its building lives from 15 to 25 years. Its first 10-Q since says nothing about it, but the lease note moved. What the silence means, what the quarter did to the value, and what the price now asks for.</description>
+      <category>Equity Valuation</category>
+      <enclosure url="https://ton618capital.com/ton618-research/msft-q3-update/TON618_MSFT_FQ1-2027_Valuation_Update.pdf" type="application/pdf" length="334517" />
+    </item>
     <item>
       <title>GE Vernova (GEV) — The Customers Paid First</title>
       <link>https://ton618capital.com/ton618-research/gev-q3-update/</link>
