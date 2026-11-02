@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 05:29:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 05:32:09 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Coinbase (COIN) — Leaner at the Trough. The Price Needs a Low Hurdle for a High-Beta Stock.</title>
+      <link>https://ton618capital.com/ton618-research/coin-q3-update/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/coin-q3-update/</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Coinbase's trading revenue hit a two-year low, while lower costs, prediction markets and stablecoin offset most of the damage. What a share is worth once two double counts come out, how likely a new crypto cycle is, and what return the price asks owners to accept.</description>
+      <category>Equity Valuation</category>
+      <enclosure url="https://ton618capital.com/ton618-research/coin-q3-update/TON618_COIN_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="393206" />
+    </item>
     <item>
       <title>Strategy (MSTR) Q3 2026 — Fewer Coins a Share, Fewer Claims Ahead</title>
       <link>https://ton618capital.com/ton618-research/mstr-q3-update/</link>
@@ -833,14 +842,6 @@
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       <description>Sizing Bitcoin as the monetary/settlement layer of the AI economy, 2026–2030 — agentic machine-to-machine payments, Bitcoin-native rails (L402, Lightning), AI-driven BTC demand, and the miner-to-AI-compute convergence.</description>
       <category>Thematic Research</category>
-    </item>
-    <item>
-      <title>Coinbase (COIN) — Leaner at the Trough. The Price Needs a Low Hurdle for a High-Beta Stock.</title>
-      <link>https://ton618capital.com/ton618-research/coin-q3-update/</link>
-      <guid isPermaLink="true">https://ton618capital.com/ton618-research/coin-q3-update/</guid>
-      <description>Coinbase's trading revenue hit a two-year low, while lower costs, prediction markets and stablecoin offset most of the damage. What a share is worth once two double counts come out, how likely a new crypto cycle is, and what return the price asks owners to accept.</description>
-      <category>Equity Valuation</category>
-      <enclosure url="https://ton618capital.com/ton618-research/coin-q3-update/TON618_COIN_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="393206" />
     </item>
   </channel>
 </rss>
