@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 05:09:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 05:21:13 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>Strategy (MSTR) Q3 2026 — Fewer Coins a Share, Fewer Claims Ahead</title>
+      <link>https://ton618capital.com/ton618-research/mstr-q3-update/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/mstr-q3-update/</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <description>In July we valued Strategy at its net asset value and gave its credit franchise no value. Then it sold $5.41 billion of stock and bought little bitcoin. What that money bought instead, what it cost each share, and what the price now pays for.</description>
+      <category>Equity Valuation</category>
+      <enclosure url="https://ton618capital.com/ton618-research/mstr-q3-update/TON618_MSTR_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="348526" />
+    </item>
     <item>
       <title>Robinhood (HOOD) — The Tax Rate Arrived. The Price Still Assumes a Decade.</title>
       <link>https://ton618capital.com/ton618-research/hood-q3-update/</link>
