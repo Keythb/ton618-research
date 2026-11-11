@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 17:39:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 17:42:47 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>CoreWeave (CRWV) — The Floor Moved to the Fleet</title>
+      <link>https://ton618capital.com/ton618-research/crwv-q3-update/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/crwv-q3-update/</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <description>CoreWeave's stock fell a third from July while its margin went from 1% to 10% and its older GPUs re-contracted above their first prices. The credit market and the business disagree about what the equity is. We find each is right about a different thing, and value what the fleet, not the signed book, is worth.</description>
+      <category>Equity Valuation</category>
+      <enclosure url="https://ton618capital.com/ton618-research/crwv-q3-update/TON618_CRWV_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="372794" />
+    </item>
     <item>
       <title>Democrats Won Congress. What Did They Actually Win?</title>
       <link>https://ton618capital.com/ton618-research/divided-government-2027/</link>
@@ -896,14 +905,6 @@
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       <description>Sizing Bitcoin as the monetary/settlement layer of the AI economy, 2026–2030 — agentic machine-to-machine payments, Bitcoin-native rails (L402, Lightning), AI-driven BTC demand, and the miner-to-AI-compute convergence.</description>
       <category>Thematic Research</category>
-    </item>
-    <item>
-      <title>CoreWeave (CRWV) — The Floor Moved to the Fleet</title>
-      <link>https://ton618capital.com/ton618-research/crwv-q3-update/</link>
-      <guid isPermaLink="true">https://ton618capital.com/ton618-research/crwv-q3-update/</guid>
-      <description>CoreWeave's stock fell a third from July while its margin went from 1% to 10% and its older GPUs re-contracted above their first prices. The credit market and the business disagree about what the equity is. We find each is right about a different thing, and value what the fleet, not the signed book, is worth.</description>
-      <category>Equity Valuation</category>
-      <enclosure url="https://ton618capital.com/ton618-research/crwv-q3-update/TON618_CRWV_Q3-2026_Valuation_Update.pdf" type="application/pdf" length="372794" />
     </item>
   </channel>
 </rss>
