@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 22:03:04 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 23:29:09 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>AI Makes Attacks Cheap. Can Bitcoin Make Them Expensive?</title>
+      <link>https://ton618capital.com/ton618-research/btc-cost-imposition/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/btc-cost-imposition/</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <description>AI has made attacking cheap. Can a bitcoin fee or deposit make it expensive again? We design the gate for six uses, from spam to intrusion, and test where it would stop attacks, where it would only thin them, and what it asks of honest users.</description>
+      <category>Thematic</category>
+      <enclosure url="https://ton618capital.com/ton618-research/btc-cost-imposition/TON618_Can-Bitcoin-Make-Attacks-Expensive_Research_Note.pdf" type="application/pdf" length="520869" />
+    </item>
     <item>
       <title>What Was the Most Likely Cause of This Crash?</title>
       <link>https://ton618capital.com/ton618-research/btc-crash-cause-2026-11/</link>
