@@ -6,8 +6,17 @@
     <link>https://ton618capital.com/ton618-research/</link>
     <description>TON618 Capital — published thematic and empirical research.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 23:29:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 02:32:33 +0000</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ton618capital.com/ton618-research/feed.xml" />
+    <item>
+      <title>NVIDIA (NVDA) — Priced for One More Year</title>
+      <link>https://ton618capital.com/ton618-research/nvda-q3-update/</link>
+      <guid isPermaLink="true">https://ton618capital.com/ton618-research/nvda-q3-update/</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+      <description>The quarter beat our July top case, the founder left, and the stock fell anyway. What does $155 pay for now? One guided year, and almost nothing after it. We rebuild the valuation and name what moves it next.</description>
+      <category>Equity Valuation</category>
+      <enclosure url="https://ton618capital.com/ton618-research/nvda-q3-update/TON618_NVDA_Q3-FY27_Valuation_Update.pdf" type="application/pdf" length="377424" />
+    </item>
     <item>
       <title>AI Makes Attacks Cheap. Can Bitcoin Make Them Expensive?</title>
       <link>https://ton618capital.com/ton618-research/btc-cost-imposition/</link>
